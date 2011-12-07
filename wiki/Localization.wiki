@@ -1,0 +1,6 @@
+#summary Multiple language support.
+
+= Introduction =
+
+Here we can list issues related to localization
+
