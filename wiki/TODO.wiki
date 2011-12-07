@@ -7,6 +7,7 @@
    * ~~set up repo~~
    * ~~create the MySQL tables~~
    * write a nice e-mail to Joelle explaining her the process and asking her whatever questions we still have
+   * update the prototype
 
 
 == Thu, 8Dec ==
