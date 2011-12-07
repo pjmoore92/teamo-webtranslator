@@ -1,6 +1,14 @@
 #summary Multiple language support.
 
-= Introduction =
+== Introduction ==
 
-Here we can list issues related to localization
+Here we can list issues related to localization.
+
+== Loading language files ==
+Call this in the constructor of the controller - first issue is how to control the actual language choice via country flags
+{{{
+        # Load language
+        $sesslang = 'english';
+        $this->lang->load('example', $sesslang);
+}}}
 
