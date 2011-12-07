@@ -1,0 +1,17 @@
+#summary One-sentence summary of this page.
+
+= TODO =
+
+== Wed, 7Dec ==
+
+   * ~~set up repo~~
+   * ~~create the MySQL tables~~
+   * write a nice e-mail to Joelle explaining her the process and asking her whatever questions we still have
+
+
+= Details =
+
+Add your content here.  Format your content with:
+  * Text in *bold* or _italic_
+  * Headings, paragraphs, and lists
+  * Automatic links to other wiki pages
