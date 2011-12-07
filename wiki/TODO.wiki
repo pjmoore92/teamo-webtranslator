@@ -8,7 +8,7 @@
    * ~~create the MySQL tables~~
    * Fix Relationships in tables
    * write a nice e-mail to Joelle explaining her the process and asking her whatever questions we still have
-   * update the prototype
+   * update the prototype (added the new pages; still have to update the dashboards - add left sidebar)
 
 
 == Thu, 8Dec ==
