@@ -1,4 +1,4 @@
-#summary One-sentence summary of this page.
+#summary Master TODO list
 
 = TODO =
 
@@ -14,3 +14,8 @@
 == Thu, 8Dec ==
 
    * meeting with Karen
+
+
+== Date TBC ==
+   * [Localization]
+   * [Database]
