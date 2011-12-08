@@ -8,9 +8,11 @@ Here we can list issues related to localization.
 These are stored in {{{application/language/english(etc)/<controllername>_lang.php}}}
 
 An example language file:
-{{{<?php
+{{{
+<?php
 $lang['sitetitle'] = "Bethel Translations";
-?>}}}
+?>
+}}}
 
 == Literals ==
 So first to mention is don't use string literals, we use tokens (from the language file) instead
