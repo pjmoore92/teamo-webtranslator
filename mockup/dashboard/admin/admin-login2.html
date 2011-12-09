@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Bethel Translations - Admin dashboard</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Le styles -->
+    <link href="bootstrap.css" rel="stylesheet">
+    <style type="text/css">
+      body {
+        padding-top: 60px;
+      }
+    </style>
+
+    <!-- Le fav and touch icons -->
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+
+    <script type="text/javascript" src="js/jquery/jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap-dropdown.js"></script>
+    <script src="js/jquery/jquery.tablesorter.min.js"></script>
+    <script src="js/bootstrap-alerts.js"></script>
+
+    <script >
+      $(function() {
+        $("table#sortTableExample").tablesorter({ sortList: [[1,0]] });
+        $("table#sortTableExample2").tablesorter({ sortList: [[1,0]] });
+
+        $(".alert-message>a.close").click(function(){this.alert('close');});
+      });
+    </script>
+  </head>
+
+  <body>
+
+    <div class="topbar">
+      <div class="fill">
+        <div class="container">
+          <a class="brand" href="index.html">Bethel Translations</a>
+          <ul class="nav">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="testimonials.html">Testimonials</a></li>
+            <li class="active"><a href="contact.html">Contact</a></li>
+          </ul>
+          <!--<p class="pull-right">Logged in as <a href="#">username</a></p>-->
+          <ul class="secondary-nav">
+            <li class="dropdown" data-dropdown="dropdown">
+              <a href="#" class="dropdown-toggle">Hello, User</a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Some link</a></li>
+                <li class="divider"></li>
+                <li><a href="#">Logout</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid">
+
+      <div class="sidebar">
+        <h2>Menu</h2>
+        <ul>
+          <li><a href="#">Item</a></li>
+          <li><a href="#">Item</a></li>
+          <li><a href="#">Item</a></li>
+        </ul>
+      </div>
+
+      <div class="content">
+        <div class="page-header">
+          <h1>Admin dashboard <small>Supporting text or tagline</small></h1>
+
+          <!--<div class="alert-message warning fade in" data-alert="alert" >
+            <a class="close" href="#">&times;</a>
+            <p><strong>Update:</strong> Joelle has sent you the quote for Docname3. Please review it!</p>
+          </div>-->
+
+          <div class="alert-message block-message warning fade in" data-alert="alert" >
+            <a class="close" href="#">&times;</a>
+            <h4>New job waiting</h4>
+            <p>
+              John Doe is waiting for a quote for <strong>Docname2</strong>.
+              The title is <em>Insert title here</em> and it is
+              <strong>1000</strong> words long.
+            </p>
+            <br />
+            <div class="alert-actions">
+              <a class="btn small" href="#">Review the document</a>
+            </div>
+          </div>
+          
+          <div class="alert-message block-message success fade in" data-alert="alert" >
+            <a class="close" href="#">&times;</a>
+            <h4>Job accepted!</h4>
+            <p>
+              John Doe has accepted the quote for <strong>Docname2</strong>.
+              It should be ready on <strong><time>2011-09-15</time></strong>.
+            </p>
+          </div>
+        </div><!--end page-header-->
+
+        <div class="row">
+          <h2>Requiring a quote</h2>
+          <table class="zebra-striped" id="sortTableExample">
+            <thead>
+              <tr>
+                <th class="header headerSortDown">#</th>
+                <th class="header">Document Name</th>
+                <th class="blue header">Status</th>
+                <th class="blue header">Language (to &amp; from)</th>
+                <th class="blue header">Submitted on</th>
+                <th class="blue header"><abbr title="Estimated time of arrival">ETA</abbr></th>
+                <th class="blue header">Quote</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>Docname</td>
+                <td>Paid for, waiting for translation</td>
+                <td>English to French</td>
+                <td><time>2011-09-01</time></td>
+                <td><time>2011-09-15</time></td>
+                <td>£100</td>
+              </tr><tr>
+                <td>2</td>
+                <td>Docname2</td>
+                <td>Quote sent, waiting for client answer</td>
+                <td>French to English</td>
+                <td><time>2011-09-01</time></td>
+                <td><time>2011-09-17</time></td>
+                <td>£70</td>
+              </tr><tr>
+                <td>3</td>
+                <td>Docname3</td>
+                <td>Waiting for quote</td>
+                <td>Italian to English</td>
+                <td><time>2011-09-05</time></td>
+                <td><time>2011-09-07</time></td>
+                <td>£50</td>
+              </tr></tbody>
+          </table>
+          <!--<div class="span10">
+            <h2>Main content</h2>
+          </div>
+          <div class="span4">
+            <h3>Secondary content</h3>
+          </div>-->
+
+        </div>
+
+        <div class="row">
+          <h2>Pending a translation</h2>
+          <table class="zebra-striped" id="sortTableExample2">
+            <thead>
+              <tr>
+                <th class="header headerSortDown">#</th>
+                <th class="header">Document Name</th>
+                <th class="blue header">Status</th>
+                <th class="blue header">Language (to &amp; from)</th>
+                <th class="blue header">Submitted on</th>
+                <th class="blue header"><abbr title="Estimated time of arrival">ETA</abbr></th>
+                <th class="blue header">Quote</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>Docname</td>
+                <td>Paid for, waiting for translation</td>
+                <td>English to French</td>
+                <td><time>2011-09-01</time></td>
+                <td><time>2011-09-15</time></td>
+                <td>£100</td>
+              </tr><tr>
+                <td>2</td>
+                <td>Docname2</td>
+                <td>Quote sent, waiting for client answer</td>
+                <td>French to English</td>
+                <td><time>2011-09-01</time></td>
+                <td><time>2011-09-17</time></td>
+                <td>£70</td>
+              </tr><tr>
+                <td>3</td>
+                <td>Docname3</td>
+                <td>Waiting for quote</td>
+                <td>Italian to English</td>
+                <td><time>2011-09-05</time></td>
+                <td><time>2011-09-07</time></td>
+                <td>£50</td>
+              </tr></tbody>
+          </table>
+
+        </div><!-- end row -->
+
+      </div>
+
+      <footer>
+        <p>Bethel Translations 2011</p>
+      </footer>
+
+    </div> <!-- /container -->
+
+  </body>
+</html>
