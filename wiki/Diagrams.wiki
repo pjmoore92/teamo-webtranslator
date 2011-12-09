@@ -1,4 +1,4 @@
-A list of the sequence diagrams
+#summary A list of the sequence diagrams
 
 = Sequence diagrams =
 
