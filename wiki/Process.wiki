@@ -1,4 +1,13 @@
 = Process =
+
+=== Job statuses ===
+   * Quote pending
+   * Quote sent
+   * Quote accepted, wait to pay
+   * Quote accepted, paid
+   * Completed
+
+=== Process description ===
 {{{
 
 
