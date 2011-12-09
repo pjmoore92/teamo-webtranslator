@@ -1,31 +1,6 @@
 = Process =
 {{{
-Index :
 
-   * Register + Upload / Login + Upload  (2 Versions)
-   * About: Advertise the Service
-   * Testamonial: Feedback 
-   * Client: Dashboard 
-   * Admin: Dashboard 
-   * Contact: Form to contact Joelle? 
-
-
-Client Dashboard: 
-
-  * Submit new job 
-  * Quotes 
-  * Translations 
-  * History
-
-
-Admin Dashboard: 
-
-  * Home 
-  * Pending Quotes 
-  * Pending Jobs 
-  * (Accepted) Jobs: [said yes] 
-  * Translations: [yes + paid] 
-  * Completed 
 
 ↓ 
 
