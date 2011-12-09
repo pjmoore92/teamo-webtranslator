@@ -10,7 +10,7 @@
    * write a nice e-mail to Joelle explaining her the process and asking her whatever questions we still have
    * update the prototype (added the new pages; still have to update the dashboards - add left sidebar) - Andrei
    * ER Diagrams - Paul
-   * nicely formatted sequence diagrams (maybe) - Andrei
+   * nicely formatted sequence [Diagrams diagrams] - Andrei
 
 
 == Thu, 8Dec ==
@@ -19,6 +19,8 @@
 
 == Fri, 9Dec ==
    * make some sketches for the rest of the pages ?
+   * update the prototype (added the new pages; added left sidebar; still needs content) - Andrei
+   * started working on the [Diagrams diagrams]
 
 
 == Specific Pages ==
