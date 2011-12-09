@@ -1,0 +1,21 @@
+#summary A list of the pages and what each does.
+
+
+
+   * [http://alasdaircampbell.com/tp3/mockup/index.html Main page] - Will contain Register + Upload / Login + Upload  (2 Versions)
+   * [http://alasdaircampbell.com/tp3/mockup/about.html About] - Advertise the service
+   * [http://alasdaircampbell.com/tp3/mockup/testimonials.html Testimonials] - Feedback
+   * [http://alasdaircampbell.com/tp3/mockup/testimonials.html Contact] - A form to contact Joelle
+   * Login - Login for the dashboards
+      * [http://alasdaircampbell.com/tp3/mockup/client-login.html Client dashboard]
+         * Submit new job 
+         * Quotes 
+         * Translations 
+         * History
+      * [http://alasdaircampbell.com/tp3/mockup/admin-login.html Admin dashboard]
+         * Home
+         * Pending Quotes
+         * Pending Jobs
+         * (Accepted) Jobs: [said yes]
+         * Translations: [yes + paid]
+         * Completed 
