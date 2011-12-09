@@ -20,6 +20,7 @@
 
 == Specific Pages ==
    * [Process]
+   * [Diagrams]
    * [Localization]
    * [Database]
    
