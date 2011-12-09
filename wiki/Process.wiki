@@ -1,6 +1,7 @@
 = Process =
 
 === Job statuses ===
+not sure if I got these right, so could someone check and update if necessary, please?
    * Quote pending
    * Quote sent
    * Quote accepted, wait to pay
