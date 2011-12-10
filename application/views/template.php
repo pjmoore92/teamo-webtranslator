@@ -12,7 +12,7 @@
     <![endif]-->
 
     <!-- Le styles -->
-    <link href="/style/bootstrap.css" rel="stylesheet">
+    <link href="<?php echo base_url('style/bootstrap.css'); ?>" rel="stylesheet">
     <style type="text/css">
       body {
         padding-top: 40px;
@@ -25,9 +25,9 @@
     <link rel="apple-touch-icon" sizes="72x72" href="/images/apple-touch-icon-72x72.png">
     <link rel="apple-touch-icon" sizes="114x114" href="/images/apple-touch-icon-114x114.png">
 
-    <script type="text/javascript" src="/js/jquery/jquery-1.7.1.min.js"></script>
-    <script type="text/javascript" src="/js/bootstrap-modal.js"></script>
-    <script type="text/javascript" src="/js/bootstrap-dropdown.js"></script>
+    <script type="text/javascript" src="<?php echo base_url('/js/jquery/jquery-1.7.1.min.js'); ?>"></script>
+    <script type="text/javascript" src="<?php echo base_url('/js/bootstrap-modal.js'); ?>"></script>
+    <script type="text/javascript" src="<?php echo base_url('/js/bootstrap-dropdown.js'); ?>"></script>
   </head>
 
   <body>
@@ -114,13 +114,12 @@
 
     <div class="container"> <!--FIXME is this needed? -->
       <div id="contents"><?= $contents ?></div>
+      <footer>
+        <p>Bethel Translations 2011</p>
+    </footer>
     </div>
 
     <!-- END OF VIEW -->
-
-    <footer>
-      <p>Bethel Translations 2011</p>
-    </footer>
 
   </body>
 </html>
