@@ -1,4 +1,4 @@
-<?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
+<?php if ( ! defined('BASEPATH')) exit('Access denied');
 
 class Welcome extends CI_Controller {
 
@@ -19,7 +19,26 @@ class Welcome extends CI_Controller {
 	 */
 	public function index()
 	{
-		$this->load->view('welcome_message');
+                $this->template->set('title', '');
+                $this->template->load('template', 'welcome_message');
+	}
+
+	public function about()
+	{
+                $this->template->set('title', 'About');
+                $this->template->load('template', 'about');
+	}
+
+	public function testimonials()
+	{
+                $this->template->set('title', 'Testimonials -');
+                $this->template->load('template', 'testimonials');
+	}
+
+	public function contact()
+	{
+                $this->template->set('title', 'Contact -');
+                $this->template->load('template', 'contact');
 	}
 }
 
