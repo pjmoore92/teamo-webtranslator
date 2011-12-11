@@ -36,12 +36,12 @@
     <div class="topbar">
       <div class="fill">
         <div class="container">
-          <a class="brand" href="/">Bethel Translations</a>
+          <?php echo anchor('welcome', 'Bethel Translations', 'class="brand"'); ?>
           <ul class="nav">
-            <li class="active"><a href="/">Home</a></li>
-            <li><a href="/welcome/about/">About</a></li>
-            <li><a href="/welcome/testimonials/">Testimonials</a></li>
-            <li><a href="/welcome/contact/">Contact</a></li>
+            <li class="active"><?php echo anchor('welcome', 'Home'); ?></li>
+            <li><?php echo anchor('welcome/about', 'About'); ?></li>
+            <li><?php echo anchor('welcome/testimonials', 'Testimonials'); ?></li>
+            <li><?php echo anchor('welcome/contact', 'Contact'); ?></li>
           </ul>
           <ul class="secondary-nav">
             <li class="dropdown" data-dropdown="dropdown">
