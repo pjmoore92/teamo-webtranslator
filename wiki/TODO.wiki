@@ -31,12 +31,11 @@
    * (get started on the) [http://codeigniter.com/user_guide/general/models.html Model] functions
 
 == JOBS ==
-Paul - Finish Prototype
-Stephen - Background Section
-Models
-Alasdair - Database Tables + Dummy data
-Wei -
-Andrei -
+*Paul - Finish Prototype
+*Stephen - Background Section
+*Alasdair - Database Tables + Dummy data
+*Wei -
+*Andrei -
 
 
 == Specific Pages ==
