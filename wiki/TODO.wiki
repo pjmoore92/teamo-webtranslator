@@ -22,6 +22,14 @@
    * update the prototype (added the new pages; added left sidebar; still needs content) - Andrei
    * started working on the [Diagrams diagrams]
 
+== Mon, 12Dec ==
+   * meeting with Karen at 3pm
+   * things to discuss:
+      * hashing algorithm - how are we going to generate the user reference code ?
+      * final design - are we going to use the current design ?
+   * put the latest DB structure up on the wiki ?
+   * (get started on the) [http://codeigniter.com/user_guide/general/models.html Model] functions
+
 
 == Specific Pages ==
    * [Process]
