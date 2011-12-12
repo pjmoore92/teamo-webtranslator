@@ -34,8 +34,8 @@
    * Paul - Finish Prototype
    * Stephen - Background Section
    * Alasdair - Database Tables + Dummy data
-   * Wei -
-   * Andrei -
+   * Wei - Paypal. 
+   * Andrei - Registration stuff
 
 
 == Specific Pages ==
