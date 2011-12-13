@@ -8,8 +8,9 @@ class Auth extends CI_Controller {
 
 		$this->load->helper('string');
 
-		// $this->load->library('tank_auth');
 		$this->load->library('form_validation');
+		$this->load->library('tank_auth');
+		$this->lang->load('tank_auth');
 	}
 
 
