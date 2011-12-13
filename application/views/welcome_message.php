@@ -87,7 +87,6 @@ elit.</p>
   <div class="span-one-third" style="text-align:center">
     <p><a id="register-submit" class="btn" href="#" data-controls-modal="modal-from-dom-register-message" 
               data-backdrop="true" data-keyboard="true">Get your quote! &raquo;</a></p>
-    <input type="submit" class="btn primary" value="Get your quote!">
   </div>
   <div class="span-one-third">&nbsp;</div>
   <!--<div class="span-one-third">Quote</div>-->
