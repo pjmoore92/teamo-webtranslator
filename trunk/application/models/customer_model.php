@@ -6,7 +6,7 @@ class Customer_model extends CI_Model{
     
     public function __construct(){
         parent::__construct();
-                // $this->load->database();
+        $this->load->database();
     }
 
     public function registerCustomer($input){
@@ -20,13 +20,14 @@ class Customer_model extends CI_Model{
 
         if($this->db->insert($this->table, $data))
             return TRUE;
-        else return FALSE;
+        else
+            return FALSE;
     }
 
     public function getAllCustomers(){
-        $query = $this->db->get($this->table);
+        $query = $this->db->query("SELECT * FROM `{$this->table}`");
         
-        if ($query->num_rows() > 0) return $query->row();
+        if ($query->num_rows() > 0) return $query->result();
         return NULL;
     }
 }
