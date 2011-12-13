@@ -14,7 +14,9 @@ class Testing extends CI_Controller{
 			echo 'No customers registered';
 		else{
 			foreach($customers as $customer){
-				print_r($customer);
+				echo $customer->title . ' ' . $customer->fullName . ', ' .
+				$customer->email . ', ' . $customer->referenceStr . ', ' .
+				$customer->active .'<br />';
 			}
 		}
 	}
