@@ -12,4 +12,3 @@ $lang['login.form'] = "Login Form";
 $lang['login.email'] = "Your E-mail Address";
 $lang['login.ref'] = "Your Reference Code";
 $lang['login.reflost'] = "I can't find my reference code";
-?> 
