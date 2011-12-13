@@ -19,6 +19,7 @@ class Welcome extends CI_Controller {
 	 */
 	public function index()
 	{
+                $this->lang->load('common');
                 $this->template->set('title', '');
                 $this->template->load('template', 'welcome_message');
 	}

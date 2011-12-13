@@ -36,21 +36,19 @@
     <div class="topbar">
       <div class="fill">
         <div class="container">
-          <?php echo anchor('welcome', 'Bethel Translations', 'class="brand"'); ?>
+          <?php echo anchor('welcome', lang('company.name'), 'class="brand"'); ?>
           <ul class="nav">
-            <li class="active"><?php echo anchor('welcome', 'Home'); ?></li>
-            <li><?php echo anchor('welcome/about', 'About'); ?></li>
-            <li><?php echo anchor('welcome/testimonials', 'Testimonials'); ?></li>
-            <li><?php echo anchor('welcome/contact', 'Contact'); ?></li>
+            <li class="active"><?php echo anchor('welcome', lang('nav.home')); ?></li>
+            <li><?php echo anchor('welcome/about', lang('nav.about')); ?></li>
+            <li><?php echo anchor('welcome/testimonials', lang('nav.testimonials')); ?></li>
+            <li><?php echo anchor('welcome/contact', lang('nav.contact')); ?></li>
           </ul>
           <ul class="secondary-nav">
             <li class="dropdown" data-dropdown="dropdown">
-              <a href="#" class="dropdown-toggle">Login</a>
+            <a href="#" class="dropdown-toggle"><?php echo lang('nav.login') ?></a>
               <ul class="dropdown-menu">
                 <li><a href="#" data-controls-modal="modal-from-dom-clients" 
               data-backdrop="true" data-keyboard="true">Clients</a></li>
-              <li><a href="#" data-controls-modal="modal-from-dom-admin" 
-              data-backdrop="true" data-keyboard="true">Admin</a></li>
               </ul>
             </li>
           </ul>
@@ -61,17 +59,17 @@
     <div id="modal-from-dom-clients" class="modal hide fade">
       <div class="modal-header">
         <a href="#" class="close">&times;</a>
-        <h3>{login_form}</h3>
+        <h3><?php echo lang('login.form') ?></h3>
       </div>
       <div class="modal-body">
         <p>
           <form>
-              <label for="login-email">{login_email}</label>
+              <label for="login-email"><?php echo lang('login.email') ?></label>
               <div class="input">
                 <input class="xlarge span4" id="login-email" name="login-email" size="30" type="text" />
               </div>
               
-              <label for="login-ref-code">{login_ref}</label>
+              <label for="login-ref-code"><?php echo lang('login.refcode') ?></label>
               <div class="input">
                 <input class="xlarge span4" id="login-ref-code" name="login-ref-code" size="30" type="password" />
               </div>
@@ -80,33 +78,7 @@
       </div>
       <div class="modal-footer">
         <a href="dashboard/client/index.html" class="btn primary">Go!</a>
-        <a href="#" class="btn secondary">{login_reflost}</a>
-      </div>
-    </div>
-
-    <div id="modal-from-dom-admin" class="modal hide fade">
-      <div class="modal-header">
-        <a href="#" class="close">&times;</a>
-        <h3>Login form</h3>
-      </div>
-      <div class="modal-body">
-        <p>
-          <form>
-              <label for="login-email">{login_email}</label>
-              <div class="input">
-                <input class="xlarge span4" id="login-email" name="login-email" size="30" type="text" />
-              </div>
-              
-              <label for="login-ref-code">{login_ref}</label>
-              <div class="input">
-                <input class="xlarge span4" id="login-ref-code" name="login-ref-code" size="30" type="password" />
-              </div>
-          </form>
-        </p>
-      </div>
-      <div class="modal-footer">
-        <a href="dashboard/admin/index.html" class="btn primary">Go!</a>
-        <a href="#" class="btn secondary">{login_reflost}</a>
+        <a href="#" class="btn secondary"><?php echo lang('login.reflost') ?></a>
       </div>
     </div>
     <p/>
@@ -118,7 +90,7 @@
       <p>&copy; <?php 
         $copyYear = 2011; 
         $curYear = date('Y'); 
-        echo $copyYear . (($copyYear != $curYear) ? '-' . $curYear : ''); ?> {company_name}
+        echo $copyYear . (($copyYear != $curYear) ? '-' . $curYear : '') .' '.lang('company.name') ?> 
       </p>
     </footer>
     </div>
