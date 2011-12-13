@@ -69,7 +69,7 @@
                 <input class="xlarge span4" id="login-email" name="login-email" size="30" type="text" />
               </div>
               
-              <label for="login-ref-code"><?php echo lang('login.refcode') ?></label>
+              <label for="login-ref-code"><?php echo lang('login.ref') ?></label>
               <div class="input">
                 <input class="xlarge span4" id="login-ref-code" name="login-ref-code" size="30" type="password" />
               </div>
