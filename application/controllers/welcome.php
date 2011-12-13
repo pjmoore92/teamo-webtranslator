@@ -2,12 +2,6 @@
 
 class Welcome extends CI_Controller {
 
-        function Welcome() {
-                parent::Controller();
-                        # Load language
-                        $this->lang->load('example', 'english');
-        }
-
 	/**
 	 * Index Page for this controller.
 	 *
