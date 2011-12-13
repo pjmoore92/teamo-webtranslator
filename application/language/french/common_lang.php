@@ -1,5 +1,6 @@
 <?php
 $lang['company.name'] = "Bethel Translations";
+$lang['helloWorld'] = "Bonjour, tout le monde!";
 /**/
 $lang['nav.home'] = "Home";
 $lang['nav.login'] = "Se connecter";
