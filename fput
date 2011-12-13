@@ -1,0 +1,8 @@
+#!/bin/bash
+# you must add the following to your ~/.netrc file
+# machine ftp.claddach-kirkibost.org login tp3 password 6xx2be1qpv
+
+# you must apt-get install wput
+
+# run this command in the ROOT of your svn export
+svn status | grep ^M | cut -c9- | xargs -I '{}' wput ftp://ftp.claddach-kirkibost.org/'{}'
