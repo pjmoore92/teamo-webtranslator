@@ -121,7 +121,7 @@ elit.</p>
       var email = $('#register-email').val();
 
       $.post(
-        '<?php echo base_url("/en/register/index"); ?>',/*FIXME*/
+        '<?php echo base_url("/en/auth/register"); ?>',/*FIXME*/
         {'name' : name, 'email' : email },
         function(data){
           if(!data.error){
