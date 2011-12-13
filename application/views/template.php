@@ -61,17 +61,17 @@
     <div id="modal-from-dom-clients" class="modal hide fade">
       <div class="modal-header">
         <a href="#" class="close">&times;</a>
-        <h3>Login form</h3>
+        <h3>{login_form}</h3>
       </div>
       <div class="modal-body">
         <p>
           <form>
-              <label for="login-email">Your e-mail:</label>
+              <label for="login-email">{login_email}</label>
               <div class="input">
                 <input class="xlarge span4" id="login-email" name="login-email" size="30" type="text" />
               </div>
               
-              <label for="login-ref-code">Your reference code:</label>
+              <label for="login-ref-code">{login_ref}</label>
               <div class="input">
                 <input class="xlarge span4" id="login-ref-code" name="login-ref-code" size="30" type="password" />
               </div>
@@ -80,7 +80,7 @@
       </div>
       <div class="modal-footer">
         <a href="dashboard/client/index.html" class="btn primary">Go!</a>
-        <a href="#" class="btn secondary">I can't find my reference code</a>
+        <a href="#" class="btn secondary">{login_reflost}</a>
       </div>
     </div>
 
@@ -92,12 +92,12 @@
       <div class="modal-body">
         <p>
           <form>
-              <label for="login-email">Your e-mail:</label>
+              <label for="login-email">{login_email}</label>
               <div class="input">
                 <input class="xlarge span4" id="login-email" name="login-email" size="30" type="text" />
               </div>
               
-              <label for="login-ref-code">Your reference code:</label>
+              <label for="login-ref-code">{login_ref}</label>
               <div class="input">
                 <input class="xlarge span4" id="login-ref-code" name="login-ref-code" size="30" type="password" />
               </div>
@@ -106,7 +106,7 @@
       </div>
       <div class="modal-footer">
         <a href="dashboard/admin/index.html" class="btn primary">Go!</a>
-        <a href="#" class="btn secondary">I can't find my reference code</a>
+        <a href="#" class="btn secondary">{login_reflost}</a>
       </div>
     </div>
     <p/>
@@ -115,7 +115,11 @@
     <div class="container"> <!--FIXME is this needed? -->
       <div id="contents"><?= $contents ?></div>
       <footer>
-        <p>Bethel Translations 2011</p>
+      <p>&copy; <?php 
+        $copyYear = 2011; 
+        $curYear = date('Y'); 
+        echo $copyYear . (($copyYear != $curYear) ? '-' . $curYear : ''); ?> {company_name}
+      </p>
     </footer>
     </div>
 
