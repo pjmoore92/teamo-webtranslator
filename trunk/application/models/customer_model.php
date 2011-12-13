@@ -22,6 +22,13 @@ class Customer_model extends CI_Model{
             return TRUE;
         else return FALSE;
     }
+
+    public function getAllCustomers(){
+        $query = $this->db->get($this->table);
+        
+        if ($query->num_rows() > 0) return $query->row();
+        return NULL;
+    }
 }
 
 /* End of file customer_model.php */
