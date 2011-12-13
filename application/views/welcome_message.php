@@ -121,10 +121,10 @@ elit.</p>
       var email = $('#register-email').val();
 
       $.post(
-        '<?php echo base_url("index.php/register/index"); ?>',/*FIXME*/
+        '<?php echo base_url("/en/register/index"); ?>',/*FIXME*/
         {'name' : name, 'email' : email },
         function(data){
-          if(data){
+          if(!data.error){
             var message = $('\
               <p>\
                 Name: <span class="name"></span><br />\
@@ -143,11 +143,11 @@ elit.</p>
           }
           else{
             $('#modal-from-dom-register-message .modal-body p')
-              .html('Whoopsies! Something\'s not right!');
+              .html('Whoopsies! Something\'s not right!<br />DEBUGGING: ' + data.error);
+              /* FIXME */
           }
-          // alert(data);
         },
-        'json'
+        "json"
       );
     });
   });

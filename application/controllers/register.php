@@ -28,7 +28,7 @@ class Register extends CI_Controller {
 		
 		// $this->load->database();
 
-		$this->load->library('tank_auth');
+		// $this->load->library('tank_auth');
 		$this->load->library('form_validation');
 	}
 
@@ -36,13 +36,13 @@ class Register extends CI_Controller {
 
 		//check if request was AJAX or not
 		if(!$this->input->is_ajax_request())
-			redirect('');
+			// redirect('');
+			echo 'lawl';
 		else{
-
 			$this->form_validation->set_rules(
 				'name',
 				'Name',
-				'trim|required|alpha_dash'
+				'trim|required|callback__alphadash_space)'
 			);
 			$this->form_validation->set_rules(
 				'email',
@@ -52,7 +52,7 @@ class Register extends CI_Controller {
 			/* FIXME add is_unique[customer.email] */
 
 			if($this->form_validation->run() == FALSE)
-				die('');
+				echo json_encode(array('error'=>'form validation error'));
 			else{
 				$name = $this->input->post('name');
 				$email = $this->input->post('email');
@@ -64,10 +64,15 @@ class Register extends CI_Controller {
 				$this->load->model('customer_model');
 				if($this->customer_model->registerCustomer($arr))
 					echo json_encode($arr);
-				else die(array('name'=>'model error'));
+				else
+					echo json_encode(array('error'=>'model error'));
 			}
 		}
 	}
+
+	private function _alpha_dash_space($str){
+        return ( ! preg_match("/^([-a-z_ ])+$/i", $str)) ? FALSE : TRUE;
+    } 
 }
 
 /* End of file register.php */
