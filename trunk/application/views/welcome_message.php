@@ -1,7 +1,7 @@
 <?php if ( ! defined('BASEPATH')) exit('Access denied'); ?>
 <!-- TODO horizontal sliding Ads a la BBC? -->
 <div class="hero-unit">
-<h1>Hello, world!</h1>
+<h1><?php echo lang('helloWorld') ?></h1>
 <p>Vestibulum id ligula porta felis euismod semper. Integer posuere erat
 a ante venenatis dapibus posuere velit aliquet. Duis mollis, est non
 commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec
