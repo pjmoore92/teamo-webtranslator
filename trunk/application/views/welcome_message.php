@@ -1,5 +1,4 @@
 <?php if ( ! defined('BASEPATH')) exit('Access denied'); ?>
-
 <!-- TODO horizontal sliding Ads a la BBC? -->
 <div class="hero-unit">
 <h1>Hello, world!</h1>

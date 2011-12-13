@@ -2,10 +2,10 @@
 $lang['company.name'] = "Bethel Translations";
 /**/
 $lang['nav.home'] = "Home";
-$lang['nav.login'] = "Login";
-$lang['nav.about'] = "About";
-$lang['nav.testimonials'] = "Testimonials";
-$lang['nav.contact'] = "Contact";
+$lang['nav.login'] = "Se connecter";
+$lang['nav.about'] = "Informazioni";
+$lang['nav.testimonials'] = "Testimonianze";
+$lang['nav.contact'] = "Contatto";
 /**/
 $lang['login.form'] = "Login Form";
 $lang['login.email'] = "Your E-mail Address";

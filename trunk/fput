@@ -10,6 +10,7 @@
 
 if [ -z $1 ]; then
         svn status | grep ^M | cut -c9- | xargs -I '{}' wput -qu '{}' ftp://ftp.claddach-kirkibost.org/'{}'
+        svn status | grep ^A | cut -c9- | xargs -I '{}' wput -qu '{}' ftp://ftp.claddach-kirkibost.org/'{}'
 else
         wput -u $1 ftp://ftp.claddach-kirkibost.org/$1
 fi
