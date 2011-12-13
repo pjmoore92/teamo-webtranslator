@@ -30,6 +30,11 @@
    * put the latest DB structure up on the wiki ?
    * (get started on the) [http://codeigniter.com/user_guide/general/models.html Model] functions
 
+== Tue, 13Dec ==
+   * WOOP! progress:
+       * multilingual website
+       * user registration works (no user confirmation or login yet, though)
+
 == Wed, 14Dec ==
    * Create list of things to discuss at meeting with Joelle tomorrow.
 
