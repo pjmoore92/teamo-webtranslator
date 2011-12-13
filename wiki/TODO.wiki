@@ -7,7 +7,7 @@
    * ~~set up repo~~
    * ~~create the MySQL tables~~
    * Fix Relationships in tables
-   * write a nice e-mail to Joelle explaining her the process and asking her whatever questions we still have
+   * ~~write a nice e-mail to Joelle explaining her the process and asking her whatever questions we still have~~ - Stephen
    * update the prototype (added the new pages; still have to update the dashboards - add left sidebar) - Andrei
    * ~~ER Diagrams - Paul~~
    * nicely formatted sequence [Diagrams diagrams] - Andrei
@@ -29,6 +29,12 @@
       * final design - are we going to use the current design ?
    * put the latest DB structure up on the wiki ?
    * (get started on the) [http://codeigniter.com/user_guide/general/models.html Model] functions
+
+== Wed, 15Dec ==
+   * Create list of things to discuss at meeting with Joelle tomorrow.
+
+== Thurs, 16Dec ==
+   * Meeting with Joelle at KFC Jamaica St, Glasgow, 2pm. 
 
 == JOBS ==
    * Paul - Finish Prototype
