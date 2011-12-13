@@ -25,7 +25,7 @@ class Welcome extends CI_Controller {
 
 	public function about()
 	{
-                $this->template->set('title', 'About');
+                $this->template->set('title', 'About -');
                 $this->template->load('template', 'about');
 	}
 
