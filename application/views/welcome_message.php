@@ -13,7 +13,7 @@ elit.</p>
 <!-- Example row of columns -->
 <div class="row">
   <div class="span-one-third" style="text-align:center">
-    <h2>Input your info</h2>
+  <h2><?php echo lang('upload.details') ?></h2>
     <!--<p>Etiam porta sem malesuada magna mollis euismod. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</p>-->
     <p>
     <form>
@@ -30,7 +30,7 @@ elit.</p>
     </p>
   </div>
   <div class="span-one-third" style="text-align:center">
-    <h2>Upload your docs</h2>
+    <h2><?php echo lang('upload.browse') ?></h2>
      <!--<p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>-->
      <p>
      <form>
@@ -55,7 +55,7 @@ elit.</p>
      </p>
  </div>
   <div class="span-one-third" style="text-align:center">
-    <h2>Set requirements</h2>
+    <h2><?php echo lang('upload.setreqs') ?></h2>
     <!--<p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper.</p>-->
     <p>
     <form>
