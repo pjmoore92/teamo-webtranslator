@@ -5,4 +5,12 @@
 # you must apt-get install wput
 
 # run this command in the ROOT of your svn export
-svn status | grep ^M | cut -c9- | xargs -I '{}' wput ftp://ftp.claddach-kirkibost.org/'{}'
+# or to upload certain files use args
+# eg fput application/controllers/welcome.php
+
+if [ -z $1 ]; then
+        svn status | grep ^M | cut -c9- | xargs -I '{}' wput ftp://ftp.claddach-kirkibost.org/'{}'
+else
+        wput $1 ftp://ftp.claddach-kirkibost.org/$1
+fi
+
