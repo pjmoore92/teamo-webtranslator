@@ -73,6 +73,7 @@ elit.</p>
           <select class="medium" name="register-currency" id="register-currency-select">
             <option>GBP &pound;</option>
             <option>EUR &euro;</option>
+            <option>USD &usdollar;</option>
           </select>
         </div>
     </form>
