@@ -47,17 +47,25 @@ class Customer_model extends CI_Model{
         }
         $this->db->where('active', 0);
         $query = $this->db->get($this->table);
-        echo $this->db->last_query();
+        
         if ($query->num_rows() == 1) {
 
             $this->db->set('active', 1);
             $this->db->set('new_email_key', NULL);
-            $this->db->where('id', $user_id);
+            $this->db->where('customerID', $user_id);
             $this->db->update($this->table);
 
             return TRUE;
         }
         return FALSE;
+    }
+
+    public function get_user_by_email($email){
+        $this->db->where('LOWER(email)=', strtolower($email));
+
+        $query = $this->db->get($this->table);
+        if ($query->num_rows() == 1) return $query->row();
+        return NULL;
     }
 }
 

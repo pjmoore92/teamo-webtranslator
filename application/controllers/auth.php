@@ -77,18 +77,16 @@ class Auth extends CI_Controller {
 	 * @return void
 	 */
 	function activate(){
-		$user_id		= $this->uri->segment(3);
-		$new_email_key	= $this->uri->segment(4);
+		$user_id		= $this->uri->segment(4);
+		$new_email_key	= $this->uri->segment(5);
 
 		// Activate user
 		if ($this->tank_auth->activateCustomer($user_id, $new_email_key)) {
-			// echo 'WOOHOO';
 			// success
 			$this->tank_auth->logout();
 			$this->_show_message($this->lang->line('auth_message_activation_completed').' '.anchor('auth/login/', 'Login'));
 
 		} else {
-			// echo ':<';
 			// fail
 			$this->_show_message($this->lang->line('auth_message_activation_failed'));
 		}
@@ -125,6 +123,7 @@ class Auth extends CI_Controller {
 	 */
 	function _show_message($message){
 		$this->session->set_flashdata('message', $message);
+		echo $message;
 		// redirect('/auth/');
 	}
 
