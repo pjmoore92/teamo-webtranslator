@@ -12,7 +12,7 @@
  */
 class Users extends CI_Model
 {
-	private $table_name			= 'users';			// user accounts
+	private $table_name			= 'customer';			// user accounts
 	private $profile_table_name	= 'user_profiles';	// user profiles
 
 	function __construct()
@@ -112,7 +112,7 @@ class Users extends CI_Model
 	{
 		$this->db->select('1', FALSE);
 		$this->db->where('LOWER(email)=', strtolower($email));
-		$this->db->or_where('LOWER(new_email)=', strtolower($email));
+		//$this->db->or_where('LOWER(new_email)=', strtolower($email));
 
 		$query = $this->db->get($this->table_name);
 		return $query->num_rows() == 0;
