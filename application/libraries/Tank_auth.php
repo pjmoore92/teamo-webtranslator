@@ -29,6 +29,7 @@ class Tank_auth
 		$this->ci->load->library('session');
 		$this->ci->load->database();
 		$this->ci->load->model('tank_auth/users');
+		$this->ci->load->model('customer_model');
 
 		// Try to autologin
 		$this->autologin();
@@ -194,6 +195,41 @@ class Tank_auth
 		return NULL;
 	}
 
+	/*
+	 * Register a new user. based on create_user,
+	 * but modified for the customer_model
+	 *
+	 */
+	function registerCustomer($name, $email, $password, $email_activation){
+		
+		if (!$this->ci->users->is_email_available($email)) {
+			$this->error = array('email' => 'auth_email_in_use');
+
+		} else {
+			// Hash password using phpass
+			$hasher = new PasswordHash(
+					$this->ci->config->item('phpass_hash_strength', 'tank_auth'),
+					$this->ci->config->item('phpass_hash_portable', 'tank_auth'));
+			$hashed_password = $hasher->HashPassword($password);
+
+			$data = array(
+				'fullName'		=> $name,
+				'referenceStr'	=> $hashed_password,
+				'email'			=> $email
+			);
+
+			if ($email_activation) {
+				$data['new_email_key'] = md5(rand().microtime());
+			}
+			if (!is_null($res = $this->ci->customer_model->registerCustomer($data, !$email_activation))) {
+				$data['user_id'] = $res['user_id'];
+				$data['password'] = $password;
+				return $data;
+			}
+		}
+		return NULL;
+	}
+
 	/**
 	 * Check if username available for registering.
 	 * Can be called for instant form validation.
@@ -270,6 +306,14 @@ class Tank_auth
 		}
 		return FALSE;
 	}
+
+	function activateCustomer($user_id, $activation_key, $activate_by_email = TRUE){
+		if ((strlen($user_id) > 0) AND (strlen($activation_key) > 0)) {
+			return $this->ci->customer_model->activateCustomer($user_id, $activation_key, $activate_by_email);
+		}
+		return FALSE;
+	}
+	
 
 	/**
 	 * Set new password key for user and return some data about user:
