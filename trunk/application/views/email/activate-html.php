@@ -17,7 +17,7 @@
 
 						<big style="font: 16px/18px Arial, Helvetica, sans-serif;">
 							<b>
-								<a href="<?php echo site_url('/auth/activate/'.$user_id.'/'.$new_email_key); ?>" style="color: #3366cc;">Finish your registration...</a>
+								<a href="<?php echo site_url('auth/activate/'.$user_id.'/'.$new_email_key); ?>" style="color: #3366cc;">Finish your registration...</a>
 							</b>
 						</big>
 
@@ -27,7 +27,7 @@
 						Link doesn't work? Copy the following link to your browser address bar:<br />
 						
 						<nobr>
-							<a href="<?php echo site_url('/auth/activate/'.$user_id.'/'.$new_email_key); ?>" style="color: #3366cc;"><?php echo site_url('auth/activate/'.$user_id.'/'.$new_email_key); ?></a>
+							<a href="<?php echo site_url('auth/activate/'.$user_id.'/'.$new_email_key); ?>" style="color: #3366cc;"><?php echo site_url('auth/activate/'.$user_id.'/'.$new_email_key); ?></a>
 						</nobr>
 
 						<br />
@@ -40,6 +40,7 @@
 						
 						<?php if (strlen($name) > 0) { echo $name; ?><br /><?php } ?>
 						Your email address: <?php echo $email; ?><br />
+						Your client reference code: <strong><?php echo $refcode; ?></strong><br />
 						<?php if (isset($password)) { /* ?>Your password: <?php echo $password; ?><br /><?php */ } ?>
 						
 						<br />

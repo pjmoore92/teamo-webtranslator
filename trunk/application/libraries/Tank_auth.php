@@ -63,19 +63,19 @@ class Tank_auth
 				$hasher = new PasswordHash(
 						$this->ci->config->item('phpass_hash_strength', 'tank_auth'),
 						$this->ci->config->item('phpass_hash_portable', 'tank_auth'));
-				if ($hasher->CheckPassword($password, $user->password)) {		// password ok
+				if ($hasher->CheckPassword($password, $user->referenceStr)) {		// password ok
 
-					if ($user->banned == 1) {									// fail - banned
+					/*if ($user->banned == 1) {									// fail - banned
 						$this->error = array('banned' => $user->ban_reason);
 
-					} else {
+					} else {*/
 						$this->ci->session->set_userdata(array(
-								'user_id'	=> $user->id,
-								'username'	=> $user->username,
-								'status'	=> ($user->activated == 1) ? STATUS_ACTIVATED : STATUS_NOT_ACTIVATED,
+								'user_id'	=> $user->customerID,
+								'username'	=> '',
+								'status'	=> ($user->active == 1) ? STATUS_ACTIVATED : STATUS_NOT_ACTIVATED,
 						));
 
-						if ($user->activated == 0) {							// fail - not activated
+						if ($user->active == 0) {							// fail - not activated
 							$this->error = array('not_activated' => '');
 
 						} else {												// success
@@ -86,12 +86,12 @@ class Tank_auth
 							$this->clear_login_attempts($login);
 
 							$this->ci->users->update_login_info(
-									$user->id,
+									$user->customerID,
 									$this->ci->config->item('login_record_ip', 'tank_auth'),
 									$this->ci->config->item('login_record_time', 'tank_auth'));
 							return TRUE;
 						}
-					}
+					//} for banned
 				} else {														// fail - wrong password
 					$this->increase_login_attempt($login);
 					$this->error = array('password' => 'auth_incorrect_password');
