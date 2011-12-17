@@ -83,6 +83,7 @@ CREATE TABLE IF NOT EXISTS `note` (
   `jobID` int(11) NOT NULL,
   `created` timestamp NOT NULL default CURRENT_TIMESTAMP,
   `text` text NOT NULL,
+  `starred` tinyint(1) NOT NULL default '0',
   PRIMARY KEY (`noteID`),
   KEY `idx_note` (`jobID`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
