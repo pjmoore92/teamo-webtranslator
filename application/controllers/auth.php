@@ -118,7 +118,7 @@ class Auth extends CI_Controller {
 
 				$name =  $this->form_validation->set_value('name');
 				$email = $this->form_validation->set_value('email');
-				$refcode = random_string('alpha', 8);
+				$refcode = strtoupper(random_string('alpha', 8));
 
 				if (!is_null(
 						$data = $this->tank_auth->registerCustomer(
