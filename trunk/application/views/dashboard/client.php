@@ -17,7 +17,7 @@
       <div class="content">
         <div class="page-header">
           <h1>Client dashboard <small>Supporting text or tagline</small></h1>
-          <h2>Hello, <?php echo $email; ?>!</h2>
+          <h2>Hello, <?php echo $name; ?>!</h2>
 
           <!--<div class="alert-message warning fade in" data-alert="alert" >
             <a class="close" href="#">&times;</a>

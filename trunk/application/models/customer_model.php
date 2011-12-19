@@ -15,6 +15,14 @@ class Customer_model extends CI_Model{
             return FALSE;
     }
 
+    public function get_customer_name($id){
+        $this->db->where('customerID', $id);
+        $query = $this->db->get($this->_table);
+
+        if($query->num_rows() == 1) return $query->row();
+        return NULL;
+    }
+
     public function getAllCustomers(){
         $query = $this->db->query("SELECT * FROM `{$this->table}`");
         
