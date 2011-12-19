@@ -171,14 +171,6 @@ class Auth extends CI_Controller
 
 						$data['site_name'] = $this->config->item('website_name', 'tank_auth');
 
-						die(json_encode(
-							array(
-								'name' => $this->form_validation->set_value('name'),
-								'email' => $this->form_validation->set_value('email'),
-								'refcode' => $refcode
-							)
-						));
-
 						if ($email_activation) {									// send "activate" email
 							$data['activation_period'] = $this->config->item('email_activation_expire', 'tank_auth') / 3600;
 
@@ -186,7 +178,7 @@ class Auth extends CI_Controller
 
 							unset($data['password']); // Clear password (just for any case)
 
-							$this->_show_message($this->lang->line('auth_message_registration_completed_1'));
+							// $this->_show_message($this->lang->line('auth_message_registration_completed_1'));
 
 						} else {
 							if ($this->config->item('email_account_details', 'tank_auth')) {	// send "welcome" email
@@ -195,9 +187,22 @@ class Auth extends CI_Controller
 							}
 							unset($data['password']); // Clear password (just for any case)
 
-							$this->_show_message($this->lang->line('auth_message_registration_completed_2').' '.anchor('/auth/login/', 'Login'));
+							// $this->_show_message($this->lang->line('auth_message_registration_completed_2').' '.anchor('/auth/login/', 'Login'));
 						}
+
+						die(json_encode(
+							array(
+								'name' => $this->form_validation->set_value('name'),
+								'email' => $this->form_validation->set_value('email'),
+								'refcode' => $refcode
+							)
+						));
 					} else {
+						die(json_encode(
+							array(
+								'error' => 'DB error. could not create user account.'
+							)
+						));
 						$errors = $this->tank_auth->get_error_message();
 						foreach ($errors as $k => $v)	$data['errors'][$k] = $this->lang->line($v);
 					}
@@ -215,7 +220,7 @@ class Auth extends CI_Controller
 				$data['use_username'] = $use_username;
 				$data['captcha_registration'] = $captcha_registration;
 				$data['use_recaptcha'] = $use_recaptcha;
-				$this->load->view('auth/register_form', $data);
+				// $this->load->view('auth/register_form', $data);
 			}
 	}
 
