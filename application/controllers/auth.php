@@ -202,6 +202,16 @@ class Auth extends CI_Controller
 							// $this->_show_message($this->lang->line('auth_message_registration_completed_2').' '.anchor('/auth/login/', 'Login'));
 						}
 
+						//create the entry in the 'customer' table
+						$this->load->model('customer_model');
+						$this->customer_model->add_customer(
+							array(
+								'customerID' => $data['user_id'],
+								'fullName' => $this->form_validation->set_value('name'),
+								'title' => 'Mr'
+							)
+						);
+
 						die(json_encode(
 							array(
 								'name' => $this->form_validation->set_value('name'),
@@ -286,9 +296,6 @@ class Auth extends CI_Controller
 		// Activate user
 		if ($this->tank_auth->activate_user($user_id, $new_email_key)) {		// success
 			$this->tank_auth->logout();
-
-			// $this->load->model('customer_model');
-			// $this->customer_model->
 
 			$this->_show_message($this->lang->line('auth_message_activation_completed').' '.anchor('/auth/login/', 'Login'));
 
