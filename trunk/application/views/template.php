@@ -44,13 +44,34 @@
             <li><?php echo anchor('welcome/contact', lang('nav.contact')); ?></li>
           </ul>
           <ul class="secondary-nav">
+
+          <?php if(!$this->tank_auth->is_logged_in()): ?>
+
             <li class="dropdown" data-dropdown="dropdown">
-            <a href="#" class="dropdown-toggle"><?php echo lang('nav.login') ?></a>
+              <a href="#" class="dropdown-toggle">
+                <?php echo lang('nav.login') ?>
+              </a>
               <ul class="dropdown-menu">
-                <li><a href="#" data-controls-modal="modal-from-dom-clients" 
-              data-backdrop="true" data-keyboard="true">Clients</a></li>
+                <li>
+                  <a href="#" data-controls-modal="modal-from-dom-clients" 
+              data-backdrop="true" data-keyboard="true">Clients</a>
+                </li>
               </ul>
             </li>
+            
+          <?php else: ?>
+            
+            <li class="dropdown" data-dropdown="dropdown">
+              <a href="#" class="dropdown-toggle">
+                <?php //echo lang('nav.logout') ?>Logout
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <?php echo anchor('auth/logout', 'Logout'); ?>
+                </li>
+              </ul>
+            </li>
+          <?php endif; ?>
           </ul>
         </div>
       </div>
