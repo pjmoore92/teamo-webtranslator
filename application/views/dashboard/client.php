@@ -9,7 +9,7 @@
           </ul>
           <h5>Other</h5>
           <ul>
-            <li><a href="../../index.html">Logout</a></li>
+            <li><?php echo anchor('auth/logout', 'Logout'); ?></li>
           </ul>
         </div>
       </div>
