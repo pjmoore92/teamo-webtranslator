@@ -53,8 +53,9 @@
               </a>
               <ul class="dropdown-menu">
                 <li>
-                  <a href="#" data-controls-modal="modal-from-dom-clients" 
-              data-backdrop="true" data-keyboard="true">Clients</a>
+                  <!-- <a href="#" data-controls-modal="modal-from-dom-clients" 
+              data-backdrop="true" data-keyboard="true">Clients</a> -->
+                  <?php echo anchor('auth/login', 'Clients'); ?>
                 </li>
               </ul>
             </li>
@@ -87,22 +88,39 @@
           <form>
               <label for="login-email"><?php echo lang('login.email') ?></label>
               <div class="input">
-                <input class="xlarge span4" id="login-email" name="login-email" size="30" type="text" />
+                <input class="xlarge span4" id="login-email" name="login" size="30" type="text" />
               </div>
               
               <label for="login-ref-code"><?php echo lang('login.ref') ?></label>
               <div class="input">
-                <input class="xlarge span4" id="login-ref-code" name="login-ref-code" size="30" type="password" />
+                <input class="xlarge span4" id="login-ref-code" name="password" size="30" type="password" />
               </div>
           </form>
         </p>
       </div>
       <div class="modal-footer">
-        <a href="dashboard/client/index.html" class="btn primary">Go!</a>
+        <input type="checkbox" name="remember" value="1" id="remember" style="margin:0;padding:0">
+        <label for="remember">Remember me</label>
+        <?php echo anchor('#', 'Go!', array('id' => 'login-submit','class'=>'btn primary')); ?>
         <a href="#" class="btn secondary"><?php echo lang('login.reflost') ?></a>
       </div>
     </div>
     <p/>
+
+    <script type="text/javascript">
+      $(document).ready(function(){
+
+        $('#login-submit').click(function(){
+          var email = $("#login-email").val();
+          var pass = $('#login-ref-code').val();
+          
+          $.post(
+          '<?php echo base_url("/en/auth/login"); ?>',/*FIXME*/
+          {'login' : email, 'password' : pass, 'remember' : 0 }
+        );
+        })
+      });
+    </script>
     <!-- END OF HEADER -->
 
     <div class="container"> <!--FIXME is this needed? -->
