@@ -37,8 +37,9 @@ class Auth extends CI_Controller
 			redirect('/auth/send_again/');
 
 		} else {
-			$data['login_by_username'] = ($this->config->item('login_by_username', 'tank_auth') AND
-					$this->config->item('use_username', 'tank_auth'));
+			$data['login_by_username'] = (
+				$this->config->item('login_by_username', 'tank_auth') AND
+				$this->config->item('use_username', 'tank_auth'));
 			$data['login_by_email'] = $this->config->item('login_by_email', 'tank_auth');
 
 			$this->form_validation->set_rules('login', 'Login', 'trim|required|xss_clean');
@@ -47,8 +48,10 @@ class Auth extends CI_Controller
 
 			// Get login for counting attempts to login
 			if ($this->config->item('login_count_attempts', 'tank_auth') AND
-					($login = $this->input->post('login'))) {
-				$login = $this->security->xss_clean($login);
+				($login = $this->input->post('login'))) {
+				
+					$login = $this->security->xss_clean($login);
+
 			} else {
 				$login = '';
 			}
@@ -56,9 +59,15 @@ class Auth extends CI_Controller
 			$data['use_recaptcha'] = $this->config->item('use_recaptcha', 'tank_auth');
 			if ($this->tank_auth->is_max_login_attempts_exceeded($login)) {
 				if ($data['use_recaptcha'])
-					$this->form_validation->set_rules('recaptcha_response_field', 'Confirmation Code', 'trim|xss_clean|required|callback__check_recaptcha');
+					$this->form_validation->set_rules(
+						'recaptcha_response_field',
+						'Confirmation Code',
+						'trim|xss_clean|required|callback__check_recaptcha');
 				else
-					$this->form_validation->set_rules('captcha', 'Confirmation Code', 'trim|xss_clean|required|callback__check_captcha');
+					$this->form_validation->set_rules(
+						'captcha',
+						'Confirmation Code',
+						'trim|xss_clean|required|callback__check_captcha');
 			}
 			$data['errors'] = array();
 
@@ -136,7 +145,10 @@ class Auth extends CI_Controller
 			} else {
 				$use_username = $this->config->item('use_username', 'tank_auth');
 				if ($use_username) {
-					$this->form_validation->set_rules('username', 'Username', 'trim|required|xss_clean|min_length['.$this->config->item('username_min_length', 'tank_auth').']|max_length['.$this->config->item('username_max_length', 'tank_auth').']|alpha_dash');
+					$this->form_validation->set_rules(
+						'username',
+						'Username',
+						'trim|required|xss_clean|min_length['.$this->config->item('username_min_length', 'tank_auth').']|max_length['.$this->config->item('username_max_length', 'tank_auth').']|alpha_dash');
 				}
 				
 				$this->form_validation->set_rules(
@@ -274,6 +286,10 @@ class Auth extends CI_Controller
 		// Activate user
 		if ($this->tank_auth->activate_user($user_id, $new_email_key)) {		// success
 			$this->tank_auth->logout();
+
+			// $this->load->model('customer_model');
+			// $this->customer_model->
+
 			$this->_show_message($this->lang->line('auth_message_activation_completed').' '.anchor('/auth/login/', 'Login'));
 
 		} else {																// fail
