@@ -166,7 +166,7 @@ class Users extends CI_Model
 			$this->db->where('id', $user_id);
 			$this->db->update($this->table_name);
 
-			$this->create_profile($user_id);
+			// $this->create_profile($user_id);
 			return TRUE;
 		}
 		return FALSE;
