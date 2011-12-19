@@ -14,9 +14,9 @@ class Client extends CI_Controller {
 
 		$user_id = $this->session->userdata('user_id');
 		
-		$this->load->model('tank_auth/users');
-		$user = $this->users->get_user_by_id($user_id, TRUE);
-		$data['email'] = $user->email;
+		$this->load->model('customer_model');
+		$user = $this->customer_model->get_customer_name($user_id);
+		$data['name'] = $user->title . '. ' . $user->fullName;
 
 		$this->template->set('title', 'Client Dashboard -');
 		$this->template->load('template', 'dashboard/client', $data);
