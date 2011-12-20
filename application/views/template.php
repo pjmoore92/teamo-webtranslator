@@ -123,8 +123,8 @@
     </script>
     <!-- END OF HEADER -->
 
-    <div class="container"> <!--FIXME is this needed? -->
-      <div id="contents"><?= $contents ?></div>
+    <div class="container-fluid">
+      <?= $contents ?>
       <footer>
       <p>&copy; <?php 
         $copyYear = 2011; 
