@@ -1,0 +1,14 @@
+#summary A list and log of modifications of the wireframes.
+
+= Wireframes =
+
+== Log ==
+=== Version 1 ===
+Date: *some time ago*
+   * first draft of the main page
+
+
+== Pages ==
+
+=== Main page ===
+https://lh4.googleusercontent.com/-rysCzJyEOGM/TwTX3bmC2wI/AAAAAAAAJdg/j9WAwz23iBw/s720/main-page.png
