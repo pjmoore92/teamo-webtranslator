@@ -1,0 +1,26 @@
+#summary The specification requirements document
+
+= Specification requirements document =
+
+
+== Overview ==
+The document is *incomplete*.
+
+This document contains the *process* through which the users of the system will go when using the system, along with a *screen by screen* specification.
+
+Other sections may be added later.
+
+== Scenarios ==
+
+
+== Process overview ==
+
+=== Client ===
+=== Administrator ===
+
+== Screen by screen specification ==
+=== Page name ===
+==== Description/Purpose ====
+Description of the page (what it does, etc).
+==== Skectch ====
+A sketch of the page done in [http://builds.balsamiq.com/b/mockups-web-demo/ balsamiq] and the XML code for it.
