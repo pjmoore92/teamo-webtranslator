@@ -11,6 +11,7 @@ This document contains the *process* through which the users of the system will 
 Other sections may be added later.
 
 == Scenarios ==
+_maybe later, if at all_
 
 
 == Process overview ==
@@ -20,7 +21,19 @@ Other sections may be added later.
 
 == Screen by screen specification ==
 === Page name ===
+==== Skectch ====
+A sketch of the page. See more info [Wireframes#Notes here].
 ==== Description/Purpose ====
 Description of the page (what it does, etc).
-==== Skectch ====
-A sketch of the page done in [http://builds.balsamiq.com/b/mockups-web-demo/ balsamiq] and the XML code for it.
+
+=== Main page ===
+
+==== Sketch ====
+https://lh5.googleusercontent.com/-3C9n2HKWSNQ/TwTvgtYWrlI/AAAAAAAAJeM/7NEBgj14TXg/s960/main-page.png
+
+==== Description ====
+This is the front page of the website.
+
+Contains:
+   * A short *guide* of how the system works
+   * The *registration form* for new users 
