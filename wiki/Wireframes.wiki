@@ -2,13 +2,45 @@
 
 = Wireframes =
 
+== Notes ==
+The `XML` code for each layout is in the repo, in the `wireframes` directory. To change a wireframe, copy the `XML` code, go to [http://builds.balsamiq.com/b/mockups-web-demo/ balsamiq], click on `Mockup > Clear mockup`, then `Import XML`. After you finish with your changes, first export the `XML` and update the repo, then `Download as PNG` and upload it somewhere on the interwebz, so you could paste the link in here. That's it.
+
+The *main page layout* wireframe contains all the common elements of the pages. The other wireframes would show only the *main content box* for that page.
+
 == Log ==
 === Version 1 ===
 Date: *some time ago*
-   * first draft of the main page
-
+   * first draft of the *[#Main_page main page]*
+=== Version 2 ===
+Date: *4th Jan 2012*
+   * updated *[#Main_page main page]*: added a short guide for the users
+   * added *[#Basic_page_layout basic page layout]*
+   * added *[#Client_dashboard client dashboard]*
 
 == Pages ==
 
+=== Basic page layout ===
+https://lh4.googleusercontent.com/-P-AxgHyhipg/TwTjz5-Qm4I/AAAAAAAAJd0/kWGWC6WSCaA/s1234/page-layout.png
+
+==== Header ====
+This section will remain unchanged on all of the pages.
+
+Contains:
+   * *Name* of the website
+   * Main *navigation menu*
+   * *Login menu*
+
+While the user is logged in, the *Login menu* would change its content, i.e.: _Login_ becomes _Logout_.
+
+==== Footer ====
+This section will remain unchanged on all of the pages.
+
+Contains:
+   * hm
+
+
 === Main page ===
-https://lh4.googleusercontent.com/-rysCzJyEOGM/TwTX3bmC2wI/AAAAAAAAJdg/j9WAwz23iBw/s720/main-page.png
+https://lh5.googleusercontent.com/-3C9n2HKWSNQ/TwTvgtYWrlI/AAAAAAAAJeM/7NEBgj14TXg/s960/main-page.png
+
+=== Client dashboard ===
+https://lh4.googleusercontent.com/-V_2Tn2OgfsM/TwT4Gm2lWeI/AAAAAAAAJeY/BsqoHNShflg/s960/client-dashboard.png
