@@ -3,6 +3,8 @@
 = Wireframes =
 
 == Notes ==
+I chose [http://builds.balsamiq.com/b/mockups-web-demo/ balsamiq] for the wireframes, because of its possibility to save the wireframes in actual code. This way we could have it under version control. Since I'm not sure how useful this would be for us, any other types of sketches (photos, scans, etc) should do.
+
 The `XML` code for each layout is in the repo, in the `wireframes` directory. To change a wireframe, copy the `XML` code, go to [http://builds.balsamiq.com/b/mockups-web-demo/ balsamiq], click on `Mockup > Clear mockup`, then `Import XML`. After you finish with your changes, first export the `XML` and update the repo, then `Download as PNG` and upload it somewhere on the interwebz, so you could paste the link in here. That's it.
 
 The *main page layout* wireframe contains all the common elements of the pages. The other wireframes would show only the *main content box* for that page.
