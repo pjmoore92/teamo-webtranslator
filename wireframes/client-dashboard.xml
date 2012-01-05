@@ -1,0 +1,80 @@
+<mockup version="1.0" skin="sketch" measuredW="1173" measuredH="690" mockupW="930" mockupH="564">
+  <controls>
+    <control controlID="181" controlTypeID="com.balsamiq.mockups::Canvas" x="243" y="126" w="930" h="564" measuredW="100" measuredH="70" zOrder="0" locked="false" isInGroup="-1">
+      <controlProperties>
+        <backgroundAlpha>1</backgroundAlpha>
+      </controlProperties>
+    </control>
+    <control controlID="185" controlTypeID="com.balsamiq.mockups::Canvas" x="258" y="162" w="163" h="227" measuredW="100" measuredH="70" zOrder="1" locked="false" isInGroup="-1">
+      <controlProperties>
+        <borderStyle>square</borderStyle>
+      </controlProperties>
+    </control>
+    <control controlID="187" controlTypeID="com.balsamiq.mockups::List" x="265" y="194" w="112" h="99" measuredW="100" measuredH="126" zOrder="2" locked="false" isInGroup="-1">
+      <controlProperties>
+        <borderStyle>none</borderStyle>
+        <hasHeader>false</hasHeader>
+        <selectedIndex>-1</selectedIndex>
+        <text>%5BSubmit%20new%20job%5D%0A%5BQuotes%5D%0A%5BTranslations%5D%0A%5BHistory%5D</text>
+      </controlProperties>
+    </control>
+    <control controlID="188" controlTypeID="com.balsamiq.mockups::Label" x="265" y="171" w="35" h="23" measuredW="35" measuredH="21" zOrder="3" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Menu</text>
+      </controlProperties>
+    </control>
+    <control controlID="189" controlTypeID="com.balsamiq.mockups::Label" x="265" y="287" w="-1" h="-1" measuredW="39" measuredH="21" zOrder="4" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Other</text>
+      </controlProperties>
+    </control>
+    <control controlID="190" controlTypeID="com.balsamiq.mockups::List" x="265" y="308" w="112" h="28" measuredW="100" measuredH="126" zOrder="5" locked="false" isInGroup="-1">
+      <controlProperties>
+        <borderStyle>none</borderStyle>
+        <hasHeader>false</hasHeader>
+        <selectedIndex>-1</selectedIndex>
+        <text>%5BLogout%5D</text>
+      </controlProperties>
+    </control>
+    <control controlID="191" controlTypeID="com.balsamiq.mockups::SubTitle" x="429" y="165" w="-1" h="-1" measuredW="179" measuredH="33" zOrder="6" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Client%20dashboard</text>
+      </controlProperties>
+    </control>
+    <control controlID="192" controlTypeID="com.balsamiq.mockups::DataGrid" x="429" y="323" w="714" h="334" measuredW="615" measuredH="129" zOrder="7" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Document%20name%20%5E%2C%20Status%2C%20Language%5Cr%28to%20%26%20from%29%2C%20ETA%2C%20Quote%0ADocname1%2C%20Client%20has%20accepted%5C%2C%20waiting%20for%20translation%2C%20English%20to%20French%2C%202011-09-01%2C%20%A3100%0ADocname1%2C%20Client%20has%20accepted%5C%2C%20waiting%20for%20translation%2C%20English%20to%20French%2C%202011-09-01%2C%20%A3100%0ADocname1%2C%20Client%20has%20accepted%5C%2C%20waiting%20for%20translation%2C%20English%20to%20French%2C%202011-09-01%2C%20%A3100</text>
+      </controlProperties>
+    </control>
+    <control controlID="201" controlTypeID="__group__" x="429" y="228" w="714" h="71" measuredW="714" measuredH="71" zOrder="8" locked="false" isInGroup="-1">
+      <groupChildrenDescriptors>
+        <control controlID="0" controlTypeID="com.balsamiq.mockups::Canvas" x="0" y="0" w="714" h="71" measuredW="100" measuredH="70" zOrder="0" locked="false" isInGroup="201">
+          <controlProperties>
+            <backgroundAlpha>0</backgroundAlpha>
+          </controlProperties>
+        </control>
+        <control controlID="1" controlTypeID="com.balsamiq.mockups::Paragraph" x="8" y="11" w="691" h="23" measuredW="200" measuredH="140" zOrder="1" locked="false" isInGroup="201">
+          <controlProperties>
+            <text>*Update%3A*%20Joelle%20has%20sent%20you%20a%20quote%20for%20*Docname%202*.%20It%20will%20cost%20you%20%A350%20and%20it%20will%20be%20ready%20on%20the%202011-09-17.</text>
+          </controlProperties>
+        </control>
+        <control controlID="2" controlTypeID="com.balsamiq.mockups::Button" x="8" y="34" w="-1" h="-1" measuredW="76" measuredH="27" zOrder="2" locked="false" isInGroup="201">
+          <controlProperties>
+            <text>I%20accept%21</text>
+          </controlProperties>
+        </control>
+        <control controlID="3" controlTypeID="com.balsamiq.mockups::Button" x="92" y="33" w="-1" h="-1" measuredW="87" measuredH="27" zOrder="3" locked="false" isInGroup="201">
+          <controlProperties>
+            <text>No%2C%20thanks%21</text>
+          </controlProperties>
+        </control>
+      </groupChildrenDescriptors>
+    </control>
+    <control controlID="202" controlTypeID="com.balsamiq.mockups::Label" x="429" y="194" w="148" h="19" measuredW="147" measuredH="24" zOrder="9" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>16</size>
+        <text>Hello%2C%20Mr.%20John%20Doe%21</text>
+      </controlProperties>
+    </control>
+  </controls>
+</mockup>
