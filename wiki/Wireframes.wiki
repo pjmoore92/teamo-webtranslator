@@ -22,27 +22,34 @@ Date: *4th Jan 2012*
 == Pages ==
 
 === Basic page layout ===
-https://lh4.googleusercontent.com/-P-AxgHyhipg/TwTjz5-Qm4I/AAAAAAAAJd0/kWGWC6WSCaA/s1234/page-layout.png
+https://lh4.googleusercontent.com/-weQEZsURee4/TwwZ1xVYsSI/AAAAAAAAJj8/OnGnAwbvjDU/s1054/myImage.png
+
+All the pages will have this basic layout.
+
+The *header* and the *footer* sections remain unchanged on all of the pages.
+
+The rest of the page's content goes in the *main content area*.
 
 ==== Header ====
-This section will remain unchanged on all of the pages.
-
 Contains:
-   * *Name* of the website
+   * *Name* of the website and/or company logo
    * Main *navigation menu*
    * *Login menu*
 
 While the user is logged in, the *Login menu* would change its content, i.e.: _Login_ becomes _Logout_.
 
 ==== Footer ====
-This section will remain unchanged on all of the pages.
-
 Contains:
    * hm
 
 
 === Main page ===
-https://lh5.googleusercontent.com/-3C9n2HKWSNQ/TwTvgtYWrlI/AAAAAAAAJeM/7NEBgj14TXg/s960/main-page.png
+https://lh4.googleusercontent.com/-mE14xHW0TdM/TwwhA2nssOI/AAAAAAAAJkI/C2f6pySP5gI/s960/myImage%252520%2525282%252529.png
+
+Contains:
+   # *Description*
+    This is a quick guide of how the service works and a few words to motivate the client to try it.
+   # *Registration* and *upload* form
 
 === Client dashboard ===
 https://lh4.googleusercontent.com/-V_2Tn2OgfsM/TwT4Gm2lWeI/AAAAAAAAJeY/BsqoHNShflg/s960/client-dashboard.png
