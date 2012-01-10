@@ -1,5 +1,9 @@
 #summary The specification requirements document
 
+_The document is intended for our client, so it should present her our solution. Also, it should be as non-technical as possible, since she is not a CS student. We probably should have sent this a long time ago, but if we do, that should be ok for next week._
+
+_It will also serve as a reference point for us further in the planning and the development process._
+
 = Specification requirements document =
 
 
