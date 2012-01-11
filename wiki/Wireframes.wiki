@@ -1,5 +1,8 @@
 #summary A list and log of modifications of the wireframes.
 
+_*Note*: (11 Jan 2012) I forgot exactly why I made this page (probably just a dump of all the wireframes), so until someone has an idea and starts changing this, this document should not be taken into consideration._
+
+
 = Wireframes =
 
 == Notes ==
