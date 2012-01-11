@@ -1,43 +1,77 @@
 #summary The specification requirements document
 
-_The document is intended for our client, so it should present her our solution. Also, it should be as non-technical as possible, since she is not a CS student. We probably should have sent this a long time ago, but if we do, that should be ok for next week._
+_The document is intended for our client, so it should present her our solution. Also, it should be as non-technical as possible, since she is not a CS student (this was funnier in my head). We probably should have sent this a long time ago, but if we do, that should be ok for next week._
 
 _It will also serve as a reference point for us further in the planning and the development process._
+
+_Here be notes on the [Wireframes#Notes wireframes]._
+
+_*Disclaimer*: the document is *not complete*. It needs more content to be added in all the sections and revised before it is finalized._
+
+_There is also a [http://goo.gl/k3fGk Google Docs] version of this document._
 
 = Specification requirements document =
 
 
-== Overview ==
-The document is *incomplete*.
+== Introduction ==
+This document is intended to describe the functionalities that the project “Website for a translator” should provide to its users.
+It contains the *process* through which the users of the system will go when using the system, along with a *screen by screen* specification.
 
-This document contains the *process* through which the users of the system will go when using the system, along with a *screen by screen* specification.
+Algorithms or any other technical details are not discussed here.
 
-Other sections may be added later.
+The graphics of the pages are shown merely to illustrate the functionality. The actual design of the system will be developed over time.
 
-== Scenarios ==
-_maybe later, if at all_
+== Product description ==
+=== Scenarios ===
+
+=== Process overview ===
+==== Client ====
+==== Administrator ====
+
+=== Screen by screen specification ===
+This section of the document will list all of the web-site’s different screens and pages along with sketches and thorough descriptions for each.
+
+==== Conventions used ====
+   * *green background* and *yellow labels* (fig. x) - used to highlight and label specific groups of content that will be referenced/explained in the document
+   * *links* (fig. x)
+   * *button* (fig. x)
+   * *dropdown* (fig. x)
+
+==== Page layout ====
+https://lh4.googleusercontent.com/-weQEZsURee4/TwwZ1xVYsSI/AAAAAAAAJj8/OnGnAwbvjDU/s1054/myImage.png
+
+All the pages have this basic layout comprised of the following sections:
+   * Header
+   * Content area
+   * Footer
+
+The *header* and the *footer* sections will remain unchanged across all pages and the rest of the content goes in the *content area*. The rest of the sketches of the pages illustrated here will only show the *content area*.
 
 
-== Process overview ==
+*Header*
 
-=== Client ===
-=== Administrator ===
+The header contains:
+   * the *name* and/or *logo* of the website;
+   * main navigation *menu*
 
-== Screen by screen specification ==
-=== Page name ===
-==== Skectch ====
-A sketch of the page. See more info [Wireframes#Notes here].
-==== Description/Purpose ====
-Description of the page (what it does, etc).
+The *menu* is a collection of links to the main areas of the website:
+   * Home (Section X)
+   * About (Section X)
+   * Testimonials (Section X)
+   * Contact (Section X)
+   * Login (Section X) - this link must stand out, since it is of a higher importance and the page linked is of a different nature than the rest, so it is separated from the others. _(this was me trying to sound smart and stuff)_
 
-=== Main page ===
 
-==== Sketch ====
-https://lh5.googleusercontent.com/-3C9n2HKWSNQ/TwTvgtYWrlI/AAAAAAAAJeM/7NEBgj14TXg/s960/main-page.png
+*Footer*
 
-==== Description ====
-This is the front page of the website.
+Suggestions for content:
+   * copyright notice, if needed
+   * links to legal documents (e.g.: Privacy policy, terms of use, etc) - http://goo.gl/qZ8yU
+   * awards or certifications (translation services related, PayPal certification)
+   * contact information (actual information or just a link to the ‘Contact’ page)
+   * link to the business’ facebook page
 
-Contains:
-   * A short *guide* of how the system works
-   * The *registration form* for new users 
+==== Home page ====
+https://lh4.googleusercontent.com/-mE14xHW0TdM/TwwhA2nssOI/AAAAAAAAJkI/C2f6pySP5gI/s960/myImage%252520%2525282%252529.png
+
+This is the front page of the website; it's what the users first see when they get there.
