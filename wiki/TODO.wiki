@@ -54,4 +54,22 @@
    * [Diagrams]
    * [Localization]
    * [Database]
-   
+
+----
+
+Woo! Happy new year!
+= 2nd Semester =
+
+
+== Plan ==
+=== Week 1 ===
+_9 Jan 2012 - 15 Jan 2012_
+   * finish drawing all the wireframes and give a comprehensive explanation for each of them
+   * finish the [SpecificationRequirements Specification Requirements Document]
+   * prepare the usability testing for *Week 2*
+   * Meeting with Karen (Thur, 12th)
+
+=== Week 2 ===
+_16 Jan 2012 - 22 Jan 2012_
+   * run the usability test
+   * process the results from the usability test
