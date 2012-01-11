@@ -73,3 +73,42 @@ _9 Jan 2012 - 15 Jan 2012_
 _16 Jan 2012 - 22 Jan 2012_
    * run the usability test
    * process the results from the usability test
+
+=== Week 3 ===
+_23 Jan 2012 - 29 Jan 2012_
+
+=== Week 4 ===
+_30 Jan 2012 - 5 Feb 2012_
+   * *Monday* - final *IWE* submission
+
+=== Week 5 ===
+_6 Feb 2012 - 12 Feb 2012_
+
+=== Week 6 ===
+_13 Feb 2012 - 19 Feb 2012_
+
+=== Week 7 ===
+_20 Feb 2012 - 26 Jan 2012_
+
+=== Week 8 ===
+_27 Feb 2012 - 4 Mar 2012_
+
+=== Week 9 ===
+_5 Mar 2012 - 11 Mar 2012_
+
+=== Week 10 ===
+_12 Mar 2012 - 18 Mar 2012_
+
+=== Week 11 ===  
+_19 Mar 2012 - 25 Mar 2012_
+
+=== Week 12 ===
+_26 Mar 2012 - 1 Apr 2012_
+
+=== Week 13 ===
+_2 Apr 2012 - 8 Apr 2012_
+   * *Friday* - demonstration
+
+=== Week 14 ===
+_9 Apr 2012 - 15 Apr 2012_
+   * *Monday* - presentation (check [https://webapps.dcs.gla.ac.uk/finallevel3.cfm schedule])
