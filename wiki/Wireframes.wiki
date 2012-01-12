@@ -22,7 +22,9 @@ The *main page layout* wireframe contains all the common elements of the pages. 
    * added *[#Basic_page_layout basic page layout]*
    * added *[#Client_dashboard client dashboard]*
 === Date: *12th Jan 2012* ===
-   * added  *[About_page About page]*
+   * added *[#About_page About page]*
+   * added *[#Contact Contact page]*
+   * added *[#Testimonials Testimonials page]*
 
 == Pages ==
 
@@ -58,6 +60,12 @@ Contains:
 
 === About page ===
 https://lh3.googleusercontent.com/-DI66lI_21pQ/Tw6qMcjzjRI/AAAAAAAAJkU/Rs_4XKHkPsk/s960/about.png
+
+=== Testimonials ===
+https://lh6.googleusercontent.com/-kgwTuXqNZFw/Tw9E3H7uaTI/AAAAAAAAJlU/M8svc4rbSY8/s960/testimonials.png
+
+=== Contact ===
+https://lh4.googleusercontent.com/-zWp-kPfmzB4/Tw9AaVTL5bI/AAAAAAAAJk8/ix50Gt1C0yI/s960/contact.png
 
 === Client dashboard ===
 https://lh4.googleusercontent.com/-V_2Tn2OgfsM/TwT4Gm2lWeI/AAAAAAAAJeY/BsqoHNShflg/s960/client-dashboard.png
