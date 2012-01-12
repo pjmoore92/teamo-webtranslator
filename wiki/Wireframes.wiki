@@ -2,6 +2,8 @@
 
 _*Note*: (11 Jan 2012) I forgot exactly why I made this page (probably just a dump of all the wireframes), so until someone has an idea and starts changing this, this document should not be taken into consideration._
 
+_*Note: (12 Jan 2012) Ok, so I remembered what this page is for. It keeps a log of the modifications that we make over time regarding the wireframes.*_
+
 
 = Wireframes =
 
@@ -13,14 +15,14 @@ The `XML` code for each layout is in the repo, in the `wireframes` directory. To
 The *main page layout* wireframe contains all the common elements of the pages. The other wireframes would show only the *main content box* for that page.
 
 == Log ==
-=== Version 1 ===
-Date: *some time ago*
+=== Date: *some time ago* ===
    * first draft of the *[#Main_page main page]*
-=== Version 2 ===
-Date: *4th Jan 2012*
+=== Date: *4th Jan 2012* ===
    * updated *[#Main_page main page]*: added a short guide for the users
    * added *[#Basic_page_layout basic page layout]*
    * added *[#Client_dashboard client dashboard]*
+=== Date: *12th Jan 2012* ===
+   * added  *[About_page About page]*
 
 == Pages ==
 
@@ -53,6 +55,9 @@ Contains:
    # *Description*
     This is a quick guide of how the service works and a few words to motivate the client to try it.
    # *Registration* and *upload* form
+
+=== About page ===
+https://lh3.googleusercontent.com/-DI66lI_21pQ/Tw6qMcjzjRI/AAAAAAAAJkU/Rs_4XKHkPsk/s960/about.png
 
 === Client dashboard ===
 https://lh4.googleusercontent.com/-V_2Tn2OgfsM/TwT4Gm2lWeI/AAAAAAAAJeY/BsqoHNShflg/s960/client-dashboard.png
