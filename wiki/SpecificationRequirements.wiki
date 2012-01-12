@@ -96,12 +96,17 @@ References:
    * http://sixrevisions.com/content-strategy/about-page-guidelines/
 
 ==== Testimonials ====
-Having testimonials from happy clients also adds to the trust of the business.
+https://lh6.googleusercontent.com/-kgwTuXqNZFw/Tw9E3H7uaTI/AAAAAAAAJlU/M8svc4rbSY8/s960/testimonials.png
+Having testimonials from happy clients also adds to the trust of the business. The business owner would ask her clients for feedback and permission to publish it on the website. Then she can pick which ones would suit her and post only a fragment on the website, along with some details of that client (name, company, occupation).
 
 References:
    * http://robcubbon.com/client-testimonial-page-website/
    * http://www.noupe.com/how-tos/web-design-trends-testimonials-design.html
 
 ==== Contact ====
-   * contact form (e-mail)
-   * work phone number
+https://lh4.googleusercontent.com/-zWp-kPfmzB4/Tw9AaVTL5bI/AAAAAAAAJk8/ix50Gt1C0yI/s960/contact.png
+Having other contact methods (phone number, physical mailing address) also add to the credibility of the business. “A company with no address is not one you want to give money to.” [[http://www.useit.com/alertbox/designmistakes.html Jakob Nielsen]]
+   # work telephone number
+   # physical address
+   # social media pages
+   # contact form (by e-mail)
