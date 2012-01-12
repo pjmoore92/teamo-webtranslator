@@ -1,0 +1,93 @@
+<mockup version="1.0" skin="sketch" measuredW="1173" measuredH="731" mockupW="930" mockupH="605">
+  <controls>
+    <control controlID="204" controlTypeID="com.balsamiq.mockups::Canvas" x="243" y="126" w="930" h="605" measuredW="100" measuredH="70" zOrder="0" locked="false" isInGroup="-1">
+      <controlProperties>
+        <backgroundAlpha>1</backgroundAlpha>
+      </controlProperties>
+    </control>
+    <control controlID="206" controlTypeID="com.balsamiq.mockups::SubTitle" x="302" y="149" w="389" h="-1" measuredW="196" measuredH="33" zOrder="1" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Client%20testimonials</text>
+      </controlProperties>
+    </control>
+    <control controlID="213" controlTypeID="com.balsamiq.mockups::Label" x="302" y="212" w="-1" h="-1" measuredW="304" measuredH="26" zOrder="2" locked="false" isInGroup="-1">
+      <controlProperties>
+        <bold>true</bold>
+        <size>18</size>
+        <text>What%20my%20clients%20think%20of%20my%20services</text>
+      </controlProperties>
+    </control>
+    <control controlID="263" controlTypeID="__group__" x="302" y="289" w="524" h="113" measuredW="524" measuredH="113" zOrder="3" locked="false" isInGroup="-1">
+      <groupChildrenDescriptors>
+        <control controlID="0" controlTypeID="com.balsamiq.mockups::Canvas" x="0" y="0" w="524" h="113" measuredW="100" measuredH="70" zOrder="0" locked="false" isInGroup="263">
+          <controlProperties>
+            <backgroundAlpha>0</backgroundAlpha>
+            <borderStyle>square</borderStyle>
+            <verticalScrollbar>false</verticalScrollbar>
+          </controlProperties>
+        </control>
+        <control controlID="1" controlTypeID="com.balsamiq.mockups::Paragraph" x="8" y="15" w="516" h="68" measuredW="200" measuredH="140" zOrder="1" locked="false" isInGroup="263">
+          <controlProperties>
+            <italic>true</italic>
+            <size>14</size>
+            <text>%22Lorem%20ipsum%20dolor%20sit%20amet%2C%20consectetur%20adipisicing%20elit%2C%20sed%20do%20eiusmod%20tempor%20incididunt%20ut%20labore%20et%20dolore%20magna%20aliqua.%20Ut%20enim%20ad%20minim%20veniam%2C%20quis%20nostrud%20exercitation%20ullamco%20laboris%20nisi%20ut%20aliquip%20ex%20ea%20commodo%20consequat.%22</text>
+          </controlProperties>
+        </control>
+        <control controlID="2" controlTypeID="com.balsamiq.mockups::Label" x="328" y="83" w="196" h="22" measuredW="65" measuredH="24" zOrder="2" locked="false" isInGroup="263">
+          <controlProperties>
+            <size>16</size>
+            <text>Alice%20W.</text>
+          </controlProperties>
+        </control>
+      </groupChildrenDescriptors>
+    </control>
+    <control controlID="264" controlTypeID="__group__" x="302" y="417" w="524" h="113" measuredW="524" measuredH="113" zOrder="4" locked="false" isInGroup="-1">
+      <groupChildrenDescriptors>
+        <control controlID="0" controlTypeID="com.balsamiq.mockups::Canvas" x="0" y="0" w="524" h="113" measuredW="100" measuredH="70" zOrder="0" locked="false" isInGroup="264">
+          <controlProperties>
+            <backgroundAlpha>0</backgroundAlpha>
+            <borderStyle>square</borderStyle>
+            <verticalScrollbar>false</verticalScrollbar>
+          </controlProperties>
+        </control>
+        <control controlID="1" controlTypeID="com.balsamiq.mockups::Paragraph" x="8" y="15" w="516" h="68" measuredW="200" measuredH="140" zOrder="1" locked="false" isInGroup="264">
+          <controlProperties>
+            <italic>true</italic>
+            <size>14</size>
+            <text>%22Lorem%20ipsum%20dolor%20sit%20amet%2C%20consectetur%20adipisicing%20elit%2C%20sed%20do%20eiusmod%20tempor%20incididunt%20ut%20labore%20et%20dolore%20magna%20aliqua.%20Ut%20enim%20ad%20minim%20veniam%2C%20quis%20nostrud%20exercitation%20ullamco%20laboris%20nisi%20ut%20aliquip%20ex%20ea%20commodo%20consequat.%22</text>
+          </controlProperties>
+        </control>
+        <control controlID="2" controlTypeID="com.balsamiq.mockups::Label" x="328" y="83" w="196" h="22" measuredW="65" measuredH="24" zOrder="2" locked="false" isInGroup="264">
+          <controlProperties>
+            <size>16</size>
+            <text>Alice%20W.</text>
+          </controlProperties>
+        </control>
+      </groupChildrenDescriptors>
+    </control>
+    <control controlID="265" controlTypeID="__group__" x="302" y="545" w="524" h="113" measuredW="524" measuredH="113" zOrder="5" locked="false" isInGroup="-1">
+      <groupChildrenDescriptors>
+        <control controlID="0" controlTypeID="com.balsamiq.mockups::Canvas" x="0" y="0" w="524" h="113" measuredW="100" measuredH="70" zOrder="0" locked="false" isInGroup="265">
+          <controlProperties>
+            <backgroundAlpha>0</backgroundAlpha>
+            <borderStyle>square</borderStyle>
+            <verticalScrollbar>false</verticalScrollbar>
+          </controlProperties>
+        </control>
+        <control controlID="1" controlTypeID="com.balsamiq.mockups::Paragraph" x="8" y="15" w="516" h="68" measuredW="200" measuredH="140" zOrder="1" locked="false" isInGroup="265">
+          <controlProperties>
+            <italic>true</italic>
+            <size>14</size>
+            <text>%22Lorem%20ipsum%20dolor%20sit%20amet%2C%20consectetur%20adipisicing%20elit%2C%20sed%20do%20eiusmod%20tempor%20incididunt%20ut%20labore%20et%20dolore%20magna%20aliqua.%20Ut%20enim%20ad%20minim%20veniam%2C%20quis%20nostrud%20exercitation%20ullamco%20laboris%20nisi%20ut%20aliquip%20ex%20ea%20commodo%20consequat.%22</text>
+          </controlProperties>
+        </control>
+        <control controlID="2" controlTypeID="com.balsamiq.mockups::Label" x="328" y="83" w="196" h="22" measuredW="65" measuredH="24" zOrder="2" locked="false" isInGroup="265">
+          <controlProperties>
+            <size>16</size>
+            <text>Alice%20W.</text>
+          </controlProperties>
+        </control>
+      </groupChildrenDescriptors>
+    </control>
+  </controls>
+</mockup>
