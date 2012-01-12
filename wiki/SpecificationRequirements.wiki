@@ -75,3 +75,33 @@ Suggestions for content:
 https://lh4.googleusercontent.com/-mE14xHW0TdM/TwwhA2nssOI/AAAAAAAAJkI/C2f6pySP5gI/s960/myImage%252520%2525282%252529.png
 
 This is the front page of the website; it's what the users first see when they get there.
+
+It is mainly composed of:
+   # *tagline* - a few words describing the service and how it works
+   # *quote* form - 
+
+==== About ====
+This is the page the users would go to in order to find out more about the service. Contains a few paragraphs that detail goals and accomplishments.
+The page needs to answer some possible questions that the users might have regarding the business:
+   * *who* is behind it?
+   * *what* are they doing?
+   * *when* did they start doing it?
+   * *where* are they?
+   * *how* are they accomplishing what they claim to do?
+
+Providing an image, or even a short video, would make the website seem more trustworthy.
+
+References:
+   * http://www.useit.com/alertbox/about-us-pages.html
+   * http://sixrevisions.com/content-strategy/about-page-guidelines/
+
+==== Testimonials ====
+Having testimonials from happy clients also adds to the trust of the business.
+
+References:
+   * http://robcubbon.com/client-testimonial-page-website/
+   * http://www.noupe.com/how-tos/web-design-trends-testimonials-design.html
+
+==== Contact ====
+   * contact form (e-mail)
+   * work phone number
