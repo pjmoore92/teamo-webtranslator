@@ -74,6 +74,10 @@ https://lh4.googleusercontent.com/-V_2Tn2OgfsM/TwT4Gm2lWeI/AAAAAAAAJeY/BsqoHNShf
 
 === Captcha entry ===
 https://lh3.googleusercontent.com/-t3csmlM-EZo/TxP7sF3v_6I/AAAAAAAAAAo/7BOtAyIF1-M/s912/myImage.png
+*Note*: needs to be updated.
+
+*Ideas*:
+   * e-mail confirmation is an *input box*
 
 === Final confirmation ===
 https://lh5.googleusercontent.com/-rVkz__MoqJw/TxP9qTGYQmI/AAAAAAAAAA0/Ev5oivmEHQs/s912/myImage%252520%2525281%252529.png
