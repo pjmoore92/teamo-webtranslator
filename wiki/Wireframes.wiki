@@ -26,8 +26,8 @@ The *main page layout* wireframe contains all the common elements of the pages. 
    * added *[#Contact Contact page]*
    * added *[#Testimonials Testimonials page]*
 === Date: *14th Jan 2012* ===
-   * added *[#Captcha_e Captcha entry]*
-   * added *[#Final_c Final confirmation]*
+   * added *[#Captcha_entry Captcha entry]*
+   * added *[#Final_confirmation Final confirmation]*
 == Pages ==
 
 === Basic page layout ===
