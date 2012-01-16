@@ -25,7 +25,8 @@ The *main page layout* wireframe contains all the common elements of the pages. 
    * added *[#About_page About page]*
    * added *[#Contact Contact page]*
    * added *[#Testimonials Testimonials page]*
-
+=== Date: *14th Jan 2012* ===
+   * added *[#Captcha Captcha confirmation]*
 == Pages ==
 
 === Basic page layout ===
@@ -69,3 +70,6 @@ https://lh4.googleusercontent.com/-zWp-kPfmzB4/Tw9AaVTL5bI/AAAAAAAAJk8/ix50Gt1C0
 
 === Client dashboard ===
 https://lh4.googleusercontent.com/-V_2Tn2OgfsM/TwT4Gm2lWeI/AAAAAAAAJeY/BsqoHNShflg/s960/client-dashboard.png
+
+=== Captcha ===
+https://lh3.googleusercontent.com/-t3csmlM-EZo/TxP7sF3v_6I/AAAAAAAAAAo/7BOtAyIF1-M/s912/myImage.png
