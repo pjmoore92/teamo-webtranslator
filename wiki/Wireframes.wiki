@@ -70,7 +70,7 @@ https://lh6.googleusercontent.com/-kgwTuXqNZFw/Tw9E3H7uaTI/AAAAAAAAJlU/M8svc4rbS
 https://lh4.googleusercontent.com/-zWp-kPfmzB4/Tw9AaVTL5bI/AAAAAAAAJk8/ix50Gt1C0yI/s960/contact.png
 
 === Client dashboard ===
-<table style="width:auto;"><tr><td><a href="https://picasaweb.google.com/lh/photo/6FTrNPuVceAzG_9FEUPutm7aX_-UZPINAc8imZHMij8?feat=embedwebsite"><img src="https://lh5.googleusercontent.com/-j8MWZJNo2Zw/TxRGGW7nY8I/AAAAAAAAAik/khuleO3s0ko/s144/myImage.png" height="102" width="144" /></a></td></tr><tr><td style="font-family:arial,sans-serif; font-size:11px; text-align:right">From <a href="https://picasaweb.google.com/111588023169254018238/TeamProject?authuser=0&authkey=Gv1sRgCLL51Z3jwM36Vw&feat=embedwebsite">TeamProject</a></td></tr></table>
+https://lh5.googleusercontent.com/-j8MWZJNo2Zw/TxRGGW7nY8I/AAAAAAAAAik/khuleO3s0ko/s912/myImage.png
 
    * *Submit new job* - logged in job submission
    * *Translations* - shows the jobs available for download
