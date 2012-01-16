@@ -72,6 +72,10 @@ https://lh4.googleusercontent.com/-zWp-kPfmzB4/Tw9AaVTL5bI/AAAAAAAAJk8/ix50Gt1C0
 === Client dashboard ===
 https://lh4.googleusercontent.com/-V_2Tn2OgfsM/TwT4Gm2lWeI/AAAAAAAAJeY/BsqoHNShflg/s960/client-dashboard.png
 
+   * *Submit new job* - logged in job submission
+   * *Translations* - shows the jobs available for download
+   * *History* - shows all the jobs ever recorded, even those that have expired
+
 === Captcha entry ===
 https://lh3.googleusercontent.com/-t3csmlM-EZo/TxP7sF3v_6I/AAAAAAAAAAo/7BOtAyIF1-M/s912/myImage.png
 *Note*: needs to be updated.
