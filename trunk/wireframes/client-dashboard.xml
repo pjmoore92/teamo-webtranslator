@@ -15,7 +15,7 @@
         <borderStyle>none</borderStyle>
         <hasHeader>false</hasHeader>
         <selectedIndex>-1</selectedIndex>
-        <text>%5BSubmit%20new%20job%5D%0A%5BQuotes%5D%0A%5BTranslations%5D%0A%5BHistory%5D</text>
+        <text>%5BSubmit%20new%20job%5D%0A%5BPending%5D%0A%5BQuotes%5D%0A%5BTranslations%5D%0A%5BHistory%5D</text>
       </controlProperties>
     </control>
     <control controlID="50" controlTypeID="com.balsamiq.mockups::Label" x="211" y="151" w="35" h="23" measuredW="35" measuredH="21" zOrder="3" locked="false" isInGroup="-1">
