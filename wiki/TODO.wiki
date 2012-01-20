@@ -74,7 +74,16 @@ _16 Jan 2012 - 22 Jan 2012_
    * run the usability test
    * process the results from the usability test
    * complete wireframes - admin dashboard for Joelle
+   
+Over the weekend...
+   * *Paul* - Views
+   * *Steve* - Wireframes + Database structure
+   * *Andrei* - Transition of documents after submission through pending, approved stages (from client and admin side)
 
+Other tasks that need to be looked at: 
+    * Database structure - Models are the methods for each table
+    * Plan of prototype - pilot test (possibly paper prototype) - *as part of whole testing plan to be included in dissertation*
+    
 === Week 3 ===
 _23 Jan 2012 - 29 Jan 2012_
 
