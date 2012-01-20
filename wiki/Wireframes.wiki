@@ -36,7 +36,6 @@ The *main page layout* wireframe contains all the common elements of the pages. 
    * added *[#Translations Approved requests]*
    * added *[#History History]*
    * added *[#Usage Usage statistics]*
-   * added *[#Settings Settings]*
 == Pages ==
 
 === Basic page layout ===
@@ -114,6 +113,8 @@ https://lh5.googleusercontent.com/-8Yt4KiltCwI/TxliaxdEQoI/AAAAAAAAABU/eYqP_JUeT
    * must display job status as Joelle may be waiting for payment after quote, i.e 
     a pending job can be pending a quote or pending payment.
 === Translations ===
+https://lh6.googleusercontent.com/-vSX5u1M6QEI/TxnmPfuvcEI/AAAAAAAAABs/J1--5iGjEWU/s640/myImage.png
 === History ===
+https://lh3.googleusercontent.com/-jkYYeUp9pVg/TxnmPQk4yAI/AAAAAAAAABw/ZUN3NMyKFhU/s640/myImage%252520%2525281%252529.png
 === Usage ===
-=== Settings ===
+https://lh3.googleusercontent.com/-dnRQ-gjZlso/TxnmNFXVYVI/AAAAAAAAABk/KPd1ZZC9-nQ/s640/myImage%252520%2525282%252529.png
