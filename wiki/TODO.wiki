@@ -73,6 +73,7 @@ _9 Jan 2012 - 15 Jan 2012_
 _16 Jan 2012 - 22 Jan 2012_
    * run the usability test
    * process the results from the usability test
+   * complete wireframes - admin dashboard for Joelle
 
 === Week 3 ===
 _23 Jan 2012 - 29 Jan 2012_
