@@ -31,12 +31,12 @@ The *main page layout* wireframe contains all the common elements of the pages. 
 === Date: *16th Jan 2012* ===
    * added *[#Dashboard_job New Job from Dashboard]*
 === Date: *20th Jan 2012* ===
-   * added *[#Admin_dashboard Admin Dashboard]*
-   * added *[#New_trans Pending requests]*
-   * added *[#Acc_trans Approved requests]*
-   * added *[#C_trans History]*
-   * added *[#Admin_usage Usage statistics]*
-   * added *[#Admin_settings Settings]*
+   * added *[#Admin_Dashboard Admin Dashboard]*
+   * added *[#Pending Pending requests]*
+   * added *[#Translations Approved requests]*
+   * added *[#History History]*
+   * added *[#Usage Usage statistics]*
+   * added *[#Settings Settings]*
 == Pages ==
 
 === Basic page layout ===
@@ -101,8 +101,8 @@ https://lh5.googleusercontent.com/-rVkz__MoqJw/TxP9qTGYQmI/AAAAAAAAAA0/Ev5oivmEH
    * provide links to popular E-mail websites (Y!, G, hotmail)
 
 === Admin Dashboard ===
-=== Pending requests ===
-=== Approved requests ===
+=== Pending ===
+=== Translations ===
 === History ===
-=== Usage statistics ===
+=== Usage ===
 === Settings ===
