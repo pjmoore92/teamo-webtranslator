@@ -1,0 +1,149 @@
+<mockup version="1.0" skin="sketch" measuredW="1103" measuredH="699" mockupW="930" mockupH="647">
+  <controls>
+    <control controlID="36" controlTypeID="com.balsamiq.mockups::Canvas" x="173" y="52" w="930" h="647" measuredW="100" measuredH="70" zOrder="0" locked="false" isInGroup="-1">
+      <controlProperties>
+        <backgroundAlpha>1</backgroundAlpha>
+      </controlProperties>
+    </control>
+    <control controlID="37" controlTypeID="com.balsamiq.mockups::SubTitle" x="352" y="77" w="-1" h="-1" measuredW="360" measuredH="33" zOrder="1" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Admin%20dashboard%20%20*Pending%20quotes*</text>
+      </controlProperties>
+    </control>
+    <control controlID="38" controlTypeID="__group__" x="176" y="148" w="163" h="202" measuredW="163" measuredH="202" zOrder="2" locked="false" isInGroup="-1">
+      <groupChildrenDescriptors>
+        <control controlID="0" controlTypeID="__group__" x="0" y="0" w="163" h="202" measuredW="163" measuredH="202" zOrder="0" locked="false" isInGroup="38">
+          <groupChildrenDescriptors>
+            <control controlID="0" controlTypeID="com.balsamiq.mockups::Canvas" x="0" y="0" w="163" h="202" measuredW="100" measuredH="70" zOrder="0" locked="false" isInGroup="0">
+              <controlProperties>
+                <borderStyle>square</borderStyle>
+              </controlProperties>
+            </control>
+            <control controlID="1" controlTypeID="com.balsamiq.mockups::List" x="6" y="14" w="112" h="170" measuredW="100" measuredH="149" zOrder="1" locked="false" isInGroup="0">
+              <controlProperties>
+                <bold>false</bold>
+                <borderStyle>none</borderStyle>
+                <hasHeader>false</hasHeader>
+                <selectedIndex>-1</selectedIndex>
+                <text>%5BMain%20menu%5D%0A*%5BPending%5D*%0A%5BQuotes%5D%0A%5BTranslations%5D%0A%5BHistory%5D%0A%5BReports%5D%0A%5BSettings%5D</text>
+              </controlProperties>
+            </control>
+          </groupChildrenDescriptors>
+        </control>
+      </groupChildrenDescriptors>
+    </control>
+    <control controlID="40" controlTypeID="com.balsamiq.mockups::Label" x="352" y="134" w="184" h="19" measuredW="167" measuredH="24" zOrder="4" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>16</size>
+        <text>Welcome%20back%2C%20Joelle.</text>
+      </controlProperties>
+    </control>
+    <control controlID="41" controlTypeID="com.balsamiq.mockups::Icon" x="617" y="130" w="-1" h="-1" measuredW="24" measuredH="24" zOrder="5" locked="false" isInGroup="-1">
+      <controlProperties>
+        <icon>Number5Icon%7Csmall</icon>
+      </controlProperties>
+    </control>
+    <control controlID="42" controlTypeID="com.balsamiq.mockups::Paragraph" x="543" y="137" w="74" h="18" measuredW="200" measuredH="140" zOrder="6" locked="false" isInGroup="-1">
+      <controlProperties>
+        <align>left</align>
+        <bold>false</bold>
+        <text>Notifications</text>
+      </controlProperties>
+    </control>
+    <control controlID="45" controlTypeID="com.balsamiq.mockups::DataGrid" x="376" y="539" w="641" h="147" measuredW="209" measuredH="85" zOrder="8" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Doc%20name%2C%20%20View%0Adoc91z.pdf%2C%20%5BDownload%20document%5D%0Adoc92b.pdf%2C%20%5BDownload%20document%5D</text>
+      </controlProperties>
+    </control>
+    <control controlID="48" controlTypeID="com.balsamiq.mockups::Canvas" x="347" y="411" w="710" h="282" measuredW="100" measuredH="70" zOrder="7" locked="false" isInGroup="-1"/>
+    <control controlID="49" controlTypeID="com.balsamiq.mockups::Paragraph" x="362" y="418" w="225" h="106" measuredW="200" measuredH="140" zOrder="9" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Client%20name%3A%20Joe%20Bloggs%09%0A%20%0ACient%20email%3A%20joebloggs@gmail.com%0A%20%0AReceived%3A%2021/1/2012</text>
+      </controlProperties>
+    </control>
+    <control controlID="50" controlTypeID="com.balsamiq.mockups::Paragraph" x="579" y="418" w="225" h="106" measuredW="200" measuredH="140" zOrder="10" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>JobID%3A%20913%09%0A%20%0ALanguages%20%28to%26from%29%3A%20English%20to%20French%0A%20%0ARequested%20deadline%3A%2023/2/2012</text>
+      </controlProperties>
+    </control>
+    <control controlID="51" controlTypeID="com.balsamiq.mockups::Button" x="844" y="479" w="-1" h="-1" measuredW="101" measuredH="27" zOrder="11" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Send%20a%20quote</text>
+      </controlProperties>
+    </control>
+    <control controlID="52" controlTypeID="com.balsamiq.mockups::Button" x="844" y="437" w="-1" h="-1" measuredW="102" measuredH="27" zOrder="12" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Contact%20client</text>
+      </controlProperties>
+    </control>
+    <control controlID="56" controlTypeID="__group__" x="347" y="155" w="714" h="71" measuredW="714" measuredH="71" zOrder="3" locked="false" isInGroup="-1">
+      <groupChildrenDescriptors>
+        <control controlID="0" controlTypeID="__group__" x="0" y="0" w="714" h="71" measuredW="714" measuredH="71" zOrder="0" locked="false" isInGroup="56">
+          <groupChildrenDescriptors>
+            <control controlID="0" controlTypeID="com.balsamiq.mockups::Canvas" x="0" y="0" w="714" h="71" measuredW="100" measuredH="70" zOrder="0" locked="false" isInGroup="0">
+              <controlProperties>
+                <backgroundAlpha>0</backgroundAlpha>
+              </controlProperties>
+            </control>
+            <control controlID="1" controlTypeID="com.balsamiq.mockups::Paragraph" x="8" y="11" w="691" h="23" measuredW="200" measuredH="140" zOrder="1" locked="false" isInGroup="0">
+              <controlProperties>
+                <text>*Update%3A*%20Client%20John%20Smith%20has%20sent%20you%20a%20new%20document%20to%20be%20reviewed%20for%20translation.</text>
+              </controlProperties>
+            </control>
+            <control controlID="2" controlTypeID="com.balsamiq.mockups::Button" x="8" y="34" w="-1" h="-1" measuredW="111" measuredH="27" zOrder="2" locked="false" isInGroup="0">
+              <controlProperties>
+                <text>View%20document</text>
+              </controlProperties>
+            </control>
+            <control controlID="3" controlTypeID="com.balsamiq.mockups::Button" x="141" y="34" w="-1" h="-1" measuredW="61" measuredH="27" zOrder="3" locked="false" isInGroup="0">
+              <controlProperties>
+                <text>Ignore</text>
+              </controlProperties>
+            </control>
+          </groupChildrenDescriptors>
+        </control>
+      </groupChildrenDescriptors>
+    </control>
+    <control controlID="57" controlTypeID="com.balsamiq.mockups::Canvas" x="347" y="226" w="710" h="171" measuredW="100" measuredH="70" zOrder="13" locked="false" isInGroup="-1"/>
+    <control controlID="58" controlTypeID="com.balsamiq.mockups::Paragraph" x="354" y="233" w="225" h="106" measuredW="200" measuredH="140" zOrder="14" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Client%20name%3A%20Susie%20Smith%0A%20%0ACient%20email%3A%20ssmith@msn.com%0A%20%0AReceived%3A%201/2/2012</text>
+      </controlProperties>
+    </control>
+    <control controlID="59" controlTypeID="com.balsamiq.mockups::Paragraph" x="570" y="230" w="225" h="106" measuredW="200" measuredH="140" zOrder="15" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>JobID%3A%20913%09%0A%20%0ALanguages%20%28to%26from%29%3A%20English%20to%20French%0A%20%0ARequested%20deadline%3A%2023/2/2012</text>
+      </controlProperties>
+    </control>
+    <control controlID="60" controlTypeID="com.balsamiq.mockups::Button" x="837" y="248" w="-1" h="-1" measuredW="102" measuredH="27" zOrder="16" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Contact%20client</text>
+      </controlProperties>
+    </control>
+    <control controlID="61" controlTypeID="com.balsamiq.mockups::Button" x="837" y="283" w="-1" h="-1" measuredW="101" measuredH="27" zOrder="17" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Send%20a%20quote</text>
+      </controlProperties>
+    </control>
+    <control controlID="62" controlTypeID="com.balsamiq.mockups::Link" x="581" y="350" w="-1" h="-1" measuredW="158" measuredH="21" zOrder="18" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Expand%20to%20view%20documents</text>
+      </controlProperties>
+    </control>
+    <control controlID="63" controlTypeID="com.balsamiq.mockups::Icon" x="739" y="352" w="-1" h="-1" measuredW="16" measuredH="16" zOrder="19" locked="false" isInGroup="-1">
+      <controlProperties>
+        <icon>DownTriangleIcon%7Cxsmall</icon>
+      </controlProperties>
+    </control>
+    <control controlID="64" controlTypeID="com.balsamiq.mockups::Link" x="587" y="518" w="-1" h="-1" measuredW="117" measuredH="21" zOrder="20" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Minimise%20to%20view%20job</text>
+      </controlProperties>
+    </control>
+    <control controlID="65" controlTypeID="com.balsamiq.mockups::Icon" x="746" y="520" w="-1" h="-1" measuredW="16" measuredH="16" zOrder="21" locked="false" isInGroup="-1">
+      <controlProperties>
+        <icon>UpFillTriangleIcon%7Cxsmall</icon>
+      </controlProperties>
+    </control>
+  </controls>
+</mockup>
