@@ -103,9 +103,16 @@ https://lh5.googleusercontent.com/-rVkz__MoqJw/TxP9qTGYQmI/AAAAAAAAAA0/Ev5oivmEH
 === Admin Dashboard ===
 https://lh6.googleusercontent.com/-2RRidjiAltI/TxlYci-q8-I/AAAAAAAAABE/X34gmPRVTqU/s800/myImage.png
 
+*Requirements*:
+   * "My pages" should be links, but much room for extra design in this page
+     - body of wireframe is definitely not concrete
+
 === Pending ===
 https://lh5.googleusercontent.com/-8Yt4KiltCwI/TxliaxdEQoI/AAAAAAAAABU/eYqP_JUeTIg/s800/myImage%2525282%252529.png
 
+*Requirements*:
+   * must display job status as Joelle may be waiting for payment after quote, i.e 
+    a pending job can be pending a quote or pending payment.
 === Translations ===
 === History ===
 === Usage ===
