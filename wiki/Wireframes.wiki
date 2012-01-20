@@ -30,6 +30,13 @@ The *main page layout* wireframe contains all the common elements of the pages. 
    * added *[#Final_confirmation Final confirmation]*
 === Date: *16th Jan 2012* ===
    * added *[#Dashboard_job New Job from Dashboard]*
+=== Date: *20th Jan 2012* ===
+   * added *[#Admin_dashboard Admin Dashboard]*
+   * added *[#New_trans Pending requests]*
+   * added *[#Acc_trans Approved requests]*
+   * added *[#C_trans History]*
+   * added *[#Admin_usage Usage statistics]*
+   * added *[#Admin_settings Settings]*
 == Pages ==
 
 === Basic page layout ===
@@ -92,3 +99,10 @@ https://lh3.googleusercontent.com/-t3csmlM-EZo/TxP7sF3v_6I/AAAAAAAAAAo/7BOtAyIF1
 https://lh5.googleusercontent.com/-rVkz__MoqJw/TxP9qTGYQmI/AAAAAAAAAA0/Ev5oivmEHQs/s912/myImage%252520%2525281%252529.png
 *Ideas*:
    * provide links to popular E-mail websites (Y!, G, hotmail)
+
+=== Admin Dashboard ===
+=== Pending requests ===
+=== Approved requests ===
+=== History ===
+=== Usage statistics ===
+=== Settings ===
