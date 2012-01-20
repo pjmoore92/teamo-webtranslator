@@ -110,3 +110,46 @@ Having other contact methods (phone number, physical mailing address) also add t
    # physical address
    # social media pages
    # contact form (by e-mail)
+
+==== Administrator Dashboard ====
+===== Elements =====
+   # Sidebar menu
+   # main content area
+
+*Sidebar menu*
+
+One page for each document status.
+   * *Pending*
+     "awaiting quote"
+
+     Fields: Docnames, user e-mail and name, download doc, deadline
+
+     Button: Send Quote
+
+   * *Quotes*
+     "awaiting translations"
+
+     Fields: Docnames, user e-mail and name, download doc, deadline
+
+     Button: Send
+
+   * *History*
+     "completed requests"
+        Last 90 days
+           Fields: Docnames, user e-mail and name
+        After
+           Fields: Docnames, user e-mail and name, download original, download translations
+
+   * *Reports*
+     "Usage statistics"
+
+     DB queries: completed jobs, quoted jobs, etc
+     
+     some nice pie charts
+
+   * *Settings*
+     add more languages
+
+     content edit for static pages
+
+     change password
