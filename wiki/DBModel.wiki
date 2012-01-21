@@ -1,0 +1,4 @@
+#summary Includes the current database model used by BethelTranslations, including tables and ER diagram.
+
+= Database Model =
+
