@@ -77,7 +77,7 @@ _16 Jan 2012 - 22 Jan 2012_
    
 Over the weekend...
    * *Paul* - Views
-   * *Steve* - Wireframes + Revise database structure
+   * *Steve* - ~~Wireframes~~ + Revise database structure
    * *Andrei* - Transition of documents after submission through pending, approved stages (from client and admin side)
    * *Wei* - Models 
 
