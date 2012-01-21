@@ -2,3 +2,55 @@
 
 = Database Model =
 
+_Current model included is Paul's, yet to be reviewed for new processes_
+
+
+== Tables == 
+
+*Customer* 
+  -customerID: int(11) NOT NULL AUTO_INCREMENT,
+  -fullName: text NOT NULL,
+  -title: enum('Mr','Mrs','Ms') NOT NULL,
+  -email: text NOT NULL,
+  -active: tinyint(1) NOT NULL default '0',
+  -referenceStr` varchar(8) NOT NULL,
+  -PRIMARY KEY  (`customerID`)
+
+
+*Jobs*
+  -jobID` int(11) NOT NULL AUTO_INCREMENT,
+  -customerID` int(11) NOT NULL,
+  -statusenum('QuoteReq','QuoteSent','QuoteAccept','QuoteDeclined','Paid','Translated','Complete') NOT NULL,
+  -quote int(10) NOT NULL,
+  -dateRequested` date NOT NULL,
+  -dateDue` date NOT NULL,
+  -fromLanguage` text NOT NULL,
+  -toLanguage` text NOT NULL,
+  -PRIMARY KEY  (`jobID`),
+  -KEY `idx_jobs` (`customerID`)
+ 
+*Translation*
+  -translationID` int(11) NOT NULL AUTO_INCREMENT,
+  -jobID` int(11) NOT NULL,
+  -origDoc` int(11) NOT NULL,
+  -translatedDoc` int(11) NOT NULL,
+  -PRIMARY KEY  (`translationID`),
+  -KEY `idx_translation` (`jobID`),
+  -KEY `idx_translation_1` (`origDoc`),
+  -KEY `idx_translation_2` (`translatedDoc`)
+
+*Document*
+  -documentID` int(11) NOT NULL AUTO_INCREMENT,
+  -filePath` varchar(256) NOT NULL,
+  -PRIMARY KEY  (`documentID`)
+
+_Tank auth tables omitted for clarity_ 
+
+==First changes== 
+-Removed *Notes* table since we have yet to think about how we are going to implement our Notification system. I think this is better done using SQL queries of the tables above, but let me know what you guys think.
+
+-Removed *urgency* column in *Jobs* table. I think Joelle made clear at the last meeting that she didn't want the system to control any kind of priority jobs or discounts etc, and that she would negotiate it through email.
+
+I will check if this model is able to support the flow chart Andrei has designed tomorrow.
+
+
