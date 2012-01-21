@@ -8,7 +8,9 @@ not sure if I got these right, so could someone check and update if necessary, p
    * Quote accepted, paid
    * Completed
 
-[http://goo.gl/NwMVz Job statuses flowchart]
+[http://goo.gl/NwMVz Flowchart]
+
+[https://lh6.googleusercontent.com/-3CgKnc7-H2Q/TxrkvehuLtI/AAAAAAAAJmY/gWUzh2Xop8s/s1038/Flowchart%252520%2525281%252529.png]
 
 === Process description ===
 {{{
