@@ -1,9 +1,7 @@
 #summary Includes the current database model used by BethelTranslations, including tables and ER diagram.
 
 = Database Model =
-
-_Current model included is Paul's, yet to be reviewed for new processes_
-
+_Tank auth tables omitted for clarity_ 
 
 == Tables == 
 
@@ -68,7 +66,6 @@ _Current model included is Paul's, yet to be reviewed for new processes_
 
   -PRIMARY KEY  (`documentID`)
 
-_Tank auth tables omitted for clarity_ 
 
 ==First changes== 
 -Removed *Notes* table since we have yet to think about how we are going to implement our Notification system. I think this is better done using SQL queries of the tables above, but let me know what you guys think.
