@@ -72,4 +72,10 @@ _Tank auth tables omitted for clarity_
 
 -Removed *urgency* column in *Jobs* table. I think Joelle made clear at the last meeting that she didn't want the system to control any kind of priority jobs or discounts etc, and that she would negotiate it through email.
 
-I will check if this model is able to support the flow chart Andrei has designed tomorrow.
+*Update 22/1* I've checked the most recent processes from user registration and job submission to job completion and can't fault the schema above. (although someone else should check this through, too)
+
+==ER Diagram==
+
+_Created using cacoo.com_
+
+https://lh5.googleusercontent.com/-obSuAv0vySs/Txw-f0hFvLI/AAAAAAAAACU/gQuzNUULJIM/s912/erbt.png
