@@ -1,0 +1,42 @@
+#summary uhm... controllers!
+
+*Template*:
+
+Controller_name
+   * method1()
+   * method2()
+
+= Contlollers =
+
+In *Codeigniter*, `URL`s are mapped to a controller. For instance, when `example.com/page/main` is requested, CI goes to controller `Page`, and executes method `main`.
+
+`*`more on [http://codeigniter.com/user_guide/tutorial/static_pages.html CI Controllers];
+
+
+An idea of what our controllers would look like:
+
+== Static page ==
+(`controllers/static_page`)
+   * About
+   * Testimonials
+   * Services
+   * Privacy policy & the legals
+
+
+== Client ==
+(`dashboard/client.php`)
+   * submit_job
+   * pending
+   * quotes
+   * translations
+   * history
+
+== Admin ==
+   * *TO BE CONTINUED*
+
+----
+
+=== Relevant ===
+_I hope_
+
+it is [https://cacoo.com/diagrams/JyUpK1GsZm7KCTsn here].
