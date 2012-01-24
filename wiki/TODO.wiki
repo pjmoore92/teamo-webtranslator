@@ -77,9 +77,9 @@ _16 Jan 2012 - 22 Jan 2012_
    
 Over the weekend...
    * *Paul* - Views
-   * *Steve* - ~~Wireframes~~ + Revise database structure
-   * *Andrei* - Transition of documents after submission through pending, approved stages (from client and admin side)
-   * *Wei* - Models 
+   * *Steve* - ~~Wireframes~~ + ~~Revise database structure~~
+   * *Andrei* - ~~Transition of documents after submission through pending, approved stages (from client and admin side) + implement revised db structure~~
+   * *Wei* - Models + Questionnaire for prototype demo w/ Karen
 
 Other tasks that need to be looked at: 
     * Database structure - Models are the methods for each table
