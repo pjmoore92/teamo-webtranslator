@@ -40,3 +40,7 @@ An idea of what our controllers would look like:
 _I hope_
 
 it is [https://cacoo.com/diagrams/JyUpK1GsZm7KCTsn here].
+
+Or, hopefully clearer, a [https://cacoo.com/diagrams/8N9Sbz1Nt9TN3LQY sequence diagram for the Client dashboard controller].
+
+[https://lh5.googleusercontent.com/-6FvN8a5ryDY/Tx7e8cQ96eI/AAAAAAAAJnc/uB0ask5XKQw/s912/Client_controller_sequence_diagram.png]
