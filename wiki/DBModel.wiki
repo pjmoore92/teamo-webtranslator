@@ -76,6 +76,26 @@ _Tank auth tables omitted for clarity_
 
 ==ER Diagram==
 
-_Created using cacoo.com_
+_Created using [https://cacoo.com/diagrams/QdXf2xFjGydDz7GH cacoo.com]_
 
-https://lh5.googleusercontent.com/-obSuAv0vySs/Txw-f0hFvLI/AAAAAAAAACU/gQuzNUULJIM/s912/erbt.png
+https://lh3.googleusercontent.com/-w1qwx2n8PU0/Tx38kgO3_QI/AAAAAAAAJnI/iUtoGnSQ0xg/s839/Andrei%252527s%252520attempt.png
+
+
+=== Models ===
+==== Job ====
+   * add_new_job()
+   * set_quote(JobID)
+   * get_all_pending()
+   * ...
+   * get_pending(customerID)
+   * set_status(JobID)
+
+==== Translation ====
+   * add_source(JobID, origDoc)
+   * add_translation(JobID, sourceID)
+   * get_job_translations(JobID)
+   * get_job_sources(JobID)
+
+==== Files ====
+   * add_file()
+   * get_file(fileID)
