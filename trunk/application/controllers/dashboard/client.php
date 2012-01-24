@@ -35,4 +35,44 @@ class Client extends CI_Controller {
 		else
 			print_r($pending_jobs_list);
 	}
+   
+  public function quotes(){
+  
+    $user_id = $this->session->userdata('user_id');
+
+		$this->load->model('job_model');
+		$quoted_jobs_list = $this->job_model->get_all_quoted($user_id);
+
+		if($quoted_jobs_list == NULL)
+			echo ':( You have no quoted jobs.';
+		else
+			print_r($quoted_jobs_list);
+  }
+  
+  public function translations(){
+  
+    $user_id = $this->session->userdata('user_id');
+
+		$this->load->model('job_model');
+		$translated_jobs_list = $this->job_model->get_all_translated($user_id);
+
+		if($translated_jobs_list == NULL)
+			echo ';( You have no jobs that have been translated.';
+		else
+			print_r($translated_jobs_list);
+  }
+  
+  public function history(){
+  
+    $user_id = $this->session->userdata('user_id');
+
+		$this->load->model('job_model');
+		$historic_jobs_list = $this->job_model->get_all_history($user_id);
+
+		if($historic_jobs_list == NULL)
+			echo 'You have no historic jobs.';
+		else
+			print_r($historic_jobs_list);
+  }
+  
 }
