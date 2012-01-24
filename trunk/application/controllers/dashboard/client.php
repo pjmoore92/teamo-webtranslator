@@ -22,4 +22,17 @@ class Client extends CI_Controller {
 		$this->template->load('template', 'dashboard/client', $data);
 
 	}
+
+	public function pending(){
+		
+		$user_id = $this->session->userdata('user_id');
+
+		$this->load->model('job_model');
+		$pending_jobs_list = $this->job_model->get_all_pending($user_id);
+
+		if($pending_jobs_list == NULL)
+			echo ':( You have no pending jobs.';
+		else
+			print_r($pending_jobs_list);
+	}
 }
