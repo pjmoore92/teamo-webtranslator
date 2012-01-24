@@ -24,7 +24,7 @@ class Customer_model extends CI_Model{
     }
 
     public function getAllCustomers(){
-        $query = $this->db->query("SELECT * FROM `{$this->table}`");
+        $query = $this->db->query("SELECT * FROM `{$this->_table}`");
         
         if ($query->num_rows() > 0) return $query->result();
         return NULL;
