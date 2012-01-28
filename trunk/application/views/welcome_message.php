@@ -5,7 +5,7 @@
 <p>Vestibulum id ligula porta felis euismod semper. Integer posuere erat
 a ante venenatis dapibus posuere velit aliquet. Duis mollis, est non
 commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec
-elit.</p>
+elit. The other services I offer are This that and This.</p>
 <p><a class="btn primary large">Learn more &raquo;</a></p>
 </div>
 
@@ -73,7 +73,6 @@ elit.</p>
           <select class="medium" name="register-currency" id="register-currency-select">
             <option>GBP &pound;</option>
             <option>EUR &euro;</option>
-            <option>USD &usdollar;</option>
           </select>
         </div>
     </form>
@@ -88,6 +87,7 @@ elit.</p>
   <div class="span-one-third" style="text-align:center">
     <p><a id="register-submit" class="btn" href="#" data-controls-modal="modal-from-dom-register-message" 
               data-backdrop="true" data-keyboard="true">Get your quote! &raquo;</a></p>
+  <!--  <input type="submit" class="btn primary" value="Get your quote!"> -->
   </div>
   <div class="span-one-third">&nbsp;</div>
   <!--<div class="span-one-third">Quote</div>-->

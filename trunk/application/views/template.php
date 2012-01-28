@@ -42,8 +42,43 @@
             <li><?php echo anchor('welcome/about', lang('nav.about')); ?></li>
             <li><?php echo anchor('welcome/testimonials', lang('nav.testimonials')); ?></li>
             <li><?php echo anchor('welcome/contact', lang('nav.contact')); ?></li>
+	    <li class="dropdown" data-dropdown="dropdown">
+			<a href="#" class="dropdown-toggle">
+                	  <?php echo lang('nav.serv') ?>
+              		</a>
+              		<ul class="dropdown-menu">
+               		  <li>
+                  	    <!-- <a href="#" data-controls-modal="modal-from-dom-clients" 
+                        data-backdrop="true" data-keyboard="true">Serv1</a> -->
+                           <?php echo anchor('en/', 'Serv1'); ?>
+			    <!-- <a href="#" data-controls-modal="modal-from-dom-clients" 
+                        data-backdrop="true" data-keyboard="true">French</a> -->
+                           <?php echo anchor('en/', 'Serv2'); ?> 
+			   <!-- <a href="#" data-controls-modal="modal-from-dom-clients" 
+                        data-backdrop="true" data-keyboard="true">Italian</a> -->
+                           <?php echo anchor('en/', 'Serv3'); ?> 
+                        </ul>
+           </li>
           </ul>
           <ul class="secondary-nav">
+
+	  <li class="dropdown" data-dropdown="dropdown">
+			<a href="#" class="dropdown-toggle">
+                	  <?php echo lang('nav.lang') ?>
+              		</a>
+              		<ul class="dropdown-menu">
+               		  <li>
+                  	    <!-- <a href="#" data-controls-modal="modal-from-dom-clients" 
+                        data-backdrop="true" data-keyboard="true">English</a> -->
+                           <?php echo anchor('en/', 'English'); ?>
+			    <!-- <a href="#" data-controls-modal="modal-from-dom-clients" 
+                        data-backdrop="true" data-keyboard="true">French</a> -->
+                           <?php echo anchor('fr/', 'French'); ?> 
+			   <!-- <a href="#" data-controls-modal="modal-from-dom-clients" 
+                        data-backdrop="true" data-keyboard="true">Italian</a> -->
+                           <?php echo anchor('it/', 'Italian'); ?> 
+                        </ul>
+           </li>
 
           <?php if(!$this->tank_auth->is_logged_in()): ?>
 
@@ -68,6 +103,7 @@
               </a>
               <ul class="dropdown-menu">
                 <li>
+                  <?php echo anchor('auth/login', 'Dashboard'); ?>
                   <?php echo anchor('auth/logout', 'Logout'); ?>
                 </li>
               </ul>
@@ -123,10 +159,12 @@
     </script>
     <!-- END OF HEADER -->
 
-    <div class="container-fluid">
+    <div class="container-fluid"> <!--FIXME is this needed? -->
       <?= $contents ?>
       <footer>
-      <p>&copy; <?php 
+      <p>
+	<a href="welcome/privacy">Privacy Policy</a>
+	&copy; <?php 
         $copyYear = 2011; 
         $curYear = date('Y'); 
         echo $copyYear . (($copyYear != $curYear) ? '-' . $curYear : '') .' '.lang('company.name') ?> 
