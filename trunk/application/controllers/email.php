@@ -42,7 +42,10 @@ class Email extends CI_Controller
 			
 			if($this->email->send())
 			{	
-
+				$this->lang->load('common');
+                		$this->lang->load('home');
+                		$this->template->set('title', '');
+                		$this->template->load('template', 'welcome_message');
 				
 			}
 
