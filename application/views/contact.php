@@ -34,14 +34,24 @@
 	
 	?>
 	
-	<p><label for="name">Your Full Name: </label><?php echo form_input($name_data); ?></p>
+	<p><label for="name">Your Full Name </label></p>
 
-	<p><label for="email">Your Email Address: </label><?php echo form_input($email_data); ?></p>	
+	<p><?php echo form_input($name_data); ?>  </p>
+
+	<p><label for="email">Your Email Address  </label></p>
+
+	<p><?php echo form_input($email_data); ?> </p>	
 	
-	<p><label for="message">Your Message: </label><?php echo form_input($message_data); ?></p>
+              
+	<p>
+		<label for="message">Your Message </label>
+  		<div class="input">	
+                <textarea class="xxlarge" id="message" name="message" rows="10" value="<?php echo form_input($message_data);?></textarea>
+		</div>
+		
+	</p>
 
-
-	<p><input type="submit" class="btn primary" value="Send e-mail" action=<?php echo form_submit('submit', 'Submit'); ?></p>
+	<p><input type="submit" class="btn success large" value="Send e-mail" action=<?php echo form_submit('submit', 'Submit'); ?></p>
 	
 	<?php echo form_close(); ?>
 	

@@ -1,6 +1,8 @@
+<?php if ( ! defined('BASEPATH')) exit('Access denied'); ?>
+
 <div class="content">
 <div class="page-header">
-  <h1>About Bethel Translations</h1>
+  <h1>Bethel Translations <small>About Page</small></h1>
 </div>
 <div class="row">
   <div class="span10">
