@@ -8,47 +8,47 @@
 <br />
 <br />
 <br />
-  <div class="span10 offset2">
-        <form>
-                <fieldset>
-                  <legend>Contact form</legend>
-                  <div class="clearfix">
-                    <label for="xlInput">X-Large input</label>
-                    <div class="input">
-                      <input class="xlarge" id="xlInput" name="xlInput" size="30" type="text">
-                    </div>
-                  </div><!-- /clearfix -->
+  <div id="contact_form">
+	<h2>Contact Us</h2>
+	<?php echo form_open('email/send'); ?>
+	
+	<?php
+	
+	$name_data = array(
+		'name' => 'name',
+		'id' => 'name',
+		'value' => set_value('name')
+	);
 
-                  <div class="clearfix">
-                    <label for="xlInput">X-Large input</label>
-                    <div class="input">
-                      <input class="xlarge" id="xlInput" name="xlInput" size="30" type="text">
-                    </div>
-                  </div><!-- /clearfix -->
+	$email_data = array(
+		'name' => 'email',
+		'id' => 'email',
+		'value' => set_value('email')
+	);
+	
+	$message_data = array(
+		'name' => 'message',
+		'id' => 'message',
+		'value' => set_value('message')
+	);
+	
+	?>
+	
+	<p><label for="name">Your Full Name: </label><?php echo form_input($name_data); ?></p>
 
-                  <div class="clearfix">
-                    <label for="xlInput">X-Large input</label>
-                    <div class="input">
-                      <input class="xlarge" id="xlInput" name="xlInput" size="30" type="text">
-                    </div>
-                  </div><!-- /clearfix -->
+	<p><label for="email">Your Email Address: </label><?php echo form_input($email_data); ?></p>	
+	
+	<p><label for="message">Your Message: </label><?php echo form_input($message_data); ?></p>
 
-                  <div class="clearfix">
-                    <label for="textarea">Textarea</label>
-                    <div class="input">
-                      <textarea class="xxlarge" id="textarea2" name="textarea2" rows="10"></textarea>
-                      <span class="help-block">
-                        Block of help text to describe the field above if need be.
-                      </span>
-                    </div>
-                  </div><!-- /clearfix -->
 
-                  <div class="actions">
-                    <input type="submit" class="btn primary" value="Send e-mail">&nbsp;<button type="reset" class="btn">Cancel</button>
-                  </div>
-                </fieldset>
-        </form>	
-  </div>
+	<p><input type="submit" class="btn primary" value="Send e-mail" action=<?php echo form_submit('submit', 'Submit'); ?></p>
+	
+	<?php echo form_close(); ?>
+	
+	<?php echo validation_errors('<p class="error">'); ?>
+	
+</div><!--end contact-form-->
+	
 </div>
 </div>
 
