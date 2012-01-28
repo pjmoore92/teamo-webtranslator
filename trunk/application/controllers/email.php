@@ -35,7 +35,7 @@ class Email extends CI_Controller
 			$this->email->set_newline("\r\n");
 
 			$this->email->from($email, $name);
-			$this->email->to('teamo@stbernadettes.co.uk');		
+			$this->email->to('pjmoore@staloysius.org');		
 			$this->email->subject('Contact Page Email');		
 			$this->email->message($message);
 
@@ -43,7 +43,7 @@ class Email extends CI_Controller
 			if($this->email->send())
 			{	
 
-				$this->load->view('welcome_message');
+				
 			}
 
 			else
