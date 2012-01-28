@@ -42,6 +42,11 @@ class Welcome extends CI_Controller {
                 $this->template->set('title', 'Contact -');
                 $this->template->load('template', 'contact');
 	}
+	public function privacy()
+	{
+                $this->template->set('title', 'Privacy policy -');
+                $this->template->load('template', 'privacypolicy');
+	}
 }
 
 /* End of file welcome.php */
