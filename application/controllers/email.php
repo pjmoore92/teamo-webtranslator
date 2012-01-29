@@ -19,7 +19,7 @@ class Email extends CI_Controller
 		// field name, error message, validation rules
 		$this->form_validation->set_rules('name', 'Name', 'trim|required');
 		$this->form_validation->set_rules('email', 'Email Address', 'trim|required|valid_email');
-		$this->form_validation->set_rules('message'. 'Message', 'required');
+		$this->form_validation->set_rules('message', 'Message', 'trim|required');
 		
 		if($this->form_validation->run() == FALSE)
 		{
