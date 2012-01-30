@@ -31,16 +31,31 @@
 		'id' => 'message',
 		'value' => set_value('message')
 	);
+
 	
 	?>
 	
 	<p><label for="name">Your Full Name </label></p>
 
-	<p><?php echo form_input($name_data); ?>  </p>
+	<!-- <p><?php echo form_input($name_data); ?>  </p> -->
+	<p>
+  		<div class="input">	
+                <input type="text" name="name" value id="name">
+		</div>
+		
+	</p>
 
 	<p><label for="email">Your Email Address  </label></p>
 
-	<p><?php echo form_input($email_data); ?> </p>	
+	<!-- <p><?php echo form_input($email_data); ?> </p> -->
+	
+
+	<p>
+  		<div class="input">	
+                <input type="email" name="email" value id="email" autocomplete="on">
+		</div>
+		
+	</p>
 	
               
 	<p>
@@ -50,8 +65,12 @@
 		</div>
 		
 	</p>
-
-	<p><input type="submit" class="btn success large" value="Send e-mail" action=<?php echo form_submit('submit', 'Submit'); ?></p>
+	
+	<p>
+		<div class="input">
+		<input type="submit" class="btn success large" value="Send e-mail" action=<?php echo form_submit('submit', 'Submit'); ?>
+		</div>
+	</p>
 	
 	<?php echo form_close(); ?>
 	
