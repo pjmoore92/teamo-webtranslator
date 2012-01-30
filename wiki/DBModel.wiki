@@ -1,4 +1,5 @@
 #summary Includes the current database model used by BethelTranslations, including tables and ER diagram.
+#labels Phase-Requirements
 
 = Database Model =
 _Tank auth tables omitted for clarity_ 
