@@ -1,4 +1,5 @@
 #summary A list of the sequence diagrams
+#labels Phase-Design,Deprecated
 
 = Sequence diagrams =
 
