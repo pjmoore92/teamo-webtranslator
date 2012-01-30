@@ -1,4 +1,5 @@
 #summary The specification requirements document
+#labels Phase-Requirements
 
 _The document is intended for our client, so it should present her our solution. Also, it should be as non-technical as possible, since she is not a CS student (this was funnier in my head). We probably should have sent this a long time ago, but if we do, that should be ok for next week._
 
@@ -21,15 +22,72 @@ Algorithms or any other technical details are not discussed here.
 
 The graphics of the pages are shown merely to illustrate the functionality. The actual design of the system will be developed over time.
 
-== Product description ==
+== Functional Requirements ==
+
+This section presents a use case analysis of the Translator website. The use cases presented here model the interaction between users and the website. These use cases will be used to guide usability, to provide a task-oriented documentation system.
+
+=== User classes ===
+
+We have identified the need of two main user classes:
+
+   * Client
+   * Translator
+
+The clients are the users of the service, the visitors of the website. However, as far as the system is concerned, not all visitors are clients, because, in order for a visitor to become a client, he must register with the service, so we decided to have a main *Visitor* category and *Registered client* as a subcategory.
+
+==== Visitor ====
+*Rationale*: The visitor is just visiting. An anonymous visitor of the website.
+
+"_I need to get some documents translated. I came across this website and before I register or send any of my documents, I want to make sure that I’m dealing with a serious service._"
+
+He is a potential client, therefore the steps which he must make in order to become one must be as clear as possible.
+
+His goal is to inform himself about the service. In order for him to be converted, he must be convinced that the service provided is of great quality, so the system’s goal is to make itself trustworthy. Also, a clear privacy policy regarding e-mail addresses and the documents should be available, since they might contain sensitive data.
+
+==== Client ====
+*Rationale*: The client is a registered user of the system.
+
+He has the same goals as the Visitor, but, now that he is registered, he trusts the service a bit more.
+He has access to all the documents that he ever submitted for translation and can view each of the documents statuses (e.g.: Has it been reviewed/quoted by the translator? How much do I have to pay for the translation? etc. ).
+
+==== Administrator/Translator ====
+*Rationale*: The translator is the one answering all the translation requests.
+
+"_As a translator, I must review the documents that my clients send me and quote them. After that, I must also translate them and let them know that I finished work._"
+
+His goal is to answer to all of the client’s requests, i.e. to quote the documents that are received and then translate them and send them back to them.
+
+==== Summary ====
+A set of rough, but clear specifications for each user class:
+   * The *visitor* must be able to register himself as a client of the service. It must be made clear to the visitor the exact terms of the service (e.g.: what service is provided, how it works, etc). Also, some form of contact should be provided, in case more information/details are needed.
+   * The *client* must be able to submit documents for translating and see the stage that their document is in.
+   * The *translator* must be able to quote all the incoming documents and submit them after the work is finished.
+
+
+=== System Boundary ===
+
+==== ERD ===
+[https://lh3.googleusercontent.com/-w1qwx2n8PU0/Tx38kgO3_QI/AAAAAAAAJnI/iUtoGnSQ0xg/s839/Andrei%2527s%2520attempt.png]
+[https://cacoo.com/diagrams/QdXf2xFjGydDz7GH cacoo.com]
+
+==== Job statuses ====
+[https://lh6.googleusercontent.com/--1tcOfeLjY0/Tx3lELFgxoI/AAAAAAAAJms/9cElz1WqGKs/s1038/Flowchart.png]
+[https://cacoo.com/diagrams/f8rK3UBttxbmp3Rq cacoo.com]
+
 === Scenarios ===
 
 === Process overview ===
 ==== Client ====
 ==== Administrator ====
 
-=== Screen by screen specification ===
+=== Non-functional requirements ===
 This section of the document will list all of the web-site’s different screens and pages along with sketches and thorough descriptions for each.
+
+*Note*: give clear labels to the important sections, in order for them to be referenced further in the document, e.g.: a walkthrough from both the client’s and the admin’s point of view.
+
+By the nature of their content, the pages can be categorised into *static* and *dynamic*.
+*Static* pages displays the same information for all users, regardless of their status (logged in or just visiting, client or administrator). *About*, *Testimonials* and *Contact* are such pages in the system described here.
+On the other hand, *dynamic* pages draw some data from the database and display it accordingly. In this case, the dynamic pages are the ones in the dashboard (both client’s and administrator’s) since the information there is specific to every client.
 
 ==== Conventions used ====
    * *green background* and *yellow labels* (fig. x) - used to highlight and label specific groups of content that will be referenced/explained in the document
