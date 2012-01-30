@@ -1,4 +1,5 @@
 #summary A tutorial on writing a sample module (controller+model)
+#labels general
 
 == Writing a module ==
 
