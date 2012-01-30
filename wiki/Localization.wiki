@@ -1,4 +1,5 @@
 #summary Multiple language support.
+#labels general
 
 == Introduction ==
 
