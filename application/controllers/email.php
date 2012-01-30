@@ -39,7 +39,8 @@ class Email extends CI_Controller
 			$this->email->set_newline("\r\n");
 
 			$this->email->from($email, $name);
-			$this->email->to('pjmoore@staloysius.org');		
+			$this->email->to('pjmoore@staloysius.org');
+			$this->email->cc('teamo@stbernadettes.co.uk');		
 			$this->email->subject('Contact Page Email');		
 			$this->email->message($message);
 
