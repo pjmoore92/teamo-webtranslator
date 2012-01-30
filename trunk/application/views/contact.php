@@ -61,7 +61,7 @@
 	<p>
 		<label for="message">Your Message </label>
   		<div class="input">	
-                <textarea class="xxlarge" id="message" name="message" rows="10" value="<?php echo form_input($message_data);?></textarea>
+                <textarea class="xxlarge" id="message" name="message" rows="10" value="<input type="text" name="message" value="" id="message"  /></textarea>
 		</div>
 		
 	</p>
