@@ -82,7 +82,7 @@ class Users extends CI_Model
 	{
 		$this->db->where('LOWER(email)=', strtolower($email));
 
-		$query = $this->db->get($this->table_name);
+		$query = $this->db->get($this->table_name);echo $this->db->last_query();
 		if ($query->num_rows() == 1) return $query->row();
 		return NULL;
 	}
@@ -129,7 +129,7 @@ class Users extends CI_Model
 	{
 		$data['created'] = date('Y-m-d H:i:s');
 		$data['activated'] = $activated ? 1 : 0;
-        $data['admin'] = 0;
+        $data['role_id'] = 1;
 
 		if ($this->db->insert($this->table_name, $data)) {
 			$user_id = $this->db->insert_id();
@@ -392,6 +392,21 @@ class Users extends CI_Model
 	{
 		$this->db->where('user_id', $user_id);
 		$this->db->delete($this->profile_table_name);
+	}
+
+	/**
+	* Get role for role_id
+	*
+	* @return      string
+	*/
+
+	function get_role($role_id)
+	{
+		$this->db->where('id', $role_id);
+		$query = $this->db->get('roles');
+		
+		$row = $query->row_array();
+		return $row['role'];
 	}
 }
 

@@ -1,6 +1,6 @@
         <div class="page-header">
           <h1>Client dashboard <small>Quotes</small></h1>
-          <h2>Hello, <?php echo $name; ?>!</h2>
+          <h2>Hello, <?php echo $client_name; ?>!</h2>
 
           <!--<div class="alert-message warning fade in" data-alert="alert" >
             <a class="close" href="#">&times;</a>

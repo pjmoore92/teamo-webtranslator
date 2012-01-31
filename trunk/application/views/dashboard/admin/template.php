@@ -2,7 +2,6 @@
         <div class="well">
           <h5>Menu</h5>
           <ul>
-            <li><?php echo anchor('dashboard/submit', 'Submit new job'); ?></li>
             <li><?php echo anchor('dashboard/pending', 'Pending'); ?></li>
             <li><?php echo anchor('dashboard/quotes', 'Quotes'); ?></li>
             <li><?php echo anchor('dashboard/translations', 'Translations'); ?></li>
