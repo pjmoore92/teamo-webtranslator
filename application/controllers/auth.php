@@ -30,10 +30,10 @@ class Auth extends CI_Controller
 	function login()
 	{
 		if ($this->tank_auth->is_logged_in()) {									// logged in
-			redirect('/dashboard/');
+			redirect('dashboard/');
 
 		} elseif ($this->tank_auth->is_logged_in(FALSE)) {						// logged in, not activated
-			redirect('/auth/send_again/');
+			redirect('auth/send_again/');
 
 		} else {
 			$data['login_by_username'] = (
@@ -77,7 +77,7 @@ class Auth extends CI_Controller
 						$this->form_validation->set_value('remember'),
 						$data['login_by_username'],
 						$data['login_by_email'])) {								// success
-					redirect('dashboard/client');
+					redirect('dashboard/');
 
 				} else {
 					$errors = $this->tank_auth->get_error_message();
