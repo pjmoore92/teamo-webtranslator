@@ -163,7 +163,7 @@
       <?= $contents ?>
       <footer>
       <p>
-	<a href="welcome/privacy">Privacy Policy</a>
+	<a href="/welcome/privacy">Privacy Policy</a>
 	&copy; <?php 
         $copyYear = 2011; 
         $curYear = date('Y'); 
