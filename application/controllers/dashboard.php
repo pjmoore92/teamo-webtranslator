@@ -15,10 +15,10 @@ class Dashboard extends MY_Controller {
                 $this->lang->load('common');
                 $this->lang->load('home');
 
-                $_data['content'] = 'dashboard/submit';
+                $this->_data['content'] = 'dashboard/submit';
 
-                $this->template->set('title', ucfirst($_data['role']).' Dashboard -');
-                $this->template->load('template', $this->_view_template, $_data);
+                $this->template->set('title', $this->_data['role']. ' Dashboard -');
+                $this->template->load('template', $this->_view_template, $this->_data);
         }
 
         public function add_job(){
@@ -58,15 +58,35 @@ class Dashboard extends MY_Controller {
 
         private function _retrieveData($statusType){
                 $this->load->model('job_model');
+                $_dbType = "";
+                switch ($statusType) {
+                case "pending":
+                        $_dbType = "QuoteReq";
+                        break;
+                case "quotes":
+                        $_dbType = "QuoteSent";
+                        break;
+                case "translations":
+                        $_dbType = "Translated";
+                        break;
+                default:
+                        $_dbType = $statusType;
+                        break;
+                }
 
-                $this->_data['jobs_list'] = $this->job_model->get_by_status($statusType, $this->_user_id);
+                if ($this->_data['role'] == "admin") {
+                        $this->_data['jobs_list'] = $this->job_model->get_by_status($_dbType);
+                }
+                else {
+                        $this->_data['jobs_list'] = $this->job_model->get_by_status($_dbType, $this->_user_id);
+                }
                 $this->_data['content'] = 'dashboard/'.$statusType;
                 $this->template->set('title', $this->_data['role']. ' Dashboard -');
                 $this->template->load('template', $this->_view_template, $this->_data);
         }
         public function pending(){ $this->_retrieveData("pending"); }
         public function quotes(){ $this->_retrieveData("quotes"); }
-        public function translated(){ $this->_retrieveData("translated"); }
+        public function translations(){ $this->_retrieveData("translations"); }
 
         public function history(){
                 //TODO fix historical translations

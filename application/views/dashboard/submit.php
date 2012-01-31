@@ -98,7 +98,7 @@
             var fromLanguage = $('#upload-language-from-select').val();
 
             $.post(
-              '<?php echo base_url("/en/dashboard/client/add_job"); ?>',/*FIXME*/
+              '<?php echo base_url("/en/dashboard/add_job"); ?>',/*FIXME*/
               {'toLanguage' : toLanguage, 'fromLanguage' : fromLanguage },
               function(data){
                 if(!data.error){

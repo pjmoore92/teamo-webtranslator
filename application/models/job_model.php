@@ -39,7 +39,7 @@ class Job_model extends CI_Model{
     public function add_job($job_data){
 
         $this->db->insert($this->_table, $job_data);
-
+        echo $this->db->last_query();
     }
 
     public function update_job_dates($job_id, $job_dates){
