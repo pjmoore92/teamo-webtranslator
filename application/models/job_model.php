@@ -8,9 +8,9 @@ class Job_model extends CI_Model{
         parent::__construct();
     }
 
-    public function get_by_status(String status, $customerID =  NULL) {
-        $this->db->where('status', status);
-        if (customerID != NULL) $this->db->where('customerID', $customerID);
+    public function get_by_status($status, $customerID =  NULL) {
+        $this->db->where('status', $status);
+        if ($customerID != NULL) $this->db->where('customerID', $customerID);
 
         $query = $this->db->get($this->_table);
         if($query->num_rows() > 0)

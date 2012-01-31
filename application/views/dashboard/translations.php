@@ -23,7 +23,7 @@
         <div class="row">
         <div class="span16">
           <?php
-              if($translated_jobs_list == NULL):
+              if($jobs_list == NULL):
                 echo ':( You have no translated jobs.';
               else:
           ?>
@@ -37,7 +37,7 @@
                 <th class="blue header">To language</th>
               </tr>
             </thead>
-            <?php foreach($translated_jobs_list as $job): ?>
+            <?php foreach($jobs_list as $job): ?>
             <tr>
               <td><?php echo $job->jobID; ?></td>
               <td><?php echo $job->dateRequested; ?></td>
