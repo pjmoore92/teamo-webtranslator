@@ -22,7 +22,7 @@ class MY_Controller extends CI_Controller {
 			
 			$this->_data['role'] = $this->session->userdata('role');
 			
-			$this->_view_template = "dashboard/{$this->_data['role']}/template";
+			$this->_view_template = "dashboard/template";
         }
     }
 }
