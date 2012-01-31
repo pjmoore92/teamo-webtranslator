@@ -5,15 +5,16 @@
 
 #### user conf
 
+my $debug = 1;
 my $user = 'upload@claddach-kirkibost.org';
 my $pass = 'uploading';
 my $attachdir = '/home/claddach/bethel/files/from-email';
 
 my $mimetypes = map { qr{$_} } (
-        'application/msword', # DOC
+        'application/msword', # .doc
         'application/pdf',
         'application/rtf',
-        'application/vnd.openxmlformats-officedocument.wordprocessingml.document', # DOCX 
+        'application/vnd.openxmlformats-officedocument.wordprocessingml.document', # .docx
         'text/plain', # MUST be saved .txt, else application/octet-stream
 );
 
@@ -41,6 +42,18 @@ sub checkdirs() {
 sub log() {
         my $now_string = strftime "%b %m %H:%M:%S : ", localtime;
         print $now_string.$_[0]."\n";
+}
+
+sub debugEntity() {
+        my $entity = shift;
+        my $from = shift;
+        my $head = $entity->head;
+        my $type = $head->mime_type;
+        my $filename = $head->recommended_filename;
+        if (!$filename) { 
+                $filename = "";
+        }
+        &log("$from: $head $type $filename");
 }
 
 ## Begin script
@@ -84,10 +97,9 @@ if ($num > 0) {
 
                         # check attachments
                         foreach my $part ($message->parts()) {
-                                my $head = $part->head;
-                                my $type = $head->mime_type;
-                                my $filename = $head->recommended_filename;
-                                &log("$from: $head $type $filename");
+                                if ($debug) {
+                                        &debugEntity($part, $from);
+                                }
                         }
                         unlink($file); ## delete raw message
                         $parser->filer->purge; ## delete tmp files
