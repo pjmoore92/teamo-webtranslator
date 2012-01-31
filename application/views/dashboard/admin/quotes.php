@@ -1,5 +1,5 @@
         <div class="page-header">
-          <h1>Client dashboard <small>History</small></h1>
+          <h1><?php echo ucfirst($role); ?> dashboard <small>Quotes</small></h1>
           <h2>Hello, <?php echo $client_name; ?>!</h2>
 
           <!--<div class="alert-message warning fade in" data-alert="alert" >
@@ -23,8 +23,8 @@
         <div class="row">
         <div class="span16">
           <?php
-              if($historic_jobs_list == NULL):
-                echo ':( You have no historical jobs.';
+              if($quoted_jobs_list == NULL):
+                echo ':( You have no quoted jobs.';
               else:
           ?>
           <table class="zebra-striped" id="sortTableExample">
@@ -37,7 +37,7 @@
                 <th class="blue header">To language</th>
               </tr>
             </thead>
-            <?php foreach($historic_jobs_list as $job): ?>
+            <?php foreach($quoted_jobs_list as $job): ?>
             <tr>
               <td><?php echo $job->jobID; ?></td>
               <td><?php echo $job->dateRequested; ?></td>
