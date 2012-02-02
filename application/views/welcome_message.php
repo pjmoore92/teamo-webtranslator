@@ -28,7 +28,7 @@ elit. The other services I offer are This that and This.</p>
       </div>
     </p>
   </div>
-  <div class="span3" style="text-align:center">
+  <div class="span3 offset1" style="text-align:center">
     <h2><?php echo lang('upload.browse') ?></h2>
      <!--<p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>-->
      <p>
@@ -51,7 +51,7 @@ elit. The other services I offer are This that and This.</p>
           </div>
      </p>
  </div>
-  <div class="span4" style="text-align:center">
+  <div class="span3 offset1" style="text-align:center">
     <h2><?php echo lang('upload.setreqs') ?></h2>
     <!--<p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper.</p>-->
     <p>
@@ -80,7 +80,7 @@ elit. The other services I offer are This that and This.</p>
 <br />
 <!--<div class="row">-->
   <div class="span2">&nbsp;</div>
-  <div class="span3" style="text-align:center">
+  <div class="span2 offset1" style="text-align:center">
     <p><a id="register-submit" class="btn btn-success" href="#" data-controls-modal="modal-from-dom-register-message" 
               data-backdrop="true" data-keyboard="true">Get your quote! &raquo;</a></p>
   <!--  <input type="submit" class="btn btn-success" value="Get your quote!"> -->

@@ -13,6 +13,7 @@
 
     <!-- Le styles -->
     <link href="<?php echo base_url('style/bootstrap.css'); ?>" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Ropa+Sans' rel='stylesheet' type='text/css'>
     <style type="text/css">
       body {
         padding-top: 40px;
@@ -72,11 +73,59 @@
 		<b class="caret"></b>
               </a>
               <ul class="dropdown-menu">
-                <li>
-                  <!-- <a href="#" data-controls-modal="modal-from-dom-clients" 
-              data-backdrop="true" data-keyboard="true">Clients</a> -->
-                  <?php echo anchor('auth/login', 'Clients'); ?>
-                </li>
+                 <?php
+$login = array(
+	'name'	=> 'login',
+	'id'	=> 'login',
+	'value' => set_value('login'),
+	'maxlength'	=> 80,
+	'size'	=> 30,
+);
+
+$login_label = 'Email';
+
+$password = array(
+	'name'	=> 'password',
+	'id'	=> 'password',
+	'size'	=> 30,
+);
+$remember = array(
+	'name'	=> 'remember',
+	'id'	=> 'remember',
+	'value'	=> 1,
+	'checked'	=> set_value('remember'),
+	'style' => 'margin:0;padding:0',
+);
+$captcha = array(
+	'name'	=> 'captcha',
+	'id'	=> 'captcha',
+	'maxlength'	=> 8,
+);
+?>
+<form action="http://alasdaircampbell.com/en/auth/login" method="post" accept-charset="utf-8"><table>
+	<tbody><tr>
+		<td><label for="login">Email</label></td>
+		<td><input type="text" name="login" value="" id="login" maxlength="80" size="30"></td>
+		<td style="color: red;"></td>
+	</tr>
+	<tr>
+		<td><label for="password">Password</label></td>
+		<td><input type="password" name="password" value="" id="password" size="30"></td>
+		<td style="color: red;"></td>
+	</tr>
+
+	
+	<tr>
+		<td colspan="3">
+			<input type="checkbox" name="remember" value="1" id="remember" style="margin:0;padding:0">			<label for="remember">Remember me</label>			<a href="http://alasdaircampbell.com/en//auth/forgot_password">Forgot password</a>			<a href="http://alasdaircampbell.com/en//auth/register">Register</a>		</td>
+	</tr>
+</tbody></table>
+<!--<input type="submit" name="submit" value="Let me in"></form>-->
+
+<div class="pull-right">
+<input type="submit" class="btn btn-success" name="submit" value="Let me in"></form>
+</div>
+<?php echo form_close(); ?>
               </ul>
             </li>
             
