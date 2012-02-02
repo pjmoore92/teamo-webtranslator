@@ -6,18 +6,15 @@ $login = array(
 	'maxlength'	=> 80,
 	'size'	=> 30,
 );
-if ($login_by_username AND $login_by_email) {
-	$login_label = 'Email or login';
-} else if ($login_by_username) {
-	$login_label = 'Login';
-} else {
-	$login_label = 'Email';
-}
+
+$login_label = 'Email';
+
 $password = array(
 	'name'	=> 'password',
 	'id'	=> 'password',
 	'size'	=> 30,
 );
+
 $remember = array(
 	'name'	=> 'remember',
 	'id'	=> 'remember',
@@ -25,6 +22,7 @@ $remember = array(
 	'checked'	=> set_value('remember'),
 	'style' => 'margin:0;padding:0',
 );
+
 $captcha = array(
 	'name'	=> 'captcha',
 	'id'	=> 'captcha',

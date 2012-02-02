@@ -2,13 +2,12 @@
 
 <div class="content">
 <div class="page-header">
-  <h1>Bethel Translations <small>Contact page</small></h1>
+  <h2>Bethel Translations <small>Contact page</small></h2>
 </div>
 <div class="row">
 <br />
-<br />
-<br />
   <div id="contact_form">
+	<div class="span4 offset4">
 	<h2>Contact Us</h2>
 	<?php echo form_open('email/send'); ?>
 	
@@ -68,9 +67,10 @@
 	
 	<p>
 		<div class="input">
-		<input type="submit" class="btn success large" value="Send e-mail" action=<?php echo form_submit('submit', 'Submit'); ?>
+		<input type="submit" class="btn btn-success btn-large" value="Send e-mail" action=<?php echo form_submit('submit', 'Submit'); ?>
 		</div>
 	</p>
+	</div>
 	
 	<?php echo form_close(); ?>
 	

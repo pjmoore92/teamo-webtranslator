@@ -26,65 +26,50 @@
     <link rel="apple-touch-icon" sizes="114x114" href="/images/apple-touch-icon-114x114.png">
 
     <script type="text/javascript" src="<?php echo base_url('/js/jquery/jquery-1.7.1.min.js'); ?>"></script>
+    <script type="text/javascript" src="<?php echo base_url('/js/jquery/jquery.form.js'); ?>"></script>
     <script type="text/javascript" src="<?php echo base_url('/js/bootstrap-modal.js'); ?>"></script>
     <script type="text/javascript" src="<?php echo base_url('/js/bootstrap-dropdown.js'); ?>"></script>
+    <script type="text/javascript" src="<?php echo base_url('/js/bootstrap-alert.js'); ?>"></script>
+    <script type="text/javascript" src="<?php echo base_url('/js/bootstrap-collapse.js'); ?>"></script>
+
   </head>
 
   <body>
 
     <!-- BEGIN HEADER -->
-    <div class="topbar">
-      <div class="fill">
+
+<div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
         <div class="container">
           <?php echo anchor('welcome', lang('company.name'), 'class="brand"'); ?>
-          <ul class="nav">
-            <li class="active"><?php echo anchor('welcome', lang('nav.home')); ?></li>
+          <div class="nav-collapse">
+            <ul class="nav">
+              <li class="active"><?php echo anchor('welcome', lang('nav.home')); ?></li>
             <li><?php echo anchor('welcome/about', lang('nav.about')); ?></li>
             <li><?php echo anchor('welcome/testimonials', lang('nav.testimonials')); ?></li>
             <li><?php echo anchor('welcome/contact', lang('nav.contact')); ?></li>
+	    </ul>
+	    <ul class="nav pull-right">
+	<li class="dropdown" data-dropdown="dropdown">
+              <a href="#" class="dropdown-toggle">
+                <?php echo lang('nav.lang') ?>
+		<b class="caret"></b>
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  
+                  <?php echo anchor('/en', 'English'); ?>
+                  <?php echo anchor('/fr', 'French'); ?>
+                  <?php echo anchor('/it', 'Italian'); ?>
+                </li>
+              </ul>
+            </li> 
+	    <?php if(!$this->tank_auth->is_logged_in()): ?>
+		
 	    <li class="dropdown" data-dropdown="dropdown">
-			<a href="#" class="dropdown-toggle">
-                	  <?php echo lang('nav.serv') ?>
-              		</a>
-              		<ul class="dropdown-menu">
-               		  <li>
-                  	    <!-- <a href="#" data-controls-modal="modal-from-dom-clients" 
-                        data-backdrop="true" data-keyboard="true">Serv1</a> -->
-                           <?php echo anchor('en/', 'Serv1'); ?>
-			    <!-- <a href="#" data-controls-modal="modal-from-dom-clients" 
-                        data-backdrop="true" data-keyboard="true">French</a> -->
-                           <?php echo anchor('en/', 'Serv2'); ?> 
-			   <!-- <a href="#" data-controls-modal="modal-from-dom-clients" 
-                        data-backdrop="true" data-keyboard="true">Italian</a> -->
-                           <?php echo anchor('en/', 'Serv3'); ?> 
-                        </ul>
-           </li>
-          </ul>
-          <ul class="secondary-nav">
-
-	  <li class="dropdown" data-dropdown="dropdown">
-			<a href="#" class="dropdown-toggle">
-                	  <?php echo lang('nav.lang') ?>
-              		</a>
-              		<ul class="dropdown-menu">
-               		  <li>
-                  	    <!-- <a href="#" data-controls-modal="modal-from-dom-clients" 
-                        data-backdrop="true" data-keyboard="true">English</a> -->
-                           <?php echo anchor('en/', 'English'); ?>
-			    <!-- <a href="#" data-controls-modal="modal-from-dom-clients" 
-                        data-backdrop="true" data-keyboard="true">French</a> -->
-                           <?php echo anchor('fr/', 'French'); ?> 
-			   <!-- <a href="#" data-controls-modal="modal-from-dom-clients" 
-                        data-backdrop="true" data-keyboard="true">Italian</a> -->
-                           <?php echo anchor('it/', 'Italian'); ?> 
-                        </ul>
-           </li>
-
-          <?php if(!$this->tank_auth->is_logged_in()): ?>
-
-            <li class="dropdown" data-dropdown="dropdown">
               <a href="#" class="dropdown-toggle">
                 <?php echo lang('nav.login') ?>
+		<b class="caret"></b>
               </a>
               <ul class="dropdown-menu">
                 <li>
@@ -113,6 +98,13 @@
         </div>
       </div>
     </div>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    
 
     <div id="modal-from-dom-clients" class="modal hide fade">
       <div class="modal-header">
@@ -161,15 +153,15 @@
 
     <div class="container-fluid"> <!--FIXME is this needed? -->
       <?= $contents ?>
-      <footer>
-      <p>
+      <footer class="footer">
+        <p class="pull-right">
 	<a href="/welcome/privacy">Privacy Policy</a>
 	&copy; <?php 
         $copyYear = 2011; 
         $curYear = date('Y'); 
         echo $copyYear . (($copyYear != $curYear) ? '-' . $curYear : '') .' '.lang('company.name') ?> 
       </p>
-    </footer>
+      </footer>
     </div>
 
     <!-- END OF VIEW -->
