@@ -6,17 +6,17 @@
 a ante venenatis dapibus posuere velit aliquet. Duis mollis, est non
 commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec
 elit. The other services I offer are This that and This.</p>
-<p><a class="btn primary large">Learn more &raquo;</a></p>
+<p><a class="btn btn-success ">Learn more &raquo;</a></p>
 </div>
 
 <!--<form>-->
 <!-- Example row of columns -->
+  <form id="fileform" enctype="multipart/form-data">
 <div class="row">
-  <div class="span-one-third" style="text-align:center">
+  <div class="span3 offset1" style="text-align:center">
   <h2><?php echo lang('upload.details') ?></h2>
     <!--<p>Etiam porta sem malesuada magna mollis euismod. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</p>-->
     <p>
-    <form>
       <label for="register-name">Your name</label>
       <div class="input">
         <input class="xlarge span3" id="register-name" name="register-name" size="30" type="text" />
@@ -24,16 +24,14 @@ elit. The other services I offer are This that and This.</p>
         
       <label for="register-email">Your e-mail</label>
       <div class="input">
-        <input class="xlarge span3" id="register-email" name="register-email" size="30" type="text" />
+        <input class="xlarge span3" id="register-email" name="register-email" size="30" type="email" />
       </div>
-    </form>
     </p>
   </div>
-  <div class="span-one-third" style="text-align:center">
+  <div class="span3" style="text-align:center">
     <h2><?php echo lang('upload.browse') ?></h2>
      <!--<p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>-->
      <p>
-     <form>
         <label for="register-language-from">Source language</label>
         <div class="input">
           <select class="medium" name="register-language-from" id="register-language-from-select">
@@ -51,14 +49,12 @@ elit. The other services I offer are This that and This.</p>
           <!--<input class="input-file" id="fileInput2" name="fileInput" type="file">
           <input class="input-file" id="fileInput3" name="fileInput" type="file">-->
           </div>
-      </form>
      </p>
  </div>
-  <div class="span-one-third" style="text-align:center">
+  <div class="span4" style="text-align:center">
     <h2><?php echo lang('upload.setreqs') ?></h2>
     <!--<p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper.</p>-->
     <p>
-    <form>
         <label for="register-language-to">Language</label>
         <div class="input">
           <select class="medium" name="register-language-to" id="register-language-to-select">
@@ -75,25 +71,23 @@ elit. The other services I offer are This that and This.</p>
             <option>EUR &euro;</option>
           </select>
         </div>
-    </form>
     </p>
   </div>
-</div>
+<!--</div>-->
+  
 <br />
 <br />
 <br />
-<div class="row">
-  <div class="span-one-third">&nbsp;</div>
-  <div class="span-one-third" style="text-align:center">
-    <p><a id="register-submit" class="btn" href="#" data-controls-modal="modal-from-dom-register-message" 
+<!--<div class="row">-->
+  <div class="span2">&nbsp;</div>
+  <div class="span3" style="text-align:center">
+    <p><a id="register-submit" class="btn btn-success" href="#" data-controls-modal="modal-from-dom-register-message" 
               data-backdrop="true" data-keyboard="true">Get your quote! &raquo;</a></p>
-  <!--  <input type="submit" class="btn primary" value="Get your quote!"> -->
+  <!--  <input type="submit" class="btn btn-success" value="Get your quote!"> -->
   </div>
   <div class="span-one-third">&nbsp;</div>
   <!--<div class="span-one-third">Quote</div>-->
 </div>
-<!-- </form> -->
-
     <div id="modal-from-dom-register-message" class="modal hide fade">
       <div class="modal-header">
         <a href="#" class="close">&times;</a>
@@ -111,6 +105,7 @@ elit. The other services I offer are This that and This.</p>
         <!-- <a href="dashboard/client/index.html" class="btn primary">Go!</a>
         <a href="#" class="btn secondary">I can't find my reference code</a> -->
       </div>
+	</form>
     </div>
 
 <script type="text/javascript">

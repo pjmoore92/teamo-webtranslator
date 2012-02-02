@@ -2,7 +2,7 @@
 
 <div class="content">
 <div class="page-header">
-  <h1>Bethel Translations <small>About Page</small></h1>
+  <h1 class="active">Bethel Translations <small>About Page</small></h1>
 </div>
 <div class="row">
   <div class="span10">
