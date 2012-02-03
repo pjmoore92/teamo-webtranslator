@@ -13,6 +13,7 @@
 
     <!-- Le styles -->
     <link href="<?php echo base_url('style/bootstrap.css'); ?>" rel="stylesheet">
+    <!--<link href="<?php echo base_url('style/bootstrap-responsive.css'); ?>" rel="stylesheet">-->
     <link href='http://fonts.googleapis.com/css?family=Ropa+Sans' rel='stylesheet' type='text/css'>
     <style type="text/css">
       body {
@@ -49,6 +50,20 @@
             <li><?php echo anchor('welcome/about', lang('nav.about')); ?></li>
             <li><?php echo anchor('welcome/testimonials', lang('nav.testimonials')); ?></li>
             <li><?php echo anchor('welcome/contact', lang('nav.contact')); ?></li>
+<li class="dropdown" data-dropdown="dropdown">
+              <a href="#" class="dropdown-toggle">
+                <?php echo lang('nav.serv') ?>
+		<b class="caret"></b>
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  
+                  <?php echo anchor('/en', 'Service 1'); ?>
+                  <?php echo anchor('/en', 'Service 2'); ?>
+                  <?php echo anchor('/en', 'Service 3'); ?>
+                </li>
+              </ul>
+            </li> 
 	    </ul>
 	    <ul class="nav pull-right">
 	<li class="dropdown" data-dropdown="dropdown">
@@ -134,6 +149,7 @@ $captcha = array(
             <li class="dropdown" data-dropdown="dropdown">
               <a href="#" class="dropdown-toggle">
                 <?php //echo lang('nav.logout') ?>Logout
+		<b class="caret"></b>
               </a>
               <ul class="dropdown-menu">
                 <li>
