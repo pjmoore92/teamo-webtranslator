@@ -31,7 +31,7 @@ elit. The other services I offer are This that and This.</p>
   <div class="span3 offset1" style="text-align:center">
     <h2><?php echo lang('upload.browse') ?></h2>
      <!--<p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>-->
-     <p>
+     <div>
         <label for="register-language-from">Source language</label>
         <div class="input">
           <select class="medium" name="register-language-from" id="register-language-from-select">
@@ -41,7 +41,7 @@ elit. The other services I offer are This that and This.</p>
           </select>
         </div>
 
-      </p>
+      </div>
       <p>
           <label for="register-documents-upload">Documents</label>
           <div class="input">
