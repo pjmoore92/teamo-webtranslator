@@ -26,7 +26,7 @@
     <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
     <link rel="apple-touch-icon" sizes="72x72" href="/images/apple-touch-icon-72x72.png">
     <link rel="apple-touch-icon" sizes="114x114" href="/images/apple-touch-icon-114x114.png">
-
+   
     <script type="text/javascript" src="<?php echo base_url('/js/jquery/jquery-1.7.1.min.js'); ?>"></script>
     <script type="text/javascript" src="<?php echo base_url('/js/jquery/jquery.form.js'); ?>"></script>
     <script type="text/javascript" src="<?php echo base_url('/js/bootstrap-modal.js'); ?>"></script>
@@ -35,12 +35,11 @@
     <script type="text/javascript" src="<?php echo base_url('/js/bootstrap-collapse.js'); ?>"></script>
 
   </head>
-
+    
   <body>
 
     <!-- BEGIN HEADER -->
-
-<div class="navbar navbar-fixed-top">
+    <div class="navbar navbar-fixed-top">
       <div class="navbar-inner">
         <div class="container">
           <?php echo anchor('welcome', lang('company.name'), 'class="brand"'); ?>
@@ -225,7 +224,8 @@ $captcha = array(
         $copyYear = 2011; 
         $curYear = date('Y'); 
         echo $copyYear . (($copyYear != $curYear) ? '-' . $curYear : '') .' '.lang('company.name') ?> 
-      </p>
+        </p>
+        
       </footer>
     </div>
 
