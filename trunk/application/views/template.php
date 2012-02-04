@@ -127,11 +127,16 @@ $captcha = array(
 		<td><input type="password" name="password" value="" id="password" size="30"></td>
 		<td style="color: red;"></td>
 	</tr>
-
+	<tr>
+					
+		
 	
 	<tr>
-		<td colspan="3">
-			<input type="checkbox" name="remember" value="1" id="remember" style="margin:0;padding:0">			<label for="remember">Remember me</label>			<a href="http://alasdaircampbell.com/en//auth/forgot_password">Forgot password</a>			<a href="http://alasdaircampbell.com/en//auth/register">Register</a>		</td>
+		<td colspan=3>
+			<label for="remember" style="float:left">Remember me </label>
+			<input type="checkbox" name="remember" value="1" id="remember" style="float:right">
+			<a href="http://alasdaircampbell.com/en//auth/forgot_password">Forgot password</a>
+			<a href="http://alasdaircampbell.com/en//auth/register">Register</a>		</td>
 	</tr>
 </tbody></table>
 <!--<input type="submit" name="submit" value="Let me in"></form>-->
