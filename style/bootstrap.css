@@ -32,6 +32,26 @@ html {
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
 }
+<<<<<<< .mine
+
+* {
+margin: 0;
+}
+html, body {
+height: 100%;
+}
+.wrapper {
+min-height: 100%;
+height: auto !important;
+height: 100%;
+margin: 0 auto -4em;
+}
+.footer, .push {
+clear:both;
+bottom:0;
+float: right;
+}
+=======
 
 * {
 margin: 0;
@@ -50,6 +70,7 @@ position:absolute;
 bottom:0;
 float: right;
 }
+>>>>>>> .r224
 a:focus {
   outline: thin dotted;
   outline: 5px auto -webkit-focus-ring-color;
