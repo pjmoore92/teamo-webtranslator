@@ -1,4 +1,3 @@
-<<<<<<< .mine
 <?php if ( ! defined('BASEPATH')) exit('Access denied'); ?>
 <!-- Third party script for BrowserPlus runtime (Google Gears included in Gears runtime now) -->
 <script type="text/javascript" src="http://bp.yahooapis.com/2.4.21/browserplus-min.js"></script>
@@ -430,4 +429,3 @@ $(document).ready(function(){
     });
 });
 </script>
->>>>>>> .r227
