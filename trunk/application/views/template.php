@@ -34,6 +34,7 @@
     <script type="text/javascript" src="<?php echo base_url('/js/bootstrap-alert.js'); ?>"></script>
     <script type="text/javascript" src="<?php echo base_url('/js/bootstrap-collapse.js'); ?>"></script>
 
+
   </head>
     
   <body>
@@ -45,7 +46,7 @@
           <?php echo anchor('welcome', lang('company.name'), 'class="brand"'); ?>
           <div class="nav-collapse">
             <ul class="nav">
-              <li class="active"><?php echo anchor('welcome', lang('nav.home')); ?></li>
+              <li><?php echo anchor('welcome', lang('nav.home')); ?></li>
             <li><?php echo anchor('welcome/about', lang('nav.about')); ?></li>
             <li><?php echo anchor('welcome/testimonials', lang('nav.testimonials')); ?></li>
             <li><?php echo anchor('welcome/contact', lang('nav.contact')); ?></li>
@@ -172,6 +173,7 @@ $captcha = array(
         </div>
       </div>
     </div>
+
 
     
 
