@@ -1,5 +1,71 @@
 <?php if ( ! defined('BASEPATH')) exit('Access denied'); ?>
+<!-- Third party script for BrowserPlus runtime (Google Gears included in Gears runtime now) -->
+<script type="text/javascript" src="http://bp.yahooapis.com/2.4.21/browserplus-min.js"></script>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
+
+<!-- Load plupload and all it's runtimes and finally the jQuery queue widget -->
+    <script type="text/javascript" src="/plupload/js/plupload.full.js"></script>
+
+<script type="text/javascript">
+// Custom example logic
+$(function() {
+    var uploader = new plupload.Uploader({
+        runtimes : 'gears,html5,flash,silverlight,browserplus',
+            browse_button : 'pickfiles',
+            container : 'container',
+            max_file_size : '10mb',
+            url : 'upload.php',
+            flash_swf_url : '/plupload/js/plupload.flash.swf',
+            silverlight_xap_url : '/plupload/js/plupload.silverlight.xap',
+            filters : [
+            {title : "Documents", extensions : "txt,rtf,doc,docx,pdf"},
+            ]
+    });
+
+    uploader.bind('Init', function(up, params) {
+        $('#filelist').html("No files added");
+    });
+
+    $('#uploadfiles').click(function(e) {
+        uploader.start();
+        e.preventDefault();
+    });
+
+    uploader.init();
+
+    uploader.bind('FilesAdded', function(up, files) {
+        $.each(files, function(i, file) {
+            $('#filelist').append(
+                '<div id="' + file.id + '">' +
+                file.name + ' (' + plupload.formatSize(file.size) + ') <b></b>' +
+                '</div>');
+        });
+
+        up.refresh(); // Reposition Flash/Silverlight
+    });
+
+    uploader.bind('UploadProgress', function(up, file) {
+        $('#' + file.id + " b").html(file.percent + "%");
+    });
+
+    uploader.bind('Error', function(up, err) {
+        $('#filelist').append("<div>Error: " + err.code +
+            ", Message: " + err.message +
+            (err.file ? ", File: " + err.file.name : "") +
+            "</div>"
+        );
+
+        up.refresh(); // Reposition Flash/Silverlight
+    });
+
+    uploader.bind('FileUploaded', function(up, file) {
+        $('#' + file.id + " b").html("100%");
+    });
+});
+</script>
+
 <!-- TODO horizontal sliding Ads a la BBC? -->
+
 <div class="hero-unit">
 <h1><?php echo lang('helloWorld') ?></h1>
 <p>Vestibulum id ligula porta felis euismod semper. Integer posuere erat
@@ -21,7 +87,7 @@ elit. The other services I offer are This that and This.</p>
       <div class="input">
         <input class="xlarge span3" id="register-name" name="register-name" size="30" type="text" />
       </div>
-        
+
       <label for="register-email">Your e-mail</label>
       <div class="input">
         <input class="xlarge span3" id="register-email" name="register-email" size="30" type="email" />
@@ -43,12 +109,12 @@ elit. The other services I offer are This that and This.</p>
 
       </div>
       <p>
-          <label for="register-documents-upload">Documents</label>
-          <div class="input">
-          <input class="input-file" id="register-documents-upload" name="register-documents-upload" type="file">
-          <!--<input class="input-file" id="fileInput2" name="fileInput" type="file">
-          <input class="input-file" id="fileInput3" name="fileInput" type="file">-->
-          </div>
+        <div id="container">
+            <div id="filelist"><?php echo lang('upload.emptylist') ?></div>
+            <br />
+            <a id="pickfiles" href="#">[Add files]</a>
+            <a id="uploadfiles" href="#">[Upload]</a>
+        </div>
      </p>
  </div>
   <div class="span3 offset1" style="text-align:center">
@@ -74,7 +140,7 @@ elit. The other services I offer are This that and This.</p>
     </p>
   </div>
 <!--</div>-->
-  
+
 <br />
 <br />
 <br />
@@ -105,45 +171,45 @@ elit. The other services I offer are This that and This.</p>
         <!-- <a href="dashboard/client/index.html" class="btn primary">Go!</a>
         <a href="#" class="btn secondary">I can't find my reference code</a> -->
       </div>
-	</form>
+    </form>
     </div>
 
 <script type="text/javascript">
-  $(document).ready(function(){
+$(document).ready(function(){
     $('#register-submit').click(function(){
 
-      var name = $('#register-name').val();
-      var email = $('#register-email').val();
+        var name = $('#register-name').val();
+        var email = $('#register-email').val();
 
-      $.post(
-        '<?php echo base_url("/en/auth/register"); ?>',/*FIXME*/
-        {'name' : name, 'email' : email },
-        function(data){
-          if(!data.error){
-            var message = $('\
-              <p>\
-                Name: <span class="name"></span><br />\
-                Email: <span class="email"></span><br />\
-                Reference code: <span class="refcode"></span><br /><br />\
-                Please check your email!\
-              </p>');
-            $('#modal-from-dom-register-message .modal-body')
-              .html('').append(message);
-            $('#modal-from-dom-register-message .modal-body .name')
-              .html(data.name);
-            $('#modal-from-dom-register-message .modal-body .email')
-              .html(data.email);
-            $('#modal-from-dom-register-message .modal-body .refcode')
-              .html(data.refcode);
-          }
-          else{
-            $('#modal-from-dom-register-message .modal-body p')
-              .html('Whoopsies! Something\'s not right!<br />DEBUGGING: ' + data.error);
-              /* FIXME */
-          }
-        },
-        "json"
-      );
+        $.post(
+            '<?php echo base_url("/en/auth/register"); ?>',/*FIXME*/
+            {'name' : name, 'email' : email },
+            function(data){
+                if(!data.error){
+                    var message = $('\
+                        <p>\
+                        Name: <span class="name"></span><br />\
+                        Email: <span class="email"></span><br />\
+                        Reference code: <span class="refcode"></span><br /><br />\
+                        Please check your email!\
+                        </p>');
+                    $('#modal-from-dom-register-message .modal-body')
+                        .html('').append(message);
+                    $('#modal-from-dom-register-message .modal-body .name')
+                        .html(data.name);
+                    $('#modal-from-dom-register-message .modal-body .email')
+                        .html(data.email);
+                    $('#modal-from-dom-register-message .modal-body .refcode')
+                        .html(data.refcode);
+                }
+                else{
+                    $('#modal-from-dom-register-message .modal-body p')
+                        .html('Whoopsies! Something\'s not right!<br />DEBUGGING: ' + data.error);
+                    /* FIXME */
+                }
+            },
+                "json"
+            );
     });
-  });
+});
 </script>
