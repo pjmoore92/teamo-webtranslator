@@ -3,7 +3,7 @@
         <div class="well" >
           <h5>Menu</h5>
           <ul class="nav nav-list">
-	    <?php if($this->session->userdata('role') == 'client'): ?>
+			 <?php if($this->session->userdata('role') == 'client'): ?>
             	<li><a href="/dashboard/submit"><i class="icon-plus"></i> Submit new Job</a></li>
              <?php endif; ?>
 	    <li><a href="/dashboard/pending"><i class="icon-list"></i> Pending</a></li>

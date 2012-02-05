@@ -23,28 +23,17 @@
         <div class="row">
         <div class="span9">
           <?php
-              if($jobs_list == NULL):
-                echo ':( You have no pending jobs.';
-              else:
-          ?>
-		  <?php endif; ?>
-         <!-- <table class="zebra-striped" id="sortTableExample">
-            <thead>
-              <tr>
-                <th class="header headerSortDown">#</th>
-                <th class="header">Date requested</th>
-                <th class="header">Date due</th>
-                <th class="blue header">From language</th>
-                <th class="blue header">To language</th>
-              </tr>
-            </thead>-->
-	    <div class="accordion" id="accordion2">
-	    <?php foreach($jobs_list as $job): ?>
+            if($jobs_list == NULL):
+				echo ':( You have no pending jobs.';
+            else:
+			?>
+			<div class="accordion" id="accordion2">
+			<?php foreach($jobs_list as $job): ?>
 			<div class="accordion-group">
 				<div class="accordion-heading">
-					<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#<?php echo $job->jobID; ?>"> Job <?php echo $job->jobID; ?></a>
+					<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#<?php echo $job->jobID; ?>"> Job Number: <?php echo $job->jobID; ?> <i>-  Click to Expand</i> </a>
 				</div>
-				<div id="<?php echo $job->jobID; ?>" class="accordion-body collapse in">
+				<div id="<?php echo $job->jobID; ?>" class="accordion-body collapse">
 					<div class="accordion-inner">
 						<div class="well">
 							<div class="row">
@@ -106,5 +95,17 @@
 				</div>
 		<?php endforeach; ?>
         </div>
-		
+
+		  <?php endif; ?>
+         <!-- <table class="zebra-striped" id="sortTableExample">
+            <thead>
+              <tr>
+                <th class="header headerSortDown">#</th>
+                <th class="header">Date requested</th>
+                <th class="header">Date due</th>
+                <th class="blue header">From language</th>
+                <th class="blue header">To language</th>
+              </tr>
+            </thead>-->
+	    
         </div>
