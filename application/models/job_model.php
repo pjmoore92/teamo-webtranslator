@@ -42,8 +42,29 @@ class Job_model extends CI_Model{
 
     public function add_job($job_data){
 
+        //Start transaction, lol
+        $this->db->trans_start();
+        
+        //add the new job to the table
         $this->db->insert($this->_table, $job_data);
-        echo $this->db->last_query();
+        
+        //query for the ID of the last job added
+        $this->db->select("jobID");
+        $this->db->order_by("jobID", "desc");
+        $this->db->limit(1);
+        $query = $this->db->get($this->_table);
+        
+        if($query->num_rows() == 1)
+            $jobID = $query->result();
+
+        //complete transaction
+        $this->db->trans_complete();
+        
+        if ($this->db->trans_status() === FALSE){
+            // generate an error... or use the log_message() function to log your error
+        }
+        
+        return $jobID;
     }
 
     public function update_job_dates($job_id, $job_dates){
