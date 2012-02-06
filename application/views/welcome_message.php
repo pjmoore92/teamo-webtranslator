@@ -68,11 +68,11 @@ $(function() {
 
 <div class="hero-unit">
 <h1><?php echo lang('Welcome') ?></h1>
-<p><?php echo lang('paragraph_p1') ?><?php echo anchor('http://alasdaircampbell.com/en/welcome/about', 'About')?>
+<p><?php echo lang('paragraph_p1') ?><?php echo anchor('http://alasdaircampbell.com/en/welcome/about', 'About')?>.
    <?php echo lang('paragraph_p2') ?><?php echo anchor('http://alasdaircampbell.com/en/', 'Editing and Proofreading')?>, 
    <?php echo anchor('http://alasdaircampbell.com/en/', 'Over the phone interpreting')?>,
    <?php echo lang('paragraph_p3') ?><?php echo anchor('http://alasdaircampbell.com/en/', 'Remote video interpreting')?>. 
-   <?php echo lang('paragraph_p4') ?><?php echo anchor('http://alasdaircampbell.com/en/welcome/testimonials', 'here')?></p>
+   <?php echo lang('paragraph_p4') ?><?php echo anchor('http://alasdaircampbell.com/en/welcome/testimonials', 'here')?>.</p>
 </div>
 
 <!--<form>-->
