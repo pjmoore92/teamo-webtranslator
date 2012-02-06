@@ -11,8 +11,9 @@ class Job_model extends CI_Model{
 
     public function get_by_status($status, $customerID =  NULL) {
         $this->db->where('status', $status);
-        if ($customerID != NULL) $this->db->where('customerID', $customerID);
-        else{
+        if ($customerID != NULL){
+            $this->db->where('customerID', $customerID);
+        
             //JOIN with user_profiles table to get the user specific data
             $this->db->join($this->_cust_table, "{$this->_cust_table}.customerID = {$this->_table}.customerID");
         }
