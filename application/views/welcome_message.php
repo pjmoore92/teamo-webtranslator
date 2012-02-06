@@ -68,15 +68,11 @@ $(function() {
 
 <div class="hero-unit">
 <h1><?php echo lang('Welcome') ?></h1>
-<p>I offer excellent translation services with a primary focus on translating documents 
-from French to English and vice versa. For more information on myself, please see 
-<a href="http://alasdaircampbell.com/en/">About</a>.
-I also offer the following services: 
-<a href="http://alasdaircampbell.com/en/">Editing and Proofreading</a>, 
-<a href="http://alasdaircampbell.com/en/">Over the phone interpreting</a>, and
-<a href="http://alasdaircampbell.com/en/">Video Remote Interpreting</a>. 
-You can see what other people thought of my work 
-<a href="http://alasdaircampbell.com/en/welcome/testimonials">here.</p>
+<p><?php echo lang('paragraph_p1') ?><?php echo anchor('http://alasdaircampbell.com/en/welcome/about', 'About')?>
+   <?php echo lang('paragraph_p2') ?><?php echo anchor('http://alasdaircampbell.com/en/', 'Editing and Proofreading')?>, 
+   <?php echo anchor('http://alasdaircampbell.com/en/', 'Over the phone interpreting')?>,
+   <?php echo lang('paragraph_p3') ?><?php echo anchor('http://alasdaircampbell.com/en/', 'Remote video interpreting')?>. 
+   <?php echo lang('paragraph_p4') ?><?php echo anchor('http://alasdaircampbell.com/en/welcome/testimonials', 'here')?></p>
 </div>
 
 <!--<form>-->
