@@ -67,12 +67,16 @@ $(function() {
 <!-- TODO horizontal sliding Ads a la BBC? -->
 
 <div class="hero-unit">
-<h1><?php echo lang('helloWorld') ?></h1>
-<p>Vestibulum id ligula porta felis euismod semper. Integer posuere erat
-a ante venenatis dapibus posuere velit aliquet. Duis mollis, est non
-commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec
-elit. The other services I offer are This that and This.</p>
-<p><a class="btn btn-success ">Learn more &raquo;</a></p>
+<h1><?php echo lang('Welcome') ?></h1>
+<p>I offer excellent translation services with a primary focus on translating documents 
+from French to English and vice versa. For more information on myself, please see 
+<a href="http://alasdaircampbell.com/en/">About</a>.
+I also offer the following services: 
+<a href="http://alasdaircampbell.com/en/">Editing and Proofreading</a>, 
+<a href="http://alasdaircampbell.com/en/">Over the phone interpreting</a>, and
+<a href="http://alasdaircampbell.com/en/">Video Remote Interpreting</a>. 
+You can see what other people thought of my work 
+<a href="http://alasdaircampbell.com/en/welcome/testimonials">here.</p>
 </div>
 
 <!--<form>-->
