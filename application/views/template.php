@@ -154,7 +154,7 @@ $captcha = array(
             
             <li class="dropdown" data-dropdown="dropdown">
               <a href="#" class="dropdown-toggle">
-                <?php //echo lang('nav.logout') ?>Logout
+                <?php //echo lang('nav.logout') ?>My Account
 		<b class="caret"></b>
               </a>
               <ul class="dropdown-menu">
