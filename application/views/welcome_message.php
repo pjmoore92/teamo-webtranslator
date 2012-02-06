@@ -234,7 +234,7 @@ $(function() {
             flash_swf_url : '/plupload/js/plupload.flash.swf',
             silverlight_xap_url : '/plupload/js/plupload.silverlight.xap',
             filters : [
-            {title : "Documents", extensions : "txt,rtf,doc,docx,pdf"},
+            {title : "Documents", extensions : "txt,rtf,doc,docx,pdf"}
             ]
     });
 
@@ -252,8 +252,7 @@ $(function() {
     uploader.bind('FilesAdded', function(up, files) {
         $.each(files, function(i, file) {
             $('#filelist').append(
-                '<div id="' + file.id + '">' +
-                file.name + ' (' + plupload.formatSize(file.size) + ') <b></b>' +
+                '<div id="' + file.name + ' (' + plupload.formatSize(file.size) + ')' +
                 '</div>');
         });
 
@@ -328,8 +327,8 @@ elit. The other services I offer are This that and This.</p>
         <div id="container">
             <div id="filelist"><?php echo lang('upload.emptylist') ?></div>
             <br />
-            <a id="pickfiles" href="#">[Add files]</a>
-            <a id="uploadfiles" href="#">[Upload]</a>
+            <a id="pickfiles" class="btn btn-info" href="#">Add..</a>
+            <a id="uploadfiles" class="btn btn-success" href="#">Upload</a>
         </div>
      </p>
  </div>
