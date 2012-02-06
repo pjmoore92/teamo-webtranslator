@@ -3,7 +3,7 @@
 class Job_model extends CI_Model{
 
     private $_table = 'job';
-    private $_cust_table = 'user_profiles';
+    private $_cust_table = 'customer';
 
     public function __construct(){
         parent::__construct();
@@ -14,7 +14,7 @@ class Job_model extends CI_Model{
         if ($customerID != NULL) $this->db->where('customerID', $customerID);
         else{
             //JOIN with user_profiles table to get the user specific data
-            $this->db->join($_cust_table, "{$_cust_table}.id = {$_table}.customerID");
+            $this->db->join($this->_cust_table, "{$this->_cust_table}.customerID = {$this->_table}.customerID");
         }
 
         $query = $this->db->get($this->_table);
