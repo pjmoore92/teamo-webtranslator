@@ -1,5 +1,5 @@
         <div class="page-header">
-          <h1>Client dashboard <small>Pending quotes</small></h1>
+          <h1><?php echo ucfirst($role); ?> dashboard</h1>
           <h2>Hello, <?php echo $client_name; ?>!</h2>
 
           <!--<div class="alert-message warning fade in" data-alert="alert" >
@@ -7,7 +7,7 @@
             <p><strong>Update:</strong> Joelle has sent you the quote for Docname3. Please review it!</p>
           </div>-->
 
-          <div class="alert alert-block alert-error fade in">
+          <!--<div class="alert alert-block alert-error fade in">
             <a class="close" data-dismiss="alert" href="#">&times;</a>
             <p>
               <strong>Update:</strong> Joelle has sent you a quote for <strong>Docname2</strong>:
@@ -17,7 +17,7 @@
               <a class="btn btn-small btn-success" href="#">I accept!</a>
               <a class="btn btn-small btn-danger" href="#">No, thanks!</a>
             </div>
-          </div>
+          </div>-->
 
         </div>
         <div class="row">
@@ -40,7 +40,7 @@
 								<div class="span3">
 									<dl>
 										<dt>Client</dt>
-											<dd><?php echo $client_name; ?></dd>
+											<dd><?php echo $job->fullName; ?></dd>
 										<dt>Languages</dt>
 											<dd><?php echo $job->fromLanguage; ?> to <?php echo $job->toLanguage; ?></dd>
 										<dt>Sent on</dt>
@@ -54,7 +54,16 @@
 										<dt>Date Due</dt>
 											<dd><?php echo $job->dateDue; ?></dt>
 									</dl>
-									<!--<button class="btn">Send the Quote</button>-->
+									<?php if($this->session->userdata('role') == 'client'): 		
+												  else: 	
+												  ?><form class="well form-search">
+												  <span class="label label-warning">Enter Quote</span>
+        											  <input type="text" class="input-small" placeholder="Quote">
+        											  
+												  <button class="btn btn-small btn-success">Send Quote</button>
+												  </form>
+												  <?php endif;  ?>
+									
 								</div>
 							</div>
 							  <table class="table table-striped" id="sortTableExample">
