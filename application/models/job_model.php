@@ -3,6 +3,7 @@
 class Job_model extends CI_Model{
 
     private $_table = 'job';
+    private $_cust_table = 'user_profiles';
 
     public function __construct(){
         parent::__construct();
@@ -11,6 +12,10 @@ class Job_model extends CI_Model{
     public function get_by_status($status, $customerID =  NULL) {
         $this->db->where('status', $status);
         if ($customerID != NULL) $this->db->where('customerID', $customerID);
+        else{
+            //JOIN with user_profiles table to get the user specific data
+            $this->db->join($_cust_table, "{$_cust_table}.id = {$_table}.customerID");
+        }
 
         $query = $this->db->get($this->_table);
         if($query->num_rows() > 0)
