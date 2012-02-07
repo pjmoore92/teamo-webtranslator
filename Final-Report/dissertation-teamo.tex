@@ -1,0 +1,172 @@
+% This example An LaTeX document showing how to use the l3proj class to
+% write your report. Use pdflatex and bibtex to process the file, creating 
+% a PDF file as output (there is no need to use dvips when using pdflatex).
+
+% Modified 
+
+\documentclass{l3proj}
+\begin{document}
+\title{A Website Translation Service}
+\author{Alasdair Campbell \\
+        Stephen Hayton \\
+        Paul Moore \\
+        Andrei Mustata \\
+	Wei Zhang}
+\date{5th February 2012}
+\maketitle
+\begin{abstract}
+
+(TBC)
+
+\end{abstract}
+\educationalconsent
+\tableofcontents
+%==============================================================================
+\chapter{Introduction}
+\label{intro}
+\textit{\small{This article assumes a basic general computing knowledge from the reader. If any words or phrases are not understood, consult the glossary of terms (Section~\ref{sec:gloss}) at the end of the document. All content is owned by the authors of this document or is otherwise referenced in bibliography (Section~\ref{sec:bibl})}}\\
+\\
+As part of our degree, in year 3 we are tasked with a team project, relating to computing disciplines new to us and drawing on knowledge gained from the preceding two years at University. Teams were randomly assembled at the beginning of semester and our team received the project to create a website containing a translation service for a real client. It was a pleasing allocation mainly due to the latter part of the task: the fact we would be working with a real client. To briefly summarise our task at hand: we are to develop a website for a free-lance translator. It should allow users to upload documents, request one of the available languages to translate to, and submit a request for translation. Our client should then be able to review those submitted documents and send a quote to the user for the job to be translated. The user should then be able to pay for the job(s) via Paypal, and then receive their translated document after a period of time. Additional required features of the website will be discussed later.\\
+\\
+An essential part of our requirements gathering process was the first meeting with our client, Joelle Cimatche. Our team had been forewarned by our supervisor that the client was not very "technically minded", so we tried our best to prepare questions that did not assume she had much experience with a computer. At the meeting, the client explained she had a very basic understanding of word processing applications and the Internet, and not much else. This presented us with an additional challenge. We couldn't simply relay technical jargon to the client and expect her to provide useful feedback. Not only that, our team would have to create a very easy-to-use admin end to the website that she could learn quickly. As we advanced the development of the website, we would have to be very clear and straightforward when updating her on our progress. \textbf{Figure 1.1} somewhat illustrates this challenge we have. It is basically the "adoption rate" for a percentage of users of new technologies. In otherwords, how quickly users can say they understand a new technology after it is first released. It is known as Roger's bell curve. Our client would be at the very end of the spectrum, in the 16\% of users or "Laggards" as described in the graph.\\
+
+\begin{figure}
+\begin{center}
+\includegraphics[scale=0.6]{DiffusionOfInnovation}
+\caption{Roger's bell curve, source: http://en.wikipedia.org/wiki/File:DiffusionOfInnovation.png}
+\end{center}
+\end{figure}
+
+Reflecting on our experiences in our project, working with the client has not been exceptionally easy. One of our main challenges is that our client is a novice computer user. Quite ironically, it has been a task for us to translate regular computing jargon into layman's terms in order for them to understand. This was critical in our requirement gathering process. In spite of this additional challenge that teams working with other projects might not particularly face, it is not necessarily something that is discouraging for us. When we eventually graduate and face real world software projects, it won't always be technically minded people like ourselves we deal with, it will people who are more similar to our client. It will provide us something to drawn upon when we are asked to recount our experiences in future interviews. The opportunity to work with a real client will serve us as great preparation for working life.\\
+\\
+There are multiple websites on the Internet that offer a similar service to the one we have to develop. This creates a desire of competing with what's already available, by trying to improve areas where other websites have fallen short. We believe one of the key factors that makes a modern website successful is minimalistic design: it offers simple and effective functionality and is aesthetically pleasing. The combination of these things means users are more likely to use the website after stumbling across it in a search, perhaps, and will ultimately give our client a larger customer base. To clarify, we are not trying to re-invent the wheel with our project. We have used frameworks and other free source components in the development of our website. The system is mainly built around the LAMP structure, i.e., Linux + Apache + MySQL + PHP. Also we adopted some thrid party toolkits in our design (discussed in Section~\ref{chap:design} later), namely Bootstrap (CSS, HTML), CodeIgniter and phpMyAdmin. We aimed to maintain a user friendly feel and look and believe that is something we accomplished well. One of the things that encourages this notion is the fact we have created a simple 3-stage process in which users can register, upload documents, and request languages to translate to.\\   
+
+%==============================================================================
+\chapter{Design}
+\label{chap:design}
+
+As software developers naturally would when creating anything else from scratch, our team looked for similar websites already in existence. We identified common useful features of each, features that were not so useful, and listed some we thought could be useful but simply did not exist in any of the sites we examined. One recurring theme we noticed in a majority of similar translation websites was that the home page was very cluttered. In other words, the process that the user had to follow to obtain some translation of a document was not extremely clear. Instead, they were met with various registration options, other services and annoying advertisements. From previous modules in our degree, namely IM2 and IS3, our team had experience of applying Jakob Nielsen's heuristics to obtain a successful user interface. We wanted to develop the idea that our website would display the minimal amount of information to a user by dividing the registration, document upload and language selection to a single page, 3 step process. Our interface would then fall in line with the principle that user interfaces should have aesthetic and minimalist design. \footnote{http://www.useit.com/papers/heuristic/heuristic\_list.html} We believe this is an extremely important aspect of any modern website based on the way that users make a decision of whether or not to use the services offered by the website. For example, imagine a user enters a Google search for "Translation service" and clicks our website in the results page. If the page they are met with looks too complicated or confusing in nature, the user simply clicks "Back" on their web browser, and goes to the next appropriate web page. If however the website looks clean, simple and easy to use, the user would be more inclined to use the website properly. We believe that our 3-step process found on the home page encourages anyone that requires a translation service for the provided languages to at least try for a quote, if not go through with the whole process.\\
+\\
+With this approach in mind, we began to create some wireframes in order to form a solid idea of how this 3-stage process would physically look on our website. \textbf{Figure 2.1} illustrates our early attempt at doing so:
+
+\begin{figure}
+\begin{center}
+\includegraphics[width=\linewidth]{wireframes/bt-3step}
+\caption{The 3-step process}
+\end{center}
+\end{figure}
+
+The layout is intuitive, flowing and simple to approach. The user simply enters some details, adds the documents, sets the requirements and clicks a button to request a quote. There is no daunting, large form based entry that some other websites encapsulate. It is minimal and it is undemanding of users. Obviously, the majority of our work done by our system would be when the user clicks "Get your quote", and the system would have to register a user (pending email validation), upload their documents to the filestore, associate a jobid and requirements, and place the job in our client's pending work queue. The implementation of such functions are discussed later in Section~\ref{chap:impl}.\\
+\\
+With this 3 stage process as our main design factor of the website, we began to consider the main user groups of the website. We identified the needs of two main user classes: the \textbf{clients} and the \textbf{translator}
+
+The clients are the users of the service, the visitors of the website. However, as far as the system is concerned, not all visitors are clients, because, in order for a visitor to become a client, he must register with the service. So we decided to have a visitor as a category with a registered user a subcategory. A registered user would then possess all the same abilities as a visitor with some specialised capabilities:
+
+\textbf{Visitor}
+\begin{itemize}
+\item{Rationale: The visitor is just visiting. An anonymous visitor of the website.}
+\item{Background: "I need to get some documents translated. I came across this website and before I register or send any of my documents, I want to make sure that I’m dealing with a serious service."}
+\item{He is a potential client, therefore the steps which he must make in order to become one must be as clear as possible.}
+\item{His \textbf{goal} is to inform himself about the service. In order for him to be converted, he must be convinced that the service provided is of great quality, so the system’s goal is to make itself trustworthy. Also, a clear privacy policy regarding e-mail addresses and the documents should be available, since they might contain sensitive data.}
+\end{itemize}
+\textbf{Client}
+\begin{itemize}
+\item{Rationale: The client is a registered user of the system.}
+\item{He has the same goals as the visitor, but, now that he is registered, he trusts the service a bit more. He has access to all the documents that he ever submitted for translation and can view each of the \textbf{job statuses} for which his documents are contained within. He can view documents he has paid for, and up to a certain period of time, download both the original copy and the translated copy. He can also view some other useful statistics on his previous jobs.}
+\end{itemize}
+\textbf{Administrator/Translator}
+\begin{itemize}
+\item{Rationale: The translator is the one answering all the translation requests.}
+\item{"As a translator, I must review the documents that my clients send me and quote them. After that, I must also translate them and let them know that I finished work."}
+\item{His goal is to answer to all of the client’s requests, i.e. to quote the documents that are received and then translate them and send them back to them.}
+\end{itemize}
+Building upon the needs of these user classes, we needed to design a flexible system that provided functionality for all of these goals. Our main focal point would be the transistion of \textbf{jobs}. In the context of our system, a job is what the website creates when the user uploads one or more documents for translation. Clients (registered users) would submit and pay for them. The translator would review them, download them and upload them. We considered the transition of jobs throughout the lifecycle of a translation, as job statuses, and produced a sequence that is illustrated in \textbf{Figure 2.2}. 
+
+\begin{figure}
+\begin{center}
+\includegraphics[width=\linewidth]{jobstatuses}
+\caption{The transistion of jobs through "statuses"}
+\end{center}
+\end{figure}
+
+The diagram is much self-explanatory, but to summarise: Jobs that are submitted by the clients are placed in a \textbf{pending} work queue. The translator is able to review these documents and send some quote to the client. After a job has been quoted, it is placed in the \textbf{Quotes} queue. Quoted jobs are held in this queue until they are paid for via Paypal. When this has happened, they are moved to \textbf{Translations}, which is a breakdown of completed jobs. After a period of 90 days, jobs from this section are moved to \textbf{History} in order to reduce space on the server.
+
+The transformation from this design plan to a viable user interface that is built upon these job statuses is described later in Section~\ref{chap:ui}.
+%==============================================================================
+\chapter{Implementation}
+\label{chap:impl}
+
+In this chapter, we describe how we the implemented the system from our design plan and the technologies used in doing so.
+
+%------------------------------------------------------------------------------
+\section{User Interface}
+\label{chap:ui}
+TBC
+
+% - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+%%\subsection{TBC - think project specific chapter}
+
+%%TBC
+
+%------------------------------------------------------------------------------
+\section{Database Model}
+
+Our database structure was designed after we had thoroughly revised our user registration and job transistion processes. We envisaged there being four seperate entities: one for \textbf{users} to become registered, one to represent \textbf{documents} being submitted, another for the \textbf{jobs} that are comprised of submitted documents and finally one for the documents once they have been \textbf{translated}. The attributes of each of these entities and the relationships between them is illustrated in \textbf{Figure 3.1} 
+
+\begin{figure}
+\begin{center}
+\includegraphics[width=\linewidth]{bt-dbstruct}
+\caption{ER Diagram for Bethel Translations}
+\end{center}
+\end{figure}
+
+The majority of activity for these tables occurs in the first three entities, as they are all populated in some way during the 3 stage process discussed earlier.
+
+%==============================================================================
+\chapter{Evaluation}
+
+First feedback with Karen incl wireframes etc - Jan 25\\
+Second feedback session with Karen incl more complete website design - Feb 9th
+
+%==============================================================================
+\chapter{Conclusion}
+
+Team photo goes here? :)
+A great project! etc..
+
+%==============================================================================
+\section{Contributions}
+
+Alasdair done this...
+Andrei handled that...
+Stephen took responsibiliy for... 
+Paul mainly done...
+Wei was responsible for...	
+
+%==============================================================================
+\section{Appendices}
+\subsection{Appendix A - Bibliography}
+\label{sec:bibl}
+
+
+\subsection{Appendix B - Glossary of Terms}
+\label{sec:gloss}
+
+
+\begin{itemize}
+\item{\textbf{Free-lance} - Working for different companies at different times rather than being permanently employed by one company.} 
+\item{\textbf{Client} - A person or organization using the services of a professional person or company.} 
+\item{\textbf{Users} - A set of people who use or operate something, esp. a computer or other machine.}
+\item{\textbf{Requirement gathering} - Determining the needs of a client through any form of communication.}
+\item{\textbf{Software project} - Using the surrounding context, a software project aims to create application(s) using programming language(s) by adhering to project management principles.}
+\item{\textbf{Programming language} - A programming language is an artificial language designed to express computations that can be performed by a computer.}
+\item{\textbf{Web scripting language (\textit{PHP, Javascript})} - A scripting language is a programming language that allows control of one or more applications.}
+\item{\textbf{Website development} - The process of constructing and maintaining a website.}
+\item{\textbf{LAMP} - LAMP, (Linux, Apache, MySQL and PHP), is an acronym for a solution stack of free, open source software}
+\item{\textbf{Web application framework} - A software framework that is designed to support the development of dynamic websites }
+\item{\textbf{Open source} - Computer software for which the code is freely available }
+\end{itemize}
+%==============================================================================
+\bibliographystyle{plain}
+\bibliography{example}
+\end{document}
