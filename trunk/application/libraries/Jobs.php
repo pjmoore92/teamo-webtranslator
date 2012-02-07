@@ -25,7 +25,7 @@ class Jobs{
 		//upload files;
 		// $this->ci->load->library('upload');
 		// $response = $this->ci->upload->upload_files();
-		return $jobID->jobID;
+		return $jobID[0]->jobID;
 	}
 
 	private function _upload_files(){
