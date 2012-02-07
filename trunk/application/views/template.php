@@ -227,11 +227,15 @@ $captcha = array(
       <?= $contents ?>
       <footer class="footer">
         <p class="pull-right">
+	<br />
 	<a href="/welcome/privacy">Privacy Policy</a>
 	&copy; <?php 
         $copyYear = 2011; 
         $curYear = date('Y'); 
-        echo $copyYear . (($copyYear != $curYear) ? '-' . $curYear : '') .' '.lang('company.name') ?> 
+        echo $copyYear . (($copyYear != $curYear) ? '-' . $curYear : '') .' '.lang('company.name') ?>
+	<br />
+	<a href="http://www.linkedin.com"><img src="/images/linked.png" align="right"></a>
+	<a href="http://www.facebook.com"><img src="/images/facebook.png" align="right"></a>
         </p>
         
       </footer>
