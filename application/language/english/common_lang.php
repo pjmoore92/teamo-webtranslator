@@ -19,3 +19,11 @@ $lang['login.form'] = "Login Form";
 $lang['login.email'] = "Your E-mail Address";
 $lang['login.ref'] = "Your Reference Code";
 $lang['login.reflost'] = "I can't find my reference code";
+
+/*
+<p><?php echo lang('paragraph_p1') ?><?php echo anchor('http://alasdaircampbell.com/en/welcome/about', echo lang('nav.about')?>.
+   <?php echo lang('paragraph_p2') ?><?php echo anchor('http://alasdaircampbell.com/en/', 'Editing and Proofreading')?>, 
+   <?php echo anchor('http://alasdaircampbell.com/en/', 'Over the phone interpreting')?>,
+   <?php echo lang('paragraph_p3') ?><?php echo anchor('http://alasdaircampbell.com/en/', 'Remote video interpreting')?>. 
+   <?php echo lang('paragraph_p4') ?><?php echo anchor('http://alasdaircampbell.com/en/welcome/testimonials', 'here')?>.</p>
+*/

@@ -1,6 +1,11 @@
 <?php
 $lang['company.name'] = "Bethel Translations";
 $lang['helloWorld'] = "Ciao, mondo!";
+$lang['paragraph_p1'] = "Offro servizi di traduzione eccellenti con un focus primario sui documenti traduzione
+dal francese all'inglese e viceversa. Per ulteriori informazioni su di me, vedere ";
+$lang['paragraph_p2'] = "Ho anche offrire i seguenti servizi: ";
+$lang['paragraph_p3'] = "e ";
+$lang['paragraph_p4'] = "Si può vedere cosa pensano altri del mio lavoro ";
 /**/
 $lang['nav.home'] = "Home";
 $lang['nav.login'] = "Se connecter";
