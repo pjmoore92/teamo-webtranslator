@@ -8,6 +8,7 @@ class Service extends CI_Controller {
 
     public function upload()
     {
+        log_message('error', 'Upload started');
         // Settings
         $cleanupTargetDir = true; // Remove old files
         $maxFileAge = 5 * 3600; // Temp file age in seconds
@@ -66,11 +67,8 @@ class Service extends CI_Controller {
 
 
         // Look for the content type header
-        if (isset($_SERVER["HTTP_CONTENT_TYPE"]))
-            $contentType = $_SERVER["HTTP_CONTENT_TYPE"];
-
-        if (isset($_SERVER["CONTENT_TYPE"]))
-            $contentType = $_SERVER["CONTENT_TYPE"];
+        $contentType = $this->input->server("HTTP_CONTENT_TYPE");
+	if ($contentType == FALSE) $contentType = $this->input->server("CONTENT_TYPE");
 
         // Handle non multipart uploads older WebKit versions didn't support multipart in HTML5
         if (strpos($contentType, "multipart") !== false) {
