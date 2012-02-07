@@ -213,8 +213,13 @@ class Auth extends CI_Controller
 
 						$this->load->library('jobs');
 
-						$details = array('languageTo' => "", 'languageFrom' => "", 'deadline' => "");
-						$jobID = $this->jobs->add($details);
+						$details = array(
+							'customerID' => $data['user_id'],
+							'toLanguage' => "",
+							'fromLanguage' => "",
+							'deadline' => ""
+						);
+						$jobID = $this->jobs->add_job($details);
 
 						die(json_encode(
 							array(
