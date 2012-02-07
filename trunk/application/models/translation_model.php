@@ -12,7 +12,9 @@ class Translation_Model extends CI_Model{
     public function add_orig($jobid, $filename){
 
         // check jobid is valid
-        if ($this->db->get_where($this>_table,"jobID", $jobid)->num_rows() > 0) {
+        $this->db->where("jobID", $jobid);
+        $query = $this->db->get($this->_table);
+        if ($query->num_rows() > 0) {
 
             $this->db->trans_start();
 
@@ -26,11 +28,15 @@ class Translation_Model extends CI_Model{
             $query = $this->db->get($this->_doc_table);
             
             if($query->num_rows() == 1)
-                $docID = $query->result();
+                $docid = $query->result();
 
             // now update job record
             $this->db->where('jobID', jobid);
-            $this->db->update($this->_table, { 'origDoc', docID });
+            $record = array(
+                'jobID' => $jobid,
+                'origDoc' => $docid,
+            )
+            $this->db->insert($this->_table, $record);
 
             //complete transaction
             $this->db->trans_complete();
@@ -39,6 +45,7 @@ class Translation_Model extends CI_Model{
                 // generate an error... or use the log_message() function to log your error
             }
         }
+        else log_message('error', 'jobid '.$jobid.' did not match a record');
     }
 }
 
