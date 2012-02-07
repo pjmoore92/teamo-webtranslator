@@ -14,10 +14,11 @@ $(function() {
             browse_button : 'pickfiles',
             container : 'container',
             max_file_size : '20mb',
-            url : '/welcome/about',
+            url : '/plupload/upload.php',
             flash_swf_url : '/plupload/js/plupload.flash.swf',
             silverlight_xap_url : '/plupload/js/plupload.silverlight.xap',
-            multipart_params : { job },
+            multipart : true,
+            multipart_params : { job: -20 },
             filters : [
             {title : "Documents", extensions : "txt,rtf,doc,docx,pdf"}
             ]
@@ -36,8 +37,8 @@ $(function() {
 
     uploader.bind('FilesAdded', function(up, files) {
         $.each(files, function(i, file) {
-            $('#filelist2').append(
-                '<div>' +
+            $('#filelist').append(
+                '<div id=' + file.id + '>' +
                 file.name + ' (' + plupload.formatSize(file.size) + ') <b></b>' +
                 '</div>');
         });
@@ -53,8 +54,8 @@ $(function() {
         up.refresh(); // Reposition Flash/Silverlight
     });
 
-    uploader.bind('UploadFile', function(up, file) {
-        $.extend(up.settings.multipart_params, { job : jobID });
+    uploader.bind('BeforeUpload', function(up, file) {
+        up.settings.multipart_params = { job : parseInt(jobID) };
     });
 
     uploader.bind('UploadProgress', function(up, file) {
@@ -116,7 +117,7 @@ elit. The other services I offer are This that and This.</p>
             <div id="filelist"><?php echo lang('upload.emptylist') ?></div>
             <br />
             <a id="pickfiles" class="btn btn-info" href="#">Add file..</a>
-            <!--<a id="uploadfiles" class="btn btn-success" href="#">Upload</a>-->
+            <a id="uploadfiles"></a>
         </div>
      </p>
  </div>
@@ -181,6 +182,7 @@ elit. The other services I offer are This that and This.</p>
 
 
 <script type="text/javascript">
+var jobID = -1;
 $(document).ready(function(){
     $('#register-submit').click(function(){
 
@@ -190,7 +192,6 @@ $(document).ready(function(){
         $.post(
             '<?php echo base_url("/en/auth/register"); ?>',/*FIXME*/
             {'name' : name, 'email' : email },
-            var jobID = -1;
             function(data){
                 if(!data.error){
                     var message = $('\
@@ -209,7 +210,7 @@ $(document).ready(function(){
                     $('#modal-from-dom-register-message .modal-body .refcode')
                         .html(data.refcode);
 
-                    jobID = data.jobID;
+                    jobID = data.jobid;
                     $('#filelist').clone().appendTo('#modal-from-dom-register-message .modal-footer');
                     $('#uploadfiles').trigger('click');
                 }

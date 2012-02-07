@@ -51,7 +51,7 @@ if ($chunks < 2 && file_exists($targetDir . DIRECTORY_SEPARATOR . $fileName)) {
 	$fileName = $fileName_a . '_' . $count . $fileName_b;
 }
 
-$filePath = $targetDir.DIRECTORY_SEPARATOR.$fileid.'-'.$fileName;
+$filePath = $targetDir.DIRECTORY_SEPARATOR.$fileName;
 
 // Create target dir
 if (!file_exists($targetDir))
