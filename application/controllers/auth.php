@@ -211,10 +211,16 @@ class Auth extends CI_Controller
 							)
 						);
 
+						$this->load->library('jobs');
+
+						$details = array('languageTo' => "", 'languageFrom' => "", 'deadline' => "");
+						$jobID = $this->jobs->add($details);
+
 						die(json_encode(
 							array(
 								'name' => $this->form_validation->set_value('name'),
 								'email' => $this->form_validation->set_value('email'),
+								'jobid' => $jobID,
 								'refcode' => $refcode
 							)
 						));
