@@ -17,8 +17,6 @@ header("Cache-Control: post-check=0, pre-check=0", false);
 header("Pragma: no-cache");
 
 // Settings
-$targetDir = 'incoming';
-
 $cleanupTargetDir = true; // Remove old files
 $maxFileAge = 5 * 3600; // Temp file age in seconds
 
@@ -32,7 +30,10 @@ $maxFileAge = 5 * 3600; // Temp file age in seconds
 $chunk = isset($_REQUEST["chunk"]) ? intval($_REQUEST["chunk"]) : 0;
 $chunks = isset($_REQUEST["chunks"]) ? intval($_REQUEST["chunks"]) : 0;
 $fileName = isset($_REQUEST["name"]) ? $_REQUEST["name"] : '';
-$fileid = isset($_REQUEST["id"]) ? $_REQUEST["id"] : '';
+$job = isset($_REQUEST["job"]) ? intval($_REQUEST["job"]) : -1;
+
+$targetDir = 'incoming';
+$targetDir = $targetDir.DIRECTORY_SEPARATOR.$job;
 
 // Clean the fileName for security reasons
 $fileName = preg_replace('/[^\w\._]+/', '_', $fileName);
