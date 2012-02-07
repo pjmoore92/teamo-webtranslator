@@ -50,7 +50,7 @@
 								<div class="span3">
 									<dl>
 										<dt>Quote</dt>
-											<dd><?php if($job->quote == NULL):
+											<dd class="quote"><?php if($job->quote == NULL):
 												  		echo 'Quote is Missing! Contact Us';
 												  else: 	
 												  		echo '£', $job->quote;
@@ -67,7 +67,7 @@
 												  <span class="label label-warning">Update Quote</span>
         											  <input type="text" class="input-small" placeholder="Quote">
         											  
-												  <button class="btn btn-small btn-success">Update Quote</button>
+												  <a class="btn btn-small btn-success update-quote" href="#" data-controls-modal="modal-from-dom">Update Quote</a>
 												  </form>
 												  <?php endif;  ?>
 									

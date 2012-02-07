@@ -20,5 +20,17 @@
 
       <div class="content">
 	<div class="span9">
-        <?php $this->load->view($content); ?>
-      </div>
+    
+    <?php if($this->session->userdata('role') == 'admin'): ?>
+      <script type="text/javascript" src="<?php echo base_url(); ?>js/admin-dashboard.js"></script>
+    <?php endif; ?>
+
+    <div id="modal-from-dom" class="modal hide fade">
+      <div class="modal-header"></div>
+      <div class="modal-body"></div>
+      <div class="modal-footer"></div>
+    </div>
+    
+    <?php $this->load->view($content); ?>
+
+  </div>

@@ -27,6 +27,7 @@
 				echo ':( You have no pending jobs.';
             else:
 			?>
+
 			<div class="accordion" id="accordion2">
 			<?php foreach($jobs_list as $job): ?>
 			<div class="accordion-group">
@@ -60,7 +61,7 @@
 												  <span class="label label-warning">Enter Quote</span>
         											  <input type="text" class="input-small" placeholder="Quote">
         											  
-												  <button class="btn btn-small btn-success">Send Quote</button>
+												  <a class="btn btn-small btn-success send-quote" data-controls-modal="modal-from-dom" href="#">Send Quote</a>
 												  </form>
 												  <?php endif;  ?>
 									

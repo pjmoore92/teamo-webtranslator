@@ -92,4 +92,35 @@ class Dashboard extends MY_Controller {
                 //TODO fix historical translations
                 $this->_retrieveData("translated");
         }
+
+
+        public function send_quote(){
+                if(!$this->input->is_ajax_request()){
+                        die(json_encode(array('error' => 'Somthin\' ain\' right :<')));
+                }
+                else{
+
+                        $this->load->library('form_validation');
+
+                        $this->form_validation->set_rules('quote', 'Quote', 'required|numeric');
+                        $this->form_validation->set_rules('jobid', 'JobID', 'required|numeric');
+
+                        if ($this->form_validation->run() == FALSE){
+                                die (json_encode(array('error' => 'The form values are not valid! :<')));
+                        }
+                        else{
+
+                                $job_data = array(
+                                        'jobID' => $this->form_validation->set_value('jobid'),
+                                        'quote' => $this->form_validation->set_value('quote'),
+                                        'status' => 'QuoteSent'
+                                );
+
+                                $this->load->model('job_model');
+                                $this->job_model->update_job($job_data);
+
+                                die(json_encode(array('response' => 'WOOHOO!')));
+                        }
+                }
+        }
 }
