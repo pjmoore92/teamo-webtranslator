@@ -14,7 +14,8 @@ class Translation_Model extends CI_Model{
         // check jobid is valid
         $this->db->where("jobID", $jobid);
         $query = $this->db->get($this->_table);
-        if ($query->num_rows() > 0) {
+        if ($query->num_rows() > 0) {	
+	   log_message('error', 'jobID is fine');
 
             $this->db->trans_start();
 
@@ -35,7 +36,7 @@ class Translation_Model extends CI_Model{
             $record = array(
                 'jobID' => $jobid,
                 'origDoc' => $docid,
-            )
+            );
             $this->db->insert($this->_table, $record);
 
             //complete transaction
