@@ -5,10 +5,8 @@
   <h2>Bethel Translations <small>Contact page</small></h2>
 </div>
 <div class="row">
-<br />
   <div id="contact_form">
-	<div class="span4 offset4">
-	<h2>Contact Us</h2>
+	<div class="span4 offset2">
 	<?php echo form_open('email/send'); ?>
 	
 	<?php
@@ -55,7 +53,18 @@
 		</div>
 		
 	</p>
-	
+
+	<p>
+		<div class="input">
+		<label for="selet01">Your Subject </label>	
+		<select id="select01">
+                	<option>General Enquiry</option>
+	                <option>Quote</option>
+        	        <option>Video Translation</option>
+                	<option>Interpretation</option>
+	                <option>Other</option>
+                </select>
+		</div>
               
 	<p>
 		<label for="message">Your Message </label>
