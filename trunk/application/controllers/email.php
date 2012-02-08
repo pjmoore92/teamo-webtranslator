@@ -34,6 +34,7 @@ class Email extends CI_Controller
 			$name = $this->input->post('name');
 			$email = $this->input->post('email');
 			$message = $this->input->post('message');
+			$subjectselect = $this->input->post('select01');
 			
 			$this->load->library('email');
 			$this->email->set_newline("\r\n");
@@ -41,7 +42,7 @@ class Email extends CI_Controller
 			$this->email->from($email, $name);
 			$this->email->to('pjmoore@staloysius.org');
 			$this->email->cc('teamo@stbernadettes.co.uk');		
-			$this->email->subject('Contact Page Email');		
+			$this->email->subject('Bethel Translations: '.$subjectselect);		
 			$this->email->message($message);
 
 			
