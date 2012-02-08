@@ -28,6 +28,10 @@
 		'id' => 'message',
 		'value' => set_value('message')
 	);
+	
+	$error = array(
+		'style' => 'colour:red',
+	);
 
 	
 	?>
@@ -37,8 +41,7 @@
 	<!-- <p><?php echo form_input($name_data); ?>  </p> -->
 	<p>
   		<div class="input">	
-		<?php echo form_error('name'); ?>
-                <input type="text" name="name" value id="name">
+                <input type="text" name="name" value id="name"><?php echo form_error('name', '<div class="alert-error">', '</div>'); ?>
 		</div>
 		
 	</p>
@@ -50,8 +53,7 @@
 
 	<p>
   		<div class="input">	
-		<?php echo form_error('email'); ?>
-                <input type="email" name="email" value id="email" autocomplete="on">
+                <input type="email" name="email" value id="email" autocomplete="on"><?php echo form_error('email', '<div class="alert-error">', '</div>'); ?>
 		</div>
 		
 	</p>
@@ -71,8 +73,7 @@
 	<p>
 		<label for="message">Your Message </label>
   		<div class="input">	
-		<?php echo form_error('message'); ?>
-                <textarea class="xxlarge" id="message" name="message" rows="10" value="<input type="text" name="message" value="" id="message"  /></textarea>
+                <textarea class="xxlarge" id="message" name="message" rows="10" value="<input type="text" name="message" value="" id="message"  /></textarea><?php echo form_error('message', '<div class="alert-error">', '</div>'); ?>
 		</div>
 		
 	</p>
