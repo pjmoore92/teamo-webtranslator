@@ -10,6 +10,9 @@
 	    <li><a href="/dashboard/quotes"><i class="icon-th-list"></i> Quotes</a></li>
 	    <li><a href="/dashboard/translations"><i class="icon-file"></i> Translations</a></li>
 	    <li><a href="/dashboard/history"><i class="icon-time"></i> History</a></li>
+	    <?php if($this->session->userdata('role') == 'admin'): ?>
+            	<li><a href="/dashboard/submit"><i class="icon-book"></i> Site Statistics</a></li>
+             <?php endif; ?>
           </ul>
           <h5>Other</h5>
           <ul class="nav nav-list">
