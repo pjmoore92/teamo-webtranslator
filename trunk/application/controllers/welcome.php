@@ -47,6 +47,30 @@ class Welcome extends CI_Controller {
                 $this->template->set('title', 'Privacy policy -');
                 $this->template->load('template', 'privacypolicy');
 	}
+	
+	public function documents()
+	{
+                $this->template->set('title', 'Document Translation Service -');
+                $this->template->load('template', 'doc_trans_serv');
+	}
+	
+	public function videoremote()
+	{
+                $this->template->set('title', 'Video Remote Interpreting -');
+                $this->template->load('template', 'video_interp_serv');
+	}
+	
+	public function editproof()
+	{
+                $this->template->set('title', 'Editing and Proofreading -');
+                $this->template->load('template', 'edit_proof_serv');
+	}
+	
+	public function phoneinterp()
+	{
+                $this->template->set('title', 'Over the Phone Interpreting -');
+                $this->template->load('template', 'phone_interp_serv');
+	}
 }
 
 /* End of file welcome.php */
