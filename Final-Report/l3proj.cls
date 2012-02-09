@@ -73,19 +73,19 @@ this declaration, but doing so would help future students.}
 \begin{tabular}{@{}llll}
       &                     &            &                     \\
       &                     &            &                     \\
-Name: & \rule{4.0cm}{0.5mm} & Signature: & \rule{4.5cm}{0.5mm} \\
+Name: & Alasdair Campbell   & Signature: & \rule{4.5cm}{0.5mm} \\
       &                     &            &                     \\
       &                     &            &                     \\
-Name: & \rule{4.0cm}{0.5mm} & Signature: & \rule{4.5cm}{0.5mm} \\
+Name: & Andrei Mustata      & Signature: & \rule{4.5cm}{0.5mm} \\
       &                     &            &                     \\
       &                     &            &                     \\
-Name: & \rule{4.0cm}{0.5mm} & Signature: & \rule{4.5cm}{0.5mm} \\
+Name: & Paul J Moore        & Signature: & \rule{4.5cm}{0.5mm} \\
       &                     &            &                     \\
       &                     &            &                     \\
-Name: & \rule{4.0cm}{0.5mm} & Signature: & \rule{4.5cm}{0.5mm} \\
+Name: & Stephen Hayton      & Signature: & \rule{4.5cm}{0.5mm} \\
       &                     &            &                     \\
       &                     &            &                     \\
-Name: & \rule{4.0cm}{0.5mm} & Signature: & \rule{4.5cm}{0.5mm} \\
+Name: & Wei Zhang           & Signature: & \rule{4.5cm}{0.5mm} \\
 \end{tabular}
 }
 
