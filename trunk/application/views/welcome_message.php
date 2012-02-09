@@ -1,75 +1,8 @@
 <?php if ( ! defined('BASEPATH')) exit('Access denied'); ?>
-<!-- Third party script for BrowserPlus runtime (Google Gears included in Gears runtime now) -->
-<script type="text/javascript" src="http://bp.yahooapis.com/2.4.21/browserplus-min.js"></script>
-<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
-
-<!-- Load plupload and all it's runtimes and finally the jQuery queue widget -->
-    <script type="text/javascript" src="/plupload/js/plupload.full.js"></script>
-
-<script type="text/javascript">
-// Custom example logic
-$(function() {
-    var uploader = new plupload.Uploader({
-        runtimes : 'gears,html5,flash,silverlight,browserplus',
-            browse_button : 'pickfiles',
-            container : 'container',
-            max_file_size : '20mb',
-            url : '/plupload/upload.php',
-            flash_swf_url : '/plupload/js/plupload.flash.swf',
-            silverlight_xap_url : '/plupload/js/plupload.silverlight.xap',
-            multipart : true,
-            multipart_params : { job: -20 },
-            filters : [
-            {title : "Documents", extensions : "txt,rtf,doc,docx,pdf"}
-            ]
-    });
-
-    uploader.bind('Init', function(up, params) {
-        //$('#filelist').html("No files added");
-    });
-
-    $('#uploadfiles').click(function(e) {
-        uploader.start();
-        e.preventDefault();
-    });
-
-    uploader.init();
-
-    uploader.bind('FilesAdded', function(up, files) {
-        $.each(files, function(i, file) {
-            $('#filelist').append(
-                '<div id=' + file.id + '>' +
-                file.name + ' (' + plupload.formatSize(file.size) + ') <b></b>' +
-                '</div>');
-        });
-        up.refresh(); // Reposition Flash/Silverlight
-    });
-
-    uploader.bind('Error', function(up, err) {
-        $('#filelist').append("<div>Error: " + err.code +
-            ", Message: " + err.message +
-            (err.file ? ", File: " + err.file.name : "") +
-            "</div>"
-        );
-        up.refresh(); // Reposition Flash/Silverlight
-    });
-
-    uploader.bind('BeforeUpload', function(up, file) {
-        up.settings.multipart_params = { job : parseInt(jobID) };
-    });
-
-    uploader.bind('UploadProgress', function(up, file) {
-        $('#' + file.id + " b").html(file.percent + "%");
-    });
-
-    uploader.bind('FileUploaded', function(up, file) {
-        $('#' + file.id + " b").html("100%");
-    });
-});
-</script>
+<script type="text/javascript" src="/js/jquery/jqueryui-1.8.17.js"></script>
+<script type="text/javascript" src="/js/upload/jquery-fileupload.js"></script>
 
 <!-- TODO horizontal sliding Ads a la BBC? -->
-
 <div class="hero-unit">
 <h1><?php echo lang('helloWorld') ?></h1>
 <p>Vestibulum id ligula porta felis euismod semper. Integer posuere erat
@@ -81,11 +14,10 @@ elit. The other services I offer are This that and This.</p>
 
 <!--<form>-->
 <!-- Example row of columns -->
-  <form id="fileform" enctype="multipart/form-data">
+<form id="fileform" enctype="multipart/form-data">
 <div class="row">
   <div class="span3 offset1" style="text-align:center">
   <h2><?php echo lang('upload.details') ?></h2>
-    <!--<p>Etiam porta sem malesuada magna mollis euismod. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</p>-->
     <p>
       <label for="register-name">Your name</label>
       <div class="input">
@@ -100,7 +32,6 @@ elit. The other services I offer are This that and This.</p>
   </div>
   <div class="span3 offset1" style="text-align:center">
     <h2><?php echo lang('upload.browse') ?></h2>
-     <!--<p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>-->
      <div>
         <label for="register-language-from">Source language</label>
         <div class="input">
@@ -123,7 +54,6 @@ elit. The other services I offer are This that and This.</p>
  </div>
   <div class="span3 offset1" style="text-align:center">
     <h2><?php echo lang('upload.setreqs') ?></h2>
-    <!--<p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper.</p>-->
     <p>
         <label for="register-language-to">Language</label>
         <div class="input">
@@ -143,12 +73,10 @@ elit. The other services I offer are This that and This.</p>
         </div>
     </p>
   </div>
-<!--</div>-->
 
 <br />
 <br />
 <br />
-<!--<div class="row">-->
   <div class="span2">&nbsp;</div>
   <div class="span2 offset1" style="text-align:center">
     <p><a id="register-submit" class="btn btn-success" href="#" data-controls-modal="modal-from-dom-register-message" 
@@ -156,7 +84,6 @@ elit. The other services I offer are This that and This.</p>
   <!--  <input type="submit" class="btn btn-success" value="Get your quote!"> -->
   </div>
   <div class="span-one-third">&nbsp;</div>
-  <!--<div class="span-one-third">Quote</div>-->
 </div>
 
 
@@ -180,9 +107,7 @@ elit. The other services I offer are This that and This.</p>
 </form>
 </div>
 
-
 <script type="text/javascript">
-var jobID = -1;
 $(document).ready(function(){
     $('#register-submit').click(function(){
 
