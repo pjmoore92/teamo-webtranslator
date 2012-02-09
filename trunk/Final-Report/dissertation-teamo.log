@@ -1,4 +1,4 @@
-This is pdfTeXk, Version 3.141592-1.40.3 (Web2C 7.5.6) (format=pdflatex 2011.9.14)  9 FEB 2012 14:12
+This is pdfTeXk, Version 3.141592-1.40.3 (Web2C 7.5.6) (format=pdflatex 2011.9.15)  9 FEB 2012 15:53
 entering extended mode
  %&-line parsing enabled.
 **dissertation-teamo.tex
@@ -118,108 +118,123 @@ Chapter 1.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <20.74> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 25.
 
-Underfull \hbox (badness 10000) in paragraph at lines 27--32
+Underfull \hbox (badness 10000) in paragraph at lines 27--28
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 27--32
+Underfull \hbox (badness 10000) in paragraph at lines 29--32
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 27--32
-
- []
-
-<DiffusionOfInnovation.png, id=25, 543.02875pt x 335.2525pt>
-File: DiffusionOfInnovation.png Graphic file (type png)
-
-<use DiffusionOfInnovation.png>
-Overfull \hbox (1.26851pt too wide) in paragraph at lines 36--36
-[]\OT1/ptm/m/n/10.95 Figure 1.1: Roger's bell curve, source: http://en.wikipedi
-a.org/wiki/File:DiffusionOfInnovation.png 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 40--43
+Underfull \hbox (badness 10000) in paragraph at lines 29--32
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 40--43
+Underfull \hbox (badness 10000) in paragraph at lines 33--35
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 33--35
 
  []
 
 [3
 
-] [4 <./DiffusionOfInnovation.png (PNG copy)>]
-Chapter 2.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <9> on input line 48.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 48.
+] <DiffusionOfInnovation.png, id=29, 543.02875pt x 335.2525pt>
+File: DiffusionOfInnovation.png Graphic file (type png)
 
-Underfull \hbox (badness 10000) in paragraph at lines 48--51
+<use DiffusionOfInnovation.png>
+Overfull \hbox (1.26851pt too wide) in paragraph at lines 41--41
+[]\OT1/ptm/m/n/10.95 Figure 1.1: Roger's bell curve, source: http://en.wikipedi
+a.org/wiki/File:DiffusionOfInnovation.png 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 36--44
 
  []
 
-<wireframes/bt-3step.png, id=33, 963.6pt x 500.87125pt>
+
+Underfull \hbox (badness 10000) in paragraph at lines 45--46
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 45--46
+
+ []
+
+[4] [5 <./DiffusionOfInnovation.png (PNG copy)>]
+Chapter 2.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <9> on input line 58.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 58.
+
+Underfull \hbox (badness 10000) in paragraph at lines 58--61
+
+ []
+
+<wireframes/bt-3step.png, id=37, 963.6pt x 500.87125pt>
 File: wireframes/bt-3step.png Graphic file (type png)
 
 <use wireframes/bt-3step.png>
-Underfull \hbox (badness 10000) in paragraph at lines 59--62
+Underfull \hbox (badness 10000) in paragraph at lines 69--72
 
  []
 
-[5
+[6
 
 ]
-LaTeX Font Info:    Try loading font information for OMS+ptm on input line 67.
+LaTeX Font Info:    Try loading font information for OMS+ptm on input line 77.
  (/usr/share/texmf/tex/latex/psnfss/omsptm.fd
 File: omsptm.fd 
 )
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 67.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 77.
 Missing character: There is no â in font ptmr7t!
 Missing character: There is no € in font ptmr7t!
 Missing character: There is no ™ in font ptmr7t!
 Missing character: There is no â in font ptmr7t!
 Missing character: There is no € in font ptmr7t!
 Missing character: There is no ™ in font ptmr7t!
- [6 <./wireframes/bt-3step.png>]
+ [7 <./wireframes/bt-3step.png>]
 Missing character: There is no â in font ptmr7t!
 Missing character: There is no € in font ptmr7t!
 Missing character: There is no ™ in font ptmr7t!
- <jobstatuses.png, id=43, 1041.8925pt x 564.1075pt>
+ <jobstatuses.png, id=46, 1041.8925pt x 564.1075pt>
 File: jobstatuses.png Graphic file (type png)
  <use jobstatuses.png>
-[7 <./jobstatuses.png>] [8]
+[8 <./jobstatuses.png>] [9]
 Chapter 3.
-<bt-dbstruct.png, id=51, 842.14626pt x 663.47874pt>
+<bt-dbstruct.png, id=54, 842.14626pt x 663.47874pt>
 File: bt-dbstruct.png Graphic file (type png)
  <use bt-dbstruct.png>
-[9
+[10
 
-] [10 <./bt-dbstruct.png>]
+] [11 <./bt-dbstruct.png>]
 Chapter 4.
-[11
+[12
 
 ]
 Chapter 5.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 148.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 158.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <10.95> not available
-(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 163.
-[12
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 173.
+[13
 
 ]
 No file dissertation-teamo.bbl.
-[13] (./dissertation-teamo.aux) ) 
+[14] (./dissertation-teamo.aux) ) 
 Here is how much of TeX's memory you used:
  758 strings out of 256216
  9521 string characters out of 1917072
- 61007 words of memory out of 1500000
+ 60007 words of memory out of 1500000
  4051 multiletter control sequences out of 10000+200000
  32304 words of font info for 60 fonts, out of 1200000 for 2000
  645 hyphenation exceptions out of 8191
@@ -229,9 +244,9 @@ Here is how much of TeX's memory you used:
 e1/urw/times/utmb8a.pfb></usr/share/texmf/fonts/type1/urw/times/utmbi8a.pfb></u
 sr/share/texmf/fonts/type1/urw/times/utmr8a.pfb></usr/share/texmf/fonts/type1/u
 rw/times/utmri8a.pfb>
-Output written on dissertation-teamo.pdf (15 pages, 228617 bytes).
+Output written on dissertation-teamo.pdf (16 pages, 230636 bytes).
 PDF statistics:
- 88 PDF objects out of 1000 (max. 8388607)
+ 91 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 131072)
  26 words of extra memory for PDF output out of 10000 (max. 10000000)
 
