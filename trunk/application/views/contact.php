@@ -2,8 +2,8 @@
 
 <div class="content">
 <div class="page-header">
-  <h2>Bethel Translations <small>Contact page</small></h2>
-</div>
+  <h1 class="active">Bethel Translations <small>Contact</small></h1>
+</div
 <div class="row">
   <div id="contact_form">
 	<div class="span4 offset2">
@@ -14,7 +14,7 @@
 	$name_data = array(
 		'name' => 'name',
 		'id' => 'name',
-		'value' => set_value('name')
+		'value' => set_value('name')		
 	);
 
 	$email_data = array(
@@ -36,14 +36,16 @@
 	
 	?>
 	
+	<?php if($this->tank_auth->is_logged_in()): ?>
+	<?php endif; ?>
 	<p><label for="name">Your Full Name </label></p>
 
 	<!-- <p><?php echo form_input($name_data); ?>  </p> -->
 	<p>
-  		<div class="input">	
-                <input type="text" name="name" value id="name"><?php echo form_error('name', '<div class="alert-error">', '</div>'); ?>
+		<div class="input">	
+		<input type="text" name="name" value id="name"><?php echo form_error('name', '<div class="alert-error">', '</div>'); ?>
 		</div>
-		
+			
 	</p>
 
 	<p><label for="email">Your Email Address  </label></p>
