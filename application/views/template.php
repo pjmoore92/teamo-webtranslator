@@ -57,10 +57,10 @@
               </a>
               <ul class="dropdown-menu">
                 <li>
-                  <?php echo anchor('/en', 'Document Translation'); ?>
-                  <?php echo anchor('/en', 'Editing and Proofreading'); ?>
-                  <?php echo anchor('/en', 'Over-the-phone Interpreting'); ?>
-                  <?php echo anchor('/en', 'Video Remote Interpreting'); ?>
+                  <?php echo anchor('welcome/documents', 'Document Translation'); ?>
+                  <?php echo anchor('welcome/editproof', 'Editing and Proofreading'); ?>
+                  <?php echo anchor('welcome/phoneinterp', 'Over-the-phone Interpreting'); ?>
+                  <?php echo anchor('welcome/videoremote', 'Video Remote Interpreting'); ?>
                   
                 </li>
               </ul>
