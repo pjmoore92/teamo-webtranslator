@@ -23,7 +23,7 @@ $(document).ready(function(){
    * 
    */
   $("#datepicker").datepicker({
-    showOn: "both",
+    showOn: "button",
     buttonImage: "images/calendar.gif",
     buttonImageOnly: true
   });
