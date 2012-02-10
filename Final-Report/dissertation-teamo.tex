@@ -18,6 +18,8 @@
 
 (TBC)
 
+Since the writing of the earliest manuscripts and documents there has been a need for translation so that the people of the world could understand what had been written or said, in their own tongue. Translation is just as relevant today as it was thousands of years ago, although the processes have moderenised considerably. The focus of this project is to create an online presence and document delivery system for a Glasgow based translator who is creating her own document translation business. Our goal is to improve upon the translation sites currently available and to give a unique, modern and fresh feel to translation.
+
 \end{abstract}
 \educationalconsent
 \tableofcontents
@@ -107,6 +109,23 @@ Building upon the needs of these user classes, we needed to design a flexible sy
 The diagram is much self-explanatory, but to summarise: Jobs that are submitted by the clients are placed in a \textbf{pending} work queue. The translator is able to review these documents and send some quote to the client. After a job has been quoted, it is placed in the \textbf{Quotes} queue. Quoted jobs are held in this queue until they are paid for via Paypal. When this has happened, they are moved to \textbf{Translations}, which is a breakdown of completed jobs. After a period of 90 days, jobs from this section are moved to \textbf{History} in order to reduce space on the server.
 
 The transformation from this design plan to a viable user interface that is built upon these job statuses is described later in Section~\ref{chap:ui}.
+
+\section{System Design and Wireframes}
+After laying out the process of the website we focused on creating wireframe designs. 
+
+\subsection{Template and Main Page}
+From our earlier decision of creating a simple three step process and implementing this on our homepage, we took our wireframe and refined it to come up with the  \textbf{Main Template}.
+
+\begin{figure}[ht]
+\label{fig:The Main Template}
+\begin{center}
+\includegraphics[width=\linewidth]{wireframes/bt-homepagev3}
+\caption{The Main Template}
+\end{center}
+\end{figure}
+
+The sitewide header (labelled 1) and footer (labelled 3) can clearly be seen to be simple and uncluttered.
+
 %==============================================================================
 \chapter{Implementation}
 \label{chap:impl}
