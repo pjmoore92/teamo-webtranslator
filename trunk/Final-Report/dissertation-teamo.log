@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2011.11.9)  10 FEB 2012 21:58
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2011.11.9)  10 FEB 2012 22:40
 entering extended mode
 **dissertation-teamo.tex
 (F:\TP3\Final-Report\dissertation-teamo.tex
@@ -124,112 +124,112 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10.95> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 17.
  [1]
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <14.4> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 22.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 24.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <10.95> on input line 22.
+(Font)              <10.95> on input line 24.
  [1]
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <24.88> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 23.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 25.
 
 (F:\TP3\Final-Report\dissertation-teamo.toc)
 \tf@toc=\write3
  [2
 
-]
+] [3]
 Chapter 1.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <20.74> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 25.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 27.
 
-Underfull \hbox (badness 10000) in paragraph at lines 27--28
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 29--32
+Underfull \hbox (badness 10000) in paragraph at lines 29--30
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 29--32
+Underfull \hbox (badness 10000) in paragraph at lines 31--34
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 33--35
+Underfull \hbox (badness 10000) in paragraph at lines 31--34
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 33--35
+Underfull \hbox (badness 10000) in paragraph at lines 35--37
 
  []
 
-[3
 
-] <DiffusionOfInnovation.png, id=28, 543.02875pt x 335.2525pt>
+Underfull \hbox (badness 10000) in paragraph at lines 35--37
+
+ []
+
+[4
+
+] <DiffusionOfInnovation.png, id=31, 543.02875pt x 335.2525pt>
 File: DiffusionOfInnovation.png Graphic file (type png)
 
 <use DiffusionOfInnovation.png>
-Package pdftex.def Info: DiffusionOfInnovation.png used on input line 40.
+Package pdftex.def Info: DiffusionOfInnovation.png used on input line 42.
 (pdftex.def)             Requested size: 325.81975pt x 201.15305pt.
 
-Overfull \hbox (1.26851pt too wide) in paragraph at lines 41--41
+Overfull \hbox (1.26851pt too wide) in paragraph at lines 43--43
 []\OT1/ptm/m/n/10.95 Figure 1.1: Roger's bell curve, source: http://en.wikipedi
 a.org/wiki/File:DiffusionOfInnovation.png 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 36--44
+Underfull \hbox (badness 10000) in paragraph at lines 38--46
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 45--46
+Underfull \hbox (badness 10000) in paragraph at lines 47--48
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 45--46
+Underfull \hbox (badness 10000) in paragraph at lines 47--48
 
  []
 
-[4] [5 <F:/TP3/Final-Report/DiffusionOfInnovation.png>]
+[5] [6 <F:/TP3/Final-Report/DiffusionOfInnovation.png>]
 Chapter 2.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <9> on input line 60.
+(Font)              <9> on input line 62.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 60.
+(Font)              <5> on input line 62.
 
-Underfull \hbox (badness 10000) in paragraph at lines 59--63
+Underfull \hbox (badness 10000) in paragraph at lines 61--65
 
  []
 
-<wireframes/bt-3step.png, id=36, 963.6pt x 500.87125pt>
+<wireframes/bt-3step.png, id=39, 963.6pt x 500.87125pt>
 File: wireframes/bt-3step.png Graphic file (type png)
 
 <use wireframes/bt-3step.png>
-Package pdftex.def Info: wireframes/bt-3step.png used on input line 66.
+Package pdftex.def Info: wireframes/bt-3step.png used on input line 68.
 (pdftex.def)             Requested size: 432.26999pt x 224.68684pt.
- [6
+ [7
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 71--73
+Underfull \hbox (badness 10000) in paragraph at lines 73--75
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 71--73
+Underfull \hbox (badness 10000) in paragraph at lines 73--75
 
  []
 
-[7 <F:/TP3/Final-Report/wireframes/bt-3step.png>]
-LaTeX Font Info:    Try loading font information for OMS+ptm on input line 82.
+[8 <F:/TP3/Final-Report/wireframes/bt-3step.png>]
+LaTeX Font Info:    Try loading font information for OMS+ptm on input line 84.
 
 (F:\MikTek\tex\latex\psnfss\omsptm.fd
 File: omsptm.fd 
 )
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 82.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 84.
 Missing character: There is no â in font ptmr7t!
 Missing character: There is no € in font ptmr7t!
 Missing character: There is no ™ in font ptmr7t!
@@ -240,42 +240,50 @@ Missing character: There is no â in font ptmr7t!
 Missing character: There is no € in font ptmr7t!
 Missing character: There is no ™ in font ptmr7t!
 
-<jobstatuses.png, id=45, 1041.8925pt x 564.1075pt>
+<jobstatuses.png, id=48, 1041.8925pt x 564.1075pt>
 File: jobstatuses.png Graphic file (type png)
  <use jobstatuses.png>
-Package pdftex.def Info: jobstatuses.png used on input line 102.
+Package pdftex.def Info: jobstatuses.png used on input line 104.
 (pdftex.def)             Requested size: 432.26999pt x 234.04pt.
 
-[8] [9 <F:/TP3/Final-Report/jobstatuses.png>]
+[9]
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 116.
+ <wireframes/bt-homepagev3.png, id=53, 793.46437pt x 600.74437pt>
+File: wireframes/bt-homepagev3.png Graphic file (type png)
+
+<use wireframes/bt-homepagev3.png>
+Package pdftex.def Info: wireframes/bt-homepagev3.png used on input line 122.
+(pdftex.def)             Requested size: 432.26999pt x 327.2846pt.
+ [10 <F:/TP3/Final-Report/jobstatuses.png>]
+[11 <F:/TP3/Final-Report/wireframes/bt-homepagev3.png>]
 Chapter 3.
-<bt-dbstruct.png, id=54, 842.14626pt x 663.47874pt>
+<bt-dbstruct.png, id=63, 842.14626pt x 663.47874pt>
 File: bt-dbstruct.png Graphic file (type png)
  <use bt-dbstruct.png>
-Package pdftex.def Info: bt-dbstruct.png used on input line 133.
+Package pdftex.def Info: bt-dbstruct.png used on input line 152.
 (pdftex.def)             Requested size: 432.26999pt x 340.56656pt.
 
-[10
-
-] [11 <F:/TP3/Final-Report/bt-dbstruct.png>]
-Chapter 4.
 [12
+
+] [13 <F:/TP3/Final-Report/bt-dbstruct.png>]
+Chapter 4.
+[14
 
 ]
 Chapter 5.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 163.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <10.95> not available
-(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 178.
-[13
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 197.
+[15
 
 ]
 No file dissertation-teamo.bbl.
-[14] (F:\TP3\Final-Report\dissertation-teamo.aux) ) 
+[16] (F:\TP3\Final-Report\dissertation-teamo.aux) ) 
 Here is how much of TeX's memory you used:
- 1301 strings out of 494045
- 16861 string characters out of 3155650
- 70350 words of memory out of 3000000
- 4592 multiletter control sequences out of 15000+200000
+ 1307 strings out of 494045
+ 17032 string characters out of 3155650
+ 70363 words of memory out of 3000000
+ 4597 multiletter control sequences out of 15000+200000
  32304 words of font info for 60 fonts, out of 3000000 for 9000
  715 hyphenation exceptions out of 8191
  34i,8n,23p,2122b,255s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -284,9 +292,9 @@ ontname/8r.enc}<F:/MikTek/fonts/type1/public/amsfonts/cm/cmsy10.pfb><F:/MikTek/
 fonts/type1/urw/times/utmb8a.pfb><F:/MikTek/fonts/type1/urw/times/utmbi8a.pfb><
 F:/MikTek/fonts/type1/urw/times/utmr8a.pfb><F:/MikTek/fonts/type1/urw/times/utm
 ri8a.pfb>
-Output written on dissertation-teamo.pdf (16 pages, 229543 bytes).
+Output written on dissertation-teamo.pdf (18 pages, 336335 bytes).
 PDF statistics:
- 91 PDF objects out of 1000 (max. 8388607)
+ 99 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 26 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 31 words of extra memory for PDF output out of 10000 (max. 10000000)
 
