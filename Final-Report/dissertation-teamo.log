@@ -1,23 +1,25 @@
-This is pdfTeXk, Version 3.141592-1.40.3 (Web2C 7.5.6) (format=pdflatex 2011.9.15)  9 FEB 2012 15:53
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2011.11.9)  10 FEB 2012 21:58
 entering extended mode
- %&-line parsing enabled.
 **dissertation-teamo.tex
-(./dissertation-teamo.tex
-LaTeX2e <2005/12/01>
-Babel <v3.8h> and hyphenation patterns for english, usenglishmax, dumylang, noh
-yphenation, arabic, basque, bulgarian, coptic, welsh, czech, slovak, german, ng
-erman, danish, esperanto, spanish, catalan, galician, estonian, farsi, finnish,
- french, greek, monogreek, ancientgreek, croatian, hungarian, interlingua, ibyc
-us, indonesian, icelandic, italian, latin, mongolian, dutch, norsk, polish, por
-tuguese, pinyin, romanian, russian, slovenian, uppersorbian, serbian, swedish, 
-turkish, ukenglish, ukrainian, loaded.
-(./l3proj.cls
+(F:\TP3\Final-Report\dissertation-teamo.tex
+LaTeX2e <2011/06/27>
+Babel <v3.8m> and hyphenation patterns for english, afrikaans, ancientgreek, ar
+abic, armenian, assamese, basque, bengali, bokmal, bulgarian, catalan, coptic, 
+croatian, czech, danish, dutch, esperanto, estonian, farsi, finnish, french, ga
+lician, german, german-x-2009-06-19, greek, gujarati, hindi, hungarian, iceland
+ic, indonesian, interlingua, irish, italian, kannada, kurmanji, lao, latin, lat
+vian, lithuanian, malayalam, marathi, mongolian, mongolianlmc, monogreek, ngerm
+an, ngerman-x-2009-06-19, nynorsk, oriya, panjabi, pinyin, polish, portuguese, 
+romanian, russian, sanskrit, serbian, slovak, slovenian, spanish, swedish, swis
+sgerman, tamil, telugu, turkish, turkmen, ukenglish, ukrainian, uppersorbian, u
+senglishmax, welsh, loaded.
+(F:\TP3\Final-Report\l3proj.cls
 Document Class: l3proj 2009/01/09 Colin Perkins <csp@dcs.gla.ac.uk>.2009/09/16 
 Modified by Tim Storer <tws@dcs.gla.ac.uk> to support non pdf modes.
-(/usr/share/texmf/tex/latex/base/report.cls
-Document Class: report 2005/09/16 v1.4f Standard LaTeX document class
-(/usr/share/texmf/tex/latex/base/size11.clo
-File: size11.clo 2005/09/16 v1.4f Standard LaTeX file (size option)
+(F:\MikTek\tex\latex\base\report.cls
+Document Class: report 2007/10/19 v1.4h Standard LaTeX document class
+(F:\MikTek\tex\latex\base\size11.clo
+File: size11.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
 )
 \c@part=\count79
 \c@chapter=\count80
@@ -32,40 +34,46 @@ File: size11.clo 2005/09/16 v1.4f Standard LaTeX file (size option)
 \belowcaptionskip=\skip42
 \bibindent=\dimen102
 )
-(/usr/share/texmf/tex/generic/oberdiek/ifpdf.sty
-Package: ifpdf 2006/02/20 v1.4 Provides the ifpdf switch (HO)
-Package ifpdf Info: pdfTeX in pdf mode detected.
+(F:\MikTek\tex\generic\oberdiek\ifpdf.sty
+Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
+Package ifpdf Info: pdfTeX in PDF mode is detected.
 )
-(/usr/share/texmf/tex/latex/graphics/graphicx.sty
+(F:\MikTek\tex\latex\graphics\graphicx.sty
 Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
 
-(/usr/share/texmf/tex/latex/graphics/keyval.sty
+(F:\MikTek\tex\latex\graphics\keyval.sty
 Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
 \KV@toks@=\toks14
 )
-(/usr/share/texmf/tex/latex/graphics/graphics.sty
-Package: graphics 2006/02/20 v1.0o Standard LaTeX Graphics (DPC,SPQR)
+(F:\MikTek\tex\latex\graphics\graphics.sty
+Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
 
-(/usr/share/texmf/tex/latex/graphics/trig.sty
+(F:\MikTek\tex\latex\graphics\trig.sty
 Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
 )
-(/usr/share/texmf/tex/latex/config/graphics.cfg
+(F:\MikTek\tex\latex\00miktex\graphics.cfg
 File: graphics.cfg 2007/01/18 v1.5 graphics configuration of teTeX/TeXLive
 )
-Package graphics Info: Driver file: pdftex.def on input line 90.
+Package graphics Info: Driver file: pdftex.def on input line 91.
 
-(/usr/share/texmf/tex/latex/pdftex-def/pdftex.def
-File: pdftex.def 2007/01/08 v0.04d Graphics/color for pdfTeX
+(F:\MikTek\tex\latex\pdftex-def\pdftex.def
+File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
+
+(F:\MikTek\tex\generic\oberdiek\infwarerr.sty
+Package: infwarerr 2010/04/08 v1.3 Providing info/warning/message (HO)
+)
+(F:\MikTek\tex\generic\oberdiek\ltxcmds.sty
+Package: ltxcmds 2011/04/18 v1.20 LaTeX kernel commands for general use (HO)
+)
 \Gread@gobject=\count88
 ))
 \Gin@req@height=\dimen103
 \Gin@req@width=\dimen104
 )
-(/usr/share/texmf/tex/latex/psnfss/times.sty
+(F:\MikTek\tex\latex\psnfss\times.sty
 Package: times 2005/04/12 PSNFSS-v9.2a (SPQR) 
-)) (./dissertation-teamo.aux)
-\openout1 = `dissertation-teamo.aux'.
-
+))
+(F:\TP3\Final-Report\dissertation-teamo.aux)
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 8.
 LaTeX Font Info:    ... okay on input line 8.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 8.
@@ -80,13 +88,28 @@ LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 8.
 LaTeX Font Info:    ... okay on input line 8.
 LaTeX Font Info:    Try loading font information for OT1+ptm on input line 8.
 
-(/usr/share/texmf/tex/latex/psnfss/ot1ptm.fd
+(F:\MikTek\tex\latex\psnfss\ot1ptm.fd
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 )
-<images/CompSci_mono.pdf, id=1, 413.545pt x 93.34875pt>
+(F:\MikTek\tex\context\base\supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count89
+\scratchdimen=\dimen105
+\scratchbox=\box26
+\nofMPsegments=\count90
+\nofMParguments=\count91
+\everyMPshowfont=\toks15
+\MPscratchCnt=\count92
+\MPscratchDim=\dimen106
+\MPnumerator=\count93
+\makeMPintoPDFobject=\count94
+\everyMPtoPDFconversion=\toks16
+) <images/CompSci_mono.pdf, id=1, 413.545pt x 93.34875pt>
 File: images/CompSci_mono.pdf Graphic file (type pdf)
 
 <use images/CompSci_mono.pdf>
+Package pdftex.def Info: images/CompSci_mono.pdf used on input line 16.
+(pdftex.def)             Requested size: 373.71042pt x 53.51495pt.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <12> on input line 16.
 LaTeX Font Info:    External font `cmex10' loaded for size
@@ -95,8 +118,8 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <6> on input line 16.
  [1
 
-{/usr/share/texmf/fonts/map/pdftex/updmap/pdftex.map} <./images/CompSci_mono.pd
-f>]
+{C:/Users/PJ/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map} <F:/TP3/Final-R
+eport/images/CompSci_mono.pdf>]
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10.95> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 17.
  [1]
@@ -107,10 +130,9 @@ LaTeX Font Info:    External font `cmex10' loaded for size
  [1]
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <24.88> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 23.
- (./dissertation-teamo.toc)
-\tf@toc=\write3
-\openout3 = `dissertation-teamo.toc'.
 
+(F:\TP3\Final-Report\dissertation-teamo.toc)
+\tf@toc=\write3
  [2
 
 ]
@@ -144,18 +166,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 33--35
 
 [3
 
-] <DiffusionOfInnovation.png, id=29, 543.02875pt x 335.2525pt>
+] <DiffusionOfInnovation.png, id=28, 543.02875pt x 335.2525pt>
 File: DiffusionOfInnovation.png Graphic file (type png)
 
-! LaTeX Error: File `DiffusionOfInnovation' not found.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.35 ...graphics[scale=0.6]{DiffusionOfInnovation}
-                                                  
-? 
+<use DiffusionOfInnovation.png>
+Package pdftex.def Info: DiffusionOfInnovation.png used on input line 40.
+(pdftex.def)             Requested size: 325.81975pt x 201.15305pt.
 
 Overfull \hbox (1.26851pt too wide) in paragraph at lines 41--41
 []\OT1/ptm/m/n/10.95 Figure 1.1: Roger's bell curve, source: http://en.wikipedi
@@ -177,94 +193,100 @@ Underfull \hbox (badness 10000) in paragraph at lines 45--46
 
  []
 
-[4] [5 <./DiffusionOfInnovation.png (PNG copy)>]
+[4] [5 <F:/TP3/Final-Report/DiffusionOfInnovation.png>]
 Chapter 2.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <9> on input line 58.
+(Font)              <9> on input line 60.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 58.
+(Font)              <5> on input line 60.
 
-Underfull \hbox (badness 10000) in paragraph at lines 58--61
+Underfull \hbox (badness 10000) in paragraph at lines 59--63
 
  []
 
-<wireframes/bt-3step.png, id=37, 963.6pt x 500.87125pt>
+<wireframes/bt-3step.png, id=36, 963.6pt x 500.87125pt>
 File: wireframes/bt-3step.png Graphic file (type png)
 
-! LaTeX Error: File `wireframes/bt-3step' not found.
+<use wireframes/bt-3step.png>
+Package pdftex.def Info: wireframes/bt-3step.png used on input line 66.
+(pdftex.def)             Requested size: 432.26999pt x 224.68684pt.
+ [6
 
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.54 ...ics[width=\linewidth]{wireframes/bt-3step}
-                                                  
-? 
-
-Underfull \hbox (badness 10000) in paragraph at lines 69--72
+]
+Underfull \hbox (badness 10000) in paragraph at lines 71--73
 
  []
 
-[6
 
-]
-LaTeX Font Info:    Try loading font information for OMS+ptm on input line 77.
- (/usr/share/texmf/tex/latex/psnfss/omsptm.fd
+Underfull \hbox (badness 10000) in paragraph at lines 71--73
+
+ []
+
+[7 <F:/TP3/Final-Report/wireframes/bt-3step.png>]
+LaTeX Font Info:    Try loading font information for OMS+ptm on input line 82.
+
+(F:\MikTek\tex\latex\psnfss\omsptm.fd
 File: omsptm.fd 
 )
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 77.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 82.
 Missing character: There is no â in font ptmr7t!
 Missing character: There is no € in font ptmr7t!
 Missing character: There is no ™ in font ptmr7t!
 Missing character: There is no â in font ptmr7t!
 Missing character: There is no € in font ptmr7t!
 Missing character: There is no ™ in font ptmr7t!
- [7 <./wireframes/bt-3step.png>]
 Missing character: There is no â in font ptmr7t!
 Missing character: There is no € in font ptmr7t!
 Missing character: There is no ™ in font ptmr7t!
- <jobstatuses.png, id=46, 1041.8925pt x 564.1075pt>
+
+<jobstatuses.png, id=45, 1041.8925pt x 564.1075pt>
 File: jobstatuses.png Graphic file (type png)
  <use jobstatuses.png>
-[8 <./jobstatuses.png>] [9]
+Package pdftex.def Info: jobstatuses.png used on input line 102.
+(pdftex.def)             Requested size: 432.26999pt x 234.04pt.
+
+[8] [9 <F:/TP3/Final-Report/jobstatuses.png>]
 Chapter 3.
 <bt-dbstruct.png, id=54, 842.14626pt x 663.47874pt>
 File: bt-dbstruct.png Graphic file (type png)
  <use bt-dbstruct.png>
+Package pdftex.def Info: bt-dbstruct.png used on input line 133.
+(pdftex.def)             Requested size: 432.26999pt x 340.56656pt.
+
 [10
 
-] [11 <./bt-dbstruct.png>]
+] [11 <F:/TP3/Final-Report/bt-dbstruct.png>]
 Chapter 4.
 [12
 
 ]
 Chapter 5.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 158.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 163.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <10.95> not available
-(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 173.
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 178.
 [13
 
 ]
 No file dissertation-teamo.bbl.
-[14] (./dissertation-teamo.aux) ) 
+[14] (F:\TP3\Final-Report\dissertation-teamo.aux) ) 
 Here is how much of TeX's memory you used:
- 758 strings out of 256216
- 9521 string characters out of 1917072
- 60007 words of memory out of 1500000
- 4051 multiletter control sequences out of 10000+200000
- 32304 words of font info for 60 fonts, out of 1200000 for 2000
- 645 hyphenation exceptions out of 8191
- 32i,8n,23p,2070b,244s stack positions out of 5000i,500n,6000p,200000b,15000s
-{/usr/share/texmf/fonts/enc/dvips/base/8r.enc}
-</usr/share/texmf/fonts/type1/bluesky/cm/cmsy10.pfb></usr/share/texmf/fonts/typ
-e1/urw/times/utmb8a.pfb></usr/share/texmf/fonts/type1/urw/times/utmbi8a.pfb></u
-sr/share/texmf/fonts/type1/urw/times/utmr8a.pfb></usr/share/texmf/fonts/type1/u
-rw/times/utmri8a.pfb>
-Output written on dissertation-teamo.pdf (16 pages, 230636 bytes).
+ 1301 strings out of 494045
+ 16861 string characters out of 3155650
+ 70350 words of memory out of 3000000
+ 4592 multiletter control sequences out of 15000+200000
+ 32304 words of font info for 60 fonts, out of 3000000 for 9000
+ 715 hyphenation exceptions out of 8191
+ 34i,8n,23p,2122b,255s stack positions out of 5000i,500n,10000p,200000b,50000s
+{F:/MikTek/fonts/enc/dvips/f
+ontname/8r.enc}<F:/MikTek/fonts/type1/public/amsfonts/cm/cmsy10.pfb><F:/MikTek/
+fonts/type1/urw/times/utmb8a.pfb><F:/MikTek/fonts/type1/urw/times/utmbi8a.pfb><
+F:/MikTek/fonts/type1/urw/times/utmr8a.pfb><F:/MikTek/fonts/type1/urw/times/utm
+ri8a.pfb>
+Output written on dissertation-teamo.pdf (16 pages, 229543 bytes).
 PDF statistics:
  91 PDF objects out of 1000 (max. 8388607)
- 0 named destinations out of 1000 (max. 131072)
+ 0 named destinations out of 1000 (max. 500000)
  26 words of extra memory for PDF output out of 10000 (max. 10000000)
 
