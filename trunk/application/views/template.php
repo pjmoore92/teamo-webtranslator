@@ -15,6 +15,7 @@
     <link href="<?php echo base_url('style/bootstrap.css'); ?>" rel="stylesheet">
     <!--<link href="<?php echo base_url('style/bootstrap-responsive.css'); ?>" rel="stylesheet">-->
     <link href='http://fonts.googleapis.com/css?family=Ropa+Sans' rel='stylesheet' type='text/css'>
+    <link href='<?php echo base_url('style/jquery-ui/south-street/jquery-ui-1.8.17.custom.css'); ?>' rel='stylesheet' type='text/css'>
     <style type="text/css">
       body {
         padding-top: 40px;
@@ -33,6 +34,8 @@
     <script type="text/javascript" src="<?php echo base_url('/js/bootstrap-dropdown.js'); ?>"></script>
     <script type="text/javascript" src="<?php echo base_url('/js/bootstrap-alert.js'); ?>"></script>
     <script type="text/javascript" src="<?php echo base_url('/js/bootstrap-collapse.js'); ?>"></script>
+    <script type="text/javascript" src="<?php echo base_url('/js/jquery/jquery-ui-1.8.17.custom.min.js'); ?>"></script>
+    <script type="text/javascript" src="<?php echo base_url('/js/script.js'); ?>"></script>
 
 
   </head>
@@ -206,21 +209,6 @@ $captcha = array(
       </div>
     </div>
     <p/>
-
-    <script type="text/javascript">
-      $(document).ready(function(){
-
-        $('#login-submit').click(function(){
-          var email = $("#login-email").val();
-          var pass = $('#login-ref-code').val();
-          
-          $.post(
-          '<?php echo base_url("/en/auth/login"); ?>',/*FIXME*/
-          {'login' : email, 'password' : pass, 'remember' : 0 }
-        );
-        })
-      });
-    </script>
     <!-- END OF HEADER -->
 
     <div class="container-fluid"> <!--FIXME is this needed? -->
