@@ -67,6 +67,13 @@ class Job_model extends CI_Model{
         return $jobID;
     }
 
+    public function update_job($job_data){
+
+        $this->db->where('jobID', $job_data['jobID']);
+        array_shift($job_data); // shift the first element of the array (jobID) off the array
+        $this->db->update($this->_table, $job_data);
+    }
+
     public function update_job_dates($job_id, $job_dates){
 
         $this->db->where('jobID', $job_id);
