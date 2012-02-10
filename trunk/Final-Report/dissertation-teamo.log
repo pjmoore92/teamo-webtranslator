@@ -147,7 +147,16 @@ Underfull \hbox (badness 10000) in paragraph at lines 33--35
 ] <DiffusionOfInnovation.png, id=29, 543.02875pt x 335.2525pt>
 File: DiffusionOfInnovation.png Graphic file (type png)
 
-<use DiffusionOfInnovation.png>
+! LaTeX Error: File `DiffusionOfInnovation' not found.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.35 ...graphics[scale=0.6]{DiffusionOfInnovation}
+                                                  
+? 
+
 Overfull \hbox (1.26851pt too wide) in paragraph at lines 41--41
 []\OT1/ptm/m/n/10.95 Figure 1.1: Roger's bell curve, source: http://en.wikipedi
 a.org/wiki/File:DiffusionOfInnovation.png 
@@ -182,7 +191,16 @@ Underfull \hbox (badness 10000) in paragraph at lines 58--61
 <wireframes/bt-3step.png, id=37, 963.6pt x 500.87125pt>
 File: wireframes/bt-3step.png Graphic file (type png)
 
-<use wireframes/bt-3step.png>
+! LaTeX Error: File `wireframes/bt-3step' not found.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.54 ...ics[width=\linewidth]{wireframes/bt-3step}
+                                                  
+? 
+
 Underfull \hbox (badness 10000) in paragraph at lines 69--72
 
  []
