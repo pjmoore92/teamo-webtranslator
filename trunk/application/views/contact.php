@@ -7,7 +7,7 @@
 <div class="row">
   <div id="contact_form">
 	<div class="span4 offset2">
-	<?php echo form_open('email/send'); ?>
+	<?php echo form_open('welcome/contact'); ?>
 	
 	<?php
 	
@@ -43,7 +43,8 @@
 	<!-- <p><?php echo form_input($name_data); ?>  </p> -->
 	<p>
 		<div class="input">	
-		<input type="text" name="name" value id="name"><?php echo form_error('name', '<div class="alert-error">', '</div>'); ?>
+			<input type="text" name="name" value id="name">
+			<?php echo form_error('name', '<div class="alert-error">', '</div>'); ?>
 		</div>
 			
 	</p>
@@ -55,34 +56,38 @@
 
 	<p>
   		<div class="input">	
-                <input type="email" name="email" value id="email" autocomplete="on"><?php echo form_error('email', '<div class="alert-error">', '</div>'); ?>
+			<input type="email" name="email" value id="email" autocomplete="on">
+			<?php echo form_error('email', '<div class="alert-error">', '</div>'); ?>
 		</div>
 		
 	</p>
 
 	<p>
 		<div class="input">
-		<label for="selet01">Your Subject </label>	
-		<select name="select01" id="select01">
-                	<option value="General Enquiry">General Enquiry</option>
-	                <option value="Quote">Quote</option>
-        	        <option value="Video Translation">Video Translation</option>
-                	<option value="Interpretation">Interpretation</option>
-	                <option value="Other">Other</option>
-                </select>
+			<label for="selet01">Your Subject </label>	
+			<select name="select01" id="select01">
+				<option value="General Enquiry">General Enquiry</option>
+				<option value="Quote">Quote</option>
+				<option value="Video Translation">Video Translation</option>
+				<option value="Interpretation">Interpretation</option>
+				<option value="Other">Other</option>
+			</select>
 		</div>
               
 	<p>
 		<label for="message">Your Message </label>
-  		<div class="input">	
-                <textarea class="xxlarge" id="message" name="message" rows="10" value="<input type="text" name="message" value="" id="message"  /></textarea><?php echo form_error('message', '<div class="alert-error">', '</div>'); ?>
+  		<div class="input">
+			<textarea class="xxlarge" id="message" name="message" rows="10" value="">
+			</textarea>
+			<?php echo form_error('message', '<div class="alert-error">', '</div>'); ?>
 		</div>
 		
 	</p>
 	
 	<p>
 		<div class="input">
-		<input type="submit" class="btn btn-success btn-large" value="Send e-mail" action=<?php echo form_submit('submit', 'Submit'); ?>
+		<!-- <input type="submit" class="btn btn-success btn-large" value="Send e-mail" action= -->
+		<?php echo form_submit(array('name' => 'submit', 'value' => 'Send e-mail', 'class' => 'btn btn-success btn-large')); ?>
 		</div>
 	</p>
 	</div>
