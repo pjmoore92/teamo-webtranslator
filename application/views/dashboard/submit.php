@@ -21,11 +21,11 @@
 
         </div>
         <div class="row">
+             <form id="fileform" enctype="multipart/form-data">
           <div class="span-one-third" style="text-align:center">
             <h2><?php echo lang('upload.browse') ?></h2>
              <!--<p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>-->
              <p>
-             <form>
                 <label for="upload-language-from">Source language</label>
                 <div class="input">
                   <select class="medium" name="upload-language-from" id="upload-language-from-select">
@@ -43,14 +43,12 @@
                   <!--<input class="input-file" id="fileInput2" name="fileInput" type="file">
                   <input class="input-file" id="fileInput3" name="fileInput" type="file">-->
                   </div>
-              </form>
              </p>
          </div>
           <div class="span-one-third" style="text-align:center">
             <h2><?php echo lang('upload.setreqs') ?></h2>
             <!--<p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper.</p>-->
             <p>
-            <form>
                 <label for="upload-language-to">Language</label>
                 <div class="input">
                   <select class="medium" name="upload-language-to" id="upload-language-to-select">
@@ -67,13 +65,13 @@
                     <option>EUR &euro;</option>
                   </select>
                 </div>
-            </form>
             </p>
           </div>
           <div class="span-one-third" style="text-align:center">
             <p><a id="upload-submit" class="btn" href="#" data-controls-modal="modal-from-dom-upload-message" 
               data-backdrop="true" data-keyboard="true">Upload!</a></p>
           </div>
+            </form>
         </div>
       </div>
     

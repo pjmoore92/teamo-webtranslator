@@ -1,5 +1,4 @@
 <?php if ( ! defined('BASEPATH')) exit('Access denied'); ?>
-<script type="text/javascript" src="/js/jquery/jqueryui-1.8.17.js"></script>
 <script type="text/javascript" src="/js/upload/jquery-fileupload.js"></script>
 
 <!-- TODO horizontal sliding Ads a la BBC? -->
@@ -71,6 +70,9 @@ elit. The other services I offer are This that and This.</p>
             <option>EUR &euro;</option>
           </select>
         </div>
+
+        <label for="register-deadline">Deadline</label>
+        <input type="text" id="datepicker">
     </p>
   </div>
 
