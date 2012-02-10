@@ -50,46 +50,46 @@
           <div class="nav-collapse">
             <ul class="nav">
               <li><?php echo anchor('welcome', lang('nav.home')); ?></li>
-              <li><?php echo anchor('welcome/about', lang('nav.about')); ?></li>
-              <li><?php echo anchor('welcome/testimonials', lang('nav.testimonials')); ?></li>
-              <li><?php echo anchor('welcome/contact', lang('nav.contact')); ?></li>
-              <li class="dropdown" data-dropdown="dropdown">
-                <a href="#" class="dropdown-toggle">
-                  <?php echo lang('nav.serv') ?>
-                  <b class="caret"></b>
-                </a>
-                <ul class="dropdown-menu">
-                  <li>
-                    <?php echo anchor('welcome/documents', 'Document Translation'); ?>
-                    <?php echo anchor('welcome/editproof', 'Editing and Proofreading'); ?>
-                    <?php echo anchor('welcome/phoneinterp', 'Over-the-phone Interpreting'); ?>
-                    <?php echo anchor('welcome/videoremote', 'Video Remote Interpreting'); ?>
-                    
-                  </li>
-                </ul>
-              </li> 
-	         </ul>
-	         
-           <ul class="nav pull-right">
-	           <li class="dropdown" data-dropdown="dropdown">
+            <li><?php echo anchor('welcome/about', lang('nav.about')); ?></li>
+            <li><?php echo anchor('welcome/testimonials', lang('nav.testimonials')); ?></li>
+            <li><?php echo anchor('welcome/contact', lang('nav.contact')); ?></li>
+<li class="dropdown" data-dropdown="dropdown">
               <a href="#" class="dropdown-toggle">
-                <?php echo lang('nav.lang') ?>
-		            <b class="caret"></b>
+                <?php echo lang('nav.serv') ?>
+		<b class="caret"></b>
               </a>
               <ul class="dropdown-menu">
                 <li>
+                  <?php echo anchor('welcome/documents', 'Document Translation'); ?>
+                  <?php echo anchor('welcome/editproof', 'Editing and Proofreading'); ?>
+                  <?php echo anchor('welcome/phoneinterp', 'Over-the-phone Interpreting'); ?>
+                  <?php echo anchor('welcome/videoremote', 'Video Remote Interpreting'); ?>
+                  
+                </li>
+              </ul>
+            </li> 
+	    </ul>
+	    <ul class="nav pull-right">
+	<li class="dropdown" data-dropdown="dropdown">
+              <a href="#" class="dropdown-toggle">
+                <?php echo lang('nav.lang') ?>
+		<b class="caret"></b>
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  
                   <?php echo anchor('/en', 'English'); ?>
                   <?php echo anchor('/fr', 'French'); ?>
                   <?php echo anchor('/it', 'Italian'); ?>
                 </li>
               </ul>
-            </li>
+            </li> 
 	    <?php if(!$this->tank_auth->is_logged_in()): ?>
 		
-	          <li class="dropdown" data-dropdown="dropdown">
+	    <li class="dropdown" data-dropdown="dropdown">
               <a href="#" class="dropdown-toggle">
                 <?php echo lang('nav.login') ?>
-		            <b class="caret"></b>
+		<b class="caret"></b>
               </a>
               <ul class="dropdown-menu">
                  <?php
@@ -121,35 +121,35 @@ $captcha = array(
 	'maxlength'	=> 8,
 );
 ?>
-                <?php echo form_open(en/auth/login); ?>
-                  <table>
-                  	<tbody>
-                      <tr>
-                    		<td><label for="login">Email</label></td>
-                    		<td><input type="text" name="login" value="" id="login" maxlength="80" size="30"></td>
-                    		<td style="color: red;"></td>
-                    	</tr>
-                    	<tr>
-                    		<td><label for="password">Password</label></td>
-                    		<td><input type="password" name="password" value="" id="password" size="30"></td>
-                    		<td style="color: red;"></td>
-                    	</tr>
-                    	<tr>
-                    	<tr>
-                    		<td colspan=3>
-                    			<label for="remember" style="float:left">Remember me </label>
-                    			<input type="checkbox" name="remember" value="1" id="remember" style="float:right">
-                    			<a href="http://alasdaircampbell.com/en//auth/forgot_password">Forgot password</a>
-                    			<a href="http://alasdaircampbell.com/en//auth/register">Register</a>		</td>
-                    	</tr>
-                    </tbody>
-                  </table>
-                <!--<input type="submit" name="submit" value="Let me in"></form>-->
+<form action="http://alasdaircampbell.com/en/auth/login" method="post" accept-charset="utf-8"><table>
+	<tbody><tr>
+		<td><label for="login">Email</label></td>
+		<td><input type="text" name="login" value="" id="login" maxlength="80" size="30"></td>
+		<td style="color: red;"></td>
+	</tr>
+	<tr>
+		<td><label for="password">Password</label></td>
+		<td><input type="password" name="password" value="" id="password" size="30"></td>
+		<td style="color: red;"></td>
+	</tr>
+	<tr>
+					
+		
+	
+	<tr>
+		<td colspan=3>
+			<label for="remember" style="float:left">Remember me </label>
+			<input type="checkbox" name="remember" value="1" id="remember" style="float:right">
+			<a href="http://alasdaircampbell.com/en//auth/forgot_password">Forgot password</a>
+			<a href="http://alasdaircampbell.com/en//auth/register">Register</a>		</td>
+	</tr>
+</tbody></table>
+<!--<input type="submit" name="submit" value="Let me in"></form>-->
 
-                  <div class="pull-right">
-                    <input type="submit" class="btn btn-success" name="submit" value="Let me in"></form>
-                  </div>
-                <?php echo form_close(); ?>
+<div class="pull-right">
+<input type="submit" class="btn btn-success" name="submit" value="Let me in"></form>
+</div>
+<?php echo form_close(); ?>
               </ul>
             </li>
             
@@ -158,7 +158,7 @@ $captcha = array(
             <li class="dropdown" data-dropdown="dropdown">
               <a href="#" class="dropdown-toggle">
                 <?php //echo lang('nav.logout') ?>My Account
-		            <b class="caret"></b>
+		<b class="caret"></b>
               </a>
               <ul class="dropdown-menu">
                 <li>
@@ -215,23 +215,25 @@ $captcha = array(
       <?= $contents ?>
       <footer class="footer">
         <p class="pull-right">
-        	<br />
-        	<a href="http://www.linkedin.com"><img src="/images/linked.png" align="right"></a>
-        	<a href="http://www.facebook.com"><img src="/images/facebook.png" align="right"></a>
-        	<br />
-        	<br />
-        	<br />
-        	<a href="/welcome/privacy">Privacy Policy</a>
-        	&copy; <?php 
-                $copyYear = 2011; 
-                $curYear = date('Y'); 
-                echo $copyYear . (($copyYear != $curYear) ? '-' . $curYear : '') .' '.lang('company.name') ?>
+	<br />
+	<a href="http://www.linkedin.com"><img src="/images/linked.png" align="right"></a>
+	<a href="http://www.facebook.com"><img src="/images/facebook.png" align="right"></a>
+	<br />
+	<br />
+	<br />
+	<a href="/welcome/privacy">Privacy Policy</a>
+	&copy; <?php 
+        $copyYear = 2011; 
+        $curYear = date('Y'); 
+        echo $copyYear . (($copyYear != $curYear) ? '-' . $curYear : '') .' '.lang('company.name') ?>
+	
         </p>
+        
       </footer>
     </div>
-    <!-- end of .container-fluid -->
 
     <!-- END OF VIEW -->
 
   </body>
 </html>
+
