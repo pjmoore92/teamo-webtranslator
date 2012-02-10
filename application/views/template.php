@@ -50,8 +50,8 @@
           <div class="nav-collapse">
             <ul class="nav">
               <li><?php echo anchor('welcome', lang('nav.home')); ?></li>
-            <li><?php echo anchor('welcome/about', lang('nav.about')); ?></li>
-            <li><?php echo anchor('welcome/testimonials', lang('nav.testimonials')); ?></li>
+            <li><?php echo anchor('welcome/view/about', lang('nav.about')); ?></li>
+            <li><?php echo anchor('welcome/view/testimonials', lang('nav.testimonials')); ?></li>
             <li><?php echo anchor('welcome/contact', lang('nav.contact')); ?></li>
 <li class="dropdown" data-dropdown="dropdown">
               <a href="#" class="dropdown-toggle">
@@ -60,10 +60,10 @@
               </a>
               <ul class="dropdown-menu">
                 <li>
-                  <?php echo anchor('welcome/documents', 'Document Translation'); ?>
-                  <?php echo anchor('welcome/editproof', 'Editing and Proofreading'); ?>
-                  <?php echo anchor('welcome/phoneinterp', 'Over-the-phone Interpreting'); ?>
-                  <?php echo anchor('welcome/videoremote', 'Video Remote Interpreting'); ?>
+                  <?php echo anchor('welcome/view/document_translation', 'Document Translation'); ?>
+                  <?php echo anchor('welcome/view/editing_and_proofreading', 'Editing and Proofreading'); ?>
+                  <?php echo anchor('welcome/view/over-the-phone_interpreting', 'Over-the-phone Interpreting'); ?>
+                  <?php echo anchor('welcome/view/video_remote_interpreting', 'Video Remote Interpreting'); ?>
                   
                 </li>
               </ul>
