@@ -17,6 +17,14 @@ class Welcome extends CI_Controller {
 	 * map to /index.php/welcome/<method_name>
 	 * @see http://codeigniter.com/user_guide/general/urls.html
 	 */
+
+	private $_static_dir;
+
+	public function __construct(){
+		parent::__construct();
+		$this->_static_dir = 'static';
+	}
+
 	public function index()
 	{
                 $this->lang->load('common');
@@ -25,27 +33,10 @@ class Welcome extends CI_Controller {
                 $this->template->load('template', 'welcome_message');
 	}
 
-	public function about()
-	{
-                $this->template->set('title', 'About -');
-                $this->template->load('template', 'about');
-	}
-
-	public function testimonials()
-	{
-                $this->template->set('title', 'Testimonials -');
-                $this->template->load('template', 'testimonials');
-	}
-
 	public function contact()
 	{
                 $this->template->set('title', 'Contact -');
                 $this->template->load('template', 'contact');
-	}
-	public function privacy()
-	{
-                $this->template->set('title', 'Privacy policy -');
-                $this->template->load('template', 'privacypolicy');
 	}
 	
 	public function documents()
@@ -53,23 +44,18 @@ class Welcome extends CI_Controller {
                 $this->template->set('title', 'Document Translation Service -');
                 $this->template->load('template', 'doc_trans_serv');
 	}
-	
-	public function videoremote()
-	{
-                $this->template->set('title', 'Video Remote Interpreting -');
-                $this->template->load('template', 'video_interp_serv');
-	}
-	
-	public function editproof()
-	{
-                $this->template->set('title', 'Editing and Proofreading -');
-                $this->template->load('template', 'edit_proof_serv');
-	}
-	
-	public function phoneinterp()
-	{
-                $this->template->set('title', 'Over the Phone Interpreting -');
-                $this->template->load('template', 'phone_interp_serv');
+
+	public function view( $page = 'home'){
+
+		if ( ! file_exists("application/views/{$this->_static_dir}/{$page}.php"))
+			show_404();
+		
+		$this->lang->load('common');
+
+		$title = ucfirst(str_replace('_', ' ', $page));
+
+		$this->template->set('title', "{$title} - ");
+		$this->template->load('template', $this->_static_dir . '/' . $page);
 	}
 }
 
