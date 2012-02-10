@@ -38,12 +38,6 @@ class Welcome extends CI_Controller {
                 $this->template->set('title', 'Contact -');
                 $this->template->load('template', 'contact');
 	}
-	
-	public function documents()
-	{
-                $this->template->set('title', 'Document Translation Service -');
-                $this->template->load('template', 'doc_trans_serv');
-	}
 
 	public function view( $page = 'home'){
 
