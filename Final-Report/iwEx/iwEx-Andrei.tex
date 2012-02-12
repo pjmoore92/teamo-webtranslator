@@ -1,0 +1,128 @@
+\documentclass{article}
+\usepackage{marginnote}
+
+\title{Website for a translator\\ \vspace{4mm} 
+Individual writing exercise}
+
+\author{\bf Andrei Mustata\\ \bf Team O}
+
+\date{\today}
+
+\begin{document}
+\maketitle
+
+The project is to build a website for a translator (the human languages kind).
+
+\section*{Background}
+
+Currently, the translator has her usual clients from whom she receives documents
+intended to be translated. They agree on a price and then she starts working
+on it. After the document is translated, she sends it back to them and waits
+for her payment. All communication is done mainly by e-mail.
+
+While this might look like a nice and comfortable process, issues might occur.
+For instance, having the document translated and in their hands, clients may
+not pay at all. Of course, this would give that particular client a bad
+reputation and this may not be a frequent situation, but it is certainly not
+a happy case. Another problem rises when the number of the clients gets too
+big. Managing only a handful of documents from a couple of clients is fine
+to do without a software system, but when the demand increases, things are
+bound to go wrong. Also, communication becomes difficult and hard to track.
+
+
+\section*{Aims}
+
+The purpose of our project is to solve the issues discussed earlier.
+
+A few important points on why using a software system to manage documents,
+keep track of discussions and tasks would be better than the current system
+are:
+\marginpar{\textbf{Karen}: \emph{Also shows a timeline of her activity.}}
+\begin{itemize}
+	\item
+	makes {\bf planning} deadlines easier, since computers are better than humans
+	at taking large amounts of data and comparing, adding, etc.;
+	\item
+	makes {\bf file managing} easier;
+	\item
+	improves {\bf productivity} - now that the other two are out of the way, the
+	user of the system has more time to think of things that matter more.
+\end{itemize}
+
+By having all the details clearly stated and planned, the clients are encouraged
+to pay more attention and to take it more seriously. It also makes both sides
+- client and translator - more accountable.
+
+Having a detailed log of all the documents delivered to which clients and when,
+would make keeping track of the activity easier to do.
+
+By using an electronic payment system, the risk of having unpaid jobs is greatly
+reduced. It also gives the business a more professional look.
+\marginpar{\textbf{Karen}: \emph{Using Paypal makes her less vulnerable to hacking
+attacks.}}
+
+\section*{Motivation}
+First of all, the final product is to be used in a real business, so it gives
+us a chance to see how it's like to work with a real client for a change.
+The difference between real-life clients and, say, Computing Science lecturers
+is that clients are usually not technical people. It's highly unlikely that a 
+client would know exactly what they want from the very beginning or having
+fixed requirements that never change, not to mention the possibility of them
+having a thorough description of their project so we could get started on
+the coding. This gives us a good experience on interacting with other people,
+therefore improving our skills to explain computer-related concepts to people
+that work in other fields and also to convert their natural language
+requirements into technical ones.
+
+
+Secondly, it's a project that \emph{lives} on the Internet. Ten years ago, the
+Internet was everywhere, but now it's even more so. It's a rapidly evolving
+area where new technologies and new techniques are developed very quickly.
+These are also easy to use by anyone, regardless of computer knowledge,
+nature of their device (mobile or desktop) or their operating system. All they
+need is an up-to-date web browser, a requirement that is easy to fulfill,
+since most of them update automatically. So, there is a large audience that
+is easy to get to.
+
+Another reason for choosing a web-based system is the fact that it is
+relatively easy to deploy a project. There are a range of web hosting services
+available that are also cheap to rent: starting from around £20 per year for 
+small, basic accounts on a shared server and going up to over a few hundred 
+pounds for more complex and specialized accounts. Of course, the services and 
+support provided vary greatly, so having both good and bad experiences with 
+a few of these providers was essential and it helped us narrow the list down
+to a few. Since this is our client's first website, we advised that a simple,
+cheaper hosting plan, but with an adequate amount of storage space should suffice
+for now. Also, out of the abundance of technologies which we could have used,
+we chose to use the {\bf Linux}, {\bf Apache}, {\bf MySQL} and {\bf PHP} (LAMP) stack, for a few reasons:
+\begin{itemize}
+	\item
+	it is very {\bf popular}, so help was always easy to find;
+	
+	\item
+	it is {\bf easy} to {\bf learn}, {\bf use} and {\bf setup}.
+\end{itemize}
+Also, we thought that this choice would lower the costs of an eventual upgrade
+of the system, as opposed to having used some more exotic technologies that
+come at the cost of losing the robustness and stability that we needed.
+\marginpar{\textbf{Karen}: \emph{* good point.}}
+
+\section*{Outline}
+In the following chapters, we will go over the processes that we went through
+to deliver the final product.
+
+In the {\bf Specification and Design} chapter we will talk about the functional and
+non-functional requirements capturing process - we started with a small set of
+initial requirements, then we had interviews with the client, which lead to a
+further understanding of the problem and the discovery of more requirements.
+Also, the system architecture and user interface that we planned are discussed
+here. All of the concepts and diagrams presented here should have been thoroughly
+explained for everyone, 
+
+The {\bf Implementation} section also describes the system as well as the difficulties that we encountered, but at a finer level of detail.
+
+The {\bf Testing} chapter is concerned with all the tests that we put our product through in order to check if our solution met the requirements (e.g.: usability testing, acceptance testing).
+
+The final section of the report will list the references to the work of others that we have cited throughout the document.
+
+\end{document}
