@@ -56,7 +56,7 @@ class Dashboard extends MY_Controller {
                 }
         }
 
-        private function _retrieveData($statusType){
+        public function jobs($statusType = "pending"){
                 $this->load->model('job_model');
                 $_dbType = "";
                 switch ($statusType) {
@@ -84,9 +84,6 @@ class Dashboard extends MY_Controller {
                 $this->template->set('title', $this->_data['role']. ' Dashboard -');
                 $this->template->load('template', $this->_view_template, $this->_data);
         }
-        public function pending(){ $this->_retrieveData("pending"); }
-        public function quotes(){ $this->_retrieveData("quotes"); }
-        public function translations(){ $this->_retrieveData("translations"); }
 
         public function history(){
                 //TODO fix historical translations

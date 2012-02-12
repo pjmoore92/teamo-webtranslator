@@ -6,10 +6,10 @@
 			 <?php if($this->session->userdata('role') == 'client'): ?>
             	<li><a href="/dashboard/submit"><i class="icon-plus"></i> Submit new Job</a></li>
              <?php endif; ?>
-	    <li><a href="/dashboard/pending"><i class="icon-list"></i> Pending</a></li>
-	    <li><a href="/dashboard/quotes"><i class="icon-th-list"></i> Quotes</a></li>
-	    <li><a href="/dashboard/translations"><i class="icon-file"></i> Translations</a></li>
-	    <li><a href="/dashboard/history"><i class="icon-time"></i> History</a></li>
+	    <li><a href="/dashboard/jobs/pending"><i class="icon-list"></i> Pending</a></li>
+	    <li><a href="/dashboard/jobs/quotes"><i class="icon-th-list"></i> Quotes</a></li>
+	    <li><a href="/dashboard/jobs/translations"><i class="icon-file"></i> Translations</a></li>
+	    <li><a href="/dashboard/jobs/history"><i class="icon-time"></i> History</a></li>
 	    <?php if($this->session->userdata('role') == 'admin'): ?>
             	<li><a href="/dashboard/submit"><i class="icon-book"></i> Site Statistics</a></li>
              <?php endif; ?>
