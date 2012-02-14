@@ -1,5 +1,4 @@
 <?php if ( ! defined('BASEPATH')) exit('Access denied'); ?>
-<script type="text/javascript" src="/js/upload/jquery-fileupload.js"></script>
 
 <!-- TODO horizontal sliding Ads a la BBC? -->
 <div class="hero-unit">
@@ -13,7 +12,7 @@ elit. The other services I offer are This that and This.</p>
 
 <!--<form>-->
 <!-- Example row of columns -->
-<form id="fileform" enctype="multipart/form-data">
+<form id="fileform" method="post" enctype="multipart/form-data">
 <div class="row">
   <div class="span3 offset1" style="text-align:center">
   <h2><?php echo lang('upload.details') ?></h2>
@@ -44,10 +43,10 @@ elit. The other services I offer are This that and This.</p>
       </div>
       <p>
         <div id="container">
-            <div id="filelist"><?php echo lang('upload.emptylist') ?></div>
+            <div id="filelist">No files added.</div>
             <br />
-            <a id="pickfiles" class="btn btn-info" href="#">Add file..</a>
-            <a id="uploadfiles"></a>
+            <a id="pickfiles" class="btn btn-info" href="#">Select files</a> 
+            <a id="uploadfiles" class="btn btn-info" href="#">Upload files</a>
         </div>
      </p>
  </div>
@@ -109,6 +108,62 @@ elit. The other services I offer are This that and This.</p>
 </form>
 </div>
 
+<!-- Load plupload and all it's runtimes and finally the jQuery queue widget -->
+<script type="text/javascript" src="/js/plupload/plupload.full.js"></script>
+
+<script type="text/javascript">
+$(function() {
+	var uploader = new plupload.Uploader({
+        runtimes : 'html5,html4,flash,silverlight,browserplus',
+		browse_button : 'pickfiles',
+		container : 'container',
+		max_file_size : '15mb',
+		url : '/service/upload/',
+		flash_swf_url : '/js/plupload/plupload.flash.swf',
+		silverlight_xap_url : '/js/plupload/plupload.silverlight.xap',
+		filters : [
+			{title : "Documents", extensions : "pdf,doc,docx,rtf,txt"}
+		]
+	});
+
+	$('#uploadfiles').click(function(e) {
+		uploader.start();
+		e.preventDefault();
+	});
+
+	uploader.init();
+
+	uploader.bind('FilesAdded', function(up, files) {
+		$.each(files, function(i, file) {
+			$('#filelist').append(
+				'<div id="' + file.id + '">' +
+				file.name + ' (' + plupload.formatSize(file.size) + ') <b></b>' +
+			'</div>');
+		});
+
+		up.refresh(); // Reposition Flash/Silverlight
+	});
+
+	uploader.bind('UploadProgress', function(up, file) {
+		$('#' + file.id + " b").html(file.percent + "%");
+	});
+
+	uploader.bind('Error', function(up, err) {
+		$('#filelist').append("<div>Error: " + err.code +
+			", Message: " + err.message +
+			(err.file ? ", File: " + err.file.name : "") +
+			"</div>"
+		);
+
+		up.refresh(); // Reposition Flash/Silverlight
+	});
+
+	uploader.bind('FileUploaded', function(up, file) {
+		$('#' + file.id + " b").html("100%");
+	});
+});
+</script>
+
 <script type="text/javascript">
 $(document).ready(function(){
     $('#register-submit').click(function(){
@@ -151,4 +206,7 @@ $(document).ready(function(){
             );
     });
 });
+
 </script>
+
+
