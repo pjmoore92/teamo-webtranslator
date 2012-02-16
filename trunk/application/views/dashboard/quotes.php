@@ -58,11 +58,9 @@
 										<dt>Date Due</dt>
 											<dd><?php echo $job->dateDue; ?></dt>
 									</dl>
-									<?php if($this->session->userdata('role') == 'client'):
-												?>
-												  <button class="btn btn-small btn-success">Pay using PayPal</button>											<?php
-												  else: 	
-												  ?>
+									<?php if($this->session->userdata('role') == 'client'): ?>
+										<?php echo anchor("/payment/pay/{$job->jobID}", 'Pay using PayPal', array('class'=>'btn btn-small btn-success')); ?>
+									<?php else: ?>
 												  <form class="well form-search">
 												  <span class="label label-warning">Update Quote</span>
         											  <input type="text" class="input-small" placeholder="Quote">
