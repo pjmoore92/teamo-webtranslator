@@ -18,7 +18,7 @@ class MY_Controller extends CI_Controller {
 
 			$this->load->model('customer_model');
 			$user = $this->customer_model->get_customer_name($this->_user_id);
-			$this->_data['client_name'] = $user->title . '. ' . $user->fullName;
+			$this->_data['client_name'] = $user->fullName;
 			
 			$this->_data['role'] = $this->session->userdata('role');
 			

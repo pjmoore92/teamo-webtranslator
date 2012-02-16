@@ -14,7 +14,6 @@
 CREATE TABLE IF NOT EXISTS `customer` (
   `customerID` int(11) NOT NULL AUTO_INCREMENT,
   `fullName` text NOT NULL,
-  `title` enum('Mr','Mrs','Ms') NOT NULL,
   PRIMARY KEY  (`customerID`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
