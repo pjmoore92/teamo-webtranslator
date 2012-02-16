@@ -191,6 +191,9 @@ abstract class PaymentGateway
 
         // Write to log
         $fp = fopen($this->ipnLogFile,'a');
+
+        return $text;
+        
         fwrite($fp, $text . "\n\n");
         fclose($fp);
     }

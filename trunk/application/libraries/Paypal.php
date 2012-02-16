@@ -106,7 +106,7 @@ class Paypal extends PaymentGateway
 		if (eregi("VERIFIED", $this->ipnResponse))
 		{
 		 	// Valid IPN transaction.
-		 	$this->logResults(true);
+		 	log_message('error', $this->logResults(true));
 		 	return true;
 		}
 		else
