@@ -28,7 +28,7 @@ class Payment extends MY_Controller{
 		$this->paypal->addField('currency_code', 'GBP');// TODO: get currency from DB?
 
 		// Specify the url where paypal will send the user on success/failure
-		$this->paypal->addField('return', 'http://alasdaircampbell.com/payment/success');
+		$this->paypal->addField('return', 'http://alasdaircampbell.com/payment/success/'.$job->jobID);
 		$this->paypal->addField('cancel_return', 'http://alasdaircampbell.com/payment/failure');
 
 		// Specify the url where paypal will send the IPN
