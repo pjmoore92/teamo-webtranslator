@@ -17,7 +17,7 @@ class Upload extends CI_Controller {
         print_r($_FILES);
 		$config['upload_path'] = 'incoming/';
 		$config['allowed_types'] = 'pdf|doc|docx|rtf|txt';
-		$config['max_size']	= '100';
+		$config['max_size']	= '150';
 		$config['max_width']  = '1024';
 		$config['max_height']  = '768';
 
