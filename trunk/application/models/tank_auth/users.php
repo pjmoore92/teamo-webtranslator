@@ -82,7 +82,7 @@ class Users extends CI_Model
 	{
 		$this->db->where('LOWER(email)=', strtolower($email));
 
-		$query = $this->db->get($this->table_name);echo $this->db->last_query();
+		$query = $this->db->get($this->table_name);
 		if ($query->num_rows() == 1) return $query->row();
 		return NULL;
 	}
