@@ -18,7 +18,6 @@ class Payment extends MY_Controller{
 		
 		//get the job details
 		$job = $this->job_model->get_job_by_id($jobid, $this->_user_id);
-		print_r($job);
 		if($job == NULL)
 			show_404();
 
