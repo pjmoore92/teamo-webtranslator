@@ -206,8 +206,7 @@ class Auth extends CI_Controller
 						$this->customer_model->add_customer(
 							array(
 								'customerID' => $data['user_id'],
-								'fullName' => $this->form_validation->set_value('name'),
-								'title' => 'Mr'
+								'fullName' => $this->form_validation->set_value('name')
 							)
 						);
 
