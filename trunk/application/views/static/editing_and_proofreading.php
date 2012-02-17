@@ -19,6 +19,12 @@
         eorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt 
         saepius. Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum.
     </p>
+    
+    <p style="text-align: center"> 
+  		<br>
+  		<br>
+  		<input type="button" class ="btn btn-success btn-large" value="Get A Quote Here" 
+onClick="window.location.href='/welcome/contact';" /></p>
   </div>
 
   <div class="span4">
