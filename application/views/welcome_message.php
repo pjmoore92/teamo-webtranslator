@@ -171,10 +171,12 @@ $(document).ready(function(){
 
         var name = $('#register-name').val();
         var email = $('#register-email').val();
+        var lang_from = $('#register-language-from-select').val();
+        var lang_to = $('#register-language-to-select').val();
 
         $.post(
             '<?php echo base_url("/en/auth/register"); ?>',/*FIXME*/
-            {'name' : name, 'email' : email },
+            {'name' : name, 'email' : email, 'lang_from':lang_from, 'lang_to':lang_to },
             function(data){
                 if(!data.error){
                     var message = $('\
