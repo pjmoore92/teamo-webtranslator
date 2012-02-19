@@ -142,6 +142,10 @@ class Auth extends CI_Controller
 				$this->_show_message($this->lang->line('auth_message_registration_disabled'));
 
 			} else {
+
+				/* set JSON headers */
+				$this->output->set_content_type('application/json');
+
 				$use_username = $this->config->item('use_username', 'tank_auth');
 				if ($use_username) {
 					$this->form_validation->set_rules(
@@ -157,6 +161,7 @@ class Auth extends CI_Controller
 					'Name',
 					'trim|required|xss_clean|callback__alphadash_space)'
 				);
+				$this->form_validation->set_message('_check_lang_from', 'Language is not allowed');
 				
 				$this->form_validation->set_rules(
 					'email',
@@ -175,6 +180,9 @@ class Auth extends CI_Controller
 					'Translation language',
 					'required|xss_clean|callback__check_lang_to'
 				);
+
+				$this->form_validation->set_message('required', 'Field %s is required');
+				$this->form_validation->set_message('valid_email', '%s is not a valid e-mail');
 
 				
 				$refcode = strtoupper(random_string('alpha', 8));
@@ -239,28 +247,42 @@ class Auth extends CI_Controller
 						);
 						$jobID = $this->jobs->add_job($details);
 
-						die(json_encode(
-							array(
-								'name' => $this->form_validation->set_value('name'),
-								'email' => $this->form_validation->set_value('email'),
-								'fromLanguage' => $this->form_validation->set_value('register-language-from'),
-								'toLanguage' => $this->form_validation->set_value('register-language-to'),
-								'jobid' => $jobID,
-								'refcode' => $refcode
-							)
-						));
+    					$this->output->set_output(
+	    					json_encode(
+								array(
+									'name' => $this->form_validation->set_value('name'),
+									'email' => $this->form_validation->set_value('email'),
+									'fromLanguage' => $this->form_validation->set_value('register-language-from'),
+									'toLanguage' => $this->form_validation->set_value('register-language-to'),
+									'jobid' => $jobID,
+									'refcode' => $refcode
+								)
+							));
+						die();
+
 					} else {
-						die(json_encode(
+						$errors = $this->tank_auth->get_error_message();
+						$this->output->set_output(json_encode(
 							array(
-								'error' => 'DB error. could not create user account.'
+								// 'error' => 'DB error. could not create user account.'
+								'error' => $errors
 							)
 						));
-						$errors = $this->tank_auth->get_error_message();
-						foreach ($errors as $k => $v)	$data['errors'][$k] = $this->lang->line($v);
+						die();
+						// foreach ($errors as $k => $v)	$data['errors'][$k] = $this->lang->line($v);
 					}
 				}
 				else{
-					die(json_encode(array('error'=>'form validation error')));
+					$this->output->set_output(json_encode(
+						array(
+							'error'=>array(
+								'name' => $this->form_validation->error('name'),
+								'email' => $this->form_validation->error('email'),
+								'register-language-to' => $this->form_validation->error('register-language-to'),
+								'register-language-from' => $this->form_validation->error('register-language-from')
+							)
+						)
+					));
 				}
 				if ($captcha_registration) {
 					if ($use_recaptcha) {
@@ -665,7 +687,12 @@ class Auth extends CI_Controller
 	}
 
 	private function _alpha_dash_space($str){
-		return ( ! preg_match("/^([-a-z_ ])+$/i", $str)) ? FALSE : TRUE;
+		if( preg_match("/^([-a-z_ ])+$/i", $str))
+			return TRUE;
+		else{
+			$this->form_validation->set_message('_alpha_dash_space', 'Language is not allowed');
+			return FALSE;
+		}
     }
 
 
