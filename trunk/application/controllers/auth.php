@@ -700,7 +700,7 @@ class Auth extends CI_Controller
      * Check if 'From' language is allowed
     */
     private function _check_lang_from($lang){
-    	$allowed = array('English', 'Italian');
+    	$allowed = array('english', 'italian');
     	
     	if( !in_array($str, $allowed)){
     		$this->form_validation->set_message('_check_lang_from', 'Language is not allowed');
@@ -714,7 +714,7 @@ class Auth extends CI_Controller
      * Check if 'From' language is allowed
     */
     private function _check_lang_to($lang){
-    	$allowed = array('Fernch');
+    	$allowed = array('french');
     	
     	if( !in_array($str, $allowed)){
     		$this->form_validation->set_message('_check_lang_to', 'Language is not allowed');
