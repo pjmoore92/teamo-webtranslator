@@ -159,9 +159,8 @@ class Auth extends CI_Controller
 				$this->form_validation->set_rules(
 					'name',
 					'Name',
-					'trim|required|xss_clean|callback__alphadash_space)'
+					'trim|required|xss_clean|callback_alphadash_space)'
 				);
-				$this->form_validation->set_message('_check_lang_from', 'Language is not allowed');
 				
 				$this->form_validation->set_rules(
 					'email',
@@ -172,13 +171,13 @@ class Auth extends CI_Controller
 				$this->form_validation->set_rules(
 					'lang_from',
 					'Source language',
-					'required|xss_clean|callback__check_lang_from'
+					'required|xss_clean|callback_check_lang_from'
 				);
 
 				$this->form_validation->set_rules(
 					'lang_to',
 					'Translation language',
-					'required|xss_clean|callback__check_lang_to'
+					'required|xss_clean|callback_check_lang_to'
 				);
 
 				$this->form_validation->set_message('required', 'Field %s is required');
@@ -686,11 +685,11 @@ class Auth extends CI_Controller
 		return TRUE;
 	}
 
-	private function _alpha_dash_space($str){
+	public function alpha_dash_space($str){
 		if( preg_match("/^([-a-z_ ])+$/i", $str))
 			return TRUE;
 		else{
-			$this->form_validation->set_message('_alpha_dash_space', 'Language is not allowed');
+			$this->form_validation->set_message('alpha_dash_space', 'Language is not allowed');
 			return FALSE;
 		}
     }
@@ -699,11 +698,11 @@ class Auth extends CI_Controller
     /**
      * Check if 'From' language is allowed
     */
-    private function _check_lang_from($lang){
+    public function check_lang_from($lang){
     	$allowed = array('english', 'italian');
     	
-    	if( !in_array($str, $allowed)){
-    		$this->form_validation->set_message('_check_lang_from', 'Language is not allowed');
+    	if( !in_array($lang, $allowed)){
+    		$this->form_validation->set_message('check_lang_from', 'Language is not allowed');
     		return FALSE;
     	}
     	else
@@ -713,11 +712,11 @@ class Auth extends CI_Controller
     /**
      * Check if 'From' language is allowed
     */
-    private function _check_lang_to($lang){
+    public function check_lang_to($lang){
     	$allowed = array('french');
     	
-    	if( !in_array($str, $allowed)){
-    		$this->form_validation->set_message('_check_lang_to', 'Language is not allowed');
+    	if( !in_array($lang, $allowed)){
+    		$this->form_validation->set_message('check_lang_to', 'Language is not allowed');
     		return FALSE;
     	}
     	else
