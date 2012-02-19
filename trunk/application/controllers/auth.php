@@ -150,13 +150,32 @@ class Auth extends CI_Controller
 						'trim|required|xss_clean|min_length['.$this->config->item('username_min_length', 'tank_auth').']|max_length['.$this->config->item('username_max_length', 'tank_auth').']|alpha_dash');
 				}
 				
+				
+				/* Registration form validation */
 				$this->form_validation->set_rules(
 					'name',
 					'Name',
 					'trim|required|xss_clean|callback__alphadash_space)'
 				);
 				
-				$this->form_validation->set_rules('email', 'Email', 'trim|required|xss_clean|valid_email');
+				$this->form_validation->set_rules(
+					'email',
+					'Email',
+					'trim|required|xss_clean|valid_email'
+				);
+
+				$this->form_validation->set_rules(
+					'register-language-from',
+					'Source language',
+					'required|xss_clean|callback__check_lang_from'
+				);
+
+				$this->form_validation->set_rules(
+					'register-language-to',
+					'Translation language',
+					'required|xss_clean|callback__check_lang_to'
+				);
+
 				
 				$refcode = strtoupper(random_string('alpha', 8));
 
@@ -645,6 +664,35 @@ class Auth extends CI_Controller
 
 	private function _alpha_dash_space($str){
 		return ( ! preg_match("/^([-a-z_ ])+$/i", $str)) ? FALSE : TRUE;
+    }
+
+
+    /**
+     * Check if 'From' language is allowed
+    */
+    private function _check_lang_from($lang){
+    	$allowed = array('English', 'Italian');
+    	
+    	if( !in_array($str, $allowed)){
+    		$this->form_validation->set_message('_check_lang_from', 'Language is not allowed');
+    		return FALSE;
+    	}
+    	else
+    		return TRUE;
+    }
+    
+    /**
+     * Check if 'From' language is allowed
+    */
+    private function _check_lang_to($lang){
+    	$allowed = array('Fernch');
+    	
+    	if( !in_array($str, $allowed)){
+    		$this->form_validation->set_message('_check_lang_to', 'Language is not allowed');
+    		return FALSE;
+    	}
+    	else
+    		return TRUE;
     }
 
 }
