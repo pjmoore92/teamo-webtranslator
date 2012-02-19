@@ -29,6 +29,12 @@ class Customer_model extends CI_Model{
         if ($query->num_rows() > 0) return $query->result();
         return NULL;
     }
+	
+	public function countActiveCustomers(){
+		$query = $this->db->query("SELECT COUNT(activated) FROM `{$this->_table}` WHERE activated = '1'");
+		
+		return $query->result();
+	}
 
 }
 
