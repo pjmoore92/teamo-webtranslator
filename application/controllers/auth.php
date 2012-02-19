@@ -243,6 +243,8 @@ class Auth extends CI_Controller
 							array(
 								'name' => $this->form_validation->set_value('name'),
 								'email' => $this->form_validation->set_value('email'),
+								'fromLanguage' => $this->form_validation->set_value('register-language-from'),
+								'toLanguage' => $this->form_validation->set_value('register-language-to'),
 								'jobid' => $jobID,
 								'refcode' => $refcode
 							)
