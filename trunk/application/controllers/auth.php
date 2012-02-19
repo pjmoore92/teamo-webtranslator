@@ -170,13 +170,13 @@ class Auth extends CI_Controller
 				);
 
 				$this->form_validation->set_rules(
-					'register-language-from',
+					'lang_from',
 					'Source language',
 					'required|xss_clean|callback__check_lang_from'
 				);
 
 				$this->form_validation->set_rules(
-					'register-language-to',
+					'lang_to',
 					'Translation language',
 					'required|xss_clean|callback__check_lang_to'
 				);
@@ -252,8 +252,8 @@ class Auth extends CI_Controller
 								array(
 									'name' => $this->form_validation->set_value('name'),
 									'email' => $this->form_validation->set_value('email'),
-									'fromLanguage' => $this->form_validation->set_value('register-language-from'),
-									'toLanguage' => $this->form_validation->set_value('register-language-to'),
+									'fromLanguage' => $this->form_validation->set_value('lang_from'),
+									'toLanguage' => $this->form_validation->set_value('lang_to'),
 									'jobid' => $jobID,
 									'refcode' => $refcode
 								)
@@ -278,8 +278,8 @@ class Auth extends CI_Controller
 							'error'=>array(
 								'name' => $this->form_validation->error('name'),
 								'email' => $this->form_validation->error('email'),
-								'register-language-to' => $this->form_validation->error('register-language-to'),
-								'register-language-from' => $this->form_validation->error('register-language-from')
+								'lang_to' => $this->form_validation->error('lang_to'),
+								'lang_from' => $this->form_validation->error('lang_from')
 							)
 						)
 					));
