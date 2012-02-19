@@ -35,7 +35,6 @@ elit. The other services I offer are This that and This.</p>
         <div class="input">
           <select class="medium" name="register-language-from" id="register-language-from-select">
             <option>English</option>
-            <option>French</option>
             <option>Italian</option>
           </select>
         </div>
@@ -56,9 +55,7 @@ elit. The other services I offer are This that and This.</p>
         <label for="register-language-to">Language</label>
         <div class="input">
           <select class="medium" name="register-language-to" id="register-language-to-select">
-            <option>English</option>
             <option>French</option>
-            <option>Italian</option>
           </select>
         </div>
 
