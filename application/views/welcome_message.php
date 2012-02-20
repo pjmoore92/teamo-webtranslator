@@ -6,7 +6,7 @@
 
 <a href="/en"><img src="/images/uk.png"></a>
 <a href="/fr"><img src="/images/france.png"></a>
-<a href="/it"><img src="/images/italy.png"></a>
+<a href="/it"><img src="/images/Italy.png"></a>
 </h1>
 <p>Vestibulum id ligula porta felis euismod semper. Integer posuere erat
 a ante venenatis dapibus posuere velit aliquet. Duis mollis, est non
