@@ -66,8 +66,8 @@ elit. The other services I offer are This that and This.</p>
         <label for="register-currency">Currency</label>
         <div class="input">
           <select class="medium" name="register-currency" id="register-currency-select">
-            <option>GBP &pound;</option>
-            <option>EUR &euro;</option>
+            <option value="gbp">GBP &pound;</option>
+            <option value="eur">EUR &euro;</option>
           </select>
         </div>
 
@@ -164,6 +164,7 @@ $(document).ready(function(){
         var lang_from = $('#register-language-from-select').val();
         var lang_to = $('#register-language-to-select').val();
         var deadline = $('#datepicker').val();
+        var currency = $('#register-currency-select').val();
 
         $.post(
             '<?php echo base_url("/en/auth/register"); ?>',/*FIXME*/
