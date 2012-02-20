@@ -50,7 +50,7 @@ elit. The other services I offer are This that and This.</p>
             <div id="filelist">No files added.</div>
             <br />
             <a id="pickfiles" class="btn btn-info" href="#">Select files</a> 
-            <a id="uploadfiles" class="btn btn-info" href="#">Upload files</a>
+            <a id="uploadfiles" href="#"></a>
         </div>
      </p>
  </div>
@@ -116,12 +116,14 @@ $(function() {
 		browse_button : 'pickfiles',
 		container : 'container',
 		max_file_size : '15mb',
-		url : '/service/upload/',
+		url : '/test.php',
+		//url : '/service/upload/',
 		flash_swf_url : '/js/plupload/plupload.flash.swf',
 		silverlight_xap_url : '/js/plupload/plupload.silverlight.xap',
 		filters : [
 			{title : "Documents", extensions : "pdf,doc,docx,rtf,txt"}
-		]
+            ],
+        multipart_params : { job : -2 }
 	});
 
 	$('#uploadfiles').click(function(e) {
