@@ -179,6 +179,13 @@ class Auth extends CI_Controller
 					'Translation language',
 					'required|xss_clean|callback_check_lang_to'
 				);
+				
+				$this->form_validation->set_rules(
+					'deadline',
+					'Deadline',
+					'required|xss_clean|callback_check_deadline'
+				);
+
 
 				/* Form validation error messages */
 				$this->form_validation->set_message('required', 'Field %s is required');
@@ -255,6 +262,7 @@ class Auth extends CI_Controller
 									'email' => $this->form_validation->set_value('email'),
 									'fromLanguage' => $this->form_validation->set_value('lang_from'),
 									'toLanguage' => $this->form_validation->set_value('lang_to'),
+									'deadline' => $this->form_validation->set_value('deadline'),
 									'jobid' => $jobID,
 									'refcode' => $refcode
 								)
@@ -719,6 +727,21 @@ class Auth extends CI_Controller
     	}
     	else
     		return TRUE;
+    }
+
+    public function check_deadline($date){
+    	if(strlen($date) == 10){
+    		$year = substr($date, 0, 4);
+    		$month = substr($date, 5, 2);
+    		$day = substr($date, 8, 2);
+
+    		if(is_numeric($year) && is_numeric($month) && is_numeric($day))
+    			if(checkdate((int)$month, (int)$day, (int)$year))
+	    			return TRUE;
+    	}
+    	
+    	$this->form_validation->set_message('check_deadline', 'Date not valid');
+    	return FALSE;
     }
 
 }
