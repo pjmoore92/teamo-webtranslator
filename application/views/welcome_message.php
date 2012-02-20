@@ -56,14 +56,18 @@ elit. The other services I offer are This that and This.</p>
   <div class="span3 offset1" style="text-align:center">
     <h2><?php echo lang('upload.setreqs') ?></h2>
     <p>
-        <label for="register-language-to">Language</label>
+        <label for="register-language-to">Language
+        <i class = "icon-question-sign" rel="tooltip" title="The language you want to translate to"></i>
+        </label>
         <div class="input">
           <select class="medium" name="register-language-to" id="register-language-to-select">
             <option value="french">French</option>
           </select>
         </div>
-
-        <label for="register-currency">Currency</label>
+	
+        <label for="register-currency">Currency	
+        <i class = "icon-question-sign" rel="tooltip" title="This is the currency you would like pay in"></i>
+        </label>        
         <div class="input">
           <select class="medium" name="register-currency" id="register-currency-select">
             <option value="gbp">GBP &pound;</option>
@@ -71,7 +75,9 @@ elit. The other services I offer are This that and This.</p>
           </select>
         </div>
 
-        <label for="register-deadline">Deadline</label>
+        <label for="register-deadline">Deadline
+        <i class = "icon-question-sign" rel="tooltip" title="The date you want your document(s) translated before"></i>
+        </label>
         <input type="text" id="datepicker" placeholder="yy-mm-dd">
     </p>
   </div>
