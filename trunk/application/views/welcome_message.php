@@ -168,7 +168,13 @@ $(document).ready(function(){
 
         $.post(
             '<?php echo base_url("/en/auth/register"); ?>',/*FIXME*/
-            {'name' : name, 'email' : email, 'lang_from':lang_from, 'lang_to':lang_to, 'deadline' : deadline },
+            {
+              'name' : name,
+              'email' : email,
+              'lang_from':lang_from,
+              'lang_to':lang_to,
+              'deadline' : deadline,
+              'currency' : currency },
             function(data){
                 console.log(data);
 
