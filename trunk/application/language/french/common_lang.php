@@ -7,13 +7,15 @@ $lang['paragraph_p2'] = "Je propose également les services suivants: ";
 $lang['paragraph_p3'] = "et ";
 $lang['paragraph_p4'] = "Vous pouvez voir ce que les autres pensaient de mon travail ";
 /**/
+$lang['nav.lang'] = "Français";
+$lang['nav.serv'] = "Services";
 $lang['nav.home'] = "Home";
 $lang['nav.login'] = "Se connecter";
 $lang['nav.about'] = "l'information";
 $lang['nav.testimonials'] = "Témoignages";
 $lang['nav.contact'] = "Contactez";
 /**/
-$lang['login.form'] = "Login Form";
-$lang['login.email'] = "Your E-mail Address";
-$lang['login.ref'] = "Your Reference Code";
-$lang['login.reflost'] = "I can't find my reference code";
+$lang['login.form'] = "Connectez-vous sous forme";
+$lang['login.email'] = "Adresse e-mail";
+$lang['login.ref'] = "Code de référence";
+$lang['login.reflost'] = "Je ne peux pas trouver mon code de référence";
