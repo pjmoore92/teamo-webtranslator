@@ -14,17 +14,14 @@ class Upload extends CI_Controller {
 
 	function do_upload()
 	{
-        print_r($_FILES);
 		$config['upload_path'] = 'incoming/';
 		$config['allowed_types'] = 'pdf|doc|docx|rtf|txt';
-		$config['max_size']	= '150';
-		$config['max_width']  = '1024';
-		$config['max_height']  = '768';
+		$config['max_size']	= '900';
 
 		$this->load->library('upload');
         $this->upload->initialize($config); // MUST CALL ELSE config not loaded
 
-		if ( ! $this->upload->do_upload('file')) {
+		if ( ! $this->upload->do_upload()) {
 			$error = array('error' => $this->upload->display_errors());
 			$this->load->view('upload_form', $error);
 		}
