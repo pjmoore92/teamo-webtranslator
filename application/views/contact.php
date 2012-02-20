@@ -1,9 +1,7 @@
 <?php if ( ! defined('BASEPATH')) exit('Access denied'); ?>
-
 <div class="content">
 <div class="page-header">
-  <h1 class="active">Bethel Translations <small>Contact</small></h1>
-</div
+  <h1 class="active">Bethel Translations <small>Contact</small></h1>    
 <div class="row">
   <div id="contact_form">
 	<div class="span4 offset2">
@@ -38,6 +36,7 @@
 	
 	<?php if($this->tank_auth->is_logged_in()): ?>
 	<?php endif; ?>
+	<br>
 	<p><label for="name">Your Full Name </label></p>
 
 	<!-- <p><?php echo form_input($name_data); ?>  </p> -->
