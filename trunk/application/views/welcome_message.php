@@ -72,7 +72,7 @@ elit. The other services I offer are This that and This.</p>
         </div>
 
         <label for="register-deadline">Deadline</label>
-        <input type="text" id="datepicker">
+        <input type="text" id="datepicker" placeholder="yy-mm-dd">
     </p>
   </div>
 
@@ -179,7 +179,7 @@ $(document).ready(function(){
             {'name' : name, 'email' : email, 'lang_from':lang_from, 'lang_to':lang_to },
             function(data){
                 console.log(data);
-                
+
                 if(!data.error){
                     var message = $('\
                         <p>\
@@ -200,7 +200,9 @@ $(document).ready(function(){
                 }
                 else{
                     $('#modal-from-dom-register-message .modal-body p')
-                        .html('Whoopsies! Something\'s not right!<br />DEBUGGING: ' + data.error);
+                        .html(
+                          'Whoopsies! Something\'s not right!<br />' + 
+                          data.error.name + data.error.email + data.error.lang_to + data.error.lang_from);
                     /* FIXME */
                 }
             },
