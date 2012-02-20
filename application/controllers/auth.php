@@ -251,7 +251,7 @@ class Auth extends CI_Controller
 							'customerID' => $data['user_id'],
 							'fromLanguage' => $this->form_validation->set_value('lang_from'),
 							'toLanguage' => $this->form_validation->set_value('lang_to'),
-							'deadline' => ""
+							'deadline' => $this->form_validation->set_value('deadline')
 						);
 						$jobID = $this->jobs->add_job($details);
 
