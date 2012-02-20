@@ -178,12 +178,13 @@ $(document).ready(function(){
             '<?php echo base_url("/en/auth/register"); ?>',/*FIXME*/
             {'name' : name, 'email' : email, 'lang_from':lang_from, 'lang_to':lang_to },
             function(data){
+                console.log(data);
+                
                 if(!data.error){
                     var message = $('\
                         <p>\
                         Name: <span class="name"></span><br />\
-                        Email: <span class="email"></span><br />\
-                        Reference code: <span class="refcode"></span><br /><br />\
+                        Email: <span class="email"></span><br /><br />\
                         Please check your email!\
                         </p>');
                     $('#modal-from-dom-register-message .modal-body')
@@ -192,8 +193,6 @@ $(document).ready(function(){
                         .html(data.name);
                     $('#modal-from-dom-register-message .modal-body .email')
                         .html(data.email);
-                    $('#modal-from-dom-register-message .modal-body .refcode')
-                        .html(data.refcode);
 
                     jobID = data.jobid;
                     $('#filelist').clone().appendTo('#modal-from-dom-register-message .modal-footer');
