@@ -194,8 +194,8 @@ class Auth extends CI_Controller
 
 
 				/* Form validation error messages */
-				$this->form_validation->set_message('required', 'Field %s is required');
-				$this->form_validation->set_message('valid_email', '%s is not a valid e-mail');
+				$this->form_validation->set_message('required', 'Field <strong>%s</strong> is required');
+				$this->form_validation->set_message('valid_email', '<strong>%s</strong> is not a valid e-mail');
 
 				
 				$refcode = strtoupper(random_string('alpha', 8));
@@ -701,7 +701,7 @@ class Auth extends CI_Controller
 		if( preg_match("/^([-a-z_ ])+$/i", $str))
 			return TRUE;
 		else{
-			$this->form_validation->set_message('alpha_dash_space', 'Language is not allowed');
+			$this->form_validation->set_message('alpha_dash_space', 'That name is not allowed');
 			return FALSE;
 		}
     }
@@ -714,7 +714,7 @@ class Auth extends CI_Controller
     	$allowed = array('english', 'italian');
     	
     	if( !in_array($lang, $allowed)){
-    		$this->form_validation->set_message('check_lang_from', 'Language is not allowed');
+    		$this->form_validation->set_message('check_lang_from', 'That language is not allowed');
     		return FALSE;
     	}
     	else
@@ -729,7 +729,7 @@ class Auth extends CI_Controller
     	
     	// if( !in_array($lang, $allowed)){
     	if($lang != 'french'){
-    		$this->form_validation->set_message('check_lang_to', 'Language is not allowed');
+    		$this->form_validation->set_message('check_lang_to', 'That language is not allowed');
     		return FALSE;
     	}
     	else
@@ -761,7 +761,7 @@ class Auth extends CI_Controller
     	$allowed = array('gbp', 'eur');
     	
     	if( !in_array($curr, $allowed)){
-    		$this->form_validation->set_message('check_currency', 'This currency is not allowed');
+    		$this->form_validation->set_message('check_currency', 'That currency is not allowed');
     		return FALSE;
     	}
     	else
