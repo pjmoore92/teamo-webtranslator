@@ -185,6 +185,12 @@ class Auth extends CI_Controller
 					'Deadline',
 					'required|xss_clean|callback_check_deadline'
 				);
+				
+				$this->form_validation->set_rules(
+					'currency',
+					'Currency',
+					'required|xss_clean|callback_check_currency'
+				);
 
 
 				/* Form validation error messages */
@@ -263,6 +269,7 @@ class Auth extends CI_Controller
 									'fromLanguage' => $this->form_validation->set_value('lang_from'),
 									'toLanguage' => $this->form_validation->set_value('lang_to'),
 									'deadline' => $this->form_validation->set_value('deadline'),
+									'currency' => $this->form_validation->set_value('currency'),
 									'jobid' => $jobID,
 									'refcode' => $refcode
 								)
@@ -729,6 +736,9 @@ class Auth extends CI_Controller
     		return TRUE;
     }
 
+	/**
+	 * Check if date is valid (YYY-MM-DD)
+	 */
     public function check_deadline($date){
     	if(strlen($date) == 10){
     		$year = substr($date, 0, 4);
@@ -742,6 +752,20 @@ class Auth extends CI_Controller
     	
     	$this->form_validation->set_message('check_deadline', 'Date not valid');
     	return FALSE;
+    }
+
+    /**
+     *
+     */
+    public function check_currency($curr){
+    	$allowed = array('gbp', 'eur');
+    	
+    	if( !in_array($curr, $allowed)){
+    		$this->form_validation->set_message('check_currency', 'This currency is not allowed');
+    		return FALSE;
+    	}
+    	else
+    		return TRUE;
     }
 
 }
