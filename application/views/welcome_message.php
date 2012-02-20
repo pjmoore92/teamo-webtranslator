@@ -17,6 +17,7 @@ elit. The other services I offer are This that and This.</p>
 
 <!--<form>-->
 <!-- Example row of columns -->
+<div class="wrapper">
 <form id="fileform" method="post" enctype="multipart/form-data">
 <div class="row">
   <div class="span3 offset1" style="text-align:center">
@@ -93,6 +94,7 @@ elit. The other services I offer are This that and This.</p>
   <!--  <input type="submit" class="btn btn-success" value="Get your quote!"> -->
   </div>
   <div class="span-one-third">&nbsp;</div>
+</div>
 </div>
 
 

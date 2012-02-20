@@ -13,14 +13,12 @@
 
     <!-- Le styles -->
     <link href="<?php echo base_url('style/bootstrap.css'); ?>" rel="stylesheet">
-    <!--<link href="<?php echo base_url('style/bootstrap-responsive.css'); ?>" rel="stylesheet">-->
-    <link href='http://fonts.googleapis.com/css?family=Ropa+Sans' rel='stylesheet' type='text/css'>
+	<style>
+	body {
+		padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
+	}
+	</style>
     <link href='<?php echo base_url('style/jquery-ui/south-street/jquery-ui-1.8.17.custom.css'); ?>' rel='stylesheet' type='text/css'>
-    <style type="text/css">
-      body {
-        padding-top: 40px;
-      }
-    </style>
 
     <!-- Le fav and touch icons -->
 <!--    <link rel="shortcut icon" href="/images/favicon.ico"> 

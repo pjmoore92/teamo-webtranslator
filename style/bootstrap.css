@@ -3413,7 +3413,17 @@ box-shadow:0 0 6px #f8b9b7;
     text-align: left !important;
     width: 140px;
 }
-
+.container {
+	width: 1000px;
+	margin-left: auto;
+	margin-right: auto;
+	zoom: 1;
+}
+.grid {
+	width: 220px;
+	margin-right: 100px;
+	float: left;
+}
 #footer {
 position:absolute;
 bottom:0;
