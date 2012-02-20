@@ -180,6 +180,7 @@ class Auth extends CI_Controller
 					'required|xss_clean|callback_check_lang_to'
 				);
 
+				/* Form validation error messages */
 				$this->form_validation->set_message('required', 'Field %s is required');
 				$this->form_validation->set_message('valid_email', '%s is not a valid e-mail');
 
@@ -204,7 +205,8 @@ class Auth extends CI_Controller
 							$use_username ? $this->form_validation->set_value('username') : '',
 							$this->form_validation->set_value('email'),
 							$refcode,
-							$email_activation))) {									// success
+							$email_activation))
+					){									// success
 
 						$data['site_name'] = $this->config->item('website_name', 'tank_auth');
 
@@ -240,8 +242,8 @@ class Auth extends CI_Controller
 
 						$details = array(
 							'customerID' => $data['user_id'],
-							'toLanguage' => "",
-							'fromLanguage' => "",
+							'fromLanguage' => $this->form_validation->set_value('lang_from'),
+							'toLanguage' => $this->form_validation->set_value('lang_to'),
 							'deadline' => ""
 						);
 						$jobID = $this->jobs->add_job($details);
@@ -257,14 +259,14 @@ class Auth extends CI_Controller
 									'refcode' => $refcode
 								)
 							));
-						die();
+						// die();
 
 					} else {
 						$errors = $this->tank_auth->get_error_message();
 						$this->output->set_output(json_encode(
 							array(
 								// 'error' => 'DB error. could not create user account.'
-								'error' => $errors
+								// 'error' => $errors
 							)
 						));
 						die();
@@ -715,7 +717,8 @@ class Auth extends CI_Controller
     public function check_lang_to($lang){
     	$allowed = array('french');
     	
-    	if( !in_array($lang, $allowed)){
+    	// if( !in_array($lang, $allowed)){
+    	if($lang != 'french'){
     		$this->form_validation->set_message('check_lang_to', 'Language is not allowed');
     		return FALSE;
     	}
