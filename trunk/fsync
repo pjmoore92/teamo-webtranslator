@@ -2,7 +2,7 @@
 HOST="ftp.claddach-kirkibost.org"
 USER="tp3@claddach-kirkibost.org"
 PASS="6xx2be1qpv"
-LCD="~/code/tp3/site"
+LCD="~/code/uni/tp3/site"
 RCD="/"
 lftp -c "set ftp:list-options -a;
 open ftp://$USER:$PASS@$HOST; 
@@ -15,4 +15,5 @@ mirror --reverse \
            --exclude-glob incoming/ \
            --exclude-glob Final-Report/ \
            --exclude-glob wireframes/ \
+           --exclude .git/ \
            --exclude .svn/"
