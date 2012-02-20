@@ -4,6 +4,7 @@
   <h1 class="active">Bethel Translations <small>Contact</small></h1>    
 <div class="row">
   <div id="contact_form">
+  	<hr>
 	<div class="span4 offset2">
 	<?php echo form_open('welcome/contact'); ?>
 	

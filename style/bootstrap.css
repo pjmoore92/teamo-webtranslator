@@ -623,6 +623,7 @@ input[type="image"] {
 }
 textarea {
   height: auto;
+  width: 500px;
 }
 input[type="hidden"] {
   display: none;
