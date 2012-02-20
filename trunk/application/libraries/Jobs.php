@@ -14,7 +14,8 @@ class Jobs{
 		$job_data = array(
 			'customerID' => $args['customerID'],
 			'status' => 'QuoteReq',
-			'dateDue' => date('Y-m-d H:i:s', time() + (7 * 24 * 60 * 60)),
+			// 'dateDue' => date('Y-m-d H:i:s', time() + (7 * 24 * 60 * 60)),
+			'dateDue' => $args['deadline'],
 			'toLanguage' => $args['toLanguage'],
 			'fromLanguage' => $args['fromLanguage']
 		);
