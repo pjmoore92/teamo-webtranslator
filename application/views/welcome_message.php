@@ -91,20 +91,10 @@ elit. The other services I offer are This that and This.</p>
 
 <div id="modal-from-dom-register-message" class="modal hide fade">
   <div class="modal-header">
-    <a href="#" class="close">&times;</a>
-    <h2>Thank you <span class="name">.</h3>
   </div>
-  <div class="modal-body">
-    <p>
-      Name: <span class="name"></span><br />
-      Email: <span class="email"></span><br />
-      Reference code: <span class="refcode"></span><br />
-      Please check your email!
-    </p>
-  </div>
+  <div class="modal-body"><p></p></div>
   <div class="modal-footer">
-    <!-- <a href="dashboard/client/index.html" class="btn primary">Go!</a>
-    <a href="#" class="btn secondary">I can't find my reference code</a> -->
+    <a data-dismiss="modal" class="close btn primary">OK</a>
   </div>
 </form>
 </div>
@@ -173,36 +163,44 @@ $(document).ready(function(){
         var email = $('#register-email').val();
         var lang_from = $('#register-language-from-select').val();
         var lang_to = $('#register-language-to-select').val();
+        var deadline = $('#datepicker').val();
 
         $.post(
             '<?php echo base_url("/en/auth/register"); ?>',/*FIXME*/
-            {'name' : name, 'email' : email, 'lang_from':lang_from, 'lang_to':lang_to },
+            {'name' : name, 'email' : email, 'lang_from':lang_from, 'lang_to':lang_to, 'deadline' : deadline },
             function(data){
                 console.log(data);
 
                 if(!data.error){
+                    var header = $('<a href="#" class="close">&times;</a><h2>Thank you, <span class="name"></span>!</h2>');
+
+                    $('#modal-from-dom-register-message .modal-header')
+                        .html('').append(header);
+
                     var message = $('\
                         <p>\
-                        Name: <span class="name"></span><br />\
-                        Email: <span class="email"></span><br /><br />\
-                        Please check your email!\
+                        We will get to you shortly.<br />\
+                        Please check your e-mail! (<strong><span class="email"></span><strong>)\
                         </p>');
                     $('#modal-from-dom-register-message .modal-body')
                         .html('').append(message);
-                    $('#modal-from-dom-register-message .modal-body .name')
+                    $('#modal-from-dom-register-message .name')
                         .html(data.name);
                     $('#modal-from-dom-register-message .modal-body .email')
                         .html(data.email);
+
+                    var footer = $('<a href="#" class="">I can\'t find my reference code</a>');
 
                     jobID = data.jobid;
                     $('#filelist').clone().appendTo('#modal-from-dom-register-message .modal-footer');
                     $('#uploadfiles').trigger('click');
                 }
                 else{
-                    $('#modal-from-dom-register-message .modal-body p')
-                        .html(
-                          'Whoopsies! Something\'s not right!<br />' + 
-                          data.error.name + data.error.email + data.error.lang_to + data.error.lang_from);
+                    var header = $('<a href="#" class="close">&times;</a><h2>Whoopsies!</h2>');
+                    $('#modal-from-dom-register-message .modal-header').html('').append(header);
+                    
+                    var message = $('Whoopsies! Something\'s not right!<br />' + data.error);
+                    $('#modal-from-dom-register-message .modal-body p').html('').append(message);
                     /* FIXME */
                 }
             },

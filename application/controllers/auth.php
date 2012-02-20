@@ -276,12 +276,7 @@ class Auth extends CI_Controller
 				else{
 					$this->output->set_output(json_encode(
 						array(
-							'error'=>array(
-								'name' => $this->form_validation->error('name'),
-								'email' => $this->form_validation->error('email'),
-								'lang_to' => $this->form_validation->error('lang_to'),
-								'lang_from' => $this->form_validation->error('lang_from')
-							)
+							'error'=> sprintf("%s", validation_errors())
 						)
 					));
 				}
