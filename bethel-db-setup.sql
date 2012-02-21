@@ -10,6 +10,16 @@
 --
 -- Table structure for table `customer`
 --
+DROP TABLE IF EXISTS `customer`;
+DROP TABLE IF EXISTS `document`;
+DROP TABLE IF EXISTS `job`;
+DROP TABLE IF EXISTS `translations`;
+DROP TABLE IF EXISTS `ci_sessions`;
+DROP TABLE IF EXISTS `login_attempts`;
+DROP TABLE IF EXISTS `ci_sessions`;
+DROP TABLE IF EXISTS `user_autologin`;
+DROP TABLE IF EXISTS `user_profiles`;
+DROP TABLE IF EXISTS `users`;
 
 CREATE TABLE IF NOT EXISTS `customer` (
   `customerID` int(11) NOT NULL AUTO_INCREMENT,
