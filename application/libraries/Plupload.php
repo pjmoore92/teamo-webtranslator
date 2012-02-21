@@ -126,8 +126,8 @@ class Plupload {
             rename("{$filePath}.part", $filePath);
             log_message('error', 'adding file '.$fileName.' to job '.$job);
             $CI =& get_instance();
-            $CI->load->model('translation_model');
-            if (!$CI->translation_model->add_orig($job, $_FILES['file']['name'], $filePath))
+            $CI->load->model('translation');
+            if (!$CI->translation->add_orig($job, $_FILES['file']['name'], $filePath))
                 return '{"jsonrpc" : "2.0", "error" : {"code": 109, "message": "Transaction failed."}, "id" : "id"}';
             else
                 return '{"jsonrpc" : "2.0", "result" : "'.$fileName.'", "id" : "id"}';
