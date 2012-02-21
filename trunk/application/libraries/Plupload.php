@@ -37,10 +37,9 @@ class Plupload {
         $chunk = isset($data["chunk"]) ? $data["chunk"] : 0;
         $chunks = isset($data["chunks"]) ? $data["chunks"] : 0;
         $fileName = isset($data["name"]) ? $data["name"] : '';
-        $targetDir = $this->target_folder;
+        $job = isset($data["job"]) ? $data["job"] : 'nojob';
+        $targetDir = $this->target_folder . DIRECTORY_SEPARATOR . $job;
         
-        log_message('error', 'file '.$fileName.' chunk '.$chunk.' of '.$chunks); 
- 
         // Clean the fileName for security reasons
         $fileName = preg_replace('/[^\w\._]+/', '', $fileName);
         
@@ -65,7 +64,6 @@ class Plupload {
         if (!file_exists($targetDir)) {
             if (!is_writable(dirname($targetDir))) {
                 return '{"jsonrpc" : "2.0", "error" : {"code": 101, "message": "Cant create temp dir."}, "id" : "id"}';
-                return false;
             }
             mkdir($targetDir, 0777, true);
         }
@@ -76,84 +74,64 @@ class Plupload {
         }
 
         // Look for the content type header
-        $contentType = null;
-
         if (isset($_SERVER["HTTP_CONTENT_TYPE"]))
-        {
             $contentType = $_SERVER["HTTP_CONTENT_TYPE"];
-        }
+
         if (isset($_SERVER["CONTENT_TYPE"]))
-        {
             $contentType = $_SERVER["CONTENT_TYPE"];
-        }
-        
+
         // Handle non multipart uploads older WebKit versions didn't support multipart in HTML5
-        if (strpos($contentType, "multipart") !== false)
-        {
-            if (isset($files['file']['tmp_name']) && is_uploaded_file($files['file']['tmp_name']))
-            {
+        if (strpos($contentType, "multipart") !== false) {
+            if (isset($_FILES['file']['tmp_name']) && is_uploaded_file($_FILES['file']['tmp_name'])) {
                 // Open temp file
                 $out = fopen("{$filePath}.part", $chunk == 0 ? "wb" : "ab");
-                if ($out)
-                {
+                if ($out) {
                     // Read binary input stream and append it to temp file
-                    $in = fopen($files['file']['tmp_name'], "rb");
-        
-                    if ($in)
-                    {
+                    $in = fopen($_FILES['file']['tmp_name'], "rb");
+
+                    if ($in) {
                         while ($buff = fread($in, 4096))
-                        {
                             fwrite($out, $buff);
-                        }
-                    }
-                    else
-                    {
-                        return '{"jsonrpc" : "2.0", "error" : {"code": 101, "message": "Failed to open input stream."}, "id" : "id"}';
-                    }
+                    } else
+                        die('{"jsonrpc" : "2.0", "error" : {"code": 101, "message": "Failed to open input stream."}, "id" : "id"}');
                     fclose($in);
                     fclose($out);
-                    @unlink($files['file']['tmp_name']);
-                }
-                else
-                {
-                    return '{"jsonrpc" : "2.0", "error" : {"code": 102, "message": "Failed to open output stream."}, "id" : "id"}';
-                }
-            }
-            else
-            {
-                return '{"jsonrpc" : "2.0", "error" : {"code": 103, "message": "Failed to move uploaded file."}, "id" : "id"}';
-            }
-        }
-        else
-        {
+                    @unlink($_FILES['file']['tmp_name']);
+                } else
+                    die('{"jsonrpc" : "2.0", "error" : {"code": 102, "message": "Failed to open output stream."}, "id" : "id"}');
+            } else
+                die('{"jsonrpc" : "2.0", "error" : {"code": 103, "message": "Failed to move uploaded file."}, "id" : "id"}');
+        } else {
             // Open temp file
             $out = fopen("{$filePath}.part", $chunk == 0 ? "wb" : "ab");
-            if ($out)
-            {
+            if ($out) {
                 // Read binary input stream and append it to temp file
                 $in = fopen("php://input", "rb");
-        
-                if ($in)
-                {
+
+                if ($in) {
                     while ($buff = fread($in, 4096))
-                    {
                         fwrite($out, $buff);
-                    }
-                }
-                else
-                {
-                    return '{"jsonrpc" : "2.0", "error" : {"code": 101, "message": "Failed to open input stream."}, "id" : "id"}';
-                }
+                } else
+                    die('{"jsonrpc" : "2.0", "error" : {"code": 101, "message": "Failed to open input stream."}, "id" : "id"}');
+
                 fclose($in);
                 fclose($out);
-            }
-            else
-            {
-                return '{"jsonrpc" : "2.0", "error" : {"code": 102, "message": "Failed to open output stream."}, "id" : "id"}';
-            }
+            } else
+                die('{"jsonrpc" : "2.0", "error" : {"code": 102, "message": "Failed to open output stream."}, "id" : "id"}');
         }
         
-        // Return JSON-RPC response
+        // only add on last chunk!
+        if (!$chunks || $chunk == $chunks - 1) {
+            // Strip the temp .part suffix off 
+            rename("{$filePath}.part", $filePath);
+            log_message('error', 'adding file '.$fileName.' to job '.$job);
+            $CI =& get_instance();
+            $CI->load->model('translation_model');
+            if (!$CI->translation_model->add_orig($job, $_FILES['file']['name'], $filePath))
+                return '{"jsonrpc" : "2.0", "error" : {"code": 109, "message": "Transaction failed."}, "id" : "id"}';
+            else
+                return '{"jsonrpc" : "2.0", "result" : "'.$fileName.'", "id" : "id"}';
+        }
         return '{"jsonrpc" : "2.0", "result" : "'.$fileName.'", "id" : "id"}';
     }
 
