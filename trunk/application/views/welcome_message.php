@@ -48,7 +48,7 @@ elit. The other services I offer are This that and This.</p>
       </div>
       <p>
         <div id="container">
-            <div id="filelist">No files added.</div>
+            <div id="filelist"></div>
             <br />
             <a id="pickfiles" class="btn btn-info" href="#">Select files</a> 
             <a id="uploadfiles" href="#"></a>
