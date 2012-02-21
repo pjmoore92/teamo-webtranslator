@@ -129,7 +129,7 @@ class Users extends CI_Model
 	{
 		$data['created'] = date('Y-m-d H:i:s');
 		$data['activated'] = $activated ? 1 : 0;
-        $data['role_id'] = 1;
+        $data['role_id'] = 2; //ADMIN is 1
 
 		if ($this->db->insert($this->table_name, $data)) {
 			$user_id = $this->db->insert_id();
