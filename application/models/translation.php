@@ -1,6 +1,6 @@
 <?php if (!defined('BASEPATH')) exit('No direct script access allowed');
 
-class Translation_Model extends CI_Model{
+class Translation extends CI_Model{
 
     private $_table = 'translation';
     private $_doc_table = 'document';
