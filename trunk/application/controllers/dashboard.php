@@ -81,7 +81,7 @@ class Dashboard extends MY_Controller {
                         $this->_data['jobs_list'] = $this->job_model->get_by_status($_dbType, $this->_user_id);
                 }
                 $this->_data['content'] = 'dashboard/'.$statusType;
-                $this->template->set('title', $this->_data['role']. ' Dashboard -');
+                $this->template->set('title', ucfirst($this->_data['role']). ' Dashboard -');
                 $this->template->load('template', $this->_view_template, $this->_data);
         }
 
