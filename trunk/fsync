@@ -11,6 +11,7 @@ cd $RCD;
 mirror --reverse \
            --verbose \
            --delete \
+           --exclude-glob files/ \
            --exclude-glob application/logs/ \
            --exclude-glob incoming/ \
            --exclude-glob Final-Report/ \
