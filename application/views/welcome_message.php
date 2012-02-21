@@ -119,7 +119,6 @@ $(function() {
 		browse_button : 'pickfiles',
 		container : 'container',
 		max_file_size : '15mb',
-		//url : '/test.php',
 		url : '/en/service/upload/',
 		flash_swf_url : '/js/plupload/plupload.flash.swf',
 		silverlight_xap_url : '/js/plupload/plupload.silverlight.xap',
