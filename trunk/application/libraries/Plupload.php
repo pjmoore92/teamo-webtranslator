@@ -36,7 +36,7 @@ class Plupload {
         // Get parameters
         $chunk = isset($data["chunk"]) ? $data["chunk"] : 0;
         $chunks = isset($data["chunks"]) ? $data["chunks"] : 0;
-        $fileName = isset($data["file"]) ? $data["file"] : '';
+        $fileName = isset($data["name"]) ? $data["name"] : '';
         $targetDir = $this->target_folder;
         
         log_message('error', 'file '.$fileName.' chunk '.$chunk.' of '.$chunks); 
