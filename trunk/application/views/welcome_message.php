@@ -118,6 +118,7 @@ $(function() {
         runtimes : 'html5,flash',
 		browse_button : 'pickfiles',
 		container : 'container',
+        unique_names : 'true',
 		max_file_size : '15mb',
 		url : '/en/service/upload/',
 		flash_swf_url : '/js/plupload/plupload.flash.swf',
