@@ -1,5 +1,5 @@
         <div class="page-header">
-          <h1>Client dashboard <small>Submit new job</small></h1>
+          <h1>Client Dashboard <small>Submit new job</small></h1>
           <h2>Hello, <?php echo $client_name; ?>!</h2>
 
           <!--<div class="alert-message warning fade in" data-alert="alert" >
