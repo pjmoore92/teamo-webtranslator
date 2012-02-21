@@ -17,10 +17,10 @@ elit. The other services I offer are This that and This.</p>
 
 <!--<form>-->
 <!-- Example row of columns -->
-<div class="wrapper">
+<div class="container">
 <form id="fileform" method="post" enctype="multipart/form-data">
 <div class="row">
-  <div class="span3 offset1" style="text-align:center">
+  <div class="grid" style="text-align:center">
   <h2><?php echo lang('upload.details') ?></h2>
     <p>
       <label for="register-name">Your name</label>
@@ -34,7 +34,7 @@ elit. The other services I offer are This that and This.</p>
       </div>
     </p>
   </div>
-  <div class="span3 offset1" style="text-align:center">
+  <div class="grid" style="text-align:center">
     <h2><?php echo lang('upload.browse') ?></h2>
      <div>
         <label for="register-language-from">Source language</label>
@@ -55,7 +55,7 @@ elit. The other services I offer are This that and This.</p>
         </div>
      </p>
  </div>
-  <div class="span3 offset1" style="text-align:center">
+  <div class="grid" style="text-align:center">
     <h2><?php echo lang('upload.setreqs') ?></h2>
     <p>
         <label for="register-language-to">Language
@@ -87,10 +87,11 @@ elit. The other services I offer are This that and This.</p>
 <br />
 <br />
 <br />
-  <div class="span2">&nbsp;</div>
-  <div class="span2 offset1" style="text-align:center">
+<br>
+  <div class="span3">&nbsp;</div>
+  <div class="span3 offset1" style="text-align:center">
     <p><a id="register-submit" class="btn btn-success" href="#" data-controls-modal="modal-from-dom-register-message" 
-              data-backdrop="true" data-keyboard="true">Get your quote! &raquo;</a></p>
+              data-backdrop="true" data-keyboard="true">Submit + Register! &raquo;</a></p>
   <!--  <input type="submit" class="btn btn-success" value="Get your quote!"> -->
   </div>
   <div class="span-one-third">&nbsp;</div>
@@ -150,6 +151,10 @@ $(function() {
 		$('#' + file.id + " b").html(file.percent + "%");
 	});
 
+	uploader.bind('BeforeUpload', function(up, file) {
+        up.settings.multipart_params = { job : jobID };
+	});
+
 	uploader.bind('Error', function(up, err) {
 		$('#filelist').append("<div>Error: " + err.code +
 			", Message: " + err.message +
@@ -167,6 +172,7 @@ $(function() {
 </script>
 
 <script type="text/javascript">
+var jobID = -1;
 $(document).ready(function(){
     $('#register-submit').click(function(){
 

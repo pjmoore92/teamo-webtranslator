@@ -93,6 +93,17 @@
 					  <?php endforeach; ?>
 				</td>
 			  </tr>
+			  <tr>
+				<td><p style="text-align:right"><strong>Total Number of Jobs (This Month)</strong></p></td>
+				<td>
+				    <?php $monthTotal = $this->customer_model->countJobsCurMonth(); ?>		  
+					  <?php foreach($monthtotal as $monthtotalJob): ?>
+						<?php foreach($monthtotalJob as $monthtotalJobArray): ?>
+							<strong><?php echo $monthtotalJobArray; ?></strong>
+						<?php endforeach; ?>
+					  <?php endforeach; ?>
+				</td>
+			  </tr>
 			</tbody>
 		  </table>
 		  

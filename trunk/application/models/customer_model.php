@@ -66,9 +66,18 @@ class Customer_model extends CI_Model{
 	$query = $this->db->query("SELECT COUNT(status) FROM `job`");
 	return $query->result();
     }
+    
+    public function countJobsCurMonth(){
+	$today = date("j, n, Y");  
+	$query = $this->db->query("SELECT COUNT(status) FROM `job` WHERE DATENAME(mm, job.dateRequested) AS Month = today.n");
+	return $query->result();
+    }
 
 
 }
+
+
+   
 
 /* End of file customer_model.php */
 /* Location: ./application/models/customer_model.php */
