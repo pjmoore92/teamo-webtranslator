@@ -115,12 +115,12 @@ elit. The other services I offer are This that and This.</p>
 <script type="text/javascript">
 $(function() {
 	var uploader = new plupload.Uploader({
-        runtimes : 'html5,html4,flash,silverlight,browserplus',
+        runtimes : 'html5,flash',
 		browse_button : 'pickfiles',
 		container : 'container',
 		max_file_size : '15mb',
-		url : '/test.php',
-		//url : '/service/upload/',
+		//url : '/test.php',
+		url : '/en/service/upload/',
 		flash_swf_url : '/js/plupload/plupload.flash.swf',
 		silverlight_xap_url : '/js/plupload/plupload.silverlight.xap',
 		filters : [
@@ -152,7 +152,7 @@ $(function() {
 	});
 
 	uploader.bind('BeforeUpload', function(up, file) {
-        up.settings.multipart_params = { job : jobID };
+		up.settings.multipart_params = { job : jobID };
 	});
 
 	uploader.bind('Error', function(up, err) {
@@ -173,6 +173,7 @@ $(function() {
 
 <script type="text/javascript">
 var jobID = -1;
+
 $(document).ready(function(){
     $('#register-submit').click(function(){
 
