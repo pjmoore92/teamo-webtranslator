@@ -1,5 +1,5 @@
         <div class="page-header">
-          <h1><?php echo ucfirst($role); ?> dashboard <small>Supporting text or tagline</small></h1>
+          <h1><?php echo ucfirst($role); ?> Dashboard <small>Main Dashboard</small></h1>
           <h2>Hello, <?php echo $client_name; ?>!</h2>
 
           <!--<div class="alert-message warning fade in" data-alert="alert" >
@@ -7,22 +7,11 @@
             <p><strong>Update:</strong> Joelle has sent you the quote for Docname3. Please review it!</p>
           </div>-->
 
-          <div class="alert-message block-message warning fade in" data-alert="alert" >
-            <a class="close" href="#">&times;</a>
-            <p>
-              <strong>Update:</strong> Joelle has sent you a quote for <strong>Docname2</strong>:
-              It will cost &pound;50 and it will be ready on the <time>2011-09-17</time>.
-            </p>
-            <div class="alert-actions">
-              <a class="btn small success" href="#">I accept!</a>
-              <a class="btn small danger" href="#">No, thanks!</a>
-            </div>
-          </div>
 
         </div>
         <div class="row">
-        <div class="span16">
-          <table class="zebra-striped" id="sortTableExample">
+        <div class="span10">
+          <table class="table table-bordered table-striped" id="sortTableExample">
             <thead>
               <tr>
                 <th class="header headerSortDown">#</th>
@@ -42,7 +31,7 @@
                 <td>English to French</td>
                 <td><time>2011-09-01</time></td>
                 <td><time>2011-09-15</time></td>
-                <td>Â£100</td>
+                <td>£100</td>
               </tr>
               <tr>
                 <td>2</td>
@@ -51,7 +40,7 @@
                 <td>French to English</td>
                 <td><time>2011-09-01</time></td>
                 <td><time>2011-09-17</time></td>
-                <td>Â£70</td>
+                <td>£70</td>
               </tr>
               <tr>
                 <td>3</td>
@@ -60,7 +49,7 @@
                 <td>Italian to English</td>
                 <td><time>2011-09-05</time></td>
                 <td><time>2011-09-07</time></td>
-                <td>Â£50</td>
+                <td>£50</td>
               </tr>
               <tr>
                 <td>4</td>
@@ -69,7 +58,7 @@
                 <td>French to English</td>
                 <td><time>2011-09-05</time></td>
                 <td><time>2011-09-07</time></td>
-                <td>Â£50</td>
+                <td>£50</td>
               </tr>
             </tbody>
           </table>

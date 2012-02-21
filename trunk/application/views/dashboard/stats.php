@@ -1,5 +1,5 @@
         <div class="page-header">
-          <h1><?php echo ucfirst($role); ?> dashboard</h1>
+          <h1><?php echo ucfirst($role); ?> Dashboard <small> Statistics </small></h1>
           <h2>Hello, <?php echo $client_name; ?>!</h2>
         </div>
         <div class="row">
@@ -89,17 +89,6 @@
 					  <?php foreach($total as $totalJob): ?>
 						<?php foreach($totalJob as $totalJobArray): ?>
 							<strong><?php echo $totalJobArray; ?></strong>
-						<?php endforeach; ?>
-					  <?php endforeach; ?>
-				</td>
-			  </tr>
-			  <tr>
-				<td><p style="text-align:right"><strong>Total Number of Jobs (This Month)</strong></p></td>
-				<td>
-				    <?php $monthTotal = $this->customer_model->countJobsCurMonth(); ?>		  
-					  <?php foreach($monthtotal as $monthtotalJob): ?>
-						<?php foreach($monthtotalJob as $monthtotalJobArray): ?>
-							<strong><?php echo $monthtotalJobArray; ?></strong>
 						<?php endforeach; ?>
 					  <?php endforeach; ?>
 				</td>
