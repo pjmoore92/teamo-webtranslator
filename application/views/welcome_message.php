@@ -156,9 +156,8 @@ $(function() {
 	});
 
 	uploader.bind('Error', function(up, err) {
-		$('#filelist').append("<div>Error: " + err.code +
-			", Message: " + err.message +
-			(err.file ? ", File: " + err.file.name : "") +
+		$('#filelist').append("<div>" + err.message +
+			(err.file ? err.file.name : "") +
 			"</div>"
 		);
 
