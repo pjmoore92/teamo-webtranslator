@@ -59,5 +59,14 @@ class Translation extends CI_Model{
             return false;
         }
     }
+
+    public function get_translations($jobID){
+        
+        $this->db->where("{$this->_table}.jobID", $jobID);
+        $this->db->get($this->_table);
+        
+        echo this->db->last_query();
+        
+    }
 }
 
