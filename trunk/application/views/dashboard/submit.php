@@ -1,30 +1,12 @@
         <div class="page-header">
           <h1>Client Dashboard <small>Submit new job</small></h1>
           <h2>Hello, <?php echo $client_name; ?>!</h2>
-
-          <!--<div class="alert-message warning fade in" data-alert="alert" >
-            <a class="close" href="#">&times;</a>
-            <p><strong>Update:</strong> Joelle has sent you the quote for Docname3. Please review it!</p>
-          </div>-->
-
-          <div class="alert-message block-message warning fade in" data-alert="alert" >
-            <a class="close" href="#">&times;</a>
-            <p>
-              <strong>Update:</strong> Joelle has sent you a quote for <strong>Docname2</strong>:
-              It will cost &pound;50 and it will be ready on the <time>2011-09-17</time>.
-            </p>
-            <div class="alert-actions">
-              <a class="btn small success" href="#">I accept!</a>
-              <a class="btn small danger" href="#">No, thanks!</a>
-            </div>
-          </div>
-
         </div>
+
         <div class="row">
              <form id="fileform" enctype="multipart/form-data">
           <div class="span-one-third" style="text-align:center">
             <h2><?php echo lang('upload.browse') ?></h2>
-             <!--<p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>-->
              <p>
                 <label for="upload-language-from">Source language</label>
                 <div class="input">
@@ -40,14 +22,11 @@
                   <label for="upload-documents-upload">Documents</label>
                   <div class="input">
                   <input class="input-file" id="upload-documents-upload" name="upload-documents-upload" type="file">
-                  <!--<input class="input-file" id="fileInput2" name="fileInput" type="file">
-                  <input class="input-file" id="fileInput3" name="fileInput" type="file">-->
                   </div>
              </p>
          </div>
           <div class="span-one-third" style="text-align:center">
             <h2><?php echo lang('upload.setreqs') ?></h2>
-            <!--<p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper.</p>-->
             <p>
                 <label for="upload-language-to">Language</label>
                 <div class="input">
@@ -83,8 +62,6 @@
       <div class="modal-body">
       </div>
       <div class="modal-footer">
-        <!-- <a href="dashboard/client/index.html" class="btn primary">Go!</a>
-        <a href="#" class="btn secondary">I can't find my reference code</a> -->
       </div>
     </div>
 

@@ -1,24 +1,6 @@
         <div class="page-header">
           <h1><?php echo ucfirst($role); ?> Dashboard <small>Pending Jobs</small></h1>
           <h2>Hello, <?php echo $client_name; ?>!</h2>
-
-          <!--<div class="alert-message warning fade in" data-alert="alert" >
-            <a class="close" href="#">&times;</a>
-            <p><strong>Update:</strong> Joelle has sent you the quote for Docname3. Please review it!</p>
-          </div>-->
-
-          <!--<div class="alert alert-block alert-error fade in">
-            <a class="close" data-dismiss="alert" href="#">&times;</a>
-            <p>
-              <strong>Update:</strong> Joelle has sent you a quote for <strong>Docname2</strong>:
-              It will cost &pound;50 and it will be ready on the <time>2011-09-17</time>.
-            </p>
-            <div class="alert-actions">
-              <a class="btn btn-small btn-success" href="#">I accept!</a>
-              <a class="btn btn-small btn-danger" href="#">No, thanks!</a>
-            </div>
-          </div>-->
-
         </div>
         <div class="row">
         <div class="span9">
