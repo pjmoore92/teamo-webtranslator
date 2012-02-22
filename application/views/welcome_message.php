@@ -8,11 +8,12 @@
 <a href="/fr"><img src="/images/france.png"></a>
 <a href="/it"><img src="/images/Italy.png"></a>
 </h1>
-<p>Vestibulum id ligula porta felis euismod semper. Integer posuere erat
-a ante venenatis dapibus posuere velit aliquet. Duis mollis, est non
-commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec
-elit. The other services I offer are This that and This.</p>
-<p><a class="btn btn-success ">Learn more &raquo;</a></p>
+<p>I offer excellent translation services with a primary focus on translating documents 
+from French to English and vice versa. I also offer some other services as can be viewed in 
+the menus above. If you would like a quote for any of these, please navigate to my contact page.</p>
+
+<p>You can register below and upload your documents. I will review them and send you a quote for a
+translation in your chosen language.</p>
 </div>
 
 <!--<form>-->
