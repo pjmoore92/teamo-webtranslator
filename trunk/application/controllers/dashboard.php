@@ -4,7 +4,7 @@ class Dashboard extends MY_Controller {
 
         public function index(){
 
-                $this->_data['content'] = 'dashboard/main';
+                $this->_data['type'] = 'main';
 
                 $this->template->set('title', ucfirst($this->_data['role']).' Dashboard -');
                 $this->template->load('template', $this->_view_template, $this->_data);
@@ -15,7 +15,7 @@ class Dashboard extends MY_Controller {
                 $this->lang->load('common');
                 $this->lang->load('home');
 
-                $this->_data['content'] = 'dashboard/submit';
+                $this->_data['type'] = 'submit';
 
                 $this->template->set('title', $this->_data['role']. ' Dashboard -');
                 $this->template->load('template', $this->_view_template, $this->_data);
@@ -80,13 +80,14 @@ class Dashboard extends MY_Controller {
                 else {
                         $this->_data['jobs_list'] = $this->job_model->get_by_status($_dbType, $this->_user_id);
                 }
-                $this->_data['content'] = 'dashboard/'.$statusType;
+                $this->_data['type'] = $statusType;
                 $this->template->set('title', ucfirst($this->_data['role']). ' Dashboard -');
                 $this->template->load('template', $this->_view_template, $this->_data);
         }
 
         public function history(){
                 //TODO fix historical translations
+                $this->_data['type'] = "history";
                 $this->_retrieveData("translated");
         }
 
