@@ -14,20 +14,20 @@
 			<?php foreach($jobs_list as $job): ?>
 			<div class="accordion-group">
 				<div class="accordion-heading">
-					<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#<?php echo $job->jobID; ?>"> Job Number: <?php echo $job->jobID; ?> <i>-  Click to Expand</i> </a>
+					<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#<?php echo $job[0]->jobID; ?>"> Job Number: <?php echo $job[0]->jobID; ?> <i>-  Click to Expand</i> </a>
 				</div>
-				<div id="<?php echo $job->jobID; ?>" class="accordion-body collapse">
+				<div id="<?php echo $job[0]->jobID; ?>" class="accordion-body collapse">
 					<div class="accordion-inner">
 						<div class="well">
 							<div class="row">
 								<div class="span3">
 									<dl>
 										<dt>Client</dt>
-											<dd><?php echo $job->fullName; ?></dd>
+											<dd><?php echo $job[0]->fullName; ?></dd>
 										<dt>Languages</dt>
-											<dd><?php echo $job->fromLanguage; ?> to <?php echo $job->toLanguage; ?></dd>
+											<dd><?php echo $job[0]->fromLanguage; ?> to <?php echo $job[0]->toLanguage; ?></dd>
 										<dt>Sent on</dt>
-											<dd><time><?php echo $job->dateRequested; ?></time></dd>
+											<dd><time><?php echo $job[0]->dateRequested; ?></time></dd>
 									</dl>
 								</div>
 								<div class="span3">
@@ -35,7 +35,7 @@
 										<dt>Quote</dt>
 											<dd>&mdash;</dd>
 										<dt>Date Due</dt>
-											<dd><?php echo $job->dateDue; ?></dt>
+											<dd><?php echo $job[0]->dateDue; ?></dt>
 									</dl>
 									<?php if($this->session->userdata('role') == 'client'): 		
 												  else: 	
@@ -54,31 +54,19 @@
 								  <tr>
 									<th class="header headerSortDown" width="20">#</th>
 									<th class="header">Document Name</th>
-									<th class="blue header">Word count</th>
-									<th class="blue header"><abbr title="Estimated time of arrival">ETA</abbr></th>
-									<th class="blue header">Quote</th>
+									<th class="blue header">Original File</th>
+									<th class="blue header">Translated File</th>
 								  </tr>
 								</thead>
 								<tbody>
+                                <?php $translist = $job[1]; foreach ($translist as $translation): ?>
 								  <tr>
 									<td>1</td>
-									<td>Docname</td>
-									<td>9,000</td>
-									<td><time>2011-09-15</time></td>
-									<td>£100</td>
-								  </tr><tr>
-									<td>2</td>
-									<td>Docname2</td>
-									<td>9,000</td>
-									<td><time>2011-09-17</time></td>
-									<td>£70</td>
-								  </tr><tr>
-									<td>3</td>
-									<td>Docname3</td>
-									<td>9,000</td>
-									<td><time>2011-09-07</time></td>
-									<td>£50</td>
-								  </tr>
+                                    <td><?php echo $translation[0] ?></td>
+                                    <td><?php echo anchor($translation[1]->filePath, 'Download') ?></td>
+                                    <td><?php echo anchor($translation[2]->filePath) ?></td>
+                                  </tr>
+                                <?php endforeach; ?>
 								</tbody>
 							  </table>
 						</div><!-- end .well -->
