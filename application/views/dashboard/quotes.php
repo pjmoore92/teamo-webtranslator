@@ -7,7 +7,7 @@
         <div class="span9">
            <?php
             if($jobs_list == NULL):
-				echo ':( You have no quoted jobs.';
+				echo 'You have no quoted jobs.';
             else:
 			?>
 			<div class="accordion" id="accordion2">

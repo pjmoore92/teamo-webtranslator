@@ -6,7 +6,7 @@
         <div class="span9">
           <?php
             if($jobs_list == NULL):
-				echo ':( You have no translated jobs.';
+				echo 'You have no translated jobs.';
             else:
 			?>
 			<div class="accordion" id="accordion2">
