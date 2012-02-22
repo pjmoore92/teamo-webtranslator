@@ -10,6 +10,14 @@ class Dashboard extends MY_Controller {
                 $this->template->load('template', $this->_view_template, $this->_data);
         }
 
+        //FIXME REMOVE THIS BEFORE GOING LIVE!!!
+        public function switchrole(){
+            $newrole = $this->_data['role'] == 'admin' ? 'client' :'admin';
+            $this->session->set_userdata('role', $newrole);
+            $this->_data['role'] = $newrole;
+            $this->jobs();
+        }
+
         public function submit(){
 
                 $this->lang->load('common');
