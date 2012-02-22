@@ -23,6 +23,7 @@
           <h5>Other</h5>
           <ul class="nav nav-list">
         <li><a href="/auth/logout"><i class="icon-user"></i> Logout</a></li>
+        <li><a href="/dashboard/switchrole"><i class="icon-user"></i> Switch Role</a></li>
           </ul>
         </div>
       </div>
