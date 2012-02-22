@@ -10,15 +10,26 @@ class Job_model extends CI_Model{
     }
 
     public function get_by_status($status, $customerID =  NULL) {
+        $ci =& get_instance();
+        $ci->load->model('translation');
+
         $this->db->where('status', $status);
         if ($customerID != NULL) $this->db->where("{$this->_table}.customerID", $customerID);
         
         //JOIN with user_profiles table to get the user specific data
         $this->db->join($this->_cust_table, "{$this->_cust_table}.customerID = {$this->_table}.customerID");
+        $this->db->join('users', "users.id = {$this->_table}.customerID");
 
+        $this->db->select('jobID, status, dateRequested, dateDue, fromLanguage, toLanguage, currency, quote, fullName, email');
         $query = $this->db->get($this->_table);
-        if($query->num_rows() > 0)
-            return $query->result();
+        if($query->num_rows() > 0) {
+            $jobs = array();
+            foreach ($query->result() as $job) {
+                $translations = $ci->translation->get($job->jobID);
+                $jobs[] = array($job, $translations);
+            }
+            return $jobs;
+        }
         else
             return NULL;
     }

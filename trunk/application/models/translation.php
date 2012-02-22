@@ -9,6 +9,35 @@ class Translation extends CI_Model{
         parent::__construct();
     }
 
+    public function get($job) {
+        if ($job) {
+            $this->db->select('name,origDoc,translatedDoc');
+            $this->db->where('jobID',$job);
+            $query = $this->db->get($this->_table);
+            if ($query->num_rows() > 0) {
+                $translations = array();
+                foreach ($query->result() as $trans) {
+                    $docname = $trans->name;
+
+                    $this->db->start_cache();
+                    $this->db->select('filePath');
+                    $this->db->stop_cache();
+
+                    $this->db->where('documentID', $trans->origDoc);
+                    $origFile = $this->db->get('document')->row();
+
+                    $this->db->where('documentID', $trans->translatedDoc);
+                    $transFile = $this->db->get('document')->row();
+
+                    $translations[] = array($docname, $origFile, $transFile);
+                    $this->db->flush_cache();
+                }
+                return $translations;
+            }
+        }
+        return NULL;
+    }
+
     public function add_orig($jobid, $docname, $filename){
 
         // check jobid is valid
@@ -17,6 +46,10 @@ class Translation extends CI_Model{
         if ($query->num_rows() > 0) {	
 
             $this->db->trans_start();
+
+            //FIXME 
+            //truncate filename from /home/claddach/public_html/alasdaircampbell.com/*
+            $filename = substr($filename, 48);
 
             //add file to document table
             $record = array(
