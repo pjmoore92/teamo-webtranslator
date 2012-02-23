@@ -30,7 +30,7 @@
 					<div class="span3">
 						<dl>
 							<dt>Quote</dt>
-								<dd>&mdash;</dd>
+								<dd><?php if($subtitle != 'pending') echo $job->quote; ?></dd>
 							<dt>Date Due</dt>
 								<dd><?php echo $job->dateDue; ?></dt>
 						</dl>
