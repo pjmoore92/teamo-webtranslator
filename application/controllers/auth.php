@@ -211,9 +211,8 @@ class Auth extends CI_Controller
 					}
 				}
 				$data['errors'] = array();
-
 				$email_activation = $this->config->item('email_activation', 'tank_auth');
-
+				
 				if ($this->form_validation->run()) {								// validation ok
 					if (!is_null($data = $this->tank_auth->create_user(
 							$use_username ? $this->form_validation->set_value('username') : '',
@@ -221,7 +220,6 @@ class Auth extends CI_Controller
 							$refcode,
 							$email_activation))
 					){									// success
-
 						$data['site_name'] = $this->config->item('website_name', 'tank_auth');
 
 						if ($email_activation) {									// send "activate" email
@@ -281,12 +279,9 @@ class Auth extends CI_Controller
 						$errors = $this->tank_auth->get_error_message();
 						$this->output->set_output(json_encode(
 							array(
-								// 'error' => 'DB error. could not create user account.'
-								// 'error' => $errors
+								'error' => 'already_in_use'
 							)
 						));
-						die();
-						// foreach ($errors as $k => $v)	$data['errors'][$k] = $this->lang->line($v);
 					}
 				}
 				else{
