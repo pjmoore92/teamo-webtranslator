@@ -746,6 +746,15 @@ class Auth extends CI_Controller
     		$month = substr($date, 5, 2);
     		$day = substr($date, 8, 2);
 
+    		if(
+	    		($year == FALSE || $year == '') &&
+	    		($month == FALSE || $month == '') &&
+	    		($day == FALSE || $day == '')
+	    	)
+	    		
+		    	$this->form_validation->set_message('check_deadline', 'Date not valid');
+		    	return FALSE;
+
     		if(is_numeric($year) && is_numeric($month) && is_numeric($day))
     			if(checkdate((int)$month, (int)$day, (int)$year))
 	    			return TRUE;

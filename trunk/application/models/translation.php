@@ -95,11 +95,16 @@ class Translation extends CI_Model{
 
     public function get_translations($jobID){
         
-        $this->db->where("{$this->_table}.jobID", $jobID);
-        $this->db->get($this->_table);
+        $this->db->select("name, orig.filePath AS origPath, trans.filePath AS transPath");
+        $this->db->where("jobID", $jobID);
+        $this->db->join("{$this->_doc_table} orig", "orig.documentID = {$this->_table}.origDoc");
+        $this->db->join("{$this->_doc_table} trans", "trans.documentID = {$this->_table}.translatedDoc", 'left');
+        $query = $this->db->get($this->_table);
         
-        echo this->db->last_query();
+        if($query->num_rows() > 0)
+            return $query->result();
         
+        return NULL;
     }
 }
 
