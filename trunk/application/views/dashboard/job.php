@@ -18,7 +18,11 @@
 							<dt>Client</dt>
 								<dd><?php echo $job->fullName; ?></dd>
 							<dt>Languages</dt>
-								<dd><?php echo ucfirst($job->fromLanguage); ?> to <?php echo ucfirst($job->toLanguage); ?></dd>
+								<dd>
+									<?php echo ucfirst($job->fromLanguage); ?>
+									to
+									<?php echo ucfirst($job->toLanguage); ?>
+								</dd>
 							<dt>Sent on</dt>
 								<dd><time><?php echo $job->dateRequested; ?></time></dd>
 						</dl>
@@ -34,16 +38,21 @@
 							if($this->session->userdata('role') == 'client'):
 							else:
 						?>
-						<form class="well form-search">
-							<span class="label label-warning">Enter Quote</span>
-								<input type="text" class="input-small" placeholder="Quote">
-								<a
-									class="btn btn-small btn-success send-quote"
-									data-controls-modal="modal-from-dom"
-									href="#"
-								>Send Quote
-								</a>
-						</form>
+							<?php if(in_array($subtitle, array('pending', 'quoted'))): ?>
+							<form class="well form-search">
+								<span class="label label-warning">
+									<?php echo (($subtitle == 'pending') ? 'Enter' : 'Update'); ?>
+									Quote
+								</span>
+									<input type="text" class="input-small" placeholder="Quote">
+									<a
+										class="btn btn-small btn-success <?php echo (($subtitle == 'pending') ? 'send' : 'update'); ?>-quote"
+										data-controls-modal="modal-from-dom"
+										href="#"
+									><?php echo (($subtitle == 'pending') ? 'Submit' : 'Update'); ?> Quote
+									</a>
+							</form>
+							<?php endif;  ?>
 						<?php endif;  ?>
 					</div> <!-- end .span3 -->
 				</div>
@@ -63,10 +72,11 @@
 							<td><?php echo $translation->name ?></td>
 							<td><?php echo anchor($translation->origPath, 'Download'); ?></td>
 							<td><?php 
-								if($translation->transPath != '')
-									echo anchor($translation->transPath, 'Download');
-								else
-									echo anchor('#', 'Submit translated file');
+									if($subtitle == 'pending')
+										echo 'nothing to see here';
+										// echo anchor('#', 'Submit translated file');
+									else
+										echo anchor($translation->transPath, 'Download');
 								?></td>
 						</tr>
 				<?php endforeach; ?>

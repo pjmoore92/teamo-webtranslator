@@ -67,15 +67,19 @@ class Dashboard extends MY_Controller {
         public function jobs($statusType = "pending"){
                 $this->load->model('job_model');
                 $_dbType = "";
+                $subtitle = "";
                 switch ($statusType) {
                 case "pending":
                         $_dbType = "QuoteReq";
+                        $subtitle = "pending";
                         break;
                 case "quotes":
                         $_dbType = "QuoteSent";
+                        $subtitle = "quoted";
                         break;
                 case "translations":
                         $_dbType = "Translated";
+                        $subtitle = "translated";
                         break;
                 default:
                         $_dbType = $statusType;
@@ -90,6 +94,7 @@ class Dashboard extends MY_Controller {
                         $this->_data['jobs_list'] = $this->jobs->get_jobs($_dbType, $this->_user_id);
                 }
                 $this->_data['type'] = $statusType;
+                $this->_data['subtitle'] = $subtitle;
                 $this->template->set('title', ucfirst($this->_data['role']). ' Dashboard -');
                 $this->template->load('template', $this->_view_template, $this->_data);
         }
