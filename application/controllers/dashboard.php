@@ -135,4 +135,18 @@ class Dashboard extends MY_Controller {
                         }
                 }
         }
+
+        public function stats(){
+
+                if($this->_data['role'] != 'admin')
+                        $this->index();
+
+                $this->lang->load('common');
+                $this->lang->load('home');
+
+                $this->_data['type'] = 'stats';
+
+                $this->template->set('title', $this->_data['role']. ' Dashboard -');
+                $this->template->load('template', $this->_view_template, $this->_data);
+        }
 }
