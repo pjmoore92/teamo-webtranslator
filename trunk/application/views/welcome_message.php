@@ -104,9 +104,7 @@ translation in your chosen language.</p>
   <div class="modal-header">
   </div>
   <div class="modal-body"><p></p></div>
-  <div class="modal-footer">
-    <a data-dismiss="modal" class="close btn primary">OK</a>
-  </div>
+  <div class="modal-footer"></div>
 </form>
 </div>
 
@@ -220,6 +218,26 @@ $(document).ready(function(){
                     $('#filelist').clone().appendTo('#modal-from-dom-register-message .modal-footer');
                     $('#uploadfiles').trigger('click');
                 }
+                else if(data.error == 'already_in_use'){
+                    var header = $('<a href="#" class="close">&times;</a><h2>Whoopsies!</h2>');
+                    $('#modal-from-dom-register-message .modal-header')
+                      .html('').append(header);
+                    
+                    var message = $('\
+                        <p>The email address <strong><span class="email"></span></strong>\
+                        is already in use here!</p>');
+                    $('#modal-from-dom-register-message .modal-body p')
+                      .html('').append(message);
+                    $('#modal-from-dom-register-message .modal-body .email')
+                        .html(email);
+
+                    var footer = $('\
+                        <a class="">Login</a> or \
+                        <a class="">get a new reference code.</a>\
+                        <a class="btn btn-primary">Close</a>');
+                    $('#modal-from-dom-register-message .modal-footer')
+                        .html('').append(footer);
+                }
                 else{
                     var header = $('<a href="#" class="close">&times;</a><h2>Whoopsies!</h2>');
                     $('#modal-from-dom-register-message .modal-header').html('').append(header);
@@ -227,6 +245,9 @@ $(document).ready(function(){
                     var message = $('Whoopsies! Something\'s not right!<br />' + data.error);
                     $('#modal-from-dom-register-message .modal-body p').html('').append(message);
                     /* FIXME */
+
+                    var footer= $('<a data-dismiss="modal" class="btn btn-primary">OK</a>');
+                    $('#modal-from-dom-register-message .modal-footer').html('').append(footer);
                 }
             },
                 "json"
