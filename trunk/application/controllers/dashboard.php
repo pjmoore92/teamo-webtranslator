@@ -108,8 +108,8 @@ class Dashboard extends MY_Controller {
 
                         $this->load->library('form_validation');
 
-                        $this->form_validation->set_rules('quote', 'Quote', 'required|numeric');
-                        $this->form_validation->set_rules('jobid', 'JobID', 'required|numeric');
+                        $this->form_validation->set_rules('quote', 'Quote', 'required|trim|numeric');
+                        $this->form_validation->set_rules('jobid', 'JobID', 'required|trim|numeric');
 
                         if ($this->form_validation->run() == FALSE){
                                 die (json_encode(array('error' => 'The form values are not valid! :<')));
