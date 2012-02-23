@@ -4,6 +4,8 @@ class Job_model extends CI_Model{
 
     private $_table = 'job';
     private $_cust_table = 'customer';
+    private $_trans_table = 'translation';
+    private $_doc_table = 'document';
 
     public function __construct(){
         parent::__construct();
@@ -105,6 +107,18 @@ class Job_model extends CI_Model{
     public function set_job_status($job_id, $status){
         $this->db->where('jobID', $job_id);
         $this->db->update($this->_table, array('status'=> $status));
+    }
+
+    public function get_jobs($status, $customerID = NULL){
+
+        if($customerID != NULL) $this->db->where("{$this->_table}.customerID", $customerID);
+        $this->db->where('status', $status);
+        
+        $this->db->join($this->_cust_table, "{$this->_cust_table}.customerID = {$this->_table}.customerID");
+        
+        $query = $this->db->get($this->_table);
+        if($query->num_rows() > 0) return $query->result();
+        return NULL;
     }
 }
 

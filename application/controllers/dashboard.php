@@ -82,11 +82,12 @@ class Dashboard extends MY_Controller {
                         break;
                 }
 
+                $this->load->library('jobs');
                 if ($this->_data['role'] == "admin") {
-                        $this->_data['jobs_list'] = $this->job_model->get_by_status($_dbType);
+                        $this->_data['jobs_list'] = $this->jobs->get_jobs($_dbType);
                 }
                 else {
-                        $this->_data['jobs_list'] = $this->job_model->get_by_status($_dbType, $this->_user_id);
+                        $this->_data['jobs_list'] = $this->jobs->get_jobs($_dbType, $this->_user_id);
                 }
                 $this->_data['type'] = $statusType;
                 $this->template->set('title', ucfirst($this->_data['role']). ' Dashboard -');
