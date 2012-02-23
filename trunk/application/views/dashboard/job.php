@@ -36,6 +36,7 @@
 						</dl>
 						<?php
 							if($this->session->userdata('role') == 'client'):
+								echo anchor("/payment/pay/{$job->jobID}", 'Pay using PayPal', array('class'=>'btn btn-small btn-success'));
 							else:
 						?>
 							<?php if(in_array($subtitle, array('pending', 'quoted'))): ?>
