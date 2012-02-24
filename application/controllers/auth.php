@@ -139,22 +139,10 @@ class Auth extends CI_Controller
 			} elseif ($this->tank_auth->is_logged_in(FALSE)) {						// logged in, not activated
 				redirect('/auth/send_again/');
 
-			} elseif (!$this->config->item('allow_registration', 'tank_auth')) {	// registration is off
-				$this->_show_message($this->lang->line('auth_message_registration_disabled'));
-
 			} else {
 
 				/* set JSON headers */
 				$this->output->set_content_type('application/json');
-
-				$use_username = $this->config->item('use_username', 'tank_auth');
-				if ($use_username) {
-					$this->form_validation->set_rules(
-						'username',
-						'Username',
-						'trim|required|xss_clean|min_length['.$this->config->item('username_min_length', 'tank_auth').']|max_length['.$this->config->item('username_max_length', 'tank_auth').']|alpha_dash');
-				}
-				
 				
 				/* Registration form validation */
 				$this->form_validation->set_rules(
@@ -201,21 +189,12 @@ class Auth extends CI_Controller
 				
 				$refcode = strtoupper(random_string('alpha', 8));
 
-				$captcha_registration	= $this->config->item('captcha_registration', 'tank_auth');
-				$use_recaptcha			= $this->config->item('use_recaptcha', 'tank_auth');
-				if ($captcha_registration) {
-					if ($use_recaptcha) {
-						$this->form_validation->set_rules('recaptcha_response_field', 'Confirmation Code', 'trim|xss_clean|required|callback__check_recaptcha');
-					} else {
-						$this->form_validation->set_rules('captcha', 'Confirmation Code', 'trim|xss_clean|required|callback__check_captcha');
-					}
-				}
 				$data['errors'] = array();
 				$email_activation = $this->config->item('email_activation', 'tank_auth');
 				
 				if ($this->form_validation->run()) {								// validation ok
 					if (!is_null($data = $this->tank_auth->create_user(
-							$use_username ? $this->form_validation->set_value('username') : '',
+							'',
 							$this->form_validation->set_value('email'),
 							$refcode,
 							$email_activation))
@@ -291,17 +270,6 @@ class Auth extends CI_Controller
 						)
 					));
 				}
-				if ($captcha_registration) {
-					if ($use_recaptcha) {
-						$data['recaptcha_html'] = $this->_create_recaptcha();
-					} else {
-						$data['captcha_html'] = $this->_create_captcha();
-					}
-				}
-				$data['use_username'] = $use_username;
-				$data['captcha_registration'] = $captcha_registration;
-				$data['use_recaptcha'] = $use_recaptcha;
-				// $this->load->view('auth/register_form', $data);
 			}
 	}
 
