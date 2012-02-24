@@ -148,7 +148,7 @@ class Auth extends CI_Controller
 				$this->form_validation->set_message('required', 'Field <strong>%s</strong> is required');
 				$this->form_validation->set_message('valid_email', '<strong>%s</strong> is not a valid e-mail');
 
-				
+				/* generate client reference code */
 				$refcode = strtoupper(random_string('alpha', 8));
 
 				$data['errors'] = array();
@@ -165,77 +165,80 @@ class Auth extends CI_Controller
 							$this->form_validation->set_value('email'),
 							$refcode,
 							$email_activation))
-					){									// success
+					){
+						/* user account has been succesfully created */
+
 						$data['site_name'] = $this->config->item('website_name', 'tank_auth');
 
-						if ($email_activation) {									// send "activate" email
+						if ($email_activation) {
+							/* send activation email */
+
 							$data['activation_period'] = $this->config->item('email_activation_expire', 'tank_auth') / 3600;
-
 							$this->_send_email('activate', $data['email'], $data);
-
-							unset($data['password']); // Clear password (just for any case)
-
-							// $this->_show_message($this->lang->line('auth_message_registration_completed_1'));
-
-						} else {
-							if ($this->config->item('email_account_details', 'tank_auth')) {	// send "welcome" email
+						}
+						else{
+							if ($this->config->item('email_account_details', 'tank_auth')) {
+								/* send welcome email */
 
 								$this->_send_email('welcome', $data['email'], $data);
 							}
-							unset($data['password']); // Clear password (just for any case)
-
-							// $this->_show_message($this->lang->line('auth_message_registration_completed_2').' '.anchor('/auth/login/', 'Login'));
 						}
+						
+						unset($data['password']);
 
-						//create the entry in the 'customer' table
+						$customer = new stdClass;
+						$customer->id = $data['user_id'];
+						$customer->name = $this->form_validation->set_value('name');;
+						$customer->email = $this->form_validation->set_value('email');
+						$customer->refcode = $refcode;
+						$customer->job->lang_from = $this->form_validation->set_value('lang_from');
+						$customer->job->lang_to = $this->form_validation->set_value('lang_to');
+						$customer->job->deadline = $this->form_validation->set_value('deadline');
+						$customer->job->currency = $this->form_validation->set_value('currency');
+
+						/* create the entry in the 'customer' table */
 						$this->load->model('customer_model');
 						$this->customer_model->add_customer(
 							array(
-								'customerID' => $data['user_id'],
-								'fullName' => $this->form_validation->set_value('name')
+								'customerID' => $customer->id,
+								'fullName' => $customer->name
 							)
 						);
+
 
 						$this->load->library('jobs');
 
 						$details = array(
-							'customerID' => $data['user_id'],
-							'fromLanguage' => $this->form_validation->set_value('lang_from'),
-							'toLanguage' => $this->form_validation->set_value('lang_to'),
-							'deadline' => $this->form_validation->set_value('deadline')
+							'customerID' => $customer->id,
+							'fromLanguage' => $customer->job->lang_from,
+							'toLanguage' => $customer->job->lang_to,
+							'deadline' => $customer->job->deadline
 						);
-						$jobID = $this->jobs->add_job($details);
+						
+						/* add the job to the DB */
+						$customer->job->id = $this->jobs->add_job($details);
 
+						/**
+						 * send the customer details, pretty much for debugging only;
+						 * live version would only need the name and email
+						 **/
     					$this->output->set_output(
-	    					json_encode(
-								array(
-									'name' => $this->form_validation->set_value('name'),
-									'email' => $this->form_validation->set_value('email'),
-									'fromLanguage' => $this->form_validation->set_value('lang_from'),
-									'toLanguage' => $this->form_validation->set_value('lang_to'),
-									'deadline' => $this->form_validation->set_value('deadline'),
-									'currency' => $this->form_validation->set_value('currency'),
-									'jobid' => $jobID,
-									'refcode' => $refcode
-								)
-							));
-						// die();
+	    					json_encode($customer));
+					}
+					else{
+						/* could not add user to the DB */
 
-					} else {
-						$errors = $this->tank_auth->get_error_message();
-						$this->output->set_output(json_encode(
-							array(
-								'error' => 'already_in_use'
-							)
-						));
+						$this->output->set_output(
+							json_encode(array('error' => 'already_in_use'))
+						);
 					}
 				}
 				else{
-					$this->output->set_output(json_encode(
-						array(
-							'error'=> sprintf("%s", validation_errors())
-						)
-					));
+					/* form validation failed */
+
+					$this->output->set_output(
+						json_encode(array('error'=> sprintf("%s", validation_errors())))
+					);
 				}
 			}
 	}
