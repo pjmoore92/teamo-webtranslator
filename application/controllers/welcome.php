@@ -33,21 +33,34 @@ class Welcome extends CI_Controller {
                 $this->template->load('template', 'welcome_message');
 	}
 
-	public function contact()
+	public function contact($selected = NULL)
 	{
+
+		$data['dropdown_opts'] = array(
+				'general_enquiry' => 'General Enquiry',
+				'quote' => 'Quote',
+				'video_translation' => 'Video Translation',
+				'interpretation' => 'Interpretation',
+				'other' => 'Other'
+			);
+		
+		if( isset($selected) && in_array($selected, array_keys($data['dropdown_opts'])))
+				$data['selected'] = $selected;
+
 		$this->load->library('form_validation');
 		
 		// field name, error message, validation rules
 		$this->form_validation->set_rules('name', 'Name', 'trim|required');
 		$this->form_validation->set_rules('email', 'Email Address', 'trim|required|valid_email');
 		$this->form_validation->set_rules('message', 'Message', 'trim|required');
+		//TODO: set rules for dropdown!
 		
 		if($this->form_validation->run() == FALSE)
 		{
 			$this->lang->load('common');
                 		$this->lang->load('home');
                 		$this->template->set('title', 'Contact');
-                		$this->template->load('template', 'contact');
+                		$this->template->load('template', 'contact', $data);
 		}
 		else
 		{

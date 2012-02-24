@@ -23,8 +23,7 @@
   	<p style="text-align: center"> 
   		<br>
   		<br>
-  		<input type="button" class ="btn btn-success btn-large" value="Get A Quote Here" 
-onClick="window.location.href='/welcome/contact';" /></p>
+  		<a class="btn btn-success btn-large" href="/contact/other">Get A Quote Here</a></p>
 
   </div>
 

@@ -65,13 +65,10 @@
 	<p>
 		<div class="input">
 			<label for="selet01">Your Subject </label>	
-			<select name="select01" id="select01">
-				<option value="General Enquiry">General Enquiry</option>
-				<option value="Quote">Quote</option>
-				<option value="Video Translation">Video Translation</option>
-				<option value="Interpretation">Interpretation</option>
-				<option value="Other">Other</option>
-			</select>
+			<?php				
+				$selected = (( isset($selected) ) ? $selected : '');
+				echo form_dropdown('select01', $dropdown_opts, $selected, array('id' => 'select01'));
+			?>
 		</div>
               
 	<p>
