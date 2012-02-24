@@ -143,23 +143,64 @@ class Auth extends CI_Controller
 
 				/* set JSON headers */
 				$this->output->set_content_type('application/json');
-				
-				/* Form validation error messages */
-				$this->form_validation->set_message('required', 'Field <strong>%s</strong> is required');
-				$this->form_validation->set_message('valid_email', '<strong>%s</strong> is not a valid e-mail');
 
 				/* generate client reference code */
 				$refcode = strtoupper(random_string('alpha', 8));
 
 				$data['errors'] = array();
 				$email_activation = $this->config->item('email_activation', 'tank_auth');
+
+				$config = array(
+					'new_client' => array(
+						array(
+							'field' => 'name',
+							'label' => 'Name',
+							'rules' => 'trim|required|xss_clean|callback_alphadash_space'
+						),
+						
+						array(
+							'field' => 'email',
+							'label' => 'Email',
+							'rules' => 'trim|required|xss_clean|valid_email'
+						),
+					//),// end of registration
+
+					//'new_job' => array(
+						array(
+							'field' => 'lang_from',
+							'label' => 'Source language',
+							'rules' => 'required|xss_clean|callback_check_lang_from'
+						),
+
+						array(
+							'field' => 'lang_to',
+							'label' => 'Translation language',
+							'rules' => 'required|xss_clean|callback_check_lang_to'
+						),
+						
+						array(
+							'field' => 'deadline',
+							'label' => 'Deadline',
+							'rules' => 'required|xss_clean|callback_check_deadline'
+						),
+						
+						array(
+							'field' => 'currency',
+							'label' => 'Currency',
+							'rules' => 'required|xss_clean|callback_check_currency'
+						)
+					)
+				);
 				
-				/* run validation for the registration form and save response */
-				$client_validation = $this->form_validation->run('new_client');
-				$job_validation = $this->form_validation->run('new_job');
+				/* run validation for the registration form */
+				$this->form_validation->set_rules($config['new_client']);
+
+				/* Form validation error messages */
+				$this->form_validation->set_message('required', 'Field <strong>%s</strong> is required');
+				$this->form_validation->set_message('valid_email', '<strong>%s</strong> is not a valid e-mail');
 
 				/* check form validation responses */
-				if ($client_validation && $job_validation) {
+				if ($this->form_validation->run()) {
 					if (!is_null($data = $this->tank_auth->create_user(
 							'',
 							$this->form_validation->set_value('email'),
