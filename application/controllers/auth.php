@@ -144,44 +144,6 @@ class Auth extends CI_Controller
 				/* set JSON headers */
 				$this->output->set_content_type('application/json');
 				
-				/* Registration form validation */
-				$this->form_validation->set_rules(
-					'name',
-					'Name',
-					'trim|required|xss_clean|callback_alphadash_space)'
-				);
-				
-				$this->form_validation->set_rules(
-					'email',
-					'Email',
-					'trim|required|xss_clean|valid_email'
-				);
-
-				$this->form_validation->set_rules(
-					'lang_from',
-					'Source language',
-					'required|xss_clean|callback_check_lang_from'
-				);
-
-				$this->form_validation->set_rules(
-					'lang_to',
-					'Translation language',
-					'required|xss_clean|callback_check_lang_to'
-				);
-				
-				$this->form_validation->set_rules(
-					'deadline',
-					'Deadline',
-					'required|xss_clean|callback_check_deadline'
-				);
-				
-				$this->form_validation->set_rules(
-					'currency',
-					'Currency',
-					'required|xss_clean|callback_check_currency'
-				);
-
-
 				/* Form validation error messages */
 				$this->form_validation->set_message('required', 'Field <strong>%s</strong> is required');
 				$this->form_validation->set_message('valid_email', '<strong>%s</strong> is not a valid e-mail');
@@ -192,7 +154,12 @@ class Auth extends CI_Controller
 				$data['errors'] = array();
 				$email_activation = $this->config->item('email_activation', 'tank_auth');
 				
-				if ($this->form_validation->run()) {								// validation ok
+				/* run validation for the registration form and save response */
+				$client_validation = $this->form_validation->run('new_client');
+				$job_validation = $this->form_validation->run('new_job');
+
+				/* check form validation responses */
+				if ($client_validation && $job_validation) {
 					if (!is_null($data = $this->tank_auth->create_user(
 							'',
 							$this->form_validation->set_value('email'),
