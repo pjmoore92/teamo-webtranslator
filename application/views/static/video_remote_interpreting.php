@@ -23,7 +23,16 @@
     <p style="text-align: center"> 
   		<br>
   		<br>
-  		<a class="btn btn-success btn-large" href="/contact/video_translation">Get A Quote Here</a></p>
+      <?php
+        echo anchor(
+            site_url('welcome/contact/video_translation'),
+            'Get A Quote Here',
+            array(
+                'class' => 'btn btn-success btn-large'
+              )
+          );
+      ?>
+      </p>
   </div>
 
   <div class="span4">
