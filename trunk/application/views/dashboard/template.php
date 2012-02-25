@@ -9,8 +9,12 @@
      <?php endif; ?>
     <?php if($type == 'pending'): ?><li class="active"><?php else:?><li><?php endif;?>
         <a href="/dashboard/jobs/pending"><i class="icon-list"></i> Pending</a></li>
-    <?php if($type == 'quotes'): ?><li class="active"><?php else:?><li><?php endif;?>
-        <a href="/dashboard/jobs/quotes"><i class="icon-th-list"></i> Quotes</a></li>
+    <?php if($type == 'quoted'): ?><li class="active"><?php else:?><li><?php endif;?>
+        <a href="/dashboard/jobs/quoted"><i class="icon-th-list"></i> Quoted</a></li>
+    <?php if($type == 'accepted'): ?><li class="active"><?php else:?><li><?php endif;?>
+        <a href="/dashboard/jobs/accepted"><i class="icon-th-list"></i> Accepted</a></li>
+    <?php if($type == 'Declined'): ?><li class="active"><?php else:?><li><?php endif;?>
+        <a href="/dashboard/jobs/declined"><i class="icon-th-list"></i> Declined</a></li>
     <?php if($type == 'translations'): ?><li class="active"><?php else:?><li><?php endif;?>
         <a href="/dashboard/jobs/translations"><i class="icon-file"></i> Translations</a></li>
     <?php if($type == 'history'): ?><li class="active"><?php else:?><li><?php endif;?>

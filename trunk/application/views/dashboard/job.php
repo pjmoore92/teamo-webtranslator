@@ -30,7 +30,7 @@
 					<div class="span3">
 						<dl>
 							<dt>Quote</dt>
-								<dd><?php if($subtitle != 'pending') echo $job->quote; ?></dd>
+								<dd><?php echo (($subtitle != 'pending') ? $job->quote : "&mdash;") ?></dd>
 							<dt>Date Due</dt>
 								<dd><?php echo $job->dateDue; ?></dt>
 						</dl>
@@ -50,7 +50,12 @@
 										class="btn btn-small btn-success <?php echo (($subtitle == 'pending') ? 'send' : 'update'); ?>-quote"
 										data-controls-modal="modal-from-dom"
 										href="#"
-									><?php echo (($subtitle == 'pending') ? 'Submit' : 'Update'); ?> Quote
+									><?php 
+										if( $subtitle == 'pending' )
+											echo 'Submit';
+										if( $subtitle == 'quoted' )
+											echo 'Update'
+									?> Quote
 									</a>
 							</form>
 							<?php endif;  ?>
@@ -63,7 +68,9 @@
 						<th class="header headerSortDown" width="20">#</th>
 						<th class="header">Document Name</th>
 						<th class="blue header">Original File</th>
+						<?php if( $subtitle == 'translated' ): ?>
 						<th class="blue header">Translated File</th>
+						<?php endif; ?>
 					  </tr>
 					</thead>
 					<tbody>
@@ -72,13 +79,14 @@
 							<td>1</td>
 							<td><?php echo $translation->name ?></td>
 							<td><?php echo anchor($translation->origPath, 'Download'); ?></td>
+							<?php if( in_array($subtitle, array('accepted', 'completed')) ): ?>
 							<td><?php 
-									if($subtitle == 'pending')
-										echo 'nothing to see here';
-										// echo anchor('#', 'Submit translated file');
+									if($subtitle == 'accepted')
+										echo 'UPLOAD here';
 									else
 										echo anchor($translation->transPath, 'Download');
 								?></td>
+							<?php endif; ?>
 						</tr>
 				<?php endforeach; ?>
 					</tbody>
