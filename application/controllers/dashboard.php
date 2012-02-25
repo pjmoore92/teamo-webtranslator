@@ -5,6 +5,7 @@ class Dashboard extends MY_Controller {
         public function index(){
 
                 $this->_data['type'] = 'main';
+                $this->_data['subtitle'] = 'overview of ';
 
                 $this->template->set('title', ucfirst($this->_data['role']).' Dashboard -');
                 $this->template->load('template', $this->_view_template, $this->_data);
@@ -24,6 +25,7 @@ class Dashboard extends MY_Controller {
                 $this->lang->load('home');
 
                 $this->_data['type'] = 'submit';
+                $this->_data['subtitle'] = 'Add new';
 
                 $this->template->set('title', $this->_data['role']. ' Dashboard -');
                 $this->template->load('template', $this->_view_template, $this->_data);

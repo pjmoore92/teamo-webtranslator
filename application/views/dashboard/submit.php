@@ -1,10 +1,4 @@
-        <div class="page-header">
-          <h1>Client Dashboard <small>Submit new job</small></h1>
-          <h2>Hello, <?php echo $client_name; ?>!</h2>
-        </div>
-
-        <div class="row">
-             <form id="fileform" enctype="multipart/form-data">
+        <form id="fileform" enctype="multipart/form-data">
           <div class="span-one-third" style="text-align:center">
             <h2><?php echo lang('upload.browse') ?></h2>
              <p>

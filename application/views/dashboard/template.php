@@ -50,6 +50,10 @@
   <?php
     if($type == 'stats')
       $this->load->view('dashboard/stats');
+    elseif($type == 'main')
+      $this->load->view('dashboard/main');
+    elseif($type == 'submit')
+      $this->load->view('dashboard/submit');
     else
       $this->load->view('dashboard/jobs', array('jobs_list' => $jobs_list, 'subtitle' => $subtitle));
   ?>
