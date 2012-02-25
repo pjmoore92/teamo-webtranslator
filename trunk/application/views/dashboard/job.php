@@ -35,7 +35,7 @@
 								<dd><?php echo $job->dateDue; ?></dt>
 						</dl>
 						<?php
-							if($this->session->userdata('role') == 'client'):
+							if($this->session->userdata('role') == 'client' && $subtitle == 'quoted'):
 								echo anchor("/payment/pay/{$job->jobID}", 'Pay using PayPal', array('class'=>'btn btn-small btn-success'));
 							else:
 						?>
