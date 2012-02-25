@@ -119,13 +119,21 @@ class Dashboard extends MY_Controller {
                         $_dbType = "QuoteReq";
                         $subtitle = "pending";
                         break;
-                case "quotes":
+                case "quoted":
                         $_dbType = "QuoteSent";
                         $subtitle = "quoted";
                         break;
                 case "translations":
                         $_dbType = "Translated";
                         $subtitle = "translated";
+                        break;
+                case "accepted":
+                        $_dbType = "QuoteAccept";
+                        $subtitle = "accepted";
+                        break;
+                case "declined":
+                        $_dbType = "QuoteDeclined";
+                        $subtitle = "declined";
                         break;
                 default:
                         $_dbType = $statusType;
