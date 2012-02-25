@@ -214,7 +214,7 @@ $(document).ready(function(){
 
                     var footer = $('<a href="#" class="">I can\'t find my reference code</a>');
 
-                    jobID = data.jobid;
+                    jobID = data.job.id;
                     $('#filelist').clone().appendTo('#modal-from-dom-register-message .modal-footer');
                     $('#uploadfiles').trigger('click');
                 }
