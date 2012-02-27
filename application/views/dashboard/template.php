@@ -46,7 +46,7 @@
 </div>
 
 <div class="page-header">
-  <h1><?php echo ucfirst($role); ?> Dashboard <small><?php echo ucfirst($subtitle); ?> Jobs</small></h1>
+  <h1><?php echo ucfirst($role); ?> Dashboard <small><?php if( isset($subtitle) ) echo ucfirst($subtitle) . " Jobs"; ?></small></h1>
   <h2>Hello, <?php echo $client_name; ?>!</h2>
 </div>
 <div class="row">
