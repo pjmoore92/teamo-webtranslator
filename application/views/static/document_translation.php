@@ -23,15 +23,25 @@
   	<p style="text-align: center"> 
   		<br>
   		<br>
-  		<?php
-        echo anchor(
-            site_url('welcome/contact/other'),
-            'Get A Quote Here',
-            array(
-                'class' => 'btn btn-success btn-large'
-              )
-          );
-      ?>
+  		<?php if($this->tank_auth->is_logged_in()): ?>
+	  	<?php
+		echo anchor(
+		    site_url('dashboard/submit'),
+		    'Get A Quote Here',
+		    array(
+		        'class' => 'btn btn-success btn-large'
+		      )
+          	);?>
+          	<?php else: ?>
+          	<?php
+		echo anchor(
+		    site_url('welcome/'),
+		    'Get A Quote Here',
+		    array(
+		        'class' => 'btn btn-success btn-large'
+		      )
+          	);?>
+          	<?php endif; ?>
     </p>
 
   </div>
