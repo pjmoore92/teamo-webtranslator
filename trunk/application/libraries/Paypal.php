@@ -73,7 +73,7 @@ class Paypal extends PaymentGateway
 		$postString .="cmd=_notify-validate"; // append ipn command
 
 		// open the connection to paypal
-		$fp = fsockopen($urlParsed[host], "80", $errNum, $errStr, 30);
+		$fp = fsockopen($urlParsed['host'], "80", $errNum, $errStr, 30);
 
 		if(!$fp)
 		{
@@ -87,8 +87,8 @@ class Paypal extends PaymentGateway
 		{
 			// Post the data back to paypal
 
-			fputs($fp, "POST $urlParsed[path] HTTP/1.1\r\n");
-			fputs($fp, "Host: $urlParsed[host]\r\n");
+			fputs($fp, "POST {$urlParsed['path']} HTTP/1.1\r\n");
+			fputs($fp, "Host: {$urlParsed['host']}\r\n");
 			fputs($fp, "Content-type: application/x-www-form-urlencoded\r\n");
 			fputs($fp, "Content-length: " . strlen($postString) . "\r\n");
 			fputs($fp, "Connection: close\r\n\r\n");
@@ -112,7 +112,7 @@ class Paypal extends PaymentGateway
 		else
 		{
 		 	// Invalid IPN transaction.  Check the log for details.
-			$this->lastError = "IPN Validation Failed . $urlParsed[path] : $urlParsed[host]";
+			$this->lastError = "IPN Validation Failed . {$urlParsed['path']} : {$urlParsed['host']}";
 			$this->logResults(false);
 			return false;
 		}
