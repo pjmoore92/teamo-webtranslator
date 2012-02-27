@@ -128,7 +128,7 @@ class Dashboard extends MY_Controller {
                         $subtitle = "translated";
                         break;
                 case "accepted":
-                        $_dbType = "QuoteAccept";
+                        $_dbType = "Paid";
                         $subtitle = "accepted";
                         break;
                 case "declined":
