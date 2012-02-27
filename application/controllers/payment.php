@@ -27,11 +27,11 @@ class Payment extends MY_Controller{
 		$this->paypal->addField('currency_code', 'GBP');// TODO: get currency from DB?
 
 		// Specify the url where paypal will send the user on success/failure
-		$this->paypal->addField('return', 'http://alasdaircampbell.com/payment/success/'.$job->jobID);
-		$this->paypal->addField('cancel_return', 'http://alasdaircampbell.com/payment/failure');
+		$this->paypal->addField('return', 'http://alasdaircampbell.com/en/payment/success/'.$job->jobID);
+		$this->paypal->addField('cancel_return', 'http://alasdaircampbell.com/en/payment/failure');
 
 		// Specify the url where paypal will send the IPN
-		$this->paypal->addField('notify_url', 'http://alasdaircampbell.com/paypal/paypal_ipn.php');
+		$this->paypal->addField('notify_url', 'http://alasdaircampbell.com/en/payment_validation');
 
 		// Specify the product information
 		$this->paypal->addField('item_name', 'Translation services');
@@ -46,22 +46,6 @@ class Payment extends MY_Controller{
 
 		// Let's start the train!
 		$this->paypal->submitPayment();
-
-		
-		// $this->load->library('curl');
-
-		// $data = array(
-  //           'business'=>"andrei_1329069076_biz@gmail.com",
-  //           'cmd'=>"_xclick",
-  //           'item_name'=>"Translation Services",
-  //           'amount'=>"5.95",
-  //           'currency_code'=>"USD"
-  //       );
-
-		// $this->curl->create("https://www.sandbox.paypal.com/cgi-bin/webscr");
-		// $this->curl->post($data);
-		// echo $this->curl->execute();
-
 	}
 
 	public function success($jobid = NULL){
@@ -73,6 +57,7 @@ class Payment extends MY_Controller{
 
                 
         $this->_data['content'] = 'payment/success';
+        $this->_data['type'] = 'payment_success';
 
         $this->template->set('title', $this->_data['role']. ' Dashboard -');
         $this->template->load('template', $this->_view_template, $this->_data);
@@ -80,6 +65,7 @@ class Payment extends MY_Controller{
 
 	public function failure(){
         $this->_data['content'] = 'payment/failure';
+        $this->_data['type'] = 'payment_failure';
 
         $this->template->set('title', $this->_data['role']. ' Dashboard -');
         $this->template->load('template', $this->_view_template, $this->_data);

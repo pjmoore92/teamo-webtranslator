@@ -58,6 +58,8 @@
       $this->load->view('dashboard/main');
     elseif($type == 'submit')
       $this->load->view('dashboard/submit');
+    elseif($type == 'payment_success' || $type == 'payment_failure')
+      $this->load->view($content);
     else
       $this->load->view('dashboard/jobs', array('jobs_list' => $jobs_list, 'subtitle' => $subtitle));
   ?>
