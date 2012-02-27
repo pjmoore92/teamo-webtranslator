@@ -220,7 +220,7 @@ $captcha = array(
 	<br />
 	<br />
 	<br />
-	<a href="/welcome/privacy">Privacy Policy</a>
+	<a href="/welcome/view/privacy_policy">Privacy Policy</a>
 	&copy; <?php 
         $copyYear = 2011; 
         $curYear = date('Y'); 
