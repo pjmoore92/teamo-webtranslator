@@ -8,7 +8,7 @@
 |--------------------------------------------------------------------------
 */
 $config['website_name'] = 'Bethel Translations';
-$config['webmaster_email'] = 'webmaster@example.com';
+$config['webmaster_email'] = 'contact@betheltranslations.com';
 
 /*
 |--------------------------------------------------------------------------
