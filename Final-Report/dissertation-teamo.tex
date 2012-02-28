@@ -5,6 +5,7 @@
 % Modified 
 
 \documentclass{l3proj}
+\usepackage{url}
 \begin{document}
 \title{A Website Translation Service}
 \author{Alasdair Campbell \\
@@ -151,7 +152,7 @@ The site-wide header (labelled 1) and footer (labelled 3) can clearly be seen to
 \chapter{Implementation}
 \label{chap:impl}
 
-In this chapter, we describe how we the implemented the system from our design plan and the technologies used in doing so.
+In this chapter, we describe how we implemented the system from our design plan and the technologies used in doing so.
 
 
 %------------------------------------------------------------------------------
@@ -159,9 +160,9 @@ In this chapter, we describe how we the implemented the system from our design p
 \section{Development Environment}
 Programming for the project was split between several web-orientated languages. The central development language was PHP for developing the controllers and models. HTML5, JavaScript and jQuery were used in the views. As mentioned previously we employed the use of two frameworks, namely CodeIgniter and TankAuth. CodeIgniter provided the Model-View-Controller architecture PHP framework for the website, and TankAuth is an open source authentication library for CodeIgniter.\newline
 \newline
-As we learned from Distributed Information Management, web-development is ever-changing and to stay current developers must adapt to using new technology. As a result of this we have coded the views using the newest HTML5 standard. This will allow future developers to maintain the site with ease as adding new modern features will be simpler.\newline
+As we learned from the Distributed Information Management course we studied this year, web-development is ever-changing and to stay current developers must adapt to using new technology. As a result of this we have coded the views using the newest HTML5 standard. This will allow future developers to maintain the site with ease as adding new modern features will be simpler.\newline
 \newline
-Another thing we learnt from D I M is that it is desirable to separate out our concerns when developing in a web environment. This led us to using Twitter Bootstrap (reference twitter bootstrap site). Twitter Bootstrap is “simple and flexible HTML, CSS, and Javascript for popular user interface components and interactions” During implementation Twitter released an upgraded version, version 2.0, of Bootstrap and we upgraded to this version when it was released in early 2012.\newline
+Another thing we learnt from our Distributed Information Management course is that it is desirable to separate out our concerns when developing in a web environment. This led us to using the open source Twitter Bootstrap \url{http://twitter.github.com/bootstrap/}. Twitter Bootstrap is “simple and flexible HTML, CSS, and Javascript for popular user interface components and interactions”. During implementation Twitter released an upgraded version, version 2.0, of Bootstrap and we upgraded to this version when it was released in early 2012.\newline
 \newline
 For implementation purposes we set up an online SVN using Google Code. This version control system allowed us to keep track of changes, report and resolve issues, and maintain a wiki of useful pieces of information that we needed to keep and track.\newline
 \newline
