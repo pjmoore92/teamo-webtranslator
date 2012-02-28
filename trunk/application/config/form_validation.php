@@ -4,7 +4,7 @@
 			array(
 				'field' => 'name',
 				'label' => 'Name',
-				'rules' => 'trim|required|xss_clean|callback_alphadash_space)'
+				'rules' => 'trim|required|xss_clean|callback_alphadash_space'
 			),
 			
 			array(

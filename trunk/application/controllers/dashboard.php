@@ -111,6 +111,7 @@ class Dashboard extends MY_Controller {
         }
 
         public function jobs($statusType = "pending"){
+                $this->load->library('paypal2');
                 $this->load->model('job_model');
                 $_dbType = "";
                 $subtitle = "";
@@ -146,6 +147,10 @@ class Dashboard extends MY_Controller {
                 }
                 else {
                         $this->_data['jobs_list'] = $this->jobs->get_jobs($_dbType, $this->_user_id);
+                        if($this->_data['jobs_list'] != NULL)
+                                foreach($this->_data['jobs_list'] as $job){
+                                        $job->button = $this->paypal2->get_button($job);
+                                }
                 }
                 $this->_data['type'] = $statusType;
                 $this->_data['subtitle'] = $subtitle;

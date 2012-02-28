@@ -35,9 +35,12 @@
 								<dd><?php echo $job->dateDue; ?></dt>
 						</dl>
 						<?php
-							if($this->session->userdata('role') == 'client' && $subtitle == 'quoted'):
-								echo anchor("/payment/pay/{$job->jobID}", 'Pay using PayPal', array('class'=>'btn btn-small btn-success'));
-							else:
+							if($this->session->userdata('role') == 'client'){
+								if($subtitle == 'quoted')
+									// echo anchor("/payment/pay/{$job->jobID}", 'Pay using PayPal', array('class'=>'btn btn-small btn-success'));
+									echo $job->button . "Note: If you have already paid, and the payment is pending, there is no need to click again.";
+							}
+							else{
 						?>
 							<?php if(in_array($subtitle, array('pending', 'quoted'))): ?>
 							<form class="well form-search">
@@ -59,7 +62,7 @@
 									</a>
 							</form>
 							<?php endif;  ?>
-						<?php endif;  ?>
+						<?php }//endif;  ?>
 					</div> <!-- end .span3 -->
 				</div>
 				<table class="table table-striped" id="sortTableExample">

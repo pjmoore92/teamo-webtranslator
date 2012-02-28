@@ -8,7 +8,7 @@ require_once "PPCrypto.php";
 /**
  * API for doing PayPal encryption services.
  */
-class EWPServices
+class Ewpservices
 {
 	/**
 	 * Creates a new encrypted button HTML block
