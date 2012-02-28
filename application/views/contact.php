@@ -74,8 +74,7 @@
 	<p>
 		<label for="message">Your Message </label>
   		<div class="input">
-			<textarea class="xxlarge" id="message" name="message" rows="10" value="">
-			</textarea>
+			<textarea class="xxlarge" id="message" name="message" rows="10" value=""></textarea>
 			<?php echo form_error('message', '<div class="alert-error">', '</div>'); ?>
 		</div>
 		
