@@ -52,7 +52,7 @@
             <li><?php echo anchor('welcome/view/about', lang('nav.about')); ?></li>
             <li><?php echo anchor('welcome/view/testimonials', lang('nav.testimonials')); ?></li>
             <li><?php echo anchor('welcome/contact', lang('nav.contact')); ?></li>
-<li class="dropdown" data-dropdown="dropdown">
+	    <li class="dropdown" data-dropdown="dropdown">
               <a href="#" class="dropdown-toggle">
                 <?php echo lang('nav.serv') ?>
 		<b class="caret"></b>
@@ -69,20 +69,6 @@
             </li> 
 	    </ul>
 	    <ul class="nav pull-right">
-	<li class="dropdown" data-dropdown="dropdown">
-              <a href="#" class="dropdown-toggle">
-                <?php echo lang('nav.lang') ?>
-		<b class="caret"></b>
-              </a>
-              <ul class="dropdown-menu">
-                <li>
-                  
-                  <?php echo anchor('/en', 'English'); ?>
-                  <?php echo anchor('/fr', 'French'); ?>
-                  <?php echo anchor('/it', 'Italian'); ?>
-                </li>
-              </ul>
-            </li> 
 	    <?php if(!$this->tank_auth->is_logged_in()): ?>
 		
 	    <li class="dropdown" data-dropdown="dropdown">
@@ -168,6 +154,14 @@ $captcha = array(
             </li>
           <?php endif; ?>
           </ul>
+          <ul class ="nav pull-right">
+	    <li><a href="/en" class = "language-img"><img src="/images/uk.png" height ="20" width ="20"></a></li>
+	    <li><a href="/fr" class = "language-img"><img src="/images/france.png" height ="20" width ="20"></a></li>
+	    <li><a href="/it" class = "language-img"><img src="/images/Italy.png" height ="20" width ="20"></a></li>
+	  </ul>
+	  <ul class = "nav pull-right">
+	  	<li><?php echo anchor('','Select language: ');?> </li>
+	  </ul>
         </div>
       </div>
     </div>
