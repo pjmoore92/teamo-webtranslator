@@ -35,17 +35,31 @@
 	
 	?>
 	
-	<?php if($this->tank_auth->is_logged_in()): ?>
-	<?php endif; ?>
 	<br>
 	<p><label for="name">Your Full Name </label></p>
 
 	<!-- <p><?php echo form_input($name_data); ?>  </p> -->
 	<p>
+		<?php if($this->tank_auth->is_logged_in()): ?>
+		<div class="input">
+			<?php
+			//Autopopulates name field
+			$query = $this->db->get('customer');
+			foreach ($query->result() as $row)
+			{
+			    $this->session->userdata('user_id');
+			    if($this->session->userdata('user_id') == $row->customerID)
+			   	 $nval = $row->fullName;
+			}
+			?>		
+			<input type="text" name="name" value = "<?php echo($nval) ?>" value id="name">
+			
+		</div>
+		<?php else: ?>
 		<div class="input">	
 			<input type="text" name="name" value id="name">
-			<?php echo form_error('name', '<div class="alert-error">', '</div>'); ?>
 		</div>
+		<?php endif; ?>
 			
 	</p>
 
@@ -55,8 +69,19 @@
 	
 
 	<p>
-  		<div class="input">	
-			<input type="email" name="email" value id="email" autocomplete="on">
+  		<div class="input">
+  			<?php
+  			//Autopopulates email field
+			$query = $this->db->get('users');
+			foreach ($query->result() as $row)
+			{
+			    $this->session->userdata('user_id');
+			    if($this->session->userdata('user_id') == $row->id)
+			   	 $eval = $row->email;
+			}
+			
+			?>	
+			<input type="email" name="email" value = "<?php echo($eval)?>" value id="email" autocomplete="on">
 			<?php echo form_error('email', '<div class="alert-error">', '</div>'); ?>
 		</div>
 		
