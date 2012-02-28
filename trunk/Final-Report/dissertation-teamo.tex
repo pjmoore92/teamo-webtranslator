@@ -6,6 +6,7 @@
 
 \documentclass{l3proj}
 \usepackage{url}
+\usepackage{appendix}
 \begin{document}
 \title{A Website Translation Service}
 \author{Alasdair Campbell \\
@@ -220,6 +221,9 @@ Our database structure was designed after we had thoroughly revised our user reg
 
 The majority of activity for these tables occurs in the first three entities, as they are all populated in some way during the 3 stage process discussed earlier.
 
+\section{Database Schema}
+TBC
+
 %==============================================================================
 \chapter{Evaluation}
 
@@ -242,14 +246,14 @@ Paul mainly done...
 Wei was responsible for...	
 
 %==============================================================================
-\section{Appendices}
-\subsection{Appendix A - Bibliography}
-\label{sec:bibl}
 
 
-\subsection{Appendix B - Glossary of Terms}
+%==============================================================================
+\bibliographystyle{plain}
+\bibliography{example}
+\appendix{A}
+\chapter{Glossary of Terms}
 \label{sec:gloss}
-
 
 \begin{itemize}
 \item{\textbf{Free-lance} - Working for different companies at different times rather than being permanently employed by one company.} 
@@ -264,7 +268,7 @@ Wei was responsible for...
 \item{\textbf{Web application framework} - A software framework that is designed to support the development of dynamic websites }
 \item{\textbf{Open source} - Computer software for which the code is freely available }
 \end{itemize}
-%==============================================================================
-\bibliographystyle{plain}
-\bibliography{example}
+
+
+\chapter{Evaluation Documents}
 \end{document}
