@@ -2,12 +2,8 @@
 
 <!-- TODO horizontal sliding Ads a la BBC? -->
 <div class="hero-unit">
-<h1><?php echo lang('helloWorld') ?>
+<h1><?php echo lang('helloWorld') ?></h1>
 
-<a href="/en"><img src="/images/uk.png"></a>
-<a href="/fr"><img src="/images/france.png"></a>
-<a href="/it"><img src="/images/Italy.png"></a>
-</h1>
 <p>I offer excellent translation services with a primary focus on translating documents 
 from French to English and vice versa. I also offer some other services as can be viewed in 
 the menus above. If you would like a quote for any of these, please navigate to my contact page.</p>
