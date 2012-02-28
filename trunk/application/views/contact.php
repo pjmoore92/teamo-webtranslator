@@ -69,6 +69,7 @@
 	
 
 	<p>
+		<?php if($this->tank_auth->is_logged_in()): ?>
   		<div class="input">
   			<?php
   			//Autopopulates email field
@@ -84,6 +85,11 @@
 			<input type="email" name="email" value = "<?php echo($eval)?>" value id="email" autocomplete="on">
 			<?php echo form_error('email', '<div class="alert-error">', '</div>'); ?>
 		</div>
+		<?php else: ?>
+		<div class="input">	
+			<input type="text" name="name" value id="name">
+		</div>
+		<?php endif; ?>
 		
 	</p>
 
