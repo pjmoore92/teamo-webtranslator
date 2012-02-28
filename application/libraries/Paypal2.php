@@ -22,7 +22,7 @@ class Paypal2{
 			"amount" => $job->quote,
 			"currency_code" => strtoupper($job->currency),
 			"return" => base_url('/dashboard/jobs/quoted'),
-			"cancel_return" => base_url('/payment_validation/validate'),//http://alasdaircampbell.com/en", //$this->input->post("cancelURL", TRUE),
+			"cancel_return" => base_url('/dashboard/jobs/quoted'),//http://alasdaircampbell.com/en", //$this->input->post("cancelURL", TRUE),
 			"notify_url" => base_url('/en/payment_validation/validate')
 		);
 
