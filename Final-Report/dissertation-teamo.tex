@@ -177,10 +177,29 @@ Check the history records through buttons in dashboard, namely accepted jobs, de
 \newpage
 \includegraphics[height=750px, width=\linewidth]{upc}
 
-\newpage
+% \newpage
 \section{System Design and Wireframes}
-After laying out the process of the website we focused on creating wireframes.
+After laying out the process of the website we focused on organizing the content
+and on the wireframes.
 
+\subsection{Information Architecture}
+We analyzed the requirements and made a website structure diagram
+(Figure ~\ref{website-structure}).
+
+\begin{figure}
+\centering
+%trim top bottom
+\includegraphics[height=200px, trim=0px 450px 0px 100px]{website-structure}
+\caption{Website structure}
+\label{website-structure}
+\end{figure}
+
+\newpage
+\subsection{Wireframes}
+% 
+% paper prototypes, then functional wireframes
+% http://webstyleguide.com/wsg3/2-universal-usability/5-in-design-process.html
+% 
 Wireframes are blueprints of the website, representing every important page and 
 their structure and behaviour.
 They focus more on what elements would a page contain, and their place on
@@ -190,21 +209,86 @@ colours out, because they can distract the reader from his main purpose, which
 is analyzing the layout of that particular page, rather than the visual design.
 % some more on why these are useful, etc.
 
-We analyzed the requirements and made a website structure diagram
-(Figure ~\ref{website-structure}).
+
+Conventions used in the wireframes:
+\begin{itemize} \itemsep1pt \parskip0pt \parsep0pt
+	\item \textbf{Green background} and/or \textbf{yellow labels} - are used to
+	indicate specific groups of content that will be referenced in the document.
+	\item \textbf{links} - blue text and underlined
+\end{itemize}
+
+By the nature of their content, the pages can be categorised into static and
+dynamic. Static pages displays the same information for all users, regardless of
+their status (logged in or just visiting, client or administrator). About,
+Testimonials and Contact are such pages in the system described here. On the
+other hand, dynamic pages draw some data from the database and display it
+accordingly. In this case, the dynamic pages are the ones in the dashboard
+(both client’s and administrator’s) since the information there is specific to
+every client.
+
+
+
+\subsubsection*{Template}
+All the pages have this basic layout comprised of the following sections:
+\begin{itemize} \itemsep1pt \parskip0pt \parsep0pt
+	\item Header
+	\item Content area
+	\item Footer
+\end{itemize}
 
 \begin{figure}
 \centering
-\includegraphics[height=200px, trim=10px 400px 10px 150px]{website-structure}
-\caption{Website structure}
-\label{website-structure}
+%trim left bottom
+\includegraphics[width=\linewidth, trim = 0px 50px 0px 50px]
+	{wireframes/main-layout}
+\caption{Main layout}
+\label{wireframes-main-layout}
 \end{figure}
 
-\subsection{Template and Main Page}
-From our earlier decision of creating a simple three step process and implementing this on our homepage, we took our wireframe and refined it to come up with the  \textbf{Main Template}.
+The \textbf{header} and the \textbf{footer} sections will remain unchanged
+across all pages and the rest of the content goes in the \textbf{content area}.
+The rest of the sketches of the pages illustrated here will only show the
+content area.
+
+The header contains:
+\begin{itemize} \itemsep1pt \parskip0pt \parsep0pt
+	\item the name and/or logo of the website;
+	\item main navigation menu
+\end{itemize}
+
+The menu is a collection of links to the main areas of the website:
+\begin{itemize} \itemsep1pt \parskip0pt \parsep0pt
+	\item Home
+	\item About
+	\item Services
+	\item Testimonials
+	\item Contact
+	\item Login - this link must stand out, since it is of a higher
+	importance and the page linked is of a different nature than the rest,
+	so it is separated from the others.
+\end{itemize}
+
+
+Footer:
+\begin{itemize} \itemsep1pt \parskip0pt \parsep0pt
+	\item copyright notice, if needed
+	\item links to legal documents (e.g.: Privacy policy, terms of use, etc)
+	\item awards or certifications (translation services related, 
+	PayPal certification)
+	\item contact information (actual information or just a link to the 
+	`Contact’ page)
+	\item link to the business’ facebook page
+\end{itemize}
+% end of Template
+
+
+\subsubsection{Main page}
+From our earlier decision of creating a simple three step process and
+implementing this on our homepage, we took our wireframe and refined it to
+come up with the  \textbf{Main Template} (Figure ~\ref{wireframes-main-layout}).
 
 \begin{figure}[ht]
-\label{fig:The Main Template}
+\label{wireframes:main-template}
 \begin{center}
 \includegraphics[width=\linewidth]{wireframes/bt-homepagev3}
 \caption{The Main Template}
@@ -212,6 +296,73 @@ From our earlier decision of creating a simple three step process and implementi
 \end{figure}
 
 The site-wide header (labelled 1) and footer (labelled 3) can clearly be seen to be simple and uncluttered.
+% end Main page
+
+
+\subsubsection{About}
+This is the page the users would go to in order to find out more about the
+service. Contains a few paragraphs that detail goals and accomplishments.
+The page needs to answer some possible questions that the users might have
+regarding the business:
+\begin{itemize}
+	\item who is behind it?
+	\item what are they doing?
+	\item when did they start doing it?
+	\item where are they?
+	\item how are they accomplishing what they claim to do?
+	\item Providing an image, or even a short video, would make the website seem
+	more trustworthy.
+\end{itemize}
+
+\begin{figure}
+\label{wireframes:about}
+\begin{center}
+\includegraphics[width=\linewidth, trim = 0px 110px 0px 100px]{wireframes/about}
+\caption{The About page}
+\end{center}
+\end{figure}
+% end About
+
+
+\subsubsection{Testimonials}
+Having testimonials from happy clients also adds to the trust of the business.
+The business owner would ask her clients for feedback and permission to publish
+it on the website. Then she can pick which ones would suit her and post only a
+fragment on the website, along with some details of that client (name, company,
+occupation).
+
+\begin{figure}
+\label{wireframes:testimonials}
+\begin{center}
+\includegraphics[width=\linewidth, trim = 0px 80px 0px 220px]
+	{wireframes/testimonials}
+\caption{The Testimonials page}
+\end{center}
+\end{figure}
+% end Testimonials
+
+
+\subsubsection{Contact}
+Having other contact methods (phone number, physical mailing address) also add
+to the credibility of the business. ``A company with no address is not one you
+want to give money to.'' [Jakob Nielsen]
+\begin{enumerate} \itemsep1pt \parskip0pt \parsep0pt
+	\item work telephone number
+	\item physical address
+	\item social media pages
+	\item contact form (by e-mail)
+\end{enumerate}
+
+\begin{figure}
+\label{wireframes:contact}
+\begin{center}
+\includegraphics[width=\linewidth, trim = 0px 40px 0px 220px]
+	{wireframes/contact}
+\caption{The Contact page}
+\end{center}
+\end{figure}
+% end Testimonials
+
 
 %==============================================================================
 \chapter{Implementation}
