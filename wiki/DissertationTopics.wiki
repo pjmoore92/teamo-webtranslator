@@ -1,0 +1,4 @@
+#summary Things to talk about (maybe?) in the dissertation
+
+  * *Security*: Encrypting the PayPal buttons
+  * *Testing*: [http://seleniumhq.org/ Selenium] ?
