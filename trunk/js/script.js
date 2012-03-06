@@ -22,9 +22,6 @@ $(document).ready(function(){
    * 
    */
   $("#datepicker").datepicker({
-    showOn: "both",
-    buttonImage: "/images/calendar.gif",
-    buttonImageOnly: true,
     dateFormat: "yy-mm-dd",
   });
 
