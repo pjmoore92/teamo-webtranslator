@@ -49,6 +49,8 @@ translation in your chosen language.</p>
             <br />
             <a id="pickfiles" class="btn btn-info" href="#">Select files</a> 
             <a id="uploadfiles" href="#"></a>
+	    <br />
+	    <b>&dagger;</b>Accepted file formats: pdf,doc,docx,rtf,txt<br>Maximum File Size: <b>20MB</b>
         </div>
      </p>
  </div>
@@ -64,7 +66,7 @@ translation in your chosen language.</p>
           </select>
         </div>
 	
-        <label for="register-currency">Currency	
+        <label for="register-currency"><b>&dagger;</b>Accepted file formats: pdf,doc,docx,rtf,txt<br>Maximum File Size: <b>20MB</b>Currency	
         <i class = "icon-question-sign" rel="tooltip" title="This is the currency you would like pay in"></i>
         </label>        
         <div class="input">
