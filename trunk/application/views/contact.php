@@ -22,6 +22,13 @@
                 'value' => set_value('email')
         );
         
+        //Anti spam bot 
+        $age_data = array(
+        	'name' => 'age',
+        	'id' => 'age',
+        	'value' => set_value('age') 
+        );
+        
         $message_data = array(
                 'name' => 'message',
                 'id' => 'message',
@@ -77,13 +84,15 @@
         <p>
                 <div class="input">
                         <input type="email" name="email" value = "<?php echo($eval)?>" value id="email" >
+                        <! Anti bot detection field - DO NOT remove! ->
+                        <input type="hidden" name="age" value="" value id="age" />
                         <?php echo form_error('email', '<div class="alert-error">', '</div>'); ?>
                 </div>    
         </p>
 
         <p>
                 <div class="input">
-                        <label for="selet01">Your Subject </label>      
+                        <label for="select01">Your Subject </label>      
                         <?php                           
                                 $selected = (( isset($selected) ) ? $selected : '');
                                 echo form_dropdown('select01', $dropdown_opts, $selected, array('id' => 'select01'));
