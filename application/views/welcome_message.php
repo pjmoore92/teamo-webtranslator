@@ -20,6 +20,8 @@ translation in your chosen language.</p>
   <div class="grid" style="text-align:center">
   <h2><?php echo lang('upload.details') ?></h2>
     <p>
+      <! Anti spam bot detection field - DO NOT remove! !>
+      <input type="hidden" id="register-location" name="register-location" value=""/> 
       <label for="register-name">Your name</label>
       <div class="input">
         <input class="xlarge span3" id="register-name" name="register-name" size="30" type="text" />
