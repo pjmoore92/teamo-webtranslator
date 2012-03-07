@@ -37,6 +37,8 @@
 
 <?php if($this->session->userdata('role') == 'admin'): ?>
 <script type="text/javascript" src="<?php echo base_url(); ?>js/admin-dashboard.js"></script>
+<?php else: ?>
+<script type="text/javascript" src="<?php echo base_url(); ?>js/client-dashboard.js"></script>
 <?php endif; ?>
 
 <div id="modal-from-dom" class="modal hide fade">
