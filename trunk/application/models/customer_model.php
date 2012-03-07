@@ -47,9 +47,22 @@ class Customer_model extends CI_Model{
 	return $query->result();
     }
     
+    public function countCustPending(){
+    	$cid = $this->session->userdata('user_id');
+	$query = $this->db->query("SELECT COUNT(status) FROM `job` WHERE status = 'QuoteReq' AND customerID = $cid");
+	return $query->result();
+    }
+    
     public function countAwaitingPayment(){
 	$query = $this->db->query("SELECT COUNT(status) FROM `job` WHERE status = 'QuoteSent'");
 	return $query->result();
+    }
+    
+    public function countCustAwaitingPayment(){
+    	$cid = $this->session->userdata('user_id');
+    	$query = $this->db->query("SELECT COUNT(status) FROM `job` WHERE status = 'QuoteSent' AND customerID = $cid");
+	return $query->result();
+    
     }
     
     public function countPaid(){
@@ -57,8 +70,20 @@ class Customer_model extends CI_Model{
 	return $query->result();
     }
     
+    public function countCustPaid(){
+    	$cid = $this->session->userdata('user_id');
+	$query = $this->db->query("SELECT COUNT(status) FROM `job` WHERE status = 'Paid' AND customerID = $cid");
+	return $query->result();
+    }
+    
     public function countTranslated(){
 	$query = $this->db->query("SELECT COUNT(status) FROM `job` WHERE status = 'Translated'");
+	return $query->result();
+    }
+    
+    public function countCustTranslated(){
+    	$cid = $this->session->userdata('user_id');
+	$query = $this->db->query("SELECT COUNT(status) FROM `job` WHERE status = 'Translated' AND customerID = $cid");
 	return $query->result();
     }
     
