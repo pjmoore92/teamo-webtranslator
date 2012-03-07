@@ -51,6 +51,15 @@
   <h1><?php echo ucfirst($role); ?> Dashboard <small><?php if( isset($subtitle) ) echo ucfirst($subtitle) . " Jobs"; ?></small></h1>
   <h2>Hello, <?php echo $client_name; ?>!</h2>
 </div>
+<?php if($this->session->flashdata('info') || $this->session->flashdata('error')): ?>
+          <div class="alert-message block-message warning fade in" data-alert="alert" >
+            <a class="close" href="#">&times;</a>
+            <p>
+            <strong><?php echo $this->session->flashdata('error') ? 'error' : ' info' .$this->session->flashdata('msg');?></strong>
+            </p>
+          </div>
+<?php endif; ?>
+
 <div class="row">
   <div class="span9">
   <?php
