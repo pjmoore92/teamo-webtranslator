@@ -25,7 +25,7 @@
   		<br>
       <?php
         echo anchor(
-            site_url('welcome/contact/interpretation'),
+            site_url('welcome/contact/phone_interpreting'),
             'Get A Quote Here',
             array(
                 'class' => 'btn btn-success btn-large'
