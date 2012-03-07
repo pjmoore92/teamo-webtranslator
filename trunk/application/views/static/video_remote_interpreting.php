@@ -25,7 +25,7 @@
   		<br>
       <?php
         echo anchor(
-            site_url('welcome/contact/video_translation'),
+            site_url('welcome/contact/video_interpreting'),
             'Get A Quote Here',
             array(
                 'class' => 'btn btn-success btn-large'

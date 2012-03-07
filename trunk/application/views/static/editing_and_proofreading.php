@@ -25,7 +25,7 @@
   		<br>
       <?php
         echo anchor(
-            site_url('welcome/contact/other'),
+            site_url('welcome/contact/editing_proofreading'),
             'Get A Quote Here',
             array(
                 'class' => 'btn btn-success btn-large'
