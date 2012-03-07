@@ -95,6 +95,7 @@ translation in your chosen language.</p>
   </div>
   <div class="span-one-third">&nbsp;</div>
 </div>
+<b>&dagger;</b>Accepted file formats: pdf,doc,docx,rtf,txt<br>Maximum File Size: <b>20MB</b>
 </div>
 
 
