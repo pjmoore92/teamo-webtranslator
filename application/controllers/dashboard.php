@@ -188,6 +188,33 @@ class Dashboard extends MY_Controller {
                 }
         }
 
+        public function decline_quote(){
+                if(!$this->input->is_ajax_request()){
+                        die(json_encode(array('error' => 'Somthin\' ain\' right :<')));
+                }
+                else{
+
+                        $this->load->library('form_validation');
+                        $this->form_validation->set_rules('jobid', 'JobID', 'required|trim|numeric');
+
+                        if ($this->form_validation->run() == FALSE){
+                                die (json_encode(array('error' => 'The form values are not valid! :<')));
+                        }
+                        else{
+
+                                $job_data = array(
+                                        'jobID' => $this->form_validation->set_value('jobid'),
+                                        'status' => 'QuoteDeclined'
+                                );
+
+                                $this->load->model('job_model');
+                                $this->job_model->update_job($job_data);
+
+                                die(json_encode(array('response' => 'WOOHOO!')));
+                        }
+                }
+        }
+
         public function stats(){
 
                 if($this->_data['role'] != 'admin')
