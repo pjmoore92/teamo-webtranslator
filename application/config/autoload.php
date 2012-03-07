@@ -64,7 +64,7 @@ $autoload['libraries'] = array('template', 'parser','tank_auth');
 |	$autoload['helper'] = array('url', 'file');
 */
 
-$autoload['helper'] = array('url', 'language', 'form');
+$autoload['helper'] = array('role', 'url', 'language', 'form');
 
 
 /*
