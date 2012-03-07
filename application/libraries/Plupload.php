@@ -38,6 +38,7 @@ class Plupload {
         $chunks = isset($data["chunks"]) ? $data["chunks"] : 0;
         $fileName = isset($data["name"]) ? $data["name"] : '';
         $job = isset($data["job"]) ? $data["job"] : 'nojob';
+        $trans = isset($data["trans"]) ? $data["trans"] : -1;
         $targetDir = $this->target_folder . DIRECTORY_SEPARATOR . $job;
         
         // Clean the fileName for security reasons
@@ -127,7 +128,12 @@ class Plupload {
             log_message('error', 'adding file '.$fileName.' to job '.$job);
             $CI =& get_instance();
             $CI->load->model('translation');
-            if (!$CI->translation->add_orig($job, $_FILES['file']['name'], $filePath))
+            if ($trans != -1) {
+                log_message('error', 'adding translated file'.$filename.' to translation'.$translation);
+                if (!$CI->translation->add_trans($trans, $_FILES['file']['name'], $filePath))
+                    return '{"jsonrpc" : "2.0", "error" : {"code": 109, "message": "Transaction failed."}, "id" : "id"}';
+            }
+            else if (!$CI->translation->add_orig($job, $_FILES['file']['name'], $filePath))
                 return '{"jsonrpc" : "2.0", "error" : {"code": 109, "message": "Transaction failed."}, "id" : "id"}';
             else
                 return '{"jsonrpc" : "2.0", "result" : "'.$fileName.'", "id" : "id"}';

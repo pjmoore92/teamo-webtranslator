@@ -33,7 +33,7 @@
     <script type="text/javascript" src="<?php echo base_url('/js/bootstrap-collapse.js'); ?>"></script>
     <script type="text/javascript" src="<?php echo base_url('/js/jquery/jquery-ui-1.8.17.custom.min.js'); ?>"></script>
     <script type="text/javascript" src="<?php echo base_url('/js/script.js'); ?>"></script>
-    <script type="text/javascript">jobID = -1;</script>
+    <script type="text/javascript">jobID = -1; transID = -1;</script>
 
 
   </head>
