@@ -10,16 +10,8 @@ class Jobs{
 
 	public function add_job($args){
 		
-		$job_data = array(
-			'customerID' => $args['customerID'],
-			'status' => 'QuoteReq',
-			'dateDue' => $args['deadline'],
-			'toLanguage' => $args['toLanguage'],
-			'fromLanguage' => $args['fromLanguage']
-		);
-
 		$this->ci->load->model('job_model');
-		$jobID = $this->ci->job_model->add_job($job_data);
+		$jobID = $this->ci->job_model->add_job($args);
 
 		//upload files;
 		// $this->ci->load->library('upload');
