@@ -3,3 +3,4 @@
   * *Security*: Encrypting the PayPal buttons
   * *Testing*: [http://seleniumhq.org/ Selenium] ?
   * *VC*: [http://www.red-gate.com/products/sql-development/sql-source-control/ SQL source control]
+  * bash script to automatically upload changes from the SVN
