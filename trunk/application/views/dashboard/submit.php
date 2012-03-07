@@ -55,4 +55,3 @@
 
 <script type="text/javascript" src="<?php echo base_url('/js/plupload/plupload.full.js'); ?>"></script>
 <script type="text/javascript" src="<?php echo base_url('js/upload.js'); ?>"></script>
-<script type="text/javascript" src="<?php echo base_url('js/client-dashboard.js'); ?>"></script>
