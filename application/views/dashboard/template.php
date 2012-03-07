@@ -55,9 +55,9 @@
 
 
 <!-- User Notification -->
-<?php if($this->session->flashdata('info') || $this->session->flashdata('error')): ?>
+<?php if($this->session->flashdata('info') == TRUE || $this->session->flashdata('error') == TRUE ): ?>
 <div class="msgUI" style="display:none">
-<h3><strong><?php if ($this->session->flashdata('info')) echo "Success"; else echo "Error"; ?></strong></h3>
+<h3><strong><?php if ($this->session->flashdata('info') == TRUE) echo "Success"; else echo "Error"; ?></strong></h3>
 <h4><?php echo $this->session->flashdata('msg');?></h4>
 </div>
 
