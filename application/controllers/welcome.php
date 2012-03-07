@@ -36,11 +36,12 @@ class Welcome extends CI_Controller {
         public function contact($selected = NULL)
         {
 
-                $data['dropdown_opts'] = array(
+                 $data['dropdown_opts'] = array(
                                 'general_enquiry' => 'General Enquiry',
                                 'quote' => 'Quote',
-                                'video_translation' => 'Video Translation',
-                                'interpretation' => 'Interpretation',
+                                'video_interpreting' => 'Video Intrepreting',
+                                'editing_proofreading' => 'Editing and Proofreading',
+                                'phone_interpreting' => 'Phone Interpreting',
                                 'other' => 'Other'
                         );
                 

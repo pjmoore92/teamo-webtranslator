@@ -61,7 +61,7 @@
                   <?php echo anchor('welcome/view/document_translation', 'Document Translation'); ?>
                   <?php echo anchor('welcome/view/editing_and_proofreading', 'Editing and Proofreading'); ?>
                   <?php echo anchor('welcome/view/over_the_phone_interpreting', 'Over-the-phone Interpreting'); ?>
-                  <?php echo anchor('welcome/view/video_remote_interpreting', 'Video Remote Interpreting'); ?>
+                  <?php echo anchor('welcome/view/video_remote_interpreting', 'Remote Video Interpreting'); ?>
                   
                 </li>
               </ul>
