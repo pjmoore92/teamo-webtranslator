@@ -30,7 +30,7 @@
 					<div class="span3">
 						<dl>
 							<dt>Quote</dt>
-								<dd><?php echo (($subtitle != 'pending') ? $job->quote : "&mdash;") ?></dd>
+								<dd><?php echo (($subtitle != 'pending') ? $job->quote . " " . strtoupper($job->currency) : "&mdash;") ?></dd>
 							<dt>Date Due</dt>
 								<dd><?php echo $job->dateDue; ?></dt>
 						</dl>
@@ -54,7 +54,7 @@
 									<?php echo (($subtitle == 'pending') ? 'Enter' : 'Update'); ?>
 									Quote
 								</span>
-									<input type="text" class="input-small" placeholder="Quote">
+									<input type="text" class="input-small" placeholder="Quote"> <?php echo strtoupper($job->currency); ?>
 									<a
 										class="btn btn-small btn-success <?php echo (($subtitle == 'pending') ? 'send' : 'update'); ?>-quote"
 										data-controls-modal="modal-from-dom"
