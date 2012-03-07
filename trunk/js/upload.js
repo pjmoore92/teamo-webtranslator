@@ -1,7 +1,7 @@
 $(function() {
 
   var uploader = new plupload.Uploader({
-        runtimes : 'flash,html5,html4',
+        runtimes : 'html5,flash,html4',
     browse_button : 'pickfiles',
     container : 'container',
         unique_names : 'true',
