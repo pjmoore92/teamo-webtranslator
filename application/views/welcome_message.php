@@ -14,6 +14,17 @@ translation in your chosen language.</p>
 
 <!--<form>-->
 <!-- Example row of columns -->
+<?php if ($this->tank_auth->is_logged_in()){
+?>
+<div class="container">
+<div class="row">
+<h2>
+It looks like you are logged in, please submit docs via the <a href = http://alasdaircampbell.com/en/dashboard/submit>dashboard</a>!
+</h2>
+<?php
+}
+else{
+?>
 <div class="container">
 <form id="fileform" method="post" enctype="multipart/form-data">
 <div class="row">
@@ -21,7 +32,7 @@ translation in your chosen language.</p>
   <h2><?php echo lang('upload.details') ?></h2>
     <p>
       <! Anti spam bot detection field - DO NOT remove! !>
-      <input type="hidden" id="register-location" name="register-location" value=""/> 
+      <input type="hidden" id="register-location" name="register-location" value=""/>
       <label for="register-name">Your name</label>
       <div class="input">
         <input class="xlarge span3" id="register-name" name="register-name" size="30" type="text" />
@@ -52,7 +63,7 @@ translation in your chosen language.</p>
             <a id="pickfiles" class="btn btn-info" href="#">Select files</a> 
             <a id="uploadfiles" href="#"></a>
 	    <br />
-	    <b>&dagger;</b>Accepted file formats: pdf,doc,docx,rtf,txt<br>Maximum File Size: <b>20MB</b>
+	    <b>&dagger;</b>Accepted file formats: pdf,doc,docx,rtf,txt<br>Maximum File Size: <b>20MB</b>	
         </div>
      </p>
  </div>
@@ -68,10 +79,10 @@ translation in your chosen language.</p>
           </select>
         </div>
 	
-        <label for="register-currency"><b>&dagger;</b>Accepted file formats: pdf,doc,docx,rtf,txt<br>Maximum File Size: <b>20MB</b>Currency	
+        <label for="register-currency">Currency	
         <i class = "icon-question-sign" rel="tooltip" title="This is the currency you would like pay in"></i>
         </label>        
-        <div class="input">
+        <div type = "hidden" class="input">
           <select class="medium" name="register-currency" id="register-currency-select">
             <option value="gbp">GBP &pound;</option>
             <option value="eur">EUR &euro;</option>
@@ -97,15 +108,17 @@ translation in your chosen language.</p>
   </div>
   <div class="span-one-third">&nbsp;</div>
 </div>
-<b>&dagger;</b>Accepted file formats: pdf,doc,docx,rtf,txt<br>Maximum File Size: <b>20MB</b>
 </div>
-
-
-<div id="modal-from-dom-register-message" class="modal hide fade">
+<?php
+}
+?>
+<div id="modal-from-dom-register-message" class="modal hide fade in">
   <div class="modal-header">
   </div>
-  <div class="modal-body"><p></p></div>
-  <div class="modal-footer"></div>
+  <div class="modal-body"><p></p>
+  </div>
+  <div class="modal-footer">
+  </div>
 </form>
 </div>
 
