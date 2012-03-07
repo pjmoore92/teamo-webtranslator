@@ -40,7 +40,7 @@
 						?>
 									You can:
 									<?php echo $job->button; ?>
-									<a class="btn btn-small btn-danger"> Decline</a>
+									<a class="btn btn-small btn-danger decline-quote"> Decline</a>
 									Note: If you have already paid, and the payment is pending, there is no need to click again.
 						<?php
 								endif;
