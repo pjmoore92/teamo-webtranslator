@@ -253,7 +253,8 @@ class Auth extends CI_Controller
 							'customerID' => $customer->id,
 							'fromLanguage' => $customer->job->lang_from,
 							'toLanguage' => $customer->job->lang_to,
-							'deadline' => $customer->job->deadline
+							'deadline' => $customer->job->deadline,
+							'currency' => $customer->job->currency
 						);
 						
 						/* add the job to the DB */
