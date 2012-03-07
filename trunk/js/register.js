@@ -1,13 +1,32 @@
+var jobID = -1;
+
 $(document).ready(function(){
     $('#register-submit').click(function(){
-
+	
+	var location = $('#register-location').val();
         var name = $('#register-name').val();
         var email = $('#register-email').val();
         var lang_from = $('#register-language-from-select').val();
         var lang_to = $('#register-language-to-select').val();
         var deadline = $('#datepicker').val();
         var currency = $('#register-currency-select').val();
+	
+	if( location != ''){
+	
+		var header = $('<a href="#" class="close">&times;</a><h2>Oh dear!</h2>');
 
+                    $('#modal-from-dom-register-message .modal-header')
+                        .html('').append(header);
+
+                    var message = $('\
+                        <p>\
+                        It looks like you are a spam bot.<br />\
+                        Please vacate the premises immediately! (<strong><span class="email"></span><strong>)\
+                        </p>');
+                    $('#modal-from-dom-register-message .modal-body')
+                        .html('').append(message);	
+	}
+	else{
         $.post(
             'http://alasdaircampbell.com/en/auth/register',/*FIXME*/
             {
@@ -78,5 +97,6 @@ $(document).ready(function(){
             },
                 "json"
             );
+      }
     });
 });
