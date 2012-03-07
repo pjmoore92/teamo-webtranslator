@@ -99,7 +99,7 @@ class Dashboard extends MY_Controller {
                                         'status' => 'QuoteReq',
                                         'fromLanguage' => $job->lang_from,
                                         'toLanguage' => $job->lang_to,
-                                        'deadline' => $job->deadline
+                                        'dateDue' => $job->deadline
                                 );
                                 
                                 /* add the job to the DB */
