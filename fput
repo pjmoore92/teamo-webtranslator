@@ -2,16 +2,15 @@
 # you must add the following to your ~/.netrc file
 # machine ftp.claddach-kirkibost.org login tp3 password 6xx2be1qpv
 
-# you must apt-get install wput
-
 # run this command in the ROOT of your svn export
 # or to upload certain files use args
 # eg fput application/controllers/welcome.php
-
-if [ -z $1 ]; then
-        svn status | grep ^M | cut -c9- | xargs -I '{}' wput -Bqu '{}' ftp://ftp.claddach-kirkibost.org/'{}'
-        svn status | grep ^A | cut -c9- | xargs -I '{}' wput -Bqu '{}' ftp://ftp.claddach-kirkibost.org/'{}'
-else
-        wput -Bqu $1 ftp://ftp.claddach-kirkibost.org/$1
-fi
-
+HOST="ftp.claddach-kirkibost.org"
+USER="tp3@claddach-kirkibost.org"
+PASS="6xx2be1qpv"
+LCD="~/code/uni/tp3/site"
+RCD="/"
+lftp -c "set ftp:list-options -a;
+open ftp://$USER:$PASS@$HOST; 
+lcd $LCD;
+cd $RCD;

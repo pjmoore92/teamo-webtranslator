@@ -40,6 +40,7 @@
 <?php else: ?>
 <script type="text/javascript" src="<?php echo base_url(); ?>js/client-dashboard.js"></script>
 <?php endif; ?>
+<script type="text/javascript" src="<?php echo base_url(); ?>js/jquery/jquery.blockUI.js"></script>
 
 <div id="modal-from-dom" class="modal hide fade">
 <div class="modal-header"></div>
@@ -48,34 +49,59 @@
 </div>
 
 <div class="page-header">
-  <h1><?php echo ucfirst($role); ?> Dashboard <small><?php if( isset($subtitle) ) echo ucfirst($subtitle) . " Jobs"; ?></small></h1>
-  <h2>Hello, <?php echo $client_name; ?>!</h2>
+<h1><?php echo ucfirst($role); ?> Dashboard <small><?php if( isset($subtitle) ) echo ucfirst($subtitle) . " Jobs"; ?></small></h1>
+<h2>Hello, <?php echo $client_name; ?>!</h2>
 </div>
 
 
 <!-- User Notification -->
 <?php if($this->session->flashdata('info') || $this->session->flashdata('error')): ?>
-        <div class="msgUI" style="display:none">
-            <h1>Growl Notification</h1>
-            <h2><?php echo $this->session->flashdata('msg');?></h2>
-        </div>
-        <script>$(document).ready(function() { $.growlUI('Growl Notification', 'Have a nice day!'); }); </script>
+<div class="msgUI" style="display:none">
+<h3><strong><?php if ($this->session->flashdata('info')) echo "Success"; else echo "Error"; ?></strong></h3>
+<h4><?php echo $this->session->flashdata('msg');?></h4>
+</div>
+
+<script>$(document).ready(function() {
+    $.blockUI({ 
+        message: $('div.msgUI'), 
+                fadeIn: 500, 
+                fadeOut: 400, 
+                timeout: 1500,
+                showOverlay: false, 
+                centerY: false, 
+                css: { 
+                    width: '350px', 
+                        top: '90px', 
+                        left: '', 
+                        right: '10px', 
+                        border: 'none', 
+                        padding: '5px', 
+                        backgroundColor: '#000', 
+                        '-webkit-border-radius': '10px', 
+                        '-moz-border-radius': '10px', 
+                        opacity: .6, 
+                        color: '#fff' 
+                } 
+    }); 
+});
+
+</script>
 <?php endif; ?>
 
 <!-- Sidebar -->
 <div class="row">
   <div class="span9">
-  <?php
-    if($type == 'stats')
-      $this->load->view('dashboard/stats');
-    elseif($type == 'main')
-      $this->load->view('dashboard/main');
-    elseif($type == 'submit')
-      $this->load->view('dashboard/submit');
-    elseif($type == 'payment_success' || $type == 'payment_failure')
-      $this->load->view($content);
-    else
-      $this->load->view('dashboard/jobs', array('jobs_list' => $jobs_list, 'subtitle' => $subtitle));
-  ?>
+<?php
+if($type == 'stats')
+    $this->load->view('dashboard/stats');
+elseif($type == 'main')
+    $this->load->view('dashboard/main');
+elseif($type == 'submit')
+    $this->load->view('dashboard/submit');
+elseif($type == 'payment_success' || $type == 'payment_failure')
+    $this->load->view($content);
+else
+    $this->load->view('dashboard/jobs', array('jobs_list' => $jobs_list, 'subtitle' => $subtitle));
+?>
   </div>
 </div>
