@@ -36,15 +36,14 @@
 						</dl>
 						<?php
 							if($this->session->userdata('role') == 'client'){
-								if($subtitle == 'quoted')
-									// echo anchor("/payment/pay/{$job->jobID}", 'Pay using PayPal', array('class'=>'btn btn-small btn-success'));				
-									?>You can: <?php
-									echo $job->button;
-									?>				
+								if($subtitle == 'quoted'):
+						?>
+									You can:
+									<?php echo $job->button; ?>
 									<a class="btn btn-small btn-danger"> Decline</a>
 									Note: If you have already paid, and the payment is pending, there is no need to click again.
-									<?php
-									
+						<?php
+								endif;
 							}
 							else{
 						?>
