@@ -76,7 +76,7 @@
 						<th class="header headerSortDown" width="20">#</th>
 						<th class="header">Document Name</th>
 						<th class="blue header">Original File</th>
-						<?php if( $subtitle == 'translated' ): ?>
+						<?php if( $subtitle == 'translated' || admin()): ?>
 						<th class="blue header">Translated File</th>
 						<?php endif; ?>
 					  </tr>
@@ -87,12 +87,12 @@
 							<td>1</td>
 							<td><?php echo $translation->name ?></td>
 							<td><?php echo anchor($translation->origPath, 'Download'); ?></td>
-							<?php if( in_array($subtitle, array('accepted', 'completed')) ): ?>
+							<?php if( in_array($subtitle, array('accepted', 'translated')) ): ?>
 							<td><?php 
-									if($subtitle == 'accepted')
-										echo 'UPLOAD here';
+									if($subtitle == 'accepted' && admin())
+										echo uploadbox($job->jobID, $translation->id);
 									else
-										echo anchor($translation->transPath, 'Download');
+                                        echo anchor($translation->transPath, 'Download');
 								?></td>
 							<?php endif; ?>
 						</tr>
