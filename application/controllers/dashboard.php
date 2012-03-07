@@ -86,24 +86,17 @@ class Dashboard extends MY_Controller {
                         else{
 
                                 $job = new stdClass;
-                                $job->customer_id = $this->_user_id;
-                                $job->deadline = $this->form_validation->set_value('deadline');
-                                $job->lang_to = $this->form_validation->set_value('lang_to');
-                                $job->lang_from = $this->form_validation->set_value('lang_from');
+                                $job->customerID = $this->_user_id;
+                                $job->dateDue = $this->form_validation->set_value('deadline');
+                                $job->fromLanguage = $this->form_validation->set_value('lang_to');
+                                $job->toLanguage = $this->form_validation->set_value('lang_from');
+                                $job->currency = $this->form_validation->set_value('currency');
 
 
                                 $this->load->library('jobs');
 
-                                $details = array(
-                                        'customerID' => $job->customer_id,
-                                        'status' => 'QuoteReq',
-                                        'fromLanguage' => $job->lang_from,
-                                        'toLanguage' => $job->lang_to,
-                                        'dateDue' => $job->deadline
-                                );
-                                
                                 /* add the job to the DB */
-                                $job->id = $this->jobs->add_job($details);
+                                $job->id = $this->jobs->add_job($job);
 
                                 $this->output->set_output((json_encode($job)));
                         }
