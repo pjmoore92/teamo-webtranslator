@@ -100,7 +100,7 @@ class Welcome extends CI_Controller {
                         if($this->email->send())
                         {
                         
-                        $array = 'Your Message has been sent!'.' age: '.$age;
+                        $array = 'Your Message has been sent!';
                         ?>
                         <div class="span3 alert alert-block fade in">
             		<a class="close" data-dismiss="alert" href="#">x</a>
