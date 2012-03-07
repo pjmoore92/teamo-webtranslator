@@ -1,0 +1,4 @@
+div.msgUI { background: url(../images/check48.png) no-repeat 10px 10px }
+div.msgUI h3, div.msgUI h4 {
+        color: white; padding: 5px 5px 5px 75px; text-align: left
+}

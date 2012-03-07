@@ -12,6 +12,7 @@
     <![endif]-->
 
     <!-- Le styles -->
+    <link href="<?php echo base_url('style/blockui.css'); ?>" rel="stylesheet">
     <link href="<?php echo base_url('style/bootstrap.css'); ?>" rel="stylesheet">
 	<style>
 	body {
