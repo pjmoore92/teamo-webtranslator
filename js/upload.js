@@ -12,7 +12,7 @@ $(function() {
     filters : [
       {title : "Documents", extensions : "pdf,doc,docx,rtf,txt"}
             ],
-        multipart_params : { job : -2 }
+        multipart_params : { job : -2, trans : -2 }
   });
 
   $('#uploadfiles').click(function(e) {
@@ -38,7 +38,7 @@ $(function() {
   });
 
   uploader.bind('BeforeUpload', function(up, file) {
-    up.settings.multipart_params = { job : jobID };
+    up.settings.multipart_params = { job : jobID, trans : transID };
   });
 
   uploader.bind('Error', function(up, err) {
