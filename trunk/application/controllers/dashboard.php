@@ -104,8 +104,6 @@ class Dashboard extends MY_Controller {
         }
 
         public function jobs($statusType = "pending"){
-                $this->session->set_flashdata('info', true);
-                $this->session->set_flashdata('msg', 'Hi this is a test message');
                 $this->load->library('paypal2');
                 $this->load->model('job_model');
                 $_dbType = "";
