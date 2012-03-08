@@ -744,7 +744,7 @@ class Auth extends CI_Controller
      *
      */
     public function check_currency($curr){
-    	$allowed = array('gbp', 'eur');
+    	$allowed = array('gbp', 'eur', 'usd');
     	
     	if( !in_array($curr, $allowed)){
     		$this->form_validation->set_message('check_currency', 'That currency is not allowed');
