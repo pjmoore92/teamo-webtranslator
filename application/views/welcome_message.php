@@ -86,6 +86,7 @@ else{
           <select class="medium" name="register-currency" id="register-currency-select">
             <option value="gbp">GBP &pound;</option>
             <option value="eur">EUR &euro;</option>
+            <option value="usd">USD &dollar;</option>
           </select>
         </div>
 
