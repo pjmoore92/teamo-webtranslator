@@ -5,7 +5,7 @@
 % Modified 
 
 \documentclass{l3proj}
-\usepackage{pdfpages}
+\usepackage{wrapfig}
 \usepackage{url}
 \usepackage{appendix}
 \begin{document}
@@ -158,12 +158,64 @@ The transformation from this design plan to a viable user interface that is buil
 \newline
 
 \newpage
-\includepdf{userProcessClient}
+\begin{wrapfigure}{l}{0.42\textwidth}
+\vspace{-20pt}
+  \begin{center}
+    \includegraphics[width=0.4\textwidth]{userProcessClient.png}
+  \end{center}
+  \caption{userProcessClient}
+\vspace{-60pt}
+\end{wrapfigure}
+
+First the client will have the option to switch among 3 displaying languages, namely English, French and Italian. \\
+
+To use the translation service, one must first register by: inputting name and e-mail address, uploading one or more file(s), and setting translation requirements (source/desire language, currency and due date). Note that uploading is required so that only those who are actually going to use the service are allowed to register. Also, e-mail activation is required to finish the registration. If the system finds that the inputted E-mail address has been registered, the client will be asked to login.\\
+
+Either by finishing the registration process or by submitting a new job (uploading file(s) and setting requirements) after login, a new job is submitted.\\
+
+Meanwhile the translator will quote the job and a negotiation on details such as price or due date will possibly happen during this stage (it is optional, however).\\
+
+If the client decides to accept the quote she/he will need to pay immediately through PayPal or could just leave it as quoted. Then the file(s) will (hopefully) be translated by the due date and a download link of the translation(s) will be offered in the client dashboard.\\
+
+If the client decides to decline the offer, the translation service process will be canceled.\\
+
+Other than those above, the client may: \\
+
+	Navigate the links on the main menu: read the “About” page (information about the service and the translator); read the “Testimonials” page; contact the translator in the “Contact” page through the contact form; request other services (Edit and Proofreading, Over-the-phone Interpreting and Video Remote Interpreting) in corresponding “Service” page through the contact form. \\
+
 
 \newpage
 
-\includepdf{userProcessTranslator}
+\begin{wrapfigure}{l}{0.36\textwidth}
+\vspace{-20pt}
+  \begin{center}
+    \includegraphics[width=0.34\textwidth]{userProcessTranslator.png}
+  \end{center}
+  \caption{userProcessTranslator}
+\vspace{-60pt}
+\end{wrapfigure}
+First the translator will be directed to the admin dashboard, in which she/he will (probably):\\
 
+Check all pending jobs, and pick one to quote.\\ 
+
+The quoting process will include: check the job requirements, download the files uploaded in the job, read through the documents, set a quote and confirm it in the dashboard. During this process, the translator may reject a job within any stage.\\
+
+A negotiation between the translator and a client may happen during or after the quoting stage. They may communicate via e-mails.\\
+
+If no rejection or declination happens, the translator will then be waiting for the client to pay. Only after the payment is successful an actual translation process will start.\\
+
+Finally the translator will upload the translated documents to the server through the admin dashboard.\\
+
+Other than those above, the translator may: \\
+
+Check processed jobs with different status in “Quoted”, “Accepted”, and “Declined” sections in the admin dashboard respectively. Also all recent translations can be downloaded through “Translations” and all past translation records can be found in the “History” section.\\
+
+View the statistic data for the website in “Site Statistics”.\\
+
+	Navigate the links on the main menu: read the “About” page (information about the service and the translator); read the “Testimonials” page.\\
+
+
+\newpage
 \rule{430pt}{1pt}
 
 
