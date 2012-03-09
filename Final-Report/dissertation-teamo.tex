@@ -33,20 +33,19 @@ As part of our degree in third year we are tasked with a team project. This rela
 \\
 There are many translation services available on the Internet already, a simple Google search for online translation returns around one hundred and fifty nine million results. We have looked into various different types of translation and interpretation websites during our research and have found pros and cons from each. This vast number of already available websites creates a desire of competing with what's already available, by trying to improve areas where other websites have fallen short. We believe one of the key factors that makes a modern website successful is minimalistic design: it offers simple and effective functionality and is aesthetically pleasing. The combination of these things means users are more likely to use the website after stumbling across it in a search, perhaps, and will ultimately give our client a larger customer base. To clarify, we are not trying to re-invent the wheel with our project. We have used frameworks and other free source components in the development of our website. The system is mainly built around the LAMP structure, i.e., Linux + Apache + MySQL + PHP. We believed that these choices would lower the costs of an eventual upgrade of the system, as opposed to having used some more exotic technologies that come at the cost of losing the robustness and stability that we needed. We aimed to maintain a user friendly feel and look and believe that is something we accomplished well. One of the things that encourages this notion is the fact we have created a simple 3-stage process in which users can register, upload documents, and request languages to translate to.\\ 
 \section{Aims}
-To briefly summarise our task at hand: we are to develop a website for a free-lance translator. It should allow users to upload documents, request one of the available languages to translate to, and submit a request for translation. Our client should then be able to review those submitted documents and send a quote to the user for the job to be translated. If happy, the user should then be able to pay for the job(s) via Paypal, and then receive their translated document after a period of time. Additional required features of the website will be discussed later. Listed below are a few important points on why using a software system to manage documents and to keep track of discussions and tasks has advantages over the current system. It also serves as a rough timeline of the clients activity:
+To briefly summarise our task at hand: we are to develop a website for a free-lance translator. It should allow customers to upload documents, request one of the available languages to translate to, and submit a request for translation. The translator should then be able to review those submitted documents and send a quote to the customer for the job to be translated. If happy, the customer should then be able to pay for the job(s) via Paypal, and then receive their translated document after a specified period of time. Additional required features of the website will be discussed later. Listed below are a few important points on why using a software system to manage documents and to keep track of discussions and tasks has advantages over the current manual system:
 
 \begin{itemize}
 	\item
-	makes {\bf planning} deadlines easier, since computers are better than humans
+	It makes {\bf planning} deadlines easier, since computers are better than humans
 	at taking large amounts of data and comparing, adding, etc.;
 	\item
-	makes {\bf file managing} easier;
+	It makes {\bf file management} easier;
 	\item
-	improves {\bf productivity} - now that the other two are out of the way, the
-	user of the system has more time to think of things that matter more.
+	It improves {\bf productivity} - due to the two above points, the translator now has an organised system and has more time to spend doing the actual translation.
 \end{itemize}
 
-By having all the job details clearly stated and planned, the clients are encouraged to pay more attention and to take it more seriously. It also introduces the notion of accountability on both sides - client and translator. Having a detailed log of all the documents delivered to which clients and when, would make keeping track of the activity easier to do. By using an electronic payment system, the risk of having unpaid jobs is greatly reduced. It also gives the business a more professional look and makes our client less vulnerable to hacking attacks as opposed to other methods of payment.\\
+By having all the job details clearly stated and planned, the customers are encouraged to pay more attention and to take it more seriously. It also introduces the notion of accountability on both sides - customer and translator. Having a detailed log of all the documents delivered to customers makes keeping track of all the activities easier to do. By using an electronic payment system, the risk of having unpaid jobs is eliminated. It also gives the business a more professional look and makes our client less vulnerable to hacking attacks(FIX-EXPLAIN) as opposed to other methods of payment.\\
 
 \section{Motivation}
 An essential part of our requirements gathering process was the first meeting with our client, Joelle Cimatche. Our team had been forewarned by our supervisor that the client was not very "technically minded", so we tried our best to prepare questions that did not assume she had much experience with a computer. It's fair to say that after reading the initial brief for the project we made assumptions as to the needs of the client, addressing the problem from our viewpoint. Realising we should expect to review these assumptions during the process of working on the requirements capture is a valuable lesson for future employment. Working with an individual or organization, firmly on the periphery of Internet technology adds it's own challenges, particularly during the requirements capturing process. At the meeting, the client explained she had a very basic understanding of word processing applications and the Internet, and not much else. This presented us with an additional challenge. We couldn't simply relay technical jargon to the client and expect her to provide useful feedback. Not only that, our team would have to create a very easy-to-use admin end to the website that she could master easily.\\
@@ -93,9 +92,9 @@ The remainder of this report will go into more detail on the background research
 \section{Requirements Gathering}
 
 
-At the beginning of our project we met with our client and our project supervisor to discuss her requirements. Our client currently translates for an agency and is looking to create her own translation business. To this extent she wishes to have a website built to allow her to gain an online presence in translation and to digitize the process of receiving and sending translations. We were armed with a long list of questions and ideas for the meeting and a transcript is included as an appendix.\\
+At the beginning of our project we met with our client and our project supervisor to discuss her requirements. Our client currently translates for an agency, on an ad-hoc basis, and is looking to create her own translation business. To this extent she wishes to have a website built to allow her to gain an online presence in translation and to digitize the process of receiving and sending translations. We were armed with a long list of questions and ideas for the meeting and a transcript is included as an appendix.\\
 \\
-As software developers naturally would when creating anything from scratch, our team looked for similar websites already in existence. We identified common useful features of each, and also those features that were not so useful, and listed some we thought could be useful but simply did not exist in any of the sites we examined. One recurring theme we noticed in a majority of similar translation websites was that the home page was very cluttered and full of text. In other words, the process that the user had to follow to obtain some translation of a document was not extremely clear. Instead, they were met with various registration options, other services and annoying advertisements. \textbf{Figure 2.1} is a prime example of such bad design practices. It is cluttered, unclear and unattractive to potential customers. The most intruiging thing about the website in particular is that is ranked \textit{first} in a Google search for the term "document translation". Rather alarmingly it seems this site has prioritised search engine optimisation over actual usability. We therefore felt encouraged that there was certainly room on the online domain for a document translation service that was simpler, better designed and more intuitive to use.
+As software developers naturally would when creating anything from scratch, our team looked for similar websites already in existence. We identified common useful features of each, and also those features that were not so useful, and listed some we thought could be useful but simply did not exist in any of the sites we examined. One recurring theme we noticed in a majority of similar translation websites was that the home page was very cluttered and full of text. In other words, the process that the user had to follow to obtain some translation of a document was not extremely clear. Instead, they were met with various registration options, other services and annoying advertisements. \textbf{Figure 2.1} is a prime example of such bad design practices. It is cluttered, unclear and unattractive to potential customers. The most intruiging thing about the website in particular is that is ranked \textit{first} in a Google search for the term "document translation". Rather alarmingly it seems this site has prioritised search engine optimisation over actual usability, or they have spent most of their budget paying to be rated first. Whilst being rated first is an advantage to the amount of business received, it should not detract from giving the user a usable and enjoyable experience. We therefore felt encouraged that there was certainly room on the online domain for a document translation service that was simpler, better designed and more intuitive to use.
 
 \begin{figure}
 \begin{center}
@@ -104,7 +103,7 @@ As software developers naturally would when creating anything from scratch, our 
 \end{center}
 \end{figure}
 
-From previous modules in our degree, namely IM2 and IS3, our team had experience of applying Jakob Nielsen's heuristics to obtain a successful user interface. We wanted to develop the idea that our website would display the minimal amount of information to a user by providing the registration, document upload and language selection elements on a single page, in a simple 3 step process. Our interface would then fall in line with the principle that user interfaces should have an aesthetic and minimalist design. \footnote{http://www.useit.com/papers/heuristic/heuristic\_list.html} We believe this is an extremely important aspect of any modern website based on the way that users make a decision of whether or not to use the services offered by the website. For example, imagine a user enters a Google search for "Translation service" and clicks our website in the results page. If the page they are met with looks too complicated or confusing in nature, the user simply clicks "Back" on their web browser, and goes to the next appropriate web page. If however the website looks clean, simple, and easy to use, the user would be more inclined to use it properly. We believe that our 3-step process found on the home page encourages anyone that requires a translation service for the provided languages to at least try for a quote, if not go through with the whole process.\\
+From previous modules in our degree, namely IM2 and IS3, our team had experience of applying Jakob Nielsen's heuristics to obtain a successful user interface. We wanted to develop the idea that our website would display the minimal amount of information to a user by providing the registration, document upload and language selection elements on a single page, in a simple 3 step process. Our interface would then fall in line with the principle that user interfaces should have an aesthetic and minimalist design. \footnote{http://www.useit.com/papers/heuristic/heuristic\_list.html} We believe this is an extremely important aspect of any modern website based on the way that users make a decision of whether or not to use the services offered by the website. For example, imagine a user enters a Google search for ``Translation service'' and clicks our website in the results page. If the page they are met with looks too complicated or confusing in nature, the user simply clicks ``Back'' on their web browser, and goes to the next appropriate web page. If, however, the website looks clean, simple, and easy to use, the user would be more inclined to use it properly. We believe that our 3-step process found on the home page encourages anyone that requires a translation service for the provided languages to at least try for a quote, if not go through with the whole process.\\
 \\
 With this approach in mind, we began to create some wireframes in order to form a solid idea of how this 3-stage process would physically look on our website. \textbf{Figure 2.2} illustrates our early attempt at doing so.
 
@@ -115,40 +114,34 @@ With this approach in mind, we began to create some wireframes in order to form 
 \end{center}
 \end{figure}
 
-The layout is intuitive, flowing and simple to approach. In this early design we have split the page into two sections. In section 1 the user is presented with a short amount of precise text detailing the main function of the site. Subsequently, in Section 2 the user simply enters some details, adds the documents, sets the requirements and clicks a button to request a quote. \\There is no daunting, large form based entry that some other websites encapsulate. It is minimal and it is undemanding of users. Obviously, the majority of the work done by our system would be when the user clicks "Get your quote", and the system would have to register a user (pending email validation), upload their documents to the file store, associate a jobid and requirements, and place the job in our client's pending work queue. The implementation of such functions are discussed later in Section~\ref{chap:impl}.\\
+The layout is intuitive, flowing and simple to approach. In this early design we have split the page into two sections. In section 1 the user is presented with a short amount of precise text detailing the main function of the site. Subsequently, in Section 2 the user simply enters some details, adds the documents, sets the requirements and clicks a button to request a quote. \\There is no daunting, large form based entry that some other websites encapsulate. It is minimal and it is undemanding. Obviously, the majority of the work done by our system would be when the user clicks ``Get your quote'', and the system would have to register a user (pending email validation), upload their documents to the file store, associate a \em{jobid} and requirements, and place the job in our client's pending work queue. The implementation of such functions are discussed later in Section~\ref{chap:impl}.\\
 \\
 
 
 \section{User Process}
-With this 3 stage process as our main design factor of the website, we began to consider the main user groups of the website. We identified the needs of two main user classes: the \textbf{clients} and the \textbf{translator}
+With this 3 stage process as our main design factor of the website, we began to consider the main user groups of the website. We identified the needs of two main user classes: the \textbf{customers} and the \textbf{translator}
 
 The clients are the users of the service, the visitors of the website. However, as far as the system is concerned, not all visitors are clients, because, in order for a visitor to become a client, he must register with the service. So we decided to have a visitor as a category with a registered user a subcategory. A registered user would then possess all the same abilities as a visitor with some specialised capabilities:
 
 \textbf{Visitor}
-\begin{itemize}
-\item{Rationale: The visitor is just visiting. An anonymous visitor of the website.}
+\begin{enumerate}
+\item{Rationale: The visitor is just browsing. An anonymous visitor of the website.}
 \item{Background: "I need to get some documents translated. I came across this website and before I register or send any of my documents, I want to make sure that I'm dealing with a serious service."}
-\item{He is a potential client, therefore the steps which he must make in order to become one must be as clear as possible.}
-\item{His \textbf{goal} is to inform himself about the service. In order for him to be converted, he must be convinced that the service provided is of great quality, so the system's goal is to make itself trustworthy. Also, a clear privacy policy regarding e-mail addresses and the documents should be available, since they might contain sensitive data.}
-\end{itemize}
-\textbf{Client}
+\end{enumerate}
 \begin{itemize}
-\item{Rationale: The client is a registered user of the system.}
-\item{He has the same goals as the visitor, but, now that he is registered, he trusts the service a bit more. He has access to all the documents that he ever submitted for translation and can view each of the \textbf{job statuses} for which his documents are contained within. He can view documents he has paid for, and up to a certain period of time, download both the original copy and the translated copy. He can also view some other useful statistics on his previous jobs.}
+\item{He/She is a potential client, therefore the steps which he must make in order to become one must be as clear as possible.}
+\item{His/Her \textbf{goal} is to inform himself/herself about the service. In order for him/her to transition to being a customer, he/she must be convinced that the service provided is of great quality, so the system's goal is to make itself trustworthy. Also, a clear privacy policy regarding e-mail addresses and the documents should be available, since they might contain sensitive data.}
+\end{itemize}
+\textbf{Customer}
+\begin{itemize}
+\item{Rationale: The customer is a registered user of the system.}
+\item{He/She has the same goals as the visitor, but, now that he/she is registered, he/she trusts the service a bit more. He/She has access to all the documents that he/she ever submitted for translation and can view each of the \textbf{job statuses} for which his/her documents are contained within. He/She can view documents he/she has paid for, and up to a certain period of time, download both the original copy and the translated copy. He/She can also view some other useful statistics on his/her previous jobs.}
 \end{itemize}
 \textbf{Administrator/Translator}
 \begin{itemize}
 \item{Rationale: The translator is the one answering all the translation requests.}
-\item{"As a translator, I must review the documents that my clients send me and quote them. After that, I must also translate them and let them know that I finished work."}
-\item{His goal is to answer to all of the client's requests, i.e. to quote By having all the details clearly stated and planned, the clients are encouraged
-to pay more attention and to take it more seriously. It also makes both sides
-- client and translator - more accountable.
-
-Having a detailed log of all the documents delivered to which clients and when,
-would make keeping track of the activity easier to do.
-
-By using an electronic payment system, the risk of having unpaid jobs is greatly
-reduced. It also gives the business a more professional look.the documents that are received and then translate them and send them back to them.}
+\item{"As a translator, I must review the documents that my clients send me and quote them. If they accept the quote, I must also translate them and let them know when the work is complete."}
+\item{His/Her goal is to answer all of the client's requests.}
 \end{itemize}
 
 \begin{figure}[h]
@@ -157,7 +150,7 @@ reduced. It also gives the business a more professional look.the documents that 
 \caption{The transition of jobs through "statuses"}
 \end{figure}
 
-Building upon the needs of these user classes, we needed to design a flexible system that provided functionality for all of these goals. Our main focal point would be the transition of \textbf{jobs}. In the context of our system, a job is what the website creates when the user uploads one or more documents for translation. Clients (registered users) would submit and pay for them. The translator would review them, download them and upload them. We considered the transition of jobs throughout the life cycle of a translation, as job statuses, and produced a sequence that is illustrated in \textbf{Figure 2.2}. \newline
+Building upon the needs of these user classes, we needed to design a flexible system that provided functionality for all of these goals. Our main focal point would be the transition of \textbf{jobs}. In the context of our system, a job is what the website creates when the user uploads one or more documents for translation. Clients (registered users) would submit and pay for them. The translator would review them, download them and upload them. We considered the transition of jobs throughout the life cycle of a translation, as job statuses, and produced a sequence that is illustrated in \textbf{Figure 2.3}. \newline
 
 The diagram is much self-explanatory, but to summarise: Jobs that are submitted by the clients are placed in a \textbf{pending} work queue. The translator is able to review these documents and send some quote to the client. After a job has been quoted, it is placed in the \textbf{Quotes} queue. Quoted jobs are held in this queue until they are paid for via Paypal. When this has happened, they are moved to \textbf{Translations}, which is a breakdown of completed jobs. After a period of 90 days, jobs from this section are moved to \textbf{History} in order to reduce space on the server.
 
@@ -215,7 +208,7 @@ Conventions used in the wireframes:
 \end{itemize}
 
 By the nature of their content, the pages can be categorised into static and
-dynamic. Static pages displays the same information for all users, regardless of
+dynamic. Static pages display the same information for all users, regardless of
 their status (logged in or just visiting, client or administrator). About,
 Testimonials and Contact are such pages in the system described here. On the
 other hand, dynamic pages draw some data from the database and display it
@@ -307,8 +300,7 @@ regarding the business:
 	\item when did they start doing it?
 	\item where are they?
 	\item how are they accomplishing what they claim to do?
-	\item Providing an image, or even a short video, would make the website seem
-	more trustworthy.
+	\item Optionally an image, or even a short video, to enhance trustworthiness.
 \end{itemize}
 
 \begin{figure}
@@ -322,7 +314,7 @@ regarding the business:
 
 
 \subsubsection{Testimonials}
-Having testimonials from happy clients also adds to the trust of the business.
+Having testimonials from happy customers also adds to the trust of the business.
 The business owner would ask her clients for feedback and permission to publish
 it on the website. Then she can pick which ones would suit her and post only a
 fragment on the website, along with some details of that client (name, company,
@@ -365,7 +357,7 @@ want to give money to.'' [Jakob Nielsen]
 \chapter{Implementation}
 \label{chap:impl}
 
-In this chapter, we describe how we implemented the system from our design plan and the technologies used in doing so.
+In this chapter, we describe how we implemented the system from our design plan and detail the technologies used in doing so.
 
 
 %------------------------------------------------------------------------------
@@ -393,7 +385,7 @@ Further to this we also set up a test server to allow us to view our site live o
 
 \section{Database Model}
 
-Our database structure was designed after we had thoroughly revised our user registration and job transition processes. We envisaged there being four separate entities: one for \textbf{users} to become registered, one to represent \textbf{documents} being submitted, another for the \textbf{jobs} that are comprised of submitted documents and finally one for the documents once they have been \textbf{translated}. The attributes of each of these entities and the relationships between them is illustrated in \textbf{Figure 3.1} 
+Our database structure was designed after we had thoroughly revised our user registration and job transition processes. We envisaged there being four separate entities: one for \textbf{customers} to become registered, one to represent \textbf{documents} being submitted, another for the \textbf{jobs} that are comprised of submitted documents and finally one for the documents once they have been \textbf{translated}. The attributes of each of these entities and the relationships between them is illustrated in \textbf{Figure 3.1} 
 
 \begin{figure}
 \begin{center}
