@@ -11,6 +11,7 @@
   * bash script to automatically upload changes from the SVN
      * Why? we had the code on the repo, but connecting to the DB remotely was not possible (or difficult).
 
+*Joelles Taxes
 
 == Tools ==
    * *balsamiq mockups*
