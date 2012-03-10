@@ -228,14 +228,45 @@ View the statistic data for the website in “Site Statistics”.\\
 After laying out the process of the website we focused on organizing the content
 and on the wireframes.
 
+Based on the user analysis discussed in section \ref{sec:user-process}, we split
+up the website ito two abstract sections: 
+\begin{itemize}
+	\item \textbf{Presentation pages}, which are available to all visitors, and
+	describe the service, means of contact, and other such information.
+\marginpar{``presentation'' - not the best word?}
+	\item \textbf{User dashboard}, the section of the site available only to
+	registered users, and which allows them to see the progress of their 
+	documents.
+\end{itemize}
+
+%TODO: maybe ``presentation'' isn't the best word to use here?
+The \textbf{presentation pages}, as stated above, need to inform the visitor
+about the service. Next to ``document translation'',  the translator also provided
+``video interpreting'', ``proofreading'', and ``over-the-phone interpreting''.
+Since the first one is the main service, we decided that the front page of the
+website would present only an overview of all of these, while focusing on the
+document translation. The other services would have their own separate pages.
+
+The main function of the \textbf{user dashboard} is to give a clear view of
+the statuses of the different jobs a customer has. With the status flowchart
+(Figure \ref{fig:jobstatuses}) in mind, we thought that an appropriate structure
+to try would be one page per status, as shown in Figure 
+\ref{fig:dashboard-statuses}.
+
 \subsection{Information Architecture}
+In our first interview with the translator, we learned about her workflow and
+how she organizes her documents.
+
+Based on the life-cycle of ``jobs'', which we discussed in Section
+\ref{sec:user-process}, we have 
+
 We analyzed the requirements and made a website structure diagram
 (Figure ~\ref{website-structure}).
 
 \begin{figure}[h]
 \centering
 %trim top bottom
-\includegraphics[height=200px, trim=0px 450px 0px 100px]{website-structure}
+\includegraphics[height=200px]{website-structure}
 \caption{Website structure}
 \label{website-structure}
 \end{figure}
