@@ -1,6 +1,23 @@
 #summary Things to talk about (maybe?) in the dissertation
 
   * *Security*: Encrypting the PayPal buttons
+     * What was the problem?
+     * How did the HTML look like unencrypted?
+     * How did we fix it?
+
   * *Testing*: [http://seleniumhq.org/ Selenium] ?
   * *VC*: [http://www.red-gate.com/products/sql-development/sql-source-control/ SQL source control]
+
   * bash script to automatically upload changes from the SVN
+     * Why? we had the code on the repo, but connecting to the DB remotely was not possible (or difficult).
+
+
+== Tools ==
+   * *balsamiq mockups*
+     * Why? - easy to use; exports to XML, so it can be VC'd
+
+== Implementation? ==
+   * *Twitter Bootstrap* - CSS framework
+      * pre-built UI components; UI design patterns;
+      * quick UI prototype set-up;
+      * pre-built JS components that we used to give a close feel of the UX
