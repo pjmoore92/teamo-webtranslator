@@ -22,3 +22,7 @@
       * pre-built UI components; UI design patterns;
       * quick UI prototype set-up;
       * pre-built JS components that we used to give a close feel of the UX
+
+== Transistion from development to production ==
+
+Couple potential pages here.. could talk about the processes involved in moving from a testing environment on Alasdairs server to Joelles own server and the changes we had to make etc. There is plenty of stuff from PSD textbook/lectures to provide ammo for this one.
