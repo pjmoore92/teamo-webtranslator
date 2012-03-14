@@ -6,6 +6,7 @@
 
 \documentclass{l3proj}
 \usepackage{wrapfig}
+\usepackage{subfig}
 
 
 \usepackage{url}
@@ -225,62 +226,101 @@ View the statistic data for the website in “Site Statistics”.\\
 
 % \newpage
 \section{System Design and Wireframes}
+\label{sec:system-design-and-wireframes}
 After laying out the process of the website we focused on organizing the content
 and on the wireframes.
 
+
+\subsection{Information Architecture}
 Based on the user analysis discussed in section \ref{sec:user-process}, we split
-up the website ito two abstract sections: 
-\begin{itemize}
-	\item \textbf{Presentation pages}, which are available to all visitors, and
+up the website into two abstract sections: 
+\begin{itemize} 
+	\item \textbf{Advertisment pages}, which are available to all visitors, and
 	describe the service, means of contact, and other such information.
-\marginpar{``presentation'' - not the best word?}
 	\item \textbf{User dashboard}, the section of the site available only to
 	registered users, and which allows them to see the progress of their 
 	documents.
 \end{itemize}
 
 %TODO: maybe ``presentation'' isn't the best word to use here?
-The \textbf{presentation pages}, as stated above, need to inform the visitor
-about the service. Next to ``document translation'',  the translator also provided
+The \textbf{advertisment pages}, as stated above, need to inform the visitor
+about the service. 
+
+Initially, the translator offered only a ``document translation'' service, but
+in the meantime, she obtained certifications for others as well, i.e.:
 ``video interpreting'', ``proofreading'', and ``over-the-phone interpreting''.
 Since the first one is the main service, we decided that the front page of the
 website would present only an overview of all of these, while focusing on the
-document translation. The other services would have their own separate pages.
+document translation. The other services would have their own separate pages
+describing them.
 
 The main function of the \textbf{user dashboard} is to give a clear view of
-the statuses of the different jobs a customer has. With the status flowchart
-(Figure \ref{fig:jobstatuses}) in mind, we thought that an appropriate structure
-to try would be one page per status, as shown in Figure 
+the statuses of the different jobs a customer has. With the jobs live-cycle
+flowchart (Figure \ref{fig:jobstatuses}) in mind, we thought that the best
+approach is to have one page per status, as shown in Figure 
 \ref{fig:jobstatus-page}.
 
 \begin{figure}[h]
-\centering
-%trim top bottom
-\includegraphics[height=250px, trim = 0px 150px 0px 50px]{figures/jobstatus-page}
-\caption{Connection between a job's status and the section of the dashboard it is
-found in.}
-\label{fig:jobstatus-page}
+	\begin{center}
+		%trim top bottom
+		\includegraphics
+			[scale=0.35, trim = 0px 150px 0px 48px, clip=true]
+			{figures/jobstatus-page}
+	\end{center}
+	\vspace{-40pt}
+	\caption{Connection between a job's status and the section of the
+	dashboard it is found in.}
+	\label{fig:jobstatus-page}
 \end{figure}
 
-\subsection{Information Architecture}
-In our first interview with the translator, we learned about her workflow and
-how she organizes her documents.
+After this evaluation, we have built a website structure diagram
+(Figure ~\ref{fig:website-structure}). Everything is 1-3 clicks away.
+\marginpar{TODO}
 
-Based on the life-cycle of ``jobs'', which we discussed in Section
-\ref{sec:user-process}, we have 
+\begin{figure}
+	\vspace{-50pt} %trims the whitespace on the top of the page
+	\begin{center}
+		\subfloat[Main]{
+			\label{fig:website-structure:main}
+			\includegraphics[
+				width=\linewidth,
+				% scale=0.85,
+				trim=40px 600px 40px 20px,
+				clip=true
+				]
+				{figures/website-structure}
+		}
+		
+		\qquad
+		\subfloat[Services expansion]{
+			\label{fig:website-structure:services}
+			\includegraphics[
+				width=\linewidth,
+				% scale=0.85,
+				trim=30px 700px 30px 0px,
+				clip=true
+				]
+				{figures/website-structure-services}
+		}
+		
+		\qquad
+		\subfloat[Dashboard expansion]{
+			\label{fig:website-structure:dashboard}
+			\includegraphics[
+				width=\linewidth,
+				% scale=0.85,
+				trim=30px 700px 30px 0px,
+				clip=true
+				]
+				{figures/website-structure-dashboard}
+		}
 
-We analyzed the requirements and made a website structure diagram
-(Figure ~\ref{website-structure}).
-
-\begin{figure}[h]
-\centering
-%trim top bottom
-\includegraphics[height=490px]{website-structure}
-\caption{Website structure}
-\label{website-structure}
+	\end{center}
+	\label{fig:website-structure}
+	\caption{Website structure}
 \end{figure}
 
-\newpage
+% \newpage
 \subsection{Wireframes}
 % 
 % paper prototypes, then functional wireframes
