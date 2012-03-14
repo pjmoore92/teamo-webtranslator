@@ -223,6 +223,25 @@ View the statistic data for the website in “Site Statistics”.\\
 \newpage
 \rule{430pt}{1pt}
 
+\section{Database Model}
+
+Our database structure was designed after we had thoroughly revised our user registration and job transition 
+processes, detailed before this section. We envisaged there being four separate entities: one for \textbf{customers} to become 
+registered, one to represent \textbf{documents} being submitted, another for the \textbf{jobs} that are comprised 
+of submitted documents and finally one for the documents once they have been \textbf{translated}. 
+The attributes of each of these entities and the relationships between them is illustrated in \textbf{Figure 2.6} 
+
+\begin{figure}
+\begin{center}
+\includegraphics[width=\linewidth]{bt-dbstruct}
+\caption{ER Diagram for Bethel Translations}
+\end{center}
+\end{figure}
+
+The majority of activity for these tables occurs in the first three entities, as they are all populated in some way during the 3 stage process discussed earlier.
+
+\section{Database Schema}
+TBC
 
 % \newpage
 \section{System Design and Wireframes}
@@ -518,35 +537,17 @@ Further to this we also set up a test server to allow us to view our site live o
 \newline
 
 
-% - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-%%\subsection{TBC - think project specific chapter}
-
-%%TBC
-
-%------------------------------------------------------------------------------
-
-
-\section{Database Model}
-
-Our database structure was designed after we had thoroughly revised our user registration and job transition processes. We envisaged there being four separate entities: one for \textbf{customers} to become registered, one to represent \textbf{documents} being submitted, another for the \textbf{jobs} that are comprised of submitted documents and finally one for the documents once they have been \textbf{translated}. The attributes of each of these entities and the relationships between them is illustrated in \textbf{Figure 3.1} 
-
-\begin{figure}
-\begin{center}
-\includegraphics[width=\linewidth]{bt-dbstruct}
-\caption{ER Diagram for Bethel Translations}
-\end{center}
-\end{figure}
-
-The majority of activity for these tables occurs in the first three entities, as they are all populated in some way during the 3 stage process discussed earlier.
-
-\section{Database Schema}
-TBC
-
 \section{Prototype}
 TBC
 
 \section{User Interface}
 TBC
+
+%==============================================================================
+\chapter{Transition from Development to Production}
+This chapter describes the process followed by the team as we transported the website from one server to another: 
+from a testing server used in development, to a professional web hosting company that the translator would be 
+responsible for managing after the project deadline.
 
 %==============================================================================
 \chapter{Evaluation}
