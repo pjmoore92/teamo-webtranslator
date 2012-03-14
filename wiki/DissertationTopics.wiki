@@ -1,9 +1,19 @@
 == FEEDBACK from Karen to be implemented before handin ==
-Anything in emailed .pdfs (most grammar/spelling fixed) + the following:
+Anything in emailed .pdfs (most grammar/spelling fixed) + the following...
 
-*Before you submit make sure you check for broken refs. There is one on page 14. No problem for now, but it doesn’t look good in the final version
+* Before you submit make sure you check for broken refs. There is one on page 14. No problem for now, but it doesn’t look good in the final version
  
-*P17 – perhaps use advertisement rather than presentation. Or even landing zone
+* P17 – perhaps use advertisement rather than presentation. Or even landing zone
+
+* the er diagram should be in chapter 2 - that reflects the design of the database. By the way, my previous feedback about this diagram has not been incorporated so the diagram is still faulty.
+
+* In the implementation chapter you can list the relations stored in your database.. also put a bunch of screen shots in this chapter
+
+* in chapter 3 you've simply said "we used these tools" but you don't really provide justifications. Good if you can say why you chose the technologies (apart from - they are really cool) for example - why did you use a web app and not a java app. I know it sounds obvious but including it shows you thought about the different options
+
+* in the evaluation chapter remember to include two sections
+1) for the translator's evaluation
+2) for the other people you asked to evaluate it
 
 
 #summary Things to talk about (maybe?) in the dissertation
