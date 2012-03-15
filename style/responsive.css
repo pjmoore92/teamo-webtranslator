@@ -407,7 +407,7 @@
     width: 170px;
   }
   .span3 {
-    width: 270px;
+    width: 220px;
   }
   .span4 {
     width: 370px;
@@ -416,22 +416,22 @@
     width: 470px;
   }
   .span6 {
-    width: 570px;
+    width: 530px;
   }
   .span7 {
-    width: 670px;
+    width: 620px;
   }
   .span8 {
-    width: 770px;
+    width: 600px;
   }
   .span9 {
-    width: 870px;
+    width: 700px;
   }
   .span10 {
-    width: 970px;
+    width: 800px;
   }
   .span11 {
-    width: 1070px;
+    width: 900px;
   }
   .span12, .container {
     width: 1000px;
