@@ -31,7 +31,7 @@ Since the writing of the earliest manuscripts and documents there has been a nee
 \tableofcontents
 %==============================================================================
 \chapter{Introduction}
-\label{intro}
+\label{chap:intro}
 \textit{\small{This article assumes a basic general computing knowledge from the reader. If any words or phrases are not understood, consult the glossary of terms (Section~\ref{sec:gloss}) at the end of the document. All content is owned by the authors of this document or is otherwise referenced in bibliography (Section~\ref{sec:bibl})}}\\
 \section{Background}
 As part of our degree in third year we are tasked with a team project. This relates to computing disciplines new to us and draws on knowledge gained from the preceding two years at University. Teams were randomly assembled at the beginning of semester and our team received the project to create a website providing a document translation service for a real client. It was a pleasing allocation mainly due to the latter part of the task: the fact we would be working with a real client. This bespoke web-based service builds on our client's existing business model, with the specific aims to bring about an expansion in her company, while also facilitating an improvement to her working practice as a whole.\\
@@ -124,6 +124,7 @@ The layout is intuitive, flowing and simple to approach. In this early design we
 
 
 \section{User Process}
+\label{sect:user-process}
 With this 3 stage process as our main design factor of the website, we began to consider the main user groups of the website. We identified the needs of two main user classes: the \textbf{customers} and the \textbf{translator}
 
 The clients are the users of the service, the visitors of the website. However, as far as the system is concerned, not all visitors are clients, because, in order for a visitor to become a client, he must register with the service. So we decided to have a visitor as a category with a registered user a subcategory. A registered user would then possess all the same abilities as a visitor with some specialised capabilities:
@@ -241,19 +242,19 @@ The attributes of each of these entities and the relationships between them is i
 The majority of activity for these tables occurs in the first three entities, as they are all populated 
 in some way during the 3 stage process discussed earlier.
 
-Discussion of the database schema, namely how we implemented the entities in the diagram, are listed as part of the \textbf{Implementation} chapter.
+Discussion of the database schema, namely how we implemented the entities in the diagram, are listed as part of the \ref{chap:impl} chapter.
 % \newpage
 
 
 % \newpage
 \section{System Design and Wireframes}
-\label{sec:system-design-and-wireframes}
+\label{sect:system-design-and-wireframes}
 After laying out the process of the website we focused on organizing the content
 and on the wireframes.
 
 
 \subsection{Information Architecture}
-Based on the user analysis discussed in section \ref{sec:user-process}, we split
+Based on the user analysis discussed in section \ref{sect:user-process}, we split
 up the website into two abstract sections: 
 \begin{itemize} 
 	\item \textbf{Advertisment pages}, which are available to all visitors, and
@@ -515,7 +516,7 @@ want to give money to.'' [Jakob Nielsen]
 % end Testimonials
 
 \subsection{Summary}
-From the images and diagrams in this chapter we have constructed the blueprints for a modern, stylish, and most significantly - user friendly website. Ultimately the website we want to build is one the client can fully use, without any reluctancy. The next chapter, \textbf{Implementation}, describes how transitioned from design to implementation, and the methods used in doing so.
+From the images and diagrams in this chapter we have constructed the blueprints for a modern, stylish, and most significantly - user friendly website. Ultimately the website we want to build is one the client can fully use, without any reluctancy. The next chapter, \ref{chap:impl}, describes how transitioned from design to implementation, and the methods used in doing so.
 
 %==============================================================================
 \chapter{Implementation}
@@ -527,6 +528,7 @@ In this chapter, we describe how we implemented the system from our design plan 
 %------------------------------------------------------------------------------
 
 \section{Development Environment}
+\label{sect:dev-env}
 Programming for the project was split between several web-orientated languages. The central development language was PHP for developing the controllers and models. HTML5, JavaScript and jQuery were used in the views. As mentioned previously we employed the use of two frameworks, namely CodeIgniter and TankAuth. CodeIgniter provided the Model-View-Controller architecture PHP framework for the website, and TankAuth is an open source authentication library for CodeIgniter.\newline
 \newline
 As we learned from the Distributed Information Management course we studied this year, web-development is ever-changing and to stay current developers must adapt to using new technology. As a result of this we have coded the views using the newest HTML5 standard. This will allow future developers to maintain the site with ease as adding new modern features will be simpler.\newline
@@ -540,6 +542,7 @@ Further to this we also set up a test server to allow us to view our site live o
 
 
 \section{Prototype}
+\label{sect:proto}
 TBC
 
 \section{User Interface}
@@ -547,6 +550,7 @@ TBC
 TBC
 
 \section{Database Schema}
+\label{sect:db-sch}
 Having mapped the Entities involved with Bethel Translation -  were able to integrate them in to 
 the database using SQL create table statements. Storing this as a script on the development server we used
 allowed us to simply run it when we moved the website to the production server and have the tables ready to use.
@@ -554,7 +558,7 @@ This enforces a highly recommended software engineering process in that you shou
 possible \footnote{Software Engineering by I Sommerville - pg 425}. Not only that, we have a script that is essentially
 \textit{portable} - so it could in theory be executed on any web server and create the tables requried for
 Bethel Translations to function. The process of moving the website from testing to production is described 
-in more detail in the \textbf{Transition from Development to Production} chapter. \\
+in more detail in the \ref{chap:dev-prod} chapter. \\
 \\
 \small{
 \textbf{Customer}\\
@@ -610,39 +614,44 @@ CREATE TABLE IF NOT EXISTS `translation` (\\
 
 %==============================================================================
 \chapter{Transition from Development to Production}
+\label{chap:dev-prod}
 This chapter describes the process followed by the team as we transported the website from one server to another: 
 from a testing server used in development, to a professional web hosting company that the translator would be 
 responsible for managing after the project deadline.
 
 %==============================================================================
 \chapter{Evaluation}
-
+\label{chap:eval}
 First feedback with Karen incl wireframes etc - Jan 25\\
 Second feedback session with Karen incl more complete website design - Feb 9th
 
 \section{Testing}
-
+\label{sect:testing}
 \section{Translator Evaluation}
-
+\label{trans-eval}
 \section{Client Evaluation}
-
+\label{cli-eval}
 %==============================================================================
 \chapter{Conclusion}
-
+\label{chap:concl}
 Team photo goes here? :)
 A great project! etc..
 
 %==============================================================================
 \section{Aims}
+\label{sect:aims}
 TBC
 
 \section{Achievements}
+\label{sect:achv}
 TBC
 
 \section{Future Work}
+\label{sect:fut-work}
 TBC
 
 \section{Contributions}
+\label{sec:contrib}
 
 Alasdair done this...
 Andrei handled that...
@@ -678,8 +687,9 @@ Wei was responsible for...
 \end{itemize}
 %==============================================================================
 \chapter{Project Plan}
-
+\label{chap:proj-plan}
 \section{Introduction}
+\label{sect:pp-intro}
 \subsection{Identification}
 This is the Project Plan for the Website for a Translator project by Team O.
 
@@ -689,6 +699,7 @@ fulfill the project. It will be used as a reference guide by the team to make su
 that need to be undertaken happen according to schedule and in the correct order to acheive completeness.
 
 \section{Resources, Budgets, Schedules and Organisation}
+\label{sect:rbso}
 \subsection{Work Breakdown Structure} 
 
 \begin{center}
@@ -887,10 +898,11 @@ One person will take overall responsibility, but everyone has an equal part in c
 
 
 \section{Organisation}
+\label{sect:org}
 TBC
 
 \section{Information Management}
-
+\label{sect:info-man}
 Our project data will be held on an SVN server with access rights given only to members of the team. This SVN server is hosted with Google, on Google Code. This means our project is open source. This is a requirement of using the CodeIgniter framework without having to pay for a license. 
 
 We also have a test server, to which we upload a second copy of everything from the SVN. This allows us to see the website as it will look on a browser viewed from a live web server. We have a script that we can run that will make sure everything that is on the server is also on SVN so that we do not loose work.
@@ -910,13 +922,15 @@ The implementation was carried out mainly from home on team members individual p
 During the supervised meetings notes were taken and distributed to the mailing list.
 The backups taken of documents were stored in various locations, such as on the university machines and at home. This provided a reliable backup and redundancy in case of media failure in one location. The backups of the test server were carreid out in a similar fashion in case of server failure.
 
-\section{Assurance Plan}                                                                               
+\section{Assurance Plan}
+\label{sect:a-plan}                                                                               
 From our Professional Software Devlopment course we have learnt that quality assurance is a major part of software development. From mistakes made in the past we now know that at least one member of the group should be appointed as Quality Assurer. This will minimise the risk of submitting poorly written code, documents or presentations and will greatly increase the standard of submitted work. This Quality Assurer should be a member of the team who is independant of the development team. This will allow them to report on quality issues without being influenced by the issues arising from software development. In a small team of five people it will be impossible to have a completly independant member being quality assurer however having people play to their strength means that one or two team members will be less involved with coding than others.
 
 Quality Assurance will be carried out through all stages of the project: making sure that we adhere to set plans and deadlines, checking the standard of code submitted to the repository, and also spelling and grammar checking of the deliverables and dissertations.
 These reviews and inspections, when used along with software testing, will allow us to validate our requirements and verify that our software does what we intended it to. The document reviews will insure that we right a document that is fitting to properly explain and describe all that we have achieved.
 
 \section{Risk Management Plan}
+\label{sect:risk-man}
 \subsection{Risk Identification and Analysis} 
 \subsection{Monitoring}
 \subsection{Avoidance}
@@ -925,12 +939,14 @@ These reviews and inspections, when used along with software testing, will allow
 \subsection{List of Managed Risks}
 
 \section{Configuration Management Plan}
-
+\label{sect:conf-man}
 
 
 %==============================================================================
 \chapter{Evaluation Documents}
+\label{chap:eval-docs}
 \section{Introduction and Consent}
+\label{sect:intro-cons}
 \textbf{Bethel Translations – Evaluation Consent Form}\newline
 This evaluation will take about 20 minutes to complete. 
 You may ask as many questions as you like before the evaluation starts. The tasks you have to carry out will be provided to you on another sheet. You are asked to circle YES if you successfully complete a task or NO if the opposite.\newline
@@ -952,7 +968,8 @@ Signature: \rule{180pt}{1pt} \newline \newline
 Date: \rule{100pt}{1pt} 
 Age:  \rule{100pt}{1pt} \newline
 
- \section{Task Sheet}
+\section{Task Sheet}
+\label{sect:task-sh}
 \textbf{Task Sheet: Client}\newline 
 Please navigate to www.betheltranslations.com then complete the tasks below. \newline \newline
 \textbf{Task 0}: Navigate to all the pages of the site and write down the first thoughts you have about the site. Please write on the other side of this page. \newline \newline
