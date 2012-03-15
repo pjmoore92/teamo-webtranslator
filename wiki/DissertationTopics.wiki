@@ -1,5 +1,8 @@
 #summary Things to talk about (maybe?) in the dissertation
 
+== Quick FIX / TODO ==
+?? LaTeX Error: File `bt-erdiag' not found
+
 == FEEDBACK from Karen to be implemented before handin ==
 Anything in emailed .pdfs (most grammar/spelling fixed) + the following...
 
