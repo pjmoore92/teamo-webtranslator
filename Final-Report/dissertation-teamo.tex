@@ -159,7 +159,7 @@ Building upon the needs of these user classes, we needed to design a flexible sy
 
 The diagram is much self-explanatory, but to summarise: Jobs that are submitted by the clients are placed in a \textbf{pending} work queue. The translator is able to review these documents and send some quote to the client. After a job has been quoted, it is placed in the \textbf{Quotes} queue. Quoted jobs are held in this queue until they are paid for via Paypal. When this has happened, they are moved to \textbf{Translations}, which is a breakdown of completed jobs. After a period of 90 days, jobs from this section are moved to \textbf{History} in order to reduce space on the server.
 
-The transformation from this design plan to a viable user interface that is built upon these job statuses is described later in Section~\ref{chap:ui}.
+The transformation from this design plan to a viable user interface that is built upon these job statuses is described later in Section~\ref{sect:ui}.
 \newline
 
 \newpage
@@ -543,6 +543,7 @@ Further to this we also set up a test server to allow us to view our site live o
 TBC
 
 \section{User Interface}
+\label{sect:ui}
 TBC
 
 \section{Database Schema}
