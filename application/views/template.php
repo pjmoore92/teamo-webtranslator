@@ -14,6 +14,7 @@
     <!-- Le styles -->
     <link href="<?php echo base_url('style/blockui.css'); ?>" rel="stylesheet">
     <link href="<?php echo base_url('style/bootstrap.css'); ?>" rel="stylesheet">
+    <link href="<?php echo base_url('style/responsive.css'); ?>" rel="stylesheet">
 	<style>
 	body {
 		padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
@@ -45,6 +46,11 @@
     <div class="navbar navbar-fixed-top">
       <div class="navbar-inner">
         <div class="container">
+        <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
           <?php echo anchor('welcome', lang('company.name'), 'class="brand"'); ?>
           <div class="nav-collapse">
             <ul class="nav">
@@ -68,6 +74,14 @@
               </ul>
             </li> 
 	    </ul>
+	     <ul class ="nav pull-right">
+	    <li><a href="/en" class = "language-img"><img src="/images/uk.png" height ="20" width ="20"></a></li>
+	    <li><a href="/fr" class = "language-img"><img src="/images/france.png" height ="20" width ="20"></a></li>
+	    <li><a href="/it" class = "language-img"><img src="/images/Italy.png" height ="20" width ="20"></a></li>
+	  </ul>
+	  <!--<ul class = "nav pull-right">
+	  	<li><?php echo anchor('','Select language: ');?> </li>
+	  </ul>-->
 	    <ul class="nav pull-right">
 	    <?php if(!$this->tank_auth->is_logged_in()): ?>
 		
@@ -154,14 +168,6 @@ $captcha = array(
             </li>
           <?php endif; ?>
           </ul>
-          <ul class ="nav pull-right">
-	    <li><a href="/en" class = "language-img"><img src="/images/uk.png" height ="20" width ="20"></a></li>
-	    <li><a href="/fr" class = "language-img"><img src="/images/france.png" height ="20" width ="20"></a></li>
-	    <li><a href="/it" class = "language-img"><img src="/images/Italy.png" height ="20" width ="20"></a></li>
-	  </ul>
-	  <ul class = "nav pull-right">
-	  	<li><?php echo anchor('','Select language: ');?> </li>
-	  </ul>
         </div>
       </div>
     </div>

@@ -102,7 +102,7 @@ else{
 <br />
 <br>
   <div class="span3">&nbsp;</div>
-  <div class="span3 offset1" style="text-align:center">
+  <div class="span3" style="text-align:center">
     <p><a id="register-submit" class="btn btn-success btn-large" href="#" data-controls-modal="modal-from-dom-register-message" 
               data-backdrop="true" data-keyboard="true">Submit + Register! &raquo;</a></p>
   <!--  <input type="submit" class="btn btn-success" value="Get your quote!"> -->
