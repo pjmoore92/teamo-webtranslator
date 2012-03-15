@@ -45,6 +45,7 @@ Anything in emailed .pdfs (most grammar/spelling fixed) + the following...
       * pre-built UI components; UI design patterns;
       * quick UI prototype set-up;
       * pre-built JS components that we used to give a close feel of the UX
+      * uses the [http://lesscss.org/ LESS] preprocessor, which makes changing the CSS far easier by making us of concepts like *variables*, *mixins*, etc., that don't exist in CSS. _In short, CSS violates the living crap out of the DRY principle. You are constantly and unavoidably repeating yourself._ ([http://www.codinghorror.com/blog/2010/04/whats-wrong-with-css.html Jeff Atwood - What's Wrong with CSS])
    
    * *CodeIgniter* - PHP Framework
       * Why? lightweight, easy to configure, well documented
