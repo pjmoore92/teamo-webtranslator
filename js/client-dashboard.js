@@ -1,11 +1,26 @@
 $(document).ready(function(){
   $('#upload-submit').click(function(){
 
-        var lang_from = $('#register-language-from-select').val();
-        var lang_to = $('#register-language-to-select').val();
-        var deadline = $('#datepicker').val();
-        var currency = $('#register-currency-select').val();
+    var lang_from = $('#register-language-from-select').val();
+    var lang_to = $('#register-language-to-select').val();
+    var deadline = $('#datepicker').val();
+    var currency = $('#register-currency-select').val();
 
+    //File submission validation
+     if ($('#filelist').html() == ''){	
+	var header = $('<a href="#" class="close">&times;</a><h2>Oh dear!</h2>');
+
+        $('#modal-from-dom .modal-header').html('').append(header);
+
+        var message = $('\
+          <p>\
+          You didn\'t upload any files!<br />\
+          Please go back and add 1 or more files.\
+          </p>');
+        $('#modal-from-dom .modal-body').html('').append(message);
+     } 
+       
+    else{
     $.post(
       'http://alasdaircampbell.com/en/dashboard/add_job',/*FIXME*/
       {
@@ -14,6 +29,7 @@ $(document).ready(function(){
         'deadline' : deadline,
         'currency' : currency
       },
+      
             function(data){
                 console.log(data);
 
@@ -51,6 +67,7 @@ $(document).ready(function(){
             },
       "json"
     );
+   }
   });
 
   $(".decline-quote").click(function(){
