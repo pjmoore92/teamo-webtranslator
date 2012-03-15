@@ -32,7 +32,7 @@ Since the writing of the earliest manuscripts and documents there has been a nee
 %==============================================================================
 \chapter{Introduction}
 \label{chap:intro}
-\textit{\small{This article assumes a basic general computing knowledge from the reader. If any words or phrases are not understood, consult the glossary of terms (Section~\ref{sec:gloss}) at the end of the document. All content is owned by the authors of this document or is otherwise referenced in bibliography (Section~\ref{sec:bibl})}}\\
+\textit{\small{This article assumes a basic general computing knowledge from the reader. If any words or phrases are not understood, consult the glossary of terms (Section~\ref{chap:gloss}) at the end of the document. All content is owned by the authors of this document or is otherwise referenced in bibliography (Section~\ref{chap:bibl})}}\\
 \section{Background}
 As part of our degree in third year we are tasked with a team project. This relates to computing disciplines new to us and draws on knowledge gained from the preceding two years at University. Teams were randomly assembled at the beginning of semester and our team received the project to create a website providing a document translation service for a real client. It was a pleasing allocation mainly due to the latter part of the task: the fact we would be working with a real client. This bespoke web-based service builds on our client's existing business model, with the specific aims to bring about an expansion in her company, while also facilitating an improvement to her working practice as a whole.\\
 \\
@@ -151,6 +151,7 @@ The clients are the users of the service, the visitors of the website. However, 
 \end{itemize}
 
 \begin{figure}[h]
+\label{fig:jobstatuses}
 \centering
 \includegraphics[width=\linewidth]{jobstatuses}
 \caption{The transition of jobs through "statuses"}
@@ -222,7 +223,7 @@ View the statistic data for the website in “Site Statistics”.\\
 
 
 \newpage
-\rule{430pt}{1pt}
+%%\rule{430pt}{1pt}
 
 \section{Database Model}
 
@@ -277,7 +278,7 @@ document translation. The other services would have their own separate pages
 describing them.
 
 The main function of the \textbf{user dashboard} is to give a clear view of
-the statuses of the different jobs a customer has. With the jobs live-cycle
+the statuses of the different jobs a customer has. With the jobs life-cycle
 flowchart (Figure \ref{fig:jobstatuses}) in mind, we thought that the best
 approach is to have one page per status, as shown in Figure 
 \ref{fig:jobstatus-page}.
@@ -667,7 +668,7 @@ Wei was responsible for...
 \bibliography{example}
 \appendix
 \chapter{Glossary of Terms}
-\label{sec:gloss}
+\label{chap:gloss}
 
 \begin{itemize}
 \small{
@@ -683,6 +684,15 @@ Wei was responsible for...
 \item{\textbf{LAMP} - LAMP, (Linux, Apache, MySQL and PHP), is an acronym for a solution stack of free, open source software}
 \item{\textbf{Web application framework} - A software framework that is designed to support the development of dynamic websites }
 \item{\textbf{Open source} - Computer software for which the code is freely available }
+}
+\end{itemize}
+%==============================================================================
+\chapter{Bibliography}
+\label{chap:bibl}
+Any externally owned items referenced throughout this document have been sourced at the web addresses/textbooks below:
+\begin{itemize}
+\small{
+\item Example ref here.
 }
 \end{itemize}
 %==============================================================================
