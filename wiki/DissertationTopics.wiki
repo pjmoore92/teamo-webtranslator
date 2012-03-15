@@ -50,6 +50,12 @@ Anything in emailed .pdfs (most grammar/spelling fixed) + the following...
       * Why? lightweight, easy to configure, well documented
       * started with the registration system - used TankAuth, an auth library for CI, because it had the required functionalities, open source, using other people's work is good SE practice
 
+   * *Browser compatibility* 
+      * Discuss challenges involved with making the site fully work with
+        Internet Explorer (versions 8 upwards) - since we developed the
+        website mainly with Mozilla Firefox and Google Chrome
+
+        
 == Transistion from development to production ==
 
 Couple potential pages here.. could talk about the processes involved in moving from a testing environment on Alasdairs server to Joelles own server and the changes we had to make etc. There is plenty of stuff from PSD textbook/lectures to provide ammo for this one.
