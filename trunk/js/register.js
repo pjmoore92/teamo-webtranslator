@@ -11,6 +11,7 @@ $(document).ready(function(){
         var deadline = $('#datepicker').val();
         var currency = $('#register-currency-select').val();
 	
+	//Spam bot detection
 	if( location != ''){
 	
 		var header = $('<a href="#" class="close">&times;</a><h2>Oh dear!</h2>');
@@ -25,6 +26,21 @@ $(document).ready(function(){
                         </p>');
                     $('#modal-from-dom-register-message .modal-body')
                         .html('').append(message);	
+	}
+	//File submission validation
+	else if ($('#filelist').html() == ''){	
+		var header = $('<a href="#" class="close">&times;</a><h2>Oh dear!</h2>');
+
+                    $('#modal-from-dom-register-message .modal-header')
+                        .html('').append(header);
+
+                    var message = $('\
+                        <p>\
+                        You didn\'t upload any files!<br />\
+                        Please go back and add 1 or more in order to register.\
+                        </p>');
+                    $('#modal-from-dom-register-message .modal-body')
+                        .html('').append(message);
 	}
 	else{
         $.post(
@@ -58,7 +74,7 @@ $(document).ready(function(){
                         .html(data.email);
 
                     var footer = $('<a href="#" class="">I can\'t find my reference code</a>');
-
+		    
                     jobID = data.job.id;
                     $('#filelist').clone().appendTo('#modal-from-dom-register-message .modal-footer');
                     $('#uploadfiles').trigger('click');
