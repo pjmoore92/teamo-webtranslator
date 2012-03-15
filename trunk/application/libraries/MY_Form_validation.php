@@ -53,7 +53,7 @@ class MY_Form_validation extends CI_Form_validation {
         if(strlen($str) == 10){
             $day = substr($str, 0, 2);
             $month = substr($str, 3, 2);
-            $year = substr($str, 5, 4);
+            $year = substr($str, 6, 4);
 
             if(
                 ($year == FALSE || $year == '') &&
