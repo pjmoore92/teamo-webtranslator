@@ -93,7 +93,7 @@ else{
         <label for="register-deadline">Deadline
         <i class = "icon-question-sign" rel="tooltip" title="The date you want your document(s) translated before"></i>
         </label>
-        <input type="text" id="datepicker" placeholder="yy-mm-dd">
+        <input type="text" id="datepicker" placeholder="dd-mm-yyyy">
     </p>
   </div>
 
