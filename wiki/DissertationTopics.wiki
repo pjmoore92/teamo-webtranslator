@@ -8,9 +8,9 @@ Anything in emailed .pdfs (most grammar/spelling fixed) + the following...
 
   * ~~Before you submit make sure you check for broken refs. There is one on page 14. No problem for now, but it doesn’t look good in the final version~~
  
-  * P17 – perhaps use advertisement rather than presentation. Or even landing zone
+  * ~~P17 – perhaps use advertisement rather than presentation. Or even landing zone~~
 
-  * the er diagram should be in chapter 2 - that reflects the design of the database. By the way, my previous feedback about this diagram has not been incorporated so the diagram is still faulty.
+  * ~~the er diagram should be in chapter 2 - that reflects the design of the database. By the way, my previous feedback about this diagram has not been incorporated so the diagram is still faulty.~~
 
   * In the implementation chapter you can list the relations stored in your database.. also put a bunch of screen shots in this chapter
 
