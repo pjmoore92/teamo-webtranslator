@@ -51,8 +51,7 @@ Anything in emailed .pdfs (most grammar/spelling fixed) + the following...
       * started with the registration system - used TankAuth, an auth library for CI, because it had the required functionalities, open source, using other people's work is good SE practice
 
    * *Browser compatibility* 
-      * Discuss challenges involved with making the site fully work with
-        Internet Explorer (version 7 and upwards) - since we developed      the website mainly with Mozilla Firefox and Google Chrome
+      * Discuss challenges involved with making the site fully work with                    Internet Explorer (version 7 and upwards) - since we developed the website mainly with Mozilla Firefox and Google Chrome
 
         
 == Transistion from development to production ==
