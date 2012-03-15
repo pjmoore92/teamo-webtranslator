@@ -52,8 +52,7 @@ Anything in emailed .pdfs (most grammar/spelling fixed) + the following...
 
    * *Browser compatibility* 
       * Discuss challenges involved with making the site fully work with
-        Internet Explorer (versions 8 upwards) - since we developed the
-        website mainly with Mozilla Firefox and Google Chrome
+        Internet Explorer (version 7 and upwards) - since we developed      the website mainly with Mozilla Firefox and Google Chrome
 
         
 == Transistion from development to production ==
