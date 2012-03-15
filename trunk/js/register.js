@@ -37,7 +37,7 @@ $(document).ready(function(){
                     var message = $('\
                         <p>\
                         You didn\'t upload any files!<br />\
-                        Please go back and add 1 or more in order to register.\
+                        Please go back and add 1 or more files in order to register.\
                         </p>');
                     $('#modal-from-dom-register-message .modal-body')
                         .html('').append(message);
