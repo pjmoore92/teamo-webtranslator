@@ -187,7 +187,7 @@ class Auth extends CI_Controller
 						array(
 							'field' => 'currency',
 							'label' => 'Currency',
-							'rules' => 'required|xss_clean|callback_check_currency'
+							'rules' => 'required|xss_clean|check_currency'
 						)
 					)
 				);
@@ -738,20 +738,6 @@ class Auth extends CI_Controller
     	
     	$this->form_validation->set_message('check_deadline', 'Date not valid');
     	return FALSE;
-    }
-
-    /**
-     *
-     */
-    public function check_currency($curr){
-    	$allowed = array('gbp', 'eur', 'usd');
-    	
-    	if( !in_array($curr, $allowed)){
-    		$this->form_validation->set_message('check_currency', 'That currency is not allowed');
-    		return FALSE;
-    	}
-    	else
-    		return TRUE;
     }
 
 }
