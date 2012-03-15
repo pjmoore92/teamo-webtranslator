@@ -233,7 +233,7 @@ The attributes of each of these entities and the relationships between them is i
 
 \begin{figure}
 \begin{center}
-\includegraphics[width=\linewidth]{bt-erdiag}
+\includegraphics[scale=0.5,angle=90]{bt-erdiag}
 \caption{ER Diagram for Bethel Translations}
 \end{center}
 \end{figure}
@@ -241,69 +241,9 @@ The attributes of each of these entities and the relationships between them is i
 The majority of activity for these tables occurs in the first three entities, as they are all populated 
 in some way during the 3 stage process discussed earlier.
 
+Discussion of the database schema, namely how we implemented the entities in the diagram, are listed as part of the \textbf{Implementation} chapter.
 % \newpage
 
-\section{Database Schema}
-Having mapped the Entities involved with Bethel Translation -  were able to integrate them in to 
-the database using SQL create table statements. Storing this as a script on the development server we used
-allowed us to simply run it when we moved the website to the production server and have the tables ready to use.
-This enforces a highly recommended software engineering process in that you should always reuse code wherever 
-possible \footnote{Software Engineering by I Sommerville - pg 425}. Not only that, we have a script that is essentially
-\textit{portable} - so it could in theory be executed on any web server and create the tables requried for
-Bethel Translations to function. The process of moving the website from testing to production is described 
-in more detail in the \textbf{Transition from Development to Production} chapter. \\
-\\
-\small{
-\textbf{Customer}\\
-\\
-DROP TABLE IF EXISTS `customer`;\\
-CREATE TABLE IF NOT EXISTS `customer` (\\
-  `customerID` int(11) NOT NULL,\\
-  `fullName` text NOT NULL,\\
-  PRIMARY KEY  (`customerID`)\\
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;\\
-\\
-\textbf{Document}
-\\
-DROP TABLE IF EXISTS `document`; \\
-CREATE TABLE IF NOT EXISTS `document` ( \\
-  `documentID` int(11) NOT NULL auto\_increment, \\
-  `filePath` varchar(256) NOT NULL, \\
-  PRIMARY KEY  (`documentID`) \\
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO\_INCREMENT=11 ;\\
-\\
-\textbf{Job}
-\\
-DROP TABLE IF EXISTS `job`;\\
-CREATE TABLE IF NOT EXISTS `job` (\\
-  `jobID` int(11) NOT NULL auto\_increment,\\
-  `customerID` int(11) NOT NULL,\\
-  `status` enum('QuoteReq','QuoteSent','QuoteAccept','QuoteDeclined','Paid','Translated','Complete') collate utf8\_bin NOT NULL,\\
-  `quote` int(10) default NULL,\\
-  `dateRequested` timestamp NOT NULL default CURRENT\_TIMESTAMP,\\
-  `dateDue` date NOT NULL,\\
-  `fromLanguage` enum('english','italian') collate utf8\_bin NOT NULL,\\
-  `toLanguage` enum('french') collate utf8\_bin NOT NULL,\\
-  `currency` enum('gbp','eur') collate utf8\_bin NOT NULL,\\
-  PRIMARY KEY  (`jobID`),\\
-  KEY `customerID` (`customerID`)\\
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8\_bin AUTO_INCREMENT=934247 ;\\
-\\
-\textbf{Translation}
-\\
-DROP TABLE IF EXISTS `translation`;\\
-CREATE TABLE IF NOT EXISTS `translation` (\\
-  `translationID` int(11) NOT NULL auto\_increment,\\
-  `jobID` int(11) NOT NULL,\\
-  `name` varchar(256) collate utf8\_bin NOT NULL,\\
-  `origDoc` int(11) NOT NULL,\\
-  `translatedDoc` int(11) default NULL,\\
-  PRIMARY KEY  (`translationID`),\\
-  KEY `origDoc` (`origDoc`),\\
-  KEY `translatedDoc` (`translatedDoc`)\\
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8\_bin AUTO\_INCREMENT=5 ;\\
-\\
-}
 
 % \newpage
 \section{System Design and Wireframes}
@@ -604,6 +544,68 @@ TBC
 
 \section{User Interface}
 TBC
+
+\section{Database Schema}
+Having mapped the Entities involved with Bethel Translation -  were able to integrate them in to 
+the database using SQL create table statements. Storing this as a script on the development server we used
+allowed us to simply run it when we moved the website to the production server and have the tables ready to use.
+This enforces a highly recommended software engineering process in that you should always reuse code wherever 
+possible \footnote{Software Engineering by I Sommerville - pg 425}. Not only that, we have a script that is essentially
+\textit{portable} - so it could in theory be executed on any web server and create the tables requried for
+Bethel Translations to function. The process of moving the website from testing to production is described 
+in more detail in the \textbf{Transition from Development to Production} chapter. \\
+\\
+\small{
+\textbf{Customer}\\
+\\
+DROP TABLE IF EXISTS `customer`;\\
+CREATE TABLE IF NOT EXISTS `customer` (\\
+  `customerID` int(11) NOT NULL,\\
+  `fullName` text NOT NULL,\\
+  PRIMARY KEY  (`customerID`)\\
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;\\
+\\
+\textbf{Document}
+\\
+DROP TABLE IF EXISTS `document`; \\
+CREATE TABLE IF NOT EXISTS `document` ( \\
+  `documentID` int(11) NOT NULL auto\_increment, \\
+  `filePath` varchar(256) NOT NULL, \\
+  PRIMARY KEY  (`documentID`) \\
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO\_INCREMENT=11 ;\\
+\\
+\textbf{Job}
+\\
+DROP TABLE IF EXISTS `job`;\\
+CREATE TABLE IF NOT EXISTS `job` (\\
+  `jobID` int(11) NOT NULL auto\_increment,\\
+  `customerID` int(11) NOT NULL,\\
+  `status` enum('QuoteReq','QuoteSent','QuoteAccept','QuoteDeclined','Paid','Translated','Complete') collate utf8\_bin NOT NULL,\\
+  `quote` int(10) default NULL,\\
+  `dateRequested` timestamp NOT NULL default CURRENT\_TIMESTAMP,\\
+  `dateDue` date NOT NULL,\\
+  `fromLanguage` enum('english','italian') collate utf8\_bin NOT NULL,\\
+  `toLanguage` enum('french') collate utf8\_bin NOT NULL,\\
+  `currency` enum('gbp','eur') collate utf8\_bin NOT NULL,\\
+  PRIMARY KEY  (`jobID`),\\
+  KEY `customerID` (`customerID`)\\
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8\_bin AUTO\_INCREMENT=934247 ;\\
+\\
+\textbf{Translation}
+\\
+DROP TABLE IF EXISTS `translation`;\\
+CREATE TABLE IF NOT EXISTS `translation` (\\
+  `translationID` int(11) NOT NULL auto\_increment,\\
+  `jobID` int(11) NOT NULL,\\
+  `name` varchar(256) collate utf8\_bin NOT NULL,\\
+  `origDoc` int(11) NOT NULL,\\
+  `translatedDoc` int(11) default NULL,\\
+  PRIMARY KEY  (`translationID`),\\
+  KEY `origDoc` (`origDoc`),\\
+  KEY `translatedDoc` (`translatedDoc`)\\
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8\_bin AUTO\_INCREMENT=5 ;\\
+\\
+}
 
 %==============================================================================
 \chapter{Transition from Development to Production}
