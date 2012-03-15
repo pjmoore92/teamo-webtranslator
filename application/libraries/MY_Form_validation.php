@@ -70,7 +70,7 @@ class MY_Form_validation extends CI_Form_validation {
                     return TRUE;
         }
         
-        $this->form_validation->set_message('valid_date', 'Date not valid');
+        $this->CI->form_validation->set_message('valid_date', 'Date not valid');
         return FALSE;
     }
 }
