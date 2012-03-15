@@ -181,7 +181,7 @@ class Auth extends CI_Controller
 						array(
 							'field' => 'deadline',
 							'label' => 'Deadline',
-							'rules' => 'required|xss_clean|callback_check_deadline'
+							'rules' => 'required|xss_clean|valid_date'
 						),
 						
 						array(
@@ -710,34 +710,6 @@ class Auth extends CI_Controller
     	}
     	else
     		return TRUE;
-    }
-
-	/**
-	 * Check if date is valid (YYY-MM-DD)
-	 */
-    public function check_deadline($date){
-    	if(strlen($date) == 10){
-    		$year = substr($date, 0, 4);
-    		$month = substr($date, 5, 2);
-    		$day = substr($date, 8, 2);
-
-    		if(
-	    		($year == FALSE || $year == '') &&
-	    		($month == FALSE || $month == '') &&
-	    		($day == FALSE || $day == '')
-	    	){
-	    		
-		    	$this->form_validation->set_message('check_deadline', 'Date not valid');
-		    	return FALSE;
-		}
-
-    		if(is_numeric($year) && is_numeric($month) && is_numeric($day))
-    			if(checkdate((int)$month, (int)$day, (int)$year))
-	    			return TRUE;
-    	}
-    	
-    	$this->form_validation->set_message('check_deadline', 'Date not valid');
-    	return FALSE;
     }
 
 }

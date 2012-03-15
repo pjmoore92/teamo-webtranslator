@@ -37,4 +37,40 @@ class MY_Form_validation extends CI_Form_validation {
     	else
     		return TRUE;
     }
+
+
+    
+    /**
+     * Check date
+     *
+     * Check if the argument is a valid date (DD-MM-YYYY).
+     *
+     * @access public
+     * @param string
+     * @return bool
+     */
+    public function valid_date($str){
+        if(strlen($str) == 10){
+            $day = substr($str, 0, 2);
+            $month = substr($str, 3, 2);
+            $year = substr($str, 5, 4);
+
+            if(
+                ($year == FALSE || $year == '') &&
+                ($month == FALSE || $month == '') &&
+                ($day == FALSE || $day == '')
+            ){
+                
+                $this->form_validation->set_message('valid_date', 'Date not valid');
+                return FALSE;
+            }
+
+            if(is_numeric($year) && is_numeric($month) && is_numeric($day))
+                if(checkdate((int)$month, (int)$day, (int)$year))
+                    return TRUE;
+        }
+        
+        $this->form_validation->set_message('valid_date', 'Date not valid');
+        return FALSE;
+    }
 }
