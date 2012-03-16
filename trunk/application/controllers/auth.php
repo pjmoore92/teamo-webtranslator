@@ -169,13 +169,13 @@ class Auth extends CI_Controller
 						array(
 							'field' => 'lang_from',
 							'label' => 'Source language',
-							'rules' => 'required|xss_clean|callback_check_lang_from'
+							'rules' => 'required|xss_clean|from_lang'
 						),
 
 						array(
 							'field' => 'lang_to',
 							'label' => 'Translation language',
-							'rules' => 'required|xss_clean|callback_check_lang_to'
+							'rules' => 'required|xss_clean|to_lang'
 						),
 						
 						array(
@@ -681,37 +681,6 @@ class Auth extends CI_Controller
 			return FALSE;
 		}
     }
-
-
-    /**
-     * Check if 'From' language is allowed
-    */
-    public function check_lang_from($lang){
-    	$allowed = array('english', 'italian');
-    	
-    	if( !in_array($lang, $allowed)){
-    		$this->form_validation->set_message('check_lang_from', 'That language is not allowed');
-    		return FALSE;
-    	}
-    	else
-    		return TRUE;
-    }
-    
-    /**
-     * Check if 'From' language is allowed
-    */
-    public function check_lang_to($lang){
-    	$allowed = array('french');
-    	
-    	// if( !in_array($lang, $allowed)){
-    	if($lang != 'french'){
-    		$this->form_validation->set_message('check_lang_to', 'That language is not allowed');
-    		return FALSE;
-    	}
-    	else
-    		return TRUE;
-    }
-
 }
 
 /* End of file auth.php */
