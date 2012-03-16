@@ -10,6 +10,9 @@ class Jobs{
 
 	public function add_job($args){
 		
+		// change date format from dd-mm-yyyy to yyyy-mm-dd, for SQL
+		$args['dateDue'] = date("Y-m-d", strtotime($args['dateDue']));;
+
 		$this->ci->load->model('job_model');
 		$jobID = $this->ci->job_model->add_job($args);
 
