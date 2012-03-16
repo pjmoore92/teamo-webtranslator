@@ -41,6 +41,9 @@ Anything in emailed .pdfs (most grammar/spelling fixed) + the following...
      * Why? - easy to use; exports to XML, so it can be VC'd
 
 == Implementation? ==
+   * *Version Control*
+      * we chose SVN, because BLAHBLAH
+      * problems with it? YES, INDEEDY - if we had used a *DCVS*, like Hg or git, we wouldn't have had problems in the eventuality of a server error (just like tonight - *FUN*)
    * *Twitter Bootstrap* - CSS framework
       * pre-built UI components; UI design patterns;
       * quick UI prototype set-up;
