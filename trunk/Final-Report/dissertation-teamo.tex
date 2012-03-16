@@ -7,6 +7,7 @@
 \documentclass{l3proj}
 \usepackage{wrapfig}
 \usepackage{subfig}
+\usepackage{float}
 
 
 \usepackage{url}
@@ -896,13 +897,14 @@ TBC
 
 
 
+
 The overall structure of the application is relatively simple, as shown 
-in the following diagram (Figure ~\ref{fig:website-structure}). 
+in the website structure diagram (Figure ~\ref{fig:website-structure}). 
 Everything is 1-3 clicks away.
 
-\begin{figure}[ht]
+\begin{figure}[H]
 \label{fig:website-structure}
-	\vspace{-50pt} %trims the whitespace on the top of the page
+	\vspace{-20pt} %trims the whitespace on the top of the page
 	\begin{center}
 		\subfloat[Main]{
 			%\label{fig:website-structure:main}
@@ -941,10 +943,13 @@ Everything is 1-3 clicks away.
 
 	\end{center}
 	\label{fig:website-structure}
+	\vspace{-50pt}
 	\caption{Website structure}
+	%\vspace{-50pt}
 \end{figure}
 
-There are four primary elements in the site, and each of these may
+
+There are five primary elements in the site, and each of these may
 be accessed directly from the main page (in addition to the ‘Contact
 us’ information).
 
@@ -964,22 +969,24 @@ This major part of the document contains detailed descriptions of
 each screen in [Project name].
 Unless otherwise noted, no graphic treatment has yet occurred.
 
-\textbf{Bethal Translation}
+\textbf{Welcome}
+\begin{figure}[H]
+\centering
+\includegraphics[width=\linewidth]{images/welcomePage}
+\vspace{-30pt}
+\end{figure}
 \begin{itemize}
 \item \textbf{Description}
 
-The Train Timetable screen enables the user to specify a rail line
-and day of week.
-On submitting, the [project name] displays the requested timetable in
-the popup window.
+The welcome page first provides navigation links to every other pages. It shows the welcome information from the translator.
+The main functionality of this page may be allowing clients to log in or regester here. 
+
+We decided to make the registration process as a three step process so that making it as simple as possible for a first time user.
+Also we avoid some spam by this as an actual job submittion is required in order to register.
 
 \item \textbf{Navigation}
 
-[A brief description of how this page or screen is accessed.]
-Navigation to the screen is by clicking the ‘Train’ link in the
-secondary navigation area.
-Note that this page is also reached from multiple external sites.\\
-
+This is the default page a client will see when visiting the website. One can always come back to this page with the text link "Home"
 
 \item \textbf{Elements}
 
