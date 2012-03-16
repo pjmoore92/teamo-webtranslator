@@ -180,8 +180,8 @@ class Dashboard extends MY_Controller {
                                         'status' => 'QuoteSent'
                                 );
 
-                                $this->load->model('job_model');
-                                $this->job_model->update_job($job_data);
+                                $this->load->library('jobs');
+                                $this->jobs->update_job($job_data);
 
                                 die(json_encode(array('response' => 'WOOHOO!')));
                         }

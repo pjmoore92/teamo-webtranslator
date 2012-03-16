@@ -39,6 +39,33 @@ class Jobs{
 		return $jobs_list;
 	}
 
+	public function update_job($args){
+		$this->ci->load->model('job_model');
+		$this->ci->job_model->update_job($job_data);
+
+		//email
+		$job = $this->ci->job_model->get_job($args->jobID);
+		if($job != NULL){
+			$this->ci->load->model('tank_auth/users');
+			$customer = $this->ci->users->get_user_by_id($job->customerID);
+
+			if($customer != NULL){
+				_send_email('job_status_change', $customer->email, array('customer' => $customer, 'job' => $job));
+			}
+		}
+	}
+
+	private function _send_email($type, $email){
+		$this->load->library('email');
+		$this->ci->email->from($this->config->item('webmaster_email', 'tank_auth'), $this->config->item('website_name', 'tank_auth'));
+		$this->ci->email->reply_to($this->config->item('webmaster_email', 'tank_auth'), $this->config->item('website_name', 'tank_auth'));
+		$this->ci->email->to($email);
+		$this->ci->email->subject(sprintf($this->lang->line('auth_subject_'.$type), $this->config->item('website_name', 'tank_auth')));
+		$this->ci->email->message($this->load->view('email/'.$type.'-html', $data, TRUE));
+		$this->ci->email->set_alt_message($this->load->view('email/'.$type.'-txt', $data, TRUE));
+		$this->ci->email->send();
+	}
+
 	private function _upload_files(){
 		return NULL;
 	}
