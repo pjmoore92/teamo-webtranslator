@@ -1,5 +1,14 @@
 <?php if ( ! defined('BASEPATH')) exit('Access denied'); ?>
 
+<?php
+  // load business config file for available currencies and languages
+  $this->load->config('business');
+
+  $currencies = $this->config->item('currencies');
+  $languages_to = $this->config->item('languages_to');
+  $languages_from = $this->config->item('languages_from');
+?>
+
 <!-- TODO horizontal sliding Ads a la BBC? -->
 <div class="hero-unit">
 <h1><?php echo lang('helloWorld') ?></h1>
@@ -50,8 +59,12 @@ else{
         <label for="register-language-from">Source language</label>
         <div class="input">
           <select class="medium" name="register-language-from" id="register-language-from-select">
-            <option value="english">English</option>
-            <option value="italian">Italian</option>
+            <?php
+              if( $languages_from != NULL )
+                foreach( $languages_from as $lang ):
+            ?>
+            <option value="<?php echo $lang; ?>"><?php echo ucfirst($lang); ?></option>
+            <?php endforeach; ?>
           </select>
         </div>
 
@@ -75,7 +88,12 @@ else{
         </label>
         <div class="input">
           <select class="medium" name="register-language-to" id="register-language-to-select">
-            <option value="french">French</option>
+            <?php
+              if( $languages_to != NULL )
+                foreach( $languages_to as $lang ):
+            ?>
+            <option value="<?php echo $lang; ?>"><?php echo ucfirst($lang); ?></option>
+            <?php endforeach; ?>
           </select>
         </div>
 	
@@ -84,9 +102,12 @@ else{
         </label>        
         <div type = "hidden" class="input">
           <select class="medium" name="register-currency" id="register-currency-select">
-            <option value="gbp">GBP &pound;</option>
-            <option value="eur">EUR &euro;</option>
-            <option value="usd">USD &dollar;</option>
+            <?php
+              if( $currencies != NULL )
+                foreach( $currencies as $currency ):
+            ?>
+            <option value="<?php echo $currency; ?>"><?php echo strtoupper($currency); ?></option>
+            <?php endforeach; ?>
           </select>
         </div>
 
