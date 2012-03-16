@@ -7,7 +7,7 @@
 <tr>
 <td width="5%"></td>
 <td align="left" width="95%" style="font: 13px/18px Arial, Helvetica, sans-serif;">
-<h2 style="font: normal 20px/23px Arial, Helvetica, sans-serif; margin: 0; padding: 0 0 18px; color: black;">Your job (#<?php echo $job->jobID; ?>) has changed status!</h2>
+<h2 style="font: normal 20px/23px Arial, Helvetica, sans-serif; margin: 0; padding: 0 0 18px; color: black;">Your job (#<?php echo $job->jobID; ?>) has been updated!</h2>
 <br />
 <big style="font: 16px/18px Arial, Helvetica, sans-serif;"><b><a href="<?php echo site_url('auth/login'); ?>" style="color: #3366cc;">Login</a></b> to see the changes.</big>
 <br />
@@ -18,8 +18,7 @@ Link doesn't work? Copy the following link to your browser address bar:<br />
 
 <br />
 <br />
-Thank you!<br />
-The <?php echo $site_name; ?> Team
+Thank you!
 </td>
 </tr>
 </table>
