@@ -9,8 +9,9 @@
 <td align="left" width="95%" style="font: 13px/18px Arial, Helvetica, sans-serif;">
 <h2 style="font: normal 20px/23px Arial, Helvetica, sans-serif; margin: 0; padding: 0 0 18px; color: black;">Your job (#<?php echo $job->jobID; ?>) has changed status!</h2>
 <br />
-<big style="font: 16px/18px Arial, Helvetica, sans-serif;"><b><a href="<?php echo site_url('auth/activate/'.$user_id.'/'.$new_email_key); ?>" style="color: #3366cc;">Login</a></b> to see the changes.</big>
-
+<big style="font: 16px/18px Arial, Helvetica, sans-serif;"><b><a href="<?php echo site_url('auth/login'); ?>" style="color: #3366cc;">Login</a></b> to see the changes.</big>
+<br />
+<br />
 Link doesn't work? Copy the following link to your browser address bar:<br />
 <nobr><a href="<?php echo site_url('auth/login/'); ?>" style="color: #3366cc;"><?php echo site_url('auth/login/'); ?></a></nobr>
 
