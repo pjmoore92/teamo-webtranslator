@@ -6,18 +6,20 @@
 </div>
 <div class="row">
   <div class="span10">
-    <h2>Video Interp</h2>
+    
     <p>
-        Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod 
-        tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis 
-        nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. 
-        Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel 
-        illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui 
-        blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber 
-        tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat 
-        facer possim assum. Typi non habent claritatem insitam; est usus legentis in iis qui facit 
-        eorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt 
-        saepius. Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum.
+       As a professional interpreter, I also provide video remote interpreting services from English 
+       into French language in the <strong>medical area</strong> only.<br>
+       <br />
+       Video interpreting is the perfect solution when you need to access an on-demand Interpreter and the 
+       Interpreting by Telephone and Face-to-Face Interpreting methods are not appropriate or feasible for 
+       the situation. As soon as the call is connected, I will appear on the computer monitor. 
+       You will be able to see and hear me as if I was in the room with you.<br>
+       <br />
+       As a Video Remote Interpreter I will be a key member in facilitating language communication 
+       on a variety of assignments. <br>
+       <br />
+       For a <strong>free quote</strong> on this service, please click on the button below.
     </p>
     
     <p style="text-align: center"> 
@@ -35,16 +37,6 @@
       </p>
   </div>
 
-  <div class="span4">
-    <h2>Sidebar</h2>
-      Some more lorem ipsum on the side here Typi non habent claritatem insitam; est usus legentis in
-      iis qui facit eorum claritatem. Investigationes demonstraverunt lectores legere me lius quod
-      ii legunt saepius. Claritas est etiam processus dynamicus, qui sequitur mutationem
-     <ul class="media-grid">
-       <li>
-         <a href="#"><img class="thumbnail" src="http://placehold.it/210x150" alt=""></a>
-       </li>
-     </ul>
-  </div>
+ 
 </div>
 </div>

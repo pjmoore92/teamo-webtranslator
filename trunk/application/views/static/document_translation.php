@@ -6,20 +6,36 @@
 </div>
 <div class="row">
   <div class="span10">
-    <h2>DOC TRANS</h2>
-    <p>
-        Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod 
-        tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis 
-        nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. 
-        Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel 
-        illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui 
-        blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber 
-        tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat 
-        facer possim assum. Typi non habent claritatem insitam; est usus legentis in iis qui facit 
-        eorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt 
-        saepius. Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum.
-    </p>
     
+    <p>
+       Bethel translations provides translation services according to a rigorous Quality Assurance process.<br>
+Quality in translation is non-negotiable. As a professional French translator, 
+I understand that its important main goal is one: to convey the original idea behind the words
+of an author to the target language. <br>
+<br />
+Bethel Translations is dedicated and committed to providing you, the customer, with a range of translation 
+services bringing the best in quality and customer satisfaction, at cost effective rates.<br />
+</p>
+</div>
+<br />
+<div class="span10">
+<p>My areas of expertise include: </p>
+
+<ul>
+<li>Computer / General</li>
+<li>General / Conversation / Greetings / Letters</li>
+<li>Navigation devices</li>
+<li>Household appliances</li>
+<li>User interface</li>
+<li>User manuals</li>
+</ul>
+</div>
+<div class="span10">
+<p>To receive a <strong>free full quote</strong> on this service, please click on the button below. Please understand that while I am always happy to take a look at your text, I only take on work
+if I am confident I can provide the quality you are entitled to expect.</p>
+</div>
+    
+        <div class="span10">
   	<p style="text-align: center"> 
   		<br>
   		<br>
@@ -43,19 +59,10 @@
           	);?>
           	<?php endif; ?>
     </p>
-
+    </div>
+    
   </div>
-
-  <div class="span4">
-    <h2>Sidebar</h2>
-      Some more lorem ipsum on the side here Typi non habent claritatem insitam; est usus legentis in
-      iis qui facit eorum claritatem. Investigationes demonstraverunt lectores legere me lius quod
-      ii legunt saepius. Claritas est etiam processus dynamicus, qui sequitur mutationem
-     <ul class="media-grid">
-       <li>
-         <a href="#"><img class="thumbnail" src="http://placehold.it/210x150" alt=""></a>
-       </li>
-     </ul>
-  </div>
+  
+  
 </div>
 </div>
