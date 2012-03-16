@@ -41,28 +41,28 @@ class Jobs{
 
 	public function update_job($args){
 		$this->ci->load->model('job_model');
-		$this->ci->job_model->update_job($job_data);
+		$this->ci->job_model->update_job($args);
 
 		//email
-		$job = $this->ci->job_model->get_job($args->jobID);
+		$job = $this->ci->job_model->get_job($args['jobID']);
 		if($job != NULL){
 			$this->ci->load->model('tank_auth/users');
-			$customer = $this->ci->users->get_user_by_id($job->customerID);
+			$customer = $this->ci->users->get_user_by_id($job->customerID, TRUE);
 
 			if($customer != NULL){
-				_send_email('job_status_change', $customer->email, array('customer' => $customer, 'job' => $job));
+				$this->_send_email('job_status_change', $customer->email, array('customer' => $customer, 'job' => $job));
 			}
 		}
 	}
 
-	private function _send_email($type, $email){
-		$this->load->library('email');
-		$this->ci->email->from($this->config->item('webmaster_email', 'tank_auth'), $this->config->item('website_name', 'tank_auth'));
-		$this->ci->email->reply_to($this->config->item('webmaster_email', 'tank_auth'), $this->config->item('website_name', 'tank_auth'));
+	private function _send_email($type, $email, $data){
+		$this->ci->load->library('email');
+		$this->ci->email->from($this->ci->config->item('webmaster_email', 'tank_auth'), $this->ci->config->item('website_name', 'tank_auth'));
+		$this->ci->email->reply_to($this->ci->config->item('webmaster_email', 'tank_auth'), $this->ci->config->item('website_name', 'tank_auth'));
 		$this->ci->email->to($email);
-		$this->ci->email->subject(sprintf($this->lang->line('auth_subject_'.$type), $this->config->item('website_name', 'tank_auth')));
-		$this->ci->email->message($this->load->view('email/'.$type.'-html', $data, TRUE));
-		$this->ci->email->set_alt_message($this->load->view('email/'.$type.'-txt', $data, TRUE));
+		$this->ci->email->subject(sprintf($this->ci->lang->line('auth_subject_'.$type), $this->ci->config->item('website_name', 'tank_auth')));
+		$this->ci->email->message($this->ci->load->view('email/'.$type.'-html', $data, TRUE));
+		$this->ci->email->set_alt_message($this->ci->load->view('email/'.$type.'-txt', $data, TRUE));
 		$this->ci->email->send();
 	}
 
