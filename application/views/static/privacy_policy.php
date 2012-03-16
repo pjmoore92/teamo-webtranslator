@@ -4,14 +4,14 @@
 </div>
 <div class="row">
   <div class="span10">
-    <h2>PRIVACY POLICY </h2>
+   
     <p>
 We, at <b>Bethel Translations</b> treat the privacy of our visitors with the highest importance. This policy details the measures we take to preserving and safely guarding your privacy when you visit or communicate with our site or personnel.  The Privacy Policy here has been approved and provided by the legal advice resource Legal Centre.
 A detailed explanation of how we may store or otherwise use personal information about you is explained in this Privacy Policy.
 Regular updates of the Privacy Policy are completed, requiring you to check back on this Policy from time to time.
 <br />
 <br />
-[For the purpose of the Data Protection Act of 1998, [ENTER NAME] is our data handler.]
+[For the purpose of the Data Protection Act of 1998, Mrs.Cimatche, is the data handler.]
 <br />
 <br />  
 <b>1. Information Collection</b>
