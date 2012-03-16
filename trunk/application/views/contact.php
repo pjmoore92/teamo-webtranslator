@@ -105,6 +105,7 @@
                         <textarea class="xxlarge" id="message" name="message" rows="10" value=""></textarea>
                         <?php echo form_error('message', '<div class="alert-error">', '</div>'); ?>
                 </div>
+                <p class="help-block">I will aim to answer all queries within 48 hours.</p>
                 
         </p>
         
