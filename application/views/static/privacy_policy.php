@@ -29,7 +29,7 @@ Regular updates of the Privacy Policy are completed, requiring you to check back
 <br />
 Our advertisers and us may have the occasion to collect information in regards to your computer for our services.  The information is gained in a statistical manner for our use or advertisers on our site. 
 Data gathered will not identify you personally. It is strictly aggregate statistical data about our visitors and how they used our resources on the site.  No identifying personal information will be shared at any time via cookies. 
-Close to the above, data gathering can be about general online use through a cookie file.  When used, cookies are automatically placed in your hard drive where information transferred to your computer can be found.  These cookies are designed to help us correct and improve our site’s services or products for you. 
+Close to the above, data gathering can be about general online use through a cookie file.  When used, cookies are automatically placed in your hard drive where information transferred to your computer can be found.  These cookies are designed to help us correct and improve our site's services or products for you. 
 You may elect to decline all cookies via your computer.  Every computer has the ability to decline file downloads like cookies.  Your browser has an option to enable the declining of cookies.  If you do decline cookie downloads you may be limited to certain areas of our site, as there are parts of our site that require cookies. 
 Any of our advertisers may also have a use for cookies.  We are not responsible, nor do we have control of the cookies downloaded from advertisements.  They are downloaded only if you click on the advertisement.   
 <br />
