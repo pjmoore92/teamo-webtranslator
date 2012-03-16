@@ -79,6 +79,16 @@ class Job_model extends CI_Model{
         $this->db->update($this->_table, array('status'=> $status));
     }
 
+    public function get_job($job_id){
+        
+        $this->db->where('jobID', $job_id);
+        $this->db->join($this->_cust_table, "{$this->_cust_table}.customerID = {$this->_table}.customerID");
+
+        $query = $this->db->get($this->_table);
+        if($query->num_rows() == 1) return $query->row();
+        return NULL;
+    }
+
 }
 
 /* End of file job_model.php */
