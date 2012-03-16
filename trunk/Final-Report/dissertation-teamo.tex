@@ -109,7 +109,7 @@ interpretation websites during our research and have found pros and cons from
 each. This vast number of already available websites creates a desire of
 competing with what's already available, by trying to improve areas where other
 websites have fallen short. We believe one of the key factors that makes a
-modern website successful is minimalistic design: it offers simple and effective
+modern website successful is a minimal design: it offers simple and effective
 functionality and is aesthetically pleasing. The combination of these things
 means users are more likely to use the website after stumbling across it in a
 search, perhaps, and will ultimately give our client a larger customer base. To
@@ -129,7 +129,7 @@ free-lance translator. It should allow customers to upload documents, request
 one of the available languages to translate to, and submit a request for
 translation. The translator should then be able to review those submitted
 documents and send a quote to the customer for the job to be translated. If
-happy, the customer should then be able to pay for the job(s) via Paypal, and
+happy, the customer should then be able to pay for the job(s) via PayPal, and
 then receive their translated document after a specified period of time.
 Additional required features of the website will be discussed later. Listed
 below are a few important points on why using a software system to manage
@@ -156,17 +156,17 @@ track of all the activities easier to do. By using an electronic payment system,
 the risk of having unpaid jobs is eliminated. It also gives the business a more
 professional look and makes our client less vulnerable to hacking attacks as
 opposed to other methods of payment. As part of the specification requirements,
-our website is required to support Paypal for payment of translated document. To
+our website is required to support PayPal for payment of translated document. To
 provide a short brief of this service: "PayPal allows any business or consumer
 with an email address to securely, conveniently and cost-effectively send and
-receive payments online " - \textit{\small{www.paypal.com/about}}. This setup
+receive payments online " - \textit{\small{www.PayPal.com/about}}. This setup
 provides the translator with a feature that will not only provide her with
-security but also will encourage her customers to use the site, since Paypal has
+security but also will encourage her customers to use the site, since PayPal has
 a massive online presence with excellent reputation. It is seen as the medium of
 paying for goods online, and this helps contribute to a modern, reliable website
 that we can develop. The translator, therefore, does not need to be concerned
 with things like credit card verification, since this is all functionality
-covered by Paypal. This maintains a level of separation between herself and her
+covered by PayPal. This maintains a level of separation between herself and her
 customers, so that she absolutely knows if her work has been paid for before she
 commits to it. \\
 
@@ -179,13 +179,13 @@ computer. It's fair to say that after reading the initial brief for the project
 we made assumptions as to the needs of the translator, addressing the problem
 from our viewpoint. Realising we should expect to review these assumptions
 during the process of working on the requirements capture is a valuable lesson
-for future employment. Working with an individual or organization, firmly on the
+for future employment. Working with an individual or organisation, firmly on the
 periphery of Internet technology adds it's own challenges, particularly during
 the requirements capturing process. At the meeting, the translator explained she
 had a very basic understanding of word processing applications and the Internet,
 and not much else. This presented us with an additional challenge. We couldn't
 simply relay technical jargon to the translator and expect her to provide useful
-feedback. Not only that, our team would have to create a very easy-to-use admin
+feedback. Not only that, our team would have to create a very easy-to-use administrative
 end to the website that she could master easily.\\
 As we advanced the development of the website, we would have to be very clear
 and straightforward when updating her on our progress. We accomplished this
@@ -275,7 +275,7 @@ but now it's even more so. It's a rapidly evolving area where new technologies
 and new techniques are developed very quickly. These have been made easy to use
 by anyone, regardless of: computer knowledge, nature of their device (mobile or
 desktop) or their operating system. All they need is an up-to-date web browser -
-arguably an easy requirement to fulfill, since most of them update
+arguably an easy requirement to fulfil, since most of them update
 automatically. So, there is a large audience that our project can reach, and
 that is considerably motivating for everyone in our team who worked on this
 project.\\
@@ -288,7 +288,7 @@ then returned in the chosen translated language using the same web interface. To
 understand the process that we have devised it would be advantageous to have a
 simple understanding of how a database works. As mentioned earlier, we have
 adopted several frameworks in our project development. These include Bootstrap
-(CSS, HTML), CodeIgniter and phpMyAdmin (all of which are discussed in
+(CSS, HTML), CodeIgniter and PHPMyAdmin (all of which are discussed in
 Section~\ref{chap:design} later). These frameworks provide advanced
 functionality which will, in most instances, not be necessary for our project
 and will not be utilised. Conversely, it allows us to demonstrate that we are
@@ -315,7 +315,7 @@ At the beginning of our project we met with the translator and our project
 supervisor to discuss her requirements. The translator currently translates for
 an agency, on an ad-hoc basis, and is looking to create her own translation
 business. To this extent she wishes to have a website built to allow her to gain
-an online presence in translation and to digitize the process of receiving and
+an online presence in translation and to digitise the process of receiving and
 sending translations. We were armed with a long list of questions and ideas for
 the meeting and a transcript is included as an appendix.\\
 \\
@@ -367,7 +367,7 @@ the home page encourages anyone that requires a translation service for the
 provided languages to at least try for a quote, if not go through with the whole
 process.\\
 \\
-With this approach in mind, we began to create some wireframes in order to form
+With this approach in mind, we began to create some wire-frames in order to form
 a solid idea of how this 3-stage process would appear on our website.
 \textbf{Figure 2.2} illustrates our early attempt at doing so.
 
@@ -383,7 +383,7 @@ have divided the page into two sections. In section 1 the user is presented with
 a short amount of precise text detailing the main function of the site.
 Subsequently, in Section 2 the user simply enters some details, adds the
 documents, sets the requirements and clicks a button to request a quote. \\There
-is no overwhelming web-form that some other websites utilize. It is minimal and
+is no overwhelming web-form that some other websites utilise. It is minimal and
 it is undemanding. The majority of the registration process happens
 automatically when the user clicks ``Get your quote''. and the system would have
 to register a user (pending email validation), upload their documents to the
@@ -402,7 +402,7 @@ main user classes: the \textbf{customers} and the \textbf{translator}
 The clients are the users of the service, the visitors of the website. However,
 as far as the system is concerned, not all visitors are clients, because, in
 order for a visitor to become a client, he must register with the service. So we
-decided to have a visitor as a category with a registered user a subcategory. A
+decided to have a visitor as a category with a registered user a sub-category. A
 registered user would then possess all the same abilities as a visitor with some
 specialised capabilities:
 
@@ -462,7 +462,7 @@ The diagram is much self-explanatory, but to summarise: Jobs that are submitted
 by the clients are placed in a \textbf{pending} work queue. The translator is
 able to review these documents and send some quote to the client. After a job
 has been quoted, it is placed in the \textbf{Quotes} queue. Quoted jobs are held
-in this queue until they are paid for via Paypal. When this has happened, they
+in this queue until they are paid for via PayPal. When this has happened, they
 are moved to \textbf{Translations}, which is a breakdown of completed jobs.
 After a period of 90 days, jobs from this section are moved to \textbf{History}
 in order to reduce space on the server.
@@ -506,7 +506,7 @@ through PayPal or could just leave it as quoted. Then the file(s) will
 translation(s) will be offered in the client dashboard.\\
 
 If the client decides to decline the offer, the translation service process will
-be canceled.\\
+be cancelled.\\
 
 Other than those above, the client may: \\
 
@@ -595,7 +595,7 @@ diagram, are listed as part of the \ref{chap:impl} chapter.
 % \newpage
 \section{System Design and Wireframes}
 \label{sect:system-design-and-wireframes}
-After laying out the process of the website we focused on organizing the content
+After laying out the process of the website we focused on organising the content
 and on the wireframes.
 
 
@@ -603,7 +603,7 @@ and on the wireframes.
 Based on the user analysis discussed in section \ref{sect:user-process}, we split
 up the website into two abstract sections: 
 \begin{itemize} 
-	\item \textbf{Advertisment pages}, which are available to all visitors, and
+	\item \textbf{Advertisement pages}, which are available to all visitors, and
 	describe the service, means of contact, and other such information.
 	\item \textbf{User dashboard}, the section of the site available only to
 	registered users, and which allows them to see the progress of their 
@@ -611,7 +611,7 @@ up the website into two abstract sections:
 \end{itemize}
 
 %TODO: maybe ``presentation'' isn't the best word to use here?
-The \textbf{advertisment pages}, as stated above, need to inform the visitor
+The \textbf{advertisement pages}, as stated above, need to inform the visitor
 about the service. 
 
 Initially, the translator offered only a ``document translation'' service, but
@@ -695,12 +695,12 @@ After this evaluation, we have built a website structure diagram
 % http://webstyleguide.com/wsg3/2-universal-usability/5-in-design-process.html
 % 
 Wireframes are blueprints of the website, representing every important page and 
-their structure and behavior.
+their structure and behaviour.
 They focus more on what elements would a page contain, and their place on
 the page, rather than a refined design. Therefore, these sketches take form of
 rough drawings of the final design, usually keeping things like images or
 colours out, because they can distract the reader from his main purpose, which
-is analyzing the layout of that particular page, rather than the visual design.
+is analysing the layout of that particular page, rather than the visual design.
 % some more on why these are useful, etc.
 
 
@@ -780,14 +780,14 @@ Footer:
 	PayPal certification)
 	\item contact information (actual information or just a link to the 
 	`Contact’ page)
-	\item link to the business’ facebook page
+	\item link to the business’ Facebook page
 \end{itemize}
 % end of Template
 
 
 \subsubsection{Main page}
 From our earlier decision of creating a simple three step process and
-implementing this on our homepage, we took our wireframe and refined it to
+implementing this on our homepage, we took our wire-frame and refined it to
 come up with the  \textbf{Main Template} (Figure ~\ref{wireframes-main-layout}).
 
 \begin{figure}[ht]
@@ -870,7 +870,7 @@ want to give money to.'' [Jakob Nielsen]
 From the images and diagrams in this chapter we have constructed the blueprints
 for a modern, stylish, and most significantly - user friendly website.
 Ultimately the website we want to build is one the client can fully use, without
-any reluctancy. The next chapter, \ref{chap:impl}, describes how transitioned
+any reluctance. The next chapter, \ref{chap:impl}, describes how transitioned
 from design to implementation, and the methods used in doing so.
 
 %==============================================================================
@@ -880,11 +880,20 @@ from design to implementation, and the methods used in doing so.
 In this chapter, we describe how we implemented the system from our design plan
 and detail the technologies used in doing so.
 
-
 %------------------------------------------------------------------------------
 
 \section{Development Environment}
 \label{sect:dev-env}
+Bethel Translations, like all modern websites, makes use of multiple
+technologies in order to provide both the rich user interface and the handling
+of the various background operations which are integral to a system such as this.
+These two distinct entities form part of the client/server
+model\footnote{http://en.wikipedia.org/wiki/Client-server\_model}.\\
+\\
+Utilizing this model for our design, the client domain includes all of the programming code which runs in the
+user's web browser, whilst the server domain encompasses the logical operations
+performed on the web server.\\
+\\
 Programming for the project was split between several web-orientated languages.
 The central development language was PHP for developing the controllers and
 models. HTML5, JavaScript and jQuery were used in the views. As mentioned
@@ -902,47 +911,43 @@ with ease as adding new modern features will be simpler.\newline
 Another thing we learnt from our Distributed Information Management course is
 that it is desirable to separate out our concerns when developing in a web
 environment. This led us to using the open source Twitter Bootstrap
-\url{http://twitter.github.com/bootstrap/}. Twitter Bootstrap is “simple and
-flexible HTML, CSS, and Javascript for popular user interface components and
-interactions”. During implementation Twitter released an upgraded version,
+\footnote{http://twitter.github.com/bootstrap/}. Bootstrap is ``simple and
+flexible HTML, CSS, and JavaScript for popular user interface components and
+interactions''. During the implementation stage, Twitter released an upgraded version,
 version 2.0, of Bootstrap and we upgraded to this version when it was released
 in early 2012.\newline
 \newline
-For implementation purposes we set up an online SVN using Google Code. This
-version control system allowed us to keep track of changes, report and resolve
-issues, and maintain a wiki of useful pieces of information that we needed to
-keep and track.\newline
+For implementation purposes we set up an online
+SVN using Google Code. This version control system allowed us to keep track of
+changes, report and resolve issues, and maintain a wiki of useful pieces of
+information that we needed to keep and track.\newline
+\newline Further to this we also set up a test server to allow us to view our site live on the web as we
+developed it and to test any changes as we made them.\newline
 \newline
-Further to this we also set up a test server to allow us to view our site live
-on the web as we developed it and to test any changes as we made them.\newline
-\newline
 
+\section{Prototype} \label{sect:proto}
+One of the many benefits of the client/server model is the opportunity to
+completely separate development of the user interface from the background
+processes. 
+We were able to quickly implement a mockup of the interfaces, while not worrying
+about the actual processes which would happen behind the scenes. A static
+representation of the design for the site was developed in order to allow our
+client to see early on exactly how the site would look and operate once it was
+fully operational.
+\section{User Interface} \label{sect:ui} TBC
 
-\section{Prototype}
-\label{sect:proto}
-TBC
-
-\section{User Interface}
-\label{sect:ui}
-TBC
-
-\section{Database Schema}
-\label{sect:db-sch}
-Having mapped the Entities involved with Bethel Translation -  were able to
-integrate them in to 
-the database using SQL create table statements. Storing this as a script on the
-development server we used
-allowed us to simply run it when we moved the website to the production server
-and have the tables ready to use.
-This enforces a highly recommended software engineering process in that you
-should always reuse code wherever 
-possible \footnote{Software Engineering by I Sommerville - pg 425}. Not only
-that, we have a script that is essentially
+\section{Database Schema} \label{sect:db-sch} Having mapped the Entities
+involved with Bethel Translation -  were able to integrate them in to the
+database using SQL create table statements. Storing this as a script on the
+development server we used allowed us to simply run it when we moved the
+website to the production server and have the tables ready to use.  This
+enforces a highly recommended software engineering process in that you should
+always reuse code wherever possible \footnote{Software Engineering by I
+Sommerville - pg 425}. Not only that, we have a script that is essentially
 \textit{portable} - so it could in theory be executed on any web server and
-create the tables required for
-Bethel Translations to function. The process of moving the website from testing
-to production is described 
-in more detail in the \ref{chap:depl} chapter. \\
+create the tables required for Bethel Translations to function. The process of
+moving the website from testing to production is described in more detail in
+the \ref{chap:depl} chapter. \\
 \\
 \small{
 \textbf{Customer}\\
@@ -1008,7 +1013,7 @@ responsible for managing after the project deadline.
 %==============================================================================
 \chapter{Evaluation}
 \label{chap:eval}
-First feedback with Karen incl wireframes etc - Jan 25\\
+First feedback with Karen including wireframes etc - Jan 25\\
 Second feedback session with Karen incl more complete website design - Feb 9th
 
 \section{Testing}
@@ -1058,14 +1063,14 @@ Wei was responsible for...
 \begin{itemize}
 \small{
 \item{\textbf{Free-lance} - Working for different companies at different times rather than being permanently employed by one company.} 
-\item{\textbf{Customer} - A person or organization using the services of a professional person or company.}
-\item{\textbf{Translator} - A person or organization who offers the service of converting a document from one language to another.}
-\item{\textbf{Users} - A set of people who use or operate something, esp. a computer or other machine.}
+\item{\textbf{Customer} - A person or organisation using the services of a professional person or company.}
+\item{\textbf{Translator} - A person or organisation who offers the service of converting a document from one language to another.}
+\item{\textbf{Users} - A set of people who use or operate something, asp. a computer or other machine.}
 \item{\textbf{Requirement gathering} - Determining the needs of a client through any form of communication.}
 \item{\textbf{Software project} - Using the surrounding context, a software project aims to create application(s) using programming language(s) by adhering
 to project management principles.}
 \item{\textbf{Programming language} - A programming language is an artificial
-language designed to express computations that can be performed by a computer.} \item{\textbf{Web scripting language (\textit{PHP, Javascript})} - A scripting language is a programming language that allows control of one or more
+language designed to express computations that can be performed by a computer.} \item{\textbf{Web scripting language (\textit{PHP, JavaScript})} - A scripting language is a programming language that allows control of one or more
 applications.}
 \item{\textbf{Website development} - The process of constructing and maintaining a website.}
 \item{\textbf{LAMP} - LAMP, (Linux, Apache, MySQL and PHP), is an acronym for a solution stack of free, open source software}
@@ -1094,7 +1099,7 @@ This is the Project Plan for the Website for a Translator project by Team O.
 \subsection{Purpose and Description of Document}
 This project plan sets out all the details of the project and defines all the
 necessary work that must be undertaken to 
-fulfill the project. It will be used as a reference guide by the team to make
+fulfil the project. It will be used as a reference guide by the team to make
 sure the project stays on time and that all the tasks 
 that need to be undertaken happen according to schedule and in the correct order to achieve completeness.
 
@@ -1143,7 +1148,7 @@ that need to be undertaken happen according to schedule and in the correct order
     \begin{tabular}{ | l | p{12cm} |}
     \hline	
     Task 4 & Research \\ \hline
-    Description & As a pre-requisite to requirements gathering we must research the current trends in web-development and research what works and doesn't work in a user friendly website. \\ \hline   
+    Description & As a prerequisite-requisite to requirements gathering we must research the current trends in web-development and research what works and doesn't work in a user friendly website. \\ \hline   
     Outcomes & The team will have an understanding of what current design practices are in use and what we must achieve to be competitive in the market. \\ \hline
     Deliverables & None \\ \hline
     Risks & N-A \\ 
@@ -1170,7 +1175,7 @@ that need to be undertaken happen according to schedule and in the correct order
     \begin{tabular}{ | l | p{12cm} |}
     \hline	
     Task 6 & Specification and Requirements Document \\ \hline
-    Description & Following analysis of the interview writeup create a requirements document from the specification as set out by the translator. \\ \hline   
+    Description & Following analysis of the interview write-up create a requirements document from the specification as set out by the translator. \\ \hline   
     Outcomes & Formalised requirements document \\ \hline
     Deliverables & Requirements Document \\ \hline
     Risks & Client may change their mind or team may have received inaccurate requirements. \\ 
@@ -1321,7 +1326,7 @@ Closed group page accessible by each member of the team, with ability to share
 multimedia content and instant messaging.  \item \textbf{SMS/Phone} - Numbers
 were exchanged which proves a useful form of communication when a team member
 can't attend a meeting due to illness, for example.  \item \textbf{Google Shared
-Calendar} - Every member can view and amend a group calendar set up on a gmail
+Calendar} - Every member can view and amend a group calendar set up on a GMail
 account.  \item \textbf{Face to Face Meetings} - Every member will attend a
 weekly (or more frequent if needed) meeting to discuss progress.  \end{itemize}
 
@@ -1345,26 +1350,26 @@ These reviews and inspections, when used along with software testing, will allow
 
 \section{Risk Management Plan}
 \label{sect:risk-man}
-Risk Management is an important part of any project. Risk Management Plans invlove anticpating risks that might affect the project and creating contingency plans that will allow for the risk to be avoided or at least the effect of the risk to be minimised.
+Risk Management is an important part of any project. Risk Management Plans involve anticipating risks that might affect the project and creating contingency plans that will allow for the risk to be avoided or at least the effect of the risk to be minimised.
 \subsection{Risk Identification and Analysis} 
-The idenitification of risks was initially handled at the Group Organisation meeting, and then later expanded upon in the Planning meeting. Everyone commented on potential risks personal to them and then we brainstormed as a team to come up with risks that may externally affect the project.
+The identification of risks was initially handled at the Group Organisation meeting, and then later expanded upon in the Planning meeting. Everyone commented on potential risks personal to them and then we brainstormed as a team to come up with risks that may externally affect the project.
 
 For all risks discovered we must:
 \begin{itemize}
 \item{\textbf{Discover the root cause of the risk.}}
-\item{\textbf{Catagorise the risk (e.g. catastrophic/critical/marginal/negligible).}}
+\item{\textbf{Categorise the risk (e.g. catastrophic/critical/marginal/negligible).}}
 \item{\textbf{Minimise the risk if not remove it completely.}}
 \item{\textbf{Document the risk and how it was dealt with.}}
 \end{itemize}
 
-Once the risks have been documented it is common practice to assign them a threat level so that lower level risks can be seperated out from risks that may cause a catastrophic problem to the project.
+Once the risks have been documented it is common practice to assign them a threat level so that lower level risks can be separated out from risks that may cause a catastrophic problem to the project.
 
-The threat leveles that will be used are as follows:
+The threat levels that will be used are as follows:
 \begin{itemize}
-\item{\textbf{Insignificant:} Slight inconveniances to the project.}
-\item{\textbf{Tolerable:} Project is inconvenianced. There may be a potential to recover to stick to schedule.}
+\item{\textbf{Insignificant:} Slight inconveniences to the project.}
+\item{\textbf{Tolerable:} Project is inconvenienced. There may be a potential to recover to stick to schedule.}
 \item{\textbf{Serious:} Would involve significant project degradation. Would take considerable team effort to fix and the viability of completing the project would be questioned.}
-\item{\textbf{Catastrophic:} Potential project abandonment due to risks that are outwith our control or to serious to recover from.}
+\item{\textbf{Catastrophic:} Potential project abandonment due to risks that are out-with our control or to serious to recover from.}
 \end{itemize}
 
 
@@ -1375,7 +1380,7 @@ It is important to track any risks once identified. If a risk is identified as n
 As the project life-cycle develops, choices will be made as to whether or not to change aspects of the software design to avoid risks that may be introduced as a result. 
 
 \subsection{Review}
-Risk will be monitored through our web-based issues list. These issues and risks will be discussed at our weekly meetings with team members giving their view on whether an issues poses signifcant risk to be acted upon. If any concerns are highlighted then the team will take action to resolve the issue.
+Risk will be monitored through our web-based issues list. These issues and risks will be discussed at our weekly meetings with team members giving their view on whether an issues poses significant risk to be acted upon. If any concerns are highlighted then the team will take action to resolve the issue.
 
 \subsection{List of Managed Risks}
 
@@ -1426,7 +1431,7 @@ Successful?    YES      NO \newline \newline
 Successful?    YES      NO \newline \newline
 \textbf{Task 5}: Contact Jo\"{e}lle to negotiate the price \newline \newline
 Successful?    YES      NO \newline \newline
-\textbf{Task 6}: Logout and visit the facebook page to leave some positive feedback. \newline \newline
+\textbf{Task 6}: Logout and visit the Facebook page to leave some positive feedback. \newline \newline
 Successful?    YES      NO \newline \newline
  
  
