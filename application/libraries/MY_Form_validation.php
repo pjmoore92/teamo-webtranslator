@@ -118,7 +118,7 @@ class MY_Form_validation extends CI_Form_validation {
         $allowed = $this->CI->config->item('languages_to');
         
         if( !in_array($str, $allowed) ){
-            $this->CI->form_validation->set_message('check_lang_to', 'That language is not allowed');
+            $this->CI->form_validation->set_message('to_lang', 'That language is not allowed');
             return FALSE;
         }
         else
