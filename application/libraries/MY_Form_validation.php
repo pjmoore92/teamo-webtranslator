@@ -84,7 +84,7 @@ class MY_Form_validation extends CI_Form_validation {
      * @param string
      * @return bool
      */
-    public function lang_from($str){
+    public function from_lang($str){
         
         // load the 'business' config file
         $this->CI->load->config('business');
@@ -109,7 +109,7 @@ class MY_Form_validation extends CI_Form_validation {
      * @param string
      * @return bool
      */
-    public function lang_to($str){
+    public function to_lang($str){
         
         // load the 'business' config file
         $this->CI->load->config('business');

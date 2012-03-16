@@ -46,25 +46,25 @@ class Dashboard extends MY_Controller {
                                         array(
                                                 'field' => 'lang_from',
                                                 'label' => 'Source language',
-                                                'rules' => 'required|xss_clean|callback_check_lang_from'
+                                                'rules' => 'required|xss_clean|from_lang'
                                         ),
 
                                         array(
                                                 'field' => 'lang_to',
                                                 'label' => 'Translation language',
-                                                'rules' => 'required|xss_clean|callback_check_lang_to'
+                                                'rules' => 'required|xss_clean|to_lang'
                                         ),
                                         
                                         array(
                                                 'field' => 'deadline',
                                                 'label' => 'Deadline',
-                                                'rules' => 'required|xss_clean|callback_check_deadline'
+                                                'rules' => 'required|xss_clean|valid_date'
                                         ),
                                         
                                         array(
                                                 'field' => 'currency',
                                                 'label' => 'Currency',
-                                                'rules' => 'required|xss_clean|callback_check_currency'
+                                                'rules' => 'required|xss_clean|check_currency'
                                         )
                                 )
                         );
@@ -229,75 +229,4 @@ class Dashboard extends MY_Controller {
                 $this->template->load('template', $this->_view_template, $this->_data);
         }
 
-
-    /**
-     * Check if 'From' language is allowed
-    */
-    public function check_lang_from($lang){
-        $allowed = array('english', 'italian');
-        
-        if( !in_array($lang, $allowed)){
-                $this->form_validation->set_message('check_lang_from', 'That language is not allowed');
-                return FALSE;
-        }
-        else
-                return TRUE;
-    }
-    
-    /**
-     * Check if 'From' language is allowed
-    */
-    public function check_lang_to($lang){
-        $allowed = array('french');
-        
-        // if( !in_array($lang, $allowed)){
-        if($lang != 'french'){
-                $this->form_validation->set_message('check_lang_to', 'That language is not allowed');
-                return FALSE;
-        }
-        else
-                return TRUE;
-    }
-
-        /**
-         * Check if date is valid (YYY-MM-DD)
-         */
-    public function check_deadline($date){
-        if(strlen($date) == 10){
-                $year = substr($date, 0, 4);
-                $month = substr($date, 5, 2);
-                $day = substr($date, 8, 2);
-
-                if(
-                        ($year == FALSE || $year == '') &&
-                        ($month == FALSE || $month == '') &&
-                        ($day == FALSE || $day == '')
-                ){
-                        
-                        $this->form_validation->set_message('check_deadline', 'Date not valid');
-                        return FALSE;
-                }
-
-                if(is_numeric($year) && is_numeric($month) && is_numeric($day))
-                        if(checkdate((int)$month, (int)$day, (int)$year))
-                                return TRUE;
-        }
-        
-        $this->form_validation->set_message('check_deadline', 'Date not valid');
-        return FALSE;
-    }
-
-    /**
-     *
-     */
-    public function check_currency($curr){
-        $allowed = array('gbp', 'eur', 'usd');
-        
-        if( !in_array($curr, $allowed)){
-                $this->form_validation->set_message('check_currency', 'That currency is not allowed');
-                return FALSE;
-        }
-        else
-                return TRUE;
-    }
 }
