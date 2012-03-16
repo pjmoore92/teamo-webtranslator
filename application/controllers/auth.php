@@ -232,9 +232,10 @@ class Auth extends CI_Controller
 						$customer->name = $this->form_validation->set_value('name');;
 						$customer->email = $this->form_validation->set_value('email');
 						$customer->refcode = $refcode;
-						$customer->job->lang_from = $this->form_validation->set_value('lang_from');
-						$customer->job->lang_to = $this->form_validation->set_value('lang_to');
-						$customer->job->deadline = $this->form_validation->set_value('deadline');
+						$customer->job->customerID = $data['user_id'];
+						$customer->job->fromLanguage = $this->form_validation->set_value('lang_from');
+						$customer->job->toLanguage = $this->form_validation->set_value('lang_to');
+						$customer->job->dateDue = $this->form_validation->set_value('deadline');
 						$customer->job->currency = $this->form_validation->set_value('currency');
 
 						/* create the entry in the 'customer' table */
@@ -249,16 +250,9 @@ class Auth extends CI_Controller
 
 						$this->load->library('jobs');
 
-						$details = array(
-							'customerID' => $customer->id,
-							'fromLanguage' => $customer->job->lang_from,
-							'toLanguage' => $customer->job->lang_to,
-							'dateDue' => $customer->job->deadline,
-							'currency' => $customer->job->currency
-						);
-						
+					
 						/* add the job to the DB */
-						$customer->job->id = $this->jobs->add_job($details);
+						$customer->job->id = $this->jobs->add_job($customer->job);
 
 						/**
 						 * send the customer details, pretty much for debugging only;
@@ -339,7 +333,7 @@ class Auth extends CI_Controller
 			$data = array(
 				'message' => 'Your account has been successfully activated!'
 				);
-			$this->load->view('auth/login_form', $data);
+			redirect('/en/auth/login');
 
 		} else {																// fail
 			$this->_show_message($this->lang->line('auth_message_activation_failed'));
