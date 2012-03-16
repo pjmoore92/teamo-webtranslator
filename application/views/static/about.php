@@ -2,35 +2,48 @@
 
 <div class="content">
 <div class="page-header">
-  <h1 class="active">Bethel Translations <small>About Page</small></h1>
+  <h1 class="active">Bethel Translations <small>About </small></h1>
 </div>
-<div class="row">
-  <div class="span10">
-    <h2>Main content</h2>
-    <p>
-        Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod 
-        tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis 
-        nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. 
-        Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel 
-        illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui 
-        blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber 
-        tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat 
-        facer possim assum. Typi non habent claritatem insitam; est usus legentis in iis qui facit 
-        eorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt 
-        saepius. Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum.
-    </p>
-  </div>
 
-  <div class="span4">
-    <h2>Sidebar</h2>
-      Some more lorem ipsum on the side here Typi non habent claritatem insitam; est usus legentis in
-      iis qui facit eorum claritatem. Investigationes demonstraverunt lectores legere me lius quod
-      ii legunt saepius. Claritas est etiam processus dynamicus, qui sequitur mutationem
-     <ul class="media-grid">
-       <li>
-         <a href="#"><img class="thumbnail" src="http://placehold.it/210x150" alt=""></a>
-       </li>
-     </ul>
-  </div>
+  <div class="span10">
+    <h2>About me</h2>
+    
+	My name is Mrs Jacqueline Joëlle Cimatche and I trade under the name of Bethel Translations.<br>
+	<br />
+	As a qualified and experienced freelance translator and interpreter working from English and Italian into the French language, I understand how 	important it is for you to get your message across accurately and in an irreproachable style.<br>
+	I also know that my client are expecting competitive rates, quick turnover, and a quality work. You have my guarantee that you will not be 		disappointed.<br>
+	<br />
+	I graduated from the Sorbonne Nouvelle University (Paris III) with a Master’s Degree in translation and later gained an on-the-job experience in 	 interpreting specifically in the public service with primary focus on medical area. I am an associate member of the Institute of Translation and 	 Interpreting (UK).<br>
+	<br />
+	I have been working for just over seven years now in these fields translating a range of material from English and Italian into French that 		includes:
+	<ul>
+	<br />
+	<li>Navigation devices</li>
+	<li>Household appliances</li>
+	<li>User interface</li/>
+	<li>Computer – general</li>
+	<li>User manuals</li>
+	<li>General / Conversation / Greetings / Letters</li>
+	<ul>
+
+    
+  
+
+   </div>
+   <div class ="span10">
+    <br />
+    
+    <h2>Experience</h2>
+      Over the past five years, I have been offering interpreting services to various local organisations, focusing only on two languages, from English 	into French in other to ensure I provide the best possible service.
+	Please take a look at my Services pages for more detailed information about the type of projects I can help you with.
+    </div>
+    <div class ="span10">      	
+    <br />
+    
+    <h2>Affiliations</h2>
+    You can find me on Facebook and LinkedIn. Simply click the icons at the bottom right of every page.
+    
+    </div>
+
 </div>
-</div>
+

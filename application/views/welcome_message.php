@@ -12,13 +12,17 @@
 <!-- TODO horizontal sliding Ads a la BBC? -->
 <div class="hero-unit">
 <h1><?php echo lang('helloWorld') ?></h1>
+<p>
+<strong>
+Bethel Translations provides translations and Interpreting services from English and Italian into the French language, and French proof-reading services to translation agencies, businesses and individuals.
 
-<p>I offer excellent translation services with a primary focus on translating documents 
-from French to English and vice versa. I also offer some other services as can be viewed in 
-the menus above. If you would like a quote for any of these, please navigate to my contact page.</p>
+We pride ourselves in our ability to deliver exceptional services and have set the standard for business translation and interpreting precision and quality - that means you save time and money and you can enjoy the translation and interpreting process while you work with us.
 
-<p>You can register below and upload your documents. I will review them and send you a quote for a
-translation in your chosen language.</p>
+If you would like a quote for any of these services, please navigate to my <a href =http://alasdaircampbell.com/en/welcome/contact>Contact</a> page.
+You can also register below and upload your documents. I will review them and send you a quote for a translation in your chosen language.
+We hope you enjoy our website and look forward to hearing from you soon.
+</strong>
+</p>
 </div>
 
 <!--<form>-->
