@@ -31,6 +31,13 @@ $captcha = array(
 	'maxlength'	=> 8,
 );
 ?>
+
+<?php
+	if( $message != NULL )
+		echo $message;
+?>
+
+
 <?php echo form_open($this->uri->uri_string()); ?>
 <table>
 	<tr>

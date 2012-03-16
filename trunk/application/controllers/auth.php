@@ -336,7 +336,10 @@ class Auth extends CI_Controller
 		if ($this->tank_auth->activate_user($user_id, $new_email_key)) {		// success
 			$this->tank_auth->logout();
 
-			$this->_show_message($this->lang->line('auth_message_activation_completed').' '.anchor('auth/login/', 'Login'));
+			$data = array(
+				'message' => 'Your account has been successfully activated!'
+				);
+			$this->load->view('auth/login_form', $data);
 
 		} else {																// fail
 			$this->_show_message($this->lang->line('auth_message_activation_failed'));
