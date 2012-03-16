@@ -60,7 +60,7 @@ class Jobs{
 		$this->ci->email->from($this->ci->config->item('webmaster_email', 'tank_auth'), $this->ci->config->item('website_name', 'tank_auth'));
 		$this->ci->email->reply_to($this->ci->config->item('webmaster_email', 'tank_auth'), $this->ci->config->item('website_name', 'tank_auth'));
 		$this->ci->email->to($email);
-		$this->ci->email->subject(sprintf($this->ci->lang->line('auth_subject_'.$type), $this->ci->config->item('website_name', 'tank_auth')));
+		$this->ci->email->subject('Bethel Translations job update');
 		$this->ci->email->message($this->ci->load->view('email/'.$type.'-html', $data, TRUE));
 		$this->ci->email->set_alt_message($this->ci->load->view('email/'.$type.'-txt', $data, TRUE));
 		$this->ci->email->send();
