@@ -88,8 +88,8 @@ class Dashboard extends MY_Controller {
                                 $job = new stdClass;
                                 $job->customerID = $this->_user_id;
                                 $job->dateDue = $this->form_validation->set_value('deadline');
-                                $job->fromLanguage = $this->form_validation->set_value('lang_to');
-                                $job->toLanguage = $this->form_validation->set_value('lang_from');
+                                $job->fromLanguage = $this->form_validation->set_value('lang_from');
+                                $job->toLanguage = $this->form_validation->set_value('lang_to');
                                 $job->currency = $this->form_validation->set_value('currency');
 
 
