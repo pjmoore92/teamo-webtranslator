@@ -16,9 +16,6 @@ class Jobs{
 		$this->ci->load->model('job_model');
 		$jobID = $this->ci->job_model->add_job($args);
 
-		//upload files;
-		// $this->ci->load->library('upload');
-		// $response = $this->ci->upload->upload_files();
 		return $jobID[0]->jobID;
 	}
 
@@ -55,6 +52,11 @@ class Jobs{
 		}
 	}
 
+	public function get_job_by_id($jobID){
+		$this->ci->load->model('job_model');
+		return $this->ci->job_model->get_job_by_id($jobID);
+	}
+
 	private function _send_email($type, $email, $data){
 		$this->ci->load->library('email');
 		$this->ci->email->from($this->ci->config->item('webmaster_email', 'tank_auth'), $this->ci->config->item('website_name', 'tank_auth'));
@@ -64,10 +66,6 @@ class Jobs{
 		$this->ci->email->message($this->ci->load->view('email/'.$type.'-html', $data, TRUE));
 		$this->ci->email->set_alt_message($this->ci->load->view('email/'.$type.'-txt', $data, TRUE));
 		$this->ci->email->send();
-	}
-
-	private function _upload_files(){
-		return NULL;
 	}
 
 }
