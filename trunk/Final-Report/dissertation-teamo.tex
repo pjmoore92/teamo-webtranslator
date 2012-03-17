@@ -1479,13 +1479,14 @@ Risk will be monitored through our web-based issues list. These issues and risks
 \subsection{List of Managed Risks}
 
 \begin{center}
-    \begin{tabular}{ | l | l | l | p{5cm} |}
+    \begin{tabular}{ | p{4cm} | l | l | p{4cm} |}
     \hline
     Risk & Probability & Impact & Trigger \\ \hline
     Personnel shortfall at crucial development stages & Low & High & Illness, other commitments  \\ \hline
     Unrealistic schedule not adhered to & Medium & Medium & Improper planning of work time line \\ \hline
     Inaccurate requirements capture & Medium & High & Miscommunication with client \\ \hline
-    Lack of technical knowledge in team (PHP, HTML, CSS, JavaScript) & Low & Critical & Lack of commitment to other Uni courses or weakness in understanding \\ \hline
+    Lack of technical knowledge in team (PHP, HTML, CSS, JavaScript) & Low & Critical & Lack of commitment
+    to other Uni courses or weakness in understanding \\ \hline
     Shortfall in externally performed tests & Low & Low & Laziness, misguided belief that software is fully secure \\ \hline
     Team Members external commitments & Medium & Medium & Team member has commitments that prevent them carrying out team tasks \\ \hline
     Requirement volatility - Client demands change & Medium & High & Client has change of circumstances e.g. budget, time, mind-set \\ 
@@ -1497,6 +1498,26 @@ Other risks that have not been planned for in this section are discussed in spec
 
 \section{Configuration Management Plan}
 \label{sect:conf-man}
+
+The team will identify all items that must be managed as part of the configuration management plan.
+This includes code,documents,and images that the team decide are necessary to be managed.
+
+A baseline will be agreed upon for all files under management. This means all files will be reviewed and
+agreed upon and then serve as the basis for further development. This means there is always a base line
+of the last working version.
+
+Diagram C1 outlines the process for Configuration managment. 
+All changes to the managed files are commited to the SVN where they are reviewed by the configuration
+manager and assessed to be acceptable or unacceptable. They are then added to the baseline or labelled
+as needing more work before being baselined.
+
+\begin{figure}
+\begin{center}
+\label{fig:configman}
+\includegraphics[scale=0.6]{config}
+\caption{\small{Configuration Management Activities, source: http://www.goldtech2000.com/images/image014.gif}}
+\end{center}
+\end{figure}
 
 
 %==============================================================================
