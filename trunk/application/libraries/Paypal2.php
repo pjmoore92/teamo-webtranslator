@@ -89,15 +89,20 @@ class Paypal2{
 		$log_str .= "IPN Post Response:\n".$ppResponseAr["httpResponse"];
 		$log_str .= "%d %b %Y %H:%M:%S " . "[IPNListner.php] $log_str\n";
 		
-		// log_message('error', $log_str);
-		
-		$this->ci->load->model('job_model');
-		$job = $this->ci->job_model->get_job_by_id($item_number);
+		$this->ci->load->library('jobs');
+		$job = $this->ci->jobs->get_job_by_id($item_number);
 		if($job != NULL)
 			if(strtoupper($job->currency) != strtoupper($mc_currency) || $job->quote != intval($mc_gross))
 				log_message('error', 'Transaction #'.$item_number . ' failed the check:\n' . $log_str);
-			else
-				$this->ci->job_model->set_job_status($item_number, 'Paid');
+			else{
+				
+                $job_data = array(
+	                'jobID' => $item_number,
+	                'status' => 'Paid'
+                );
+				
+				$this->ci->jobs->update_job($job_data);
+			}
 		else
 			log_message('error', 'IPN Validation: Could not load the job #' . $item_number);
 	}
