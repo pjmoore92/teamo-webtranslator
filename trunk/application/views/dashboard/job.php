@@ -84,7 +84,7 @@
 					<tbody>
                 <?php foreach($job->translations as $key => $translation): ?>
 						<tr>
-							<td><?php echo $key; ?>.</td>
+							<td><?php echo $key + 1; ?>.</td>
 							<td><?php echo $translation->name ?></td>
 							<td><?php echo anchor($translation->origPath, 'Download'); ?></td>
 							<?php if( $subtitle == 'accepted' && admin() ): ?>
