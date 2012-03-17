@@ -88,7 +88,7 @@
 </script>
 <?php endif; ?>
 
-<?php if( $message != NULL ): ?>
+<?php if( isset($message) ): ?>
   <?php
     $message->type = ($message->type != NULL) ? 'alert-'.$message->type : '';
   ?>
