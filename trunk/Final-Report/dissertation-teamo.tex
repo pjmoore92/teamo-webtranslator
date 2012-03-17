@@ -8,7 +8,7 @@
 \usepackage{wrapfig}
 \usepackage{subfig}
 \usepackage{float}
-
+\usepackage{listings}
 
 \usepackage{url}
 \usepackage{appendix}
@@ -1102,7 +1102,7 @@ environment. It involves different degrees of complexity regarding the configura
 changes that need to be made, depending on the project itself. This chapter describes 
 the process followed by the team as we transported the website from one server to another: 
 from a testing server used in development, to a professional web hosting company
-that the translator would be responsible for managing after the project deadline. 
+that the translator would be responsible for managing after the project deadline.\newline
 Ian Sommerville \footnote{Software Engineering, pg 385} describes that software developers 
 should ``provide built-in support for deployment that will reduce the probability that system 
 administrators will make mistakes when configuring the software''. Since ours is a 
@@ -1111,9 +1111,30 @@ changes to accomodate this process. As the project neared the end of development
 that most functional requirements of the system had been realisedm, more consideration was given
 to non-functional requirements. It was intuitive for us that the changes be categorised 
 into sections that generally match the non-functional requirements of the system.
-
-\section{Security}
 \section{Findability}
+\section{Security}
+As software engineers we would be naive to believe that we should not concern ourselves with the
+security of the website we had developed. A result of increasing the number of users to the site
+means there is a greater security risk. The main concern with a site like this one is spam bots.
+Spam bots deliberately try to misuse the site to gain access to customer information, flood the 
+translator with phising emails and various other malicious requests.\newline
+We identified two areas of the site that could potentially be targeted by spam bots: the contact
+page, and the main document submission/registration page. Initially it was considered to prevent 
+spam bots from abusing these forms by implementing captchas. A captcha is an interactive form that
+presents some audio-visual information that only a human can interpret and provide the system with 
+the confirmation that they are using it for genuine purposes. However, there existed a simple 
+solution than this one: hidden form validation. It is a simpler and far less intrusive approach that
+exploits the way spam bots use forms. It also meant we didn't have to concern ourselves with 
+cross browser compatibility which can be a headache with including captchas in a website. In our HTML
+for the aforementioned pages, we included two input forms amongst all the other genuine ones. The 
+difference with these two forms is that they include the "hidden" tag. The general form of these is:
+\begin{listings} 
+<input type="hidden" id="register-location" name="register-location" value="">
+\end{listings}
+There is a simple beauty to this method of anti-spam bot detection: the genuine users are never aware of the
+existence of it. However, spam bots will typically fill in every html form they can find in order
+to achieve their goal. Some simple JavaScript check was then enforced such that if the hidden forms 
+were filled in, the page wouldn't allow the registration or contact query to go through. 
 \section{Marketability}
 \section{Reliability}
 \section{Configuration}
