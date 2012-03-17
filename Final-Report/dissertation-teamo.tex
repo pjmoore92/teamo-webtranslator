@@ -1127,14 +1127,15 @@ solution than this one: hidden form validation. It is a simpler and far less int
 exploits the way spam bots use forms. It also meant we didn't have to concern ourselves with 
 cross browser compatibility which can be a headache with including captchas in a website. In our HTML
 for the aforementioned pages, we included two input forms amongst all the other genuine ones. The 
-difference with these two forms is that they include the "hidden" tag. The general form of these is:
+difference with these two forms is that they include the ``hidden'' tag. The general form of these is:
 \begin{lstlisting} 
-<input type="hidden" id="register-location" name="register-location" value="">
+<input type="hidden" value="">
 \end{lstlisting}
 There is a simple beauty to this method of anti-spam bot detection: the genuine users are never aware of the
 existence of it. However, spam bots will typically fill in every html form they can find in order
-to achieve their goal. Some simple JavaScript check was then enforced such that if the hidden forms 
-were filled in, the page wouldn't allow the registration or contact query to go through. 
+to achieve their goal. Some simple JavaScript check that looked at the value field in the code snippet above
+was then enforced. If the hidden forms were filled in, the page wouldn't allow the registration or contact 
+query to go through. 
 \section{Marketability}
 \section{Reliability}
 \section{Configuration}
