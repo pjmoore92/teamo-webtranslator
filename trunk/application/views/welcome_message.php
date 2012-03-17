@@ -121,18 +121,25 @@ else{
         <input type="text" id="datepicker" placeholder="dd-mm-yyyy">
     </p>
   </div>
+  </div>
+<br />
+<br />
+<br />
 
-<br />
-<br />
-<br />
-<br>
-  <div class="span3">&nbsp;</div>
-  <div class="span3" style="text-align:center">
+  
+  <div class = "row" position ="absolute" style="text-align:center">
+    <div class="grid" style="text-align:center">
+    <p></p>
+    </div>
+    <div class="grid" style="text-align:center">
     <p><a id="register-submit" class="btn btn-success btn-large" href="#" data-controls-modal="modal-from-dom-register-message" 
               data-backdrop="true" data-keyboard="true">Submit + Register! &raquo;</a></p>
   <!--  <input type="submit" class="btn btn-success" value="Get your quote!"> -->
+    </div>
+    <div class="grid" style="text-align:center">
+    <p></p>
+    </div>
   </div>
-  <div class="span-one-third">&nbsp;</div>
 </div>
 </div>
 <?php
