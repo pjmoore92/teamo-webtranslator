@@ -330,13 +330,34 @@ class Auth extends CI_Controller
 		if ($this->tank_auth->activate_user($user_id, $new_email_key)) {		// success
 			$this->tank_auth->logout();
 
+			$message = new stdClass;
+			$message->text = $this->lang->line('auth_message_activation_completed');
+			$message->type = 'success';
+
 			$data = array(
-				'message' => 'Your account has been successfully activated!'
+				'message' => $message,
+				'login_by_username' => (
+					$this->config->item('login_by_username', 'tank_auth') AND
+					$this->config->item('use_username', 'tank_auth'))
 				);
-			redirect('/en/auth/login');
+			
+			$this->template->set('title', 'Login -');
+			$this->template->load('template', 'auth/login_form', $data);
 
 		} else {																// fail
-			$this->_show_message($this->lang->line('auth_message_activation_failed'));
+			$message = new stdClass;
+			$message->text = $this->lang->line('auth_message_activation_failed');
+			$message->type = 'error';
+
+			$data = array(
+				'message' => $message,
+				'login_by_username' => (
+					$this->config->item('login_by_username', 'tank_auth') AND
+					$this->config->item('use_username', 'tank_auth'))
+			);
+
+			$this->template->set('title', 'Login -');
+			$this->template->load('template', 'auth/login_form', $data);
 		}
 	}
 
