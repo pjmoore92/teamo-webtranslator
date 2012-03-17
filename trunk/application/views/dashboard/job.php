@@ -76,7 +76,7 @@
 						<th class="header headerSortDown" width="20">#</th>
 						<th class="header">Document Name</th>
 						<th class="blue header">Original File</th>
-						<?php if( $subtitle == 'translated' || admin()): ?>
+						<?php if( $subtitle == 'translated' ): ?>
 						<th class="blue header">Translated File</th>
 						<?php endif; ?>
 					  </tr>
