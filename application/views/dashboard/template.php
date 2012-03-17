@@ -88,6 +88,16 @@
 </script>
 <?php endif; ?>
 
+<?php if( $message != NULL ): ?>
+  <?php
+    $message->type = ($message->type != NULL) ? 'alert-'.$message->type : '';
+  ?>
+    <div class="alert <?php echo $message->type; ?>">
+      <a class="close" data-dismiss="alert">×</a>
+      <?php echo $message->text; ?>
+    </div>
+<?php endif; ?>
+
 <!-- Sidebar -->
 <div class="row">
   <div class="span9">
