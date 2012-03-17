@@ -1098,11 +1098,27 @@ CREATE TABLE IF NOT EXISTS `translation` (\\
 %==============================================================================
 \chapter{Deployment}
 \label{chap:deply}
-This chapter describes the process followed by the team as we transported the
-website from one server to another: 
+The deployment of a system involves configuring the software to operate in an operational 
+environment. It involves different degrees of complexity regarding the configuration
+changes that need to be made, depending on the project itself. This chapter describes 
+the process followed by the team as we transported the website from one server to another: 
 from a testing server used in development, to a professional web hosting company
-that the translator would be 
-responsible for managing after the project deadline.
+that the translator would be responsible for managing after the project deadline. 
+Ian Sommerville \footnote{Software Engineering, pg 385} describes that software developers 
+should ``provide built-in support for deployment that will reduce the probability that system 
+administrators will make mistakes when configuring the software''. Since ours is a 
+website developed within a web application framework, it is relatively easy to make the
+changes to accomodate this process. As the project neared the end of development stages, such
+that most functional requirements of the system had been realisedm, more consideration was given
+to non-functional requirements. It was intuitive for us that the changes be categorised 
+into sections that generally match the non-functional requirements of the system.
+
+\section{Security}
+\section{Findability}
+\section{Marketability}
+\section{Reliability}
+\section{Configuration}
+
 
 %==============================================================================
 \chapter{Evaluation}
