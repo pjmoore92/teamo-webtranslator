@@ -476,7 +476,7 @@ built upon these job statuses is described later in Section~\ref{sect:ui}.
 \begin{wrapfigure}{l}{0.42\textwidth}
 \vspace{-20pt}
   \begin{center}
-    \includegraphics[width=0.4\textwidth]{userProcessClient.png}
+    \includegraphics[width=0.4\textwidth]{images/userProcessClient.png}
   \end{center}
   \caption{userProcessClient}
 \vspace{-60pt}
@@ -523,7 +523,7 @@ Interpreting) in corresponding “Service” page through the contact form. \\
 \begin{wrapfigure}{l}{0.36\textwidth}
 \vspace{-20pt}
   \begin{center}
-    \includegraphics[width=0.34\textwidth]{userProcessTranslator.png}
+    \includegraphics[width=0.34\textwidth]{images/userProcessTranslator.png}
   \end{center}
   \caption{userProcessTranslator}
 \vspace{-60pt}
@@ -895,9 +895,6 @@ TBC
 
 \subsection{Structure and Navigation}
 
-
-
-
 The overall structure of the application is relatively simple, as shown 
 in the website structure diagram (Figure ~\ref{fig:website-structure}). 
 Everything is 1-3 clicks away.
@@ -968,65 +965,314 @@ contains no browser controls. Links are provided to Close.
 This major part of the document contains detailed descriptions of
 each screen from the Bethel Translations website.
 
+Some of the similar pages are omitted in order to avoid redundancy.
 
-\textbf{Welcome}
+\textbf{Welcome Page}
 \begin{figure}[H]
 \centering
-\includegraphics[width=\linewidth]{images/welcomePage}
+\includegraphics[width=0.8\linewidth]{images/welcomePage}
 \vspace{-30pt}
 \end{figure}
+
 \begin{itemize}
 \item \textbf{Description}
 
 The welcome page is the landing page that provides navigation links to all other pages. It shows the welcome message from the translator.
 The main functionality of this page allows clients to log in or regester for the site. 
-
-We decided to make the registration process a three step process so as to make it as simple as possible for a first time user.
+We decided to make the registration process a three-steps process so as to make it as simple as possible for a first time user.
 
 \item \textbf{Navigation}
 
-This is the default page a potential customer will see when visiting the website. One can always come back to this page with the text link "Home".
+This is the default page a potential customer will see when visiting the website. One can always come back to this page with the text link ``Home".
 However, the registration process will not be shown for a logged-in user. Instead, they will see a message that directs them to the dashboard to submit new jobs.
 
 \item \textbf{Main Elements}
+\begin{itemize}
+\item `Main Menu Bar'\\
+Type: Text links\\
+Content: Links to the About page, the Testimonials page, the Contact page, and the Service pages. Links to versions of the website in different languages. \\
+Behaviour: The user is directed to the destination of a particular link. \\
 
-The following is a list of all elements in this screen.
-[Some sample elements included here. Use a pro-forma to ensure
-consistent treatment for all elements in any set.]
-‘Rail Line’
-Type: Dropdown list box
-Label: ‘Rail Line’
-Content: List of all rail lines, sorted alphabetically, preceded by
-        the default.
-Default: ‘Choose from this list’ if the user has accessed the
-            page from an external link, or without previously
-           choosing a rail line.
-A specific rail line if the user has chosen one on a
-previous screen.
-Behaviour: Standard.
-Comment: None.
-Type: Option (‘radio’) button set.
-[Option button set]
-Label:
-Default:
-.
-Behaviour:
-Comment:
-[Field]
-Type:
-Field.
-Label:
-Length:
-Default: .
-Validation: [Describes valid entries.]
-Behaviour:
-Comment:
-[Text link]
-Type: Text link.
-Behaviour: [Describes what happens when the link is clicked.]
-Comment:
+\item `Login' / `My Account'\\
+Type: Dropdown box\\
+Content: (For `Login') Fields `Email' and `Password' to input login information; checkbox `Remember me' to provide cookie feature; 
+text link `Forgot password' directing to password resetting process. (For `My Account') text links `Dashboard' and `Logout'.\\
+Behaviour: `Login' is shown by default. `My Account' is shown for a logged-in user.\\
+
+\item `Register'\\
+Type: Field\\
+Content: Fields to input registration information and job requirements; button to upload files; 
+button to register and submit a new job request (this request will only be presented to the translator after the user activates his account).\\
+Behaviour: Disappears after a user logged in. A modal telling the user to activate his account will pop up when submitting. \\
+\end{itemize}
+\end{itemize}
+
+\textbf{Contact Page}
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.8\linewidth]{images/contactPage}
+\vspace{-30pt}
+\end{figure}
+
+\begin{itemize}
+\item \textbf{Description}
+
+The contact page is the page that a customer may use to contact the translator for general enquiries or getting a quote for services other than document translating that the translator offers. 
+
+\item \textbf{Navigation}
+
+A user can get access to this page through the text link `Contact' on the main menu bar.
+
+\item \textbf{Main Elements}
+\begin{itemize}
+\item `Contact Form'\\
+Type: Form\\
+Content: Text fields to input user informations; dropdown box to choose a enquiry subject; text field to leave messages to the translator. \\
+Behaviour: Full name and email address will be automatically filled for a logged-in user. An enquiry email will be sent to the translator. \\
 
 \end{itemize}
+\end{itemize}
+
+\textbf{Admin Dashboard - Pending/Quoted Jobs}
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.8\linewidth]{images/adminDashPending}
+\vspace{-30pt}
+\end{figure}
+
+\begin{itemize}
+\item \textbf{Description}
+
+This page lists all pending/quoted jobs to the translator. Information of each job will be shown in separate boxes. 
+The translator can download the documents for a job and set the quote for the job here.
+
+\item \textbf{Navigation}
+
+The translator can get access to this page through the text link `Pending'/`Quoted' on the side menu bar in the Admin Dashboard.
+
+\item \textbf{Main Elements}
+\begin{itemize}
+\item `Side Menu Bar'\\
+Type: Text links\\
+Content: Links to different sections of the dashboard. And the link to logout. \\
+Behaviour: The user is directed to the destination of a particular link. \\
+
+\item `Job Information'\\
+Type: Text\\
+Content: Informations of the job including client name, source and desired languages for translation, submit date, due date, and a quote \\
+Behaviour: If the job is quoted, a quote will be shown, or otherwise a dash line. \\
+
+\item `Set/Update Quote'\\
+Type: Field\\
+Content: a field to input the quote and a button to confirm \\
+Behaviour: A job will be moved from the pending list to the quoted list if the translator submit the quote for that job in `Pending'. The quote of the job will be updated after the translator click on `Update Quote' in `Quoted'. An email will be sent to the customer stating the the job has been updated.\\
+
+\item `Download'\\
+Type: Text link\\
+Content: a download link for a document in the job\\
+Behaviour: -\\
+\end{itemize}
+\end{itemize}
+
+\textbf{Admin Dashboard - Accepted/Declined Jobs}
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.8\linewidth]{images/adminDashAccepted}
+\vspace{-30pt}
+\end{figure}
+
+\begin{itemize}
+\item \textbf{Description}
+
+This page lists all accepted/declined jobs to the translator. Information of each job will be shown in separate boxes. 
+The translator can download the documents for a job and upload the translated documents for an accepted job here.
+
+\item \textbf{Navigation}
+
+The translator can get access to this page through the text link `Accepted'/`Declined' on the side menu bar in the Admin Dashboard.
+
+\item \textbf{Main Elements}
+\begin{itemize}
+
+\item `Job Information'\\
+Type: Text\\
+Content: Informations of the job including client name, source and desired languages for translation, submit date, due date, and a quote \\
+Behaviour: -\\
+
+\item `Download'\\
+Type: Text link\\
+Content: a download link for a document in the job\\
+Behaviour: -\\
+
+\item `Upload'\\
+Type: Upload Field\\
+Content: A field to choose the document to be uploaded.\\
+Behavior: Only shows for accepted jobs. The accepted job will be moved to translations after the uploading is completed.\\
+
+\end{itemize}
+\end{itemize}
+
+
+\textbf{Admin Dashboard - Site Statstics}
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.8\linewidth]{images/adminDashStatistics}
+\vspace{-30pt}
+\end{figure}
+
+\begin{itemize}
+\item \textbf{Description}
+
+This page lists statistic informations about the numbers of users and jobs with different status in the website.\\
+
+\item \textbf{Navigation}
+
+The translator can get access to this page through the text link `Site Statistics' on the side menu bar in the Admin Dashboard.
+
+\item \textbf{Main Elements}
+\begin{itemize}
+
+\item `Statistic Information'\\
+Type: Text\\
+Content: Text fields showing informations about the numbers of users and jobs with different status in the website.\\
+Behaviour: - \\
+
+\end{itemize}
+\end{itemize}
+
+\textbf{Client Dashboard - Overview}
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.8\linewidth]{images/clientDashOverview}
+\vspace{-30pt}
+\end{figure}
+
+\begin{itemize}
+\item \textbf{Description}
+
+This page lists statistic informations about jobs with different status for the customer.\\
+
+\item \textbf{Navigation}
+
+This is the landing page when a customer come to his dashboard through the `Dashboard' link on the main menu bar.
+
+\item \textbf{Main Elements}
+\begin{itemize}
+
+\item `Statistic Information'\\
+Type: Text\\
+Content: Text fields showing informations about jobs with different status for the customer.\\
+Behaviour: - \\
+
+\end{itemize}
+\end{itemize}
+
+\textbf{Client Dashboard - Submit New Job}
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.8\linewidth]{images/clientDashNewJob}
+\vspace{-30pt}
+\end{figure}
+
+\begin{itemize}
+\item \textbf{Description}
+
+This page is used to submit a new job by customers of the website. Except from first time customers (who will use the registration process on welcome page), 
+they will be asked to come here in order to submit a new job.
+
+\item \textbf{Navigation}
+
+The customer can get access to this page through the text link `Submit New Job' on the side menu bar in the Client Dashboard.
+
+\item \textbf{Main Elements}
+\begin{itemize}
+
+\item `Set requirements'\\
+Type: Fields\\
+Content: Fields to select requirements for `Source language', (desired) `Language', `Currency', and `Deadline' \\
+Behaviour: - \\
+
+\item `Upload'\\
+Type: Button\\
+Content: A uploader button to select files to be uploaded and a button to upload and submit a new job.\\
+Behaviour: A new job will be submitted after all the requirements are set and all files are successfully uploaded.\\
+
+\end{itemize}
+\end{itemize}
+
+
+\textbf{Client Dashboard - Quoted Jobs}
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.8\linewidth]{images/clientDashQuoted}
+\vspace{-30pt}
+\end{figure}
+
+\begin{itemize}
+\item \textbf{Description}
+
+This page lists all quoted jobs to the customer. Information of each job will be shown in separate boxes. 
+The customer can accept or declined the quote here. The customer will be required to pay in order to accept a job.
+
+\item \textbf{Navigation}
+
+The customer can get access to this page through the text link `Quoted' on the side menu bar in the Client Dashboard.
+
+\item \textbf{Main Elements}
+\begin{itemize}
+
+\item `Job Information'\\
+Type: Text\\
+Content: Informations of the job including client name, source and desired languages for translation, submit date, due date, and a quote \\
+Behaviour: If the job is quoted, a quote will be shown, or otherwise a dash line. \\
+
+\item `Accept Quote'\\
+Type: Button\\
+Content: -\\
+Behaviour: The customer will be redirected to PayPal's secure payment system after click on it. Once he paid the job will be moved to `Accepted' section, as well as in the Admin Dashboard.\\
+
+\item `Declined Quote'\\
+Type: Button\\
+Content: -\\
+Behaviour: Once the customer confirm to decline the job will be moved to `Declined' section, as well as in the Admin Dashboard.\\
+
+\item `Download'\\
+Type: Text link\\
+Content: a download link for a document in the job\\
+Behaviour: -\\
+
+\end{itemize}
+\end{itemize}
+
+
+\textbf{Client Dashboard - Translations}
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.8\linewidth]{images/clientDashTranslations}
+\vspace{-30pt}
+\end{figure}
+
+\begin{itemize}
+\item \textbf{Description}
+
+The translated jobs will be shown here for the customer to download the documents.
+
+\item \textbf{Navigation}
+
+The customer can get access to this page through the text link `Translations' on the side menu bar in the Client Dashboard.
+
+\item \textbf{Main Elements}
+\begin{itemize}
+
+\item `Download'\\
+Type: Text link\\
+Content: Download links for the original documents and the translated documents in a job\\
+Behaviour: -\\
+
+\end{itemize}
+\end{itemize}
+
+
 
 
 \section{Database Schema} \label{sect:db-sch} Having mapped the Entities
