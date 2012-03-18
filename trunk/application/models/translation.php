@@ -80,12 +80,6 @@ class Translation extends CI_Model{
             $this->db->where("translationID", $trans);
             $this->db->update($this->_table, $record);
 
-            // update job status if ALL translations uploaded
-            if($this->all_translated($job)) {
-                $this->load->model('job_model');
-                $this->job_model->set_job_status($job, 'Translated');
-            }
-
             //complete transaction
             $this->db->trans_complete();
 
@@ -93,7 +87,7 @@ class Translation extends CI_Model{
                 log_message('error', 'transaction failed in translation::add_orig');
                 return false;
             }
-            return true;
+            return $job;
         }
         else {
             log_message('error', 'transid '.$trans.' did not match a record');
@@ -149,7 +143,7 @@ class Translation extends CI_Model{
                 log_message('error', 'transaction failed in translation::add_orig');
                 return false;
             }
-            return true;
+            return $job;
         }
         else {
             log_message('error', 'jobid '.$jobid.' did not match a record');

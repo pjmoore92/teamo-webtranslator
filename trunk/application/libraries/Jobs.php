@@ -57,6 +57,28 @@ class Jobs{
 		return $this->ci->job_model->get_job_by_id($jobID);
 	}
 
+	public function add_document($trans, $orig, $file){
+		$this->ci->load->model('translation');
+
+		$job = $this->ci->translation->add_trans($trans, $orig, $file);
+
+       	if( isset($job) ){
+	        // update job status if ALL translations uploaded
+	        if($this->ci->translation->all_translated($job)) {
+				$job_data = array(
+					'jobID' => $job,
+					'status' => 'Translated'
+				);
+
+	            $this->update_job($job_data);
+	        }
+
+	        return TRUE;
+	    }
+
+	    return FALSE;
+	}
+
 	private function _send_email($type, $email, $data){
 		$this->ci->load->library('email');
 		$this->ci->email->from($this->ci->config->item('webmaster_email', 'tank_auth'), $this->ci->config->item('website_name', 'tank_auth'));
