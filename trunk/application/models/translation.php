@@ -102,6 +102,9 @@ class Translation extends CI_Model{
         $query = $this->db->get("job");
         if ($query->num_rows() > 0) {	
 
+            $translation = $query->row();
+            $job = $translation->jobID;
+
             $this->db->trans_start();
 
             //FIXME 
