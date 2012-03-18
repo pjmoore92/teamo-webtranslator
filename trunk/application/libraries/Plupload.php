@@ -67,6 +67,9 @@ class Plupload {
                 return '{"jsonrpc" : "2.0", "error" : {"code": 101, "message": "Cant create temp dir."}, "id" : "id"}';
             }
             mkdir($targetDir, 0777, true);
+        
+            $index_handle = fopen($targetDir . DIRECTORY_SEPARATOR . "index.html", "x");
+            @fclose($index_handle);
         }
 
         // Check permissions
