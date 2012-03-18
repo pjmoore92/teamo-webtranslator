@@ -40,7 +40,7 @@
 <?php else: ?>
 <script type="text/javascript" src="<?php echo base_url(); ?>js/client-dashboard.js"></script>
 <?php endif; ?>
-<script type="text/javascript" src="<?php echo base_url(); ?>js/jquery/jquery.blockUI.js"></script>
+<script type="text/javascript" src="<?php echo base_url(); ?>js/dashboard.js"></script>
 
 <div id="modal-from-dom" class="modal hide fade">
 <div class="modal-header"></div>
@@ -56,36 +56,17 @@
 
 <!-- User Notification -->
 <?php if($this->session->flashdata('info') == TRUE || $this->session->flashdata('error') == TRUE ): ?>
-<div class="msgUI" style="display:none">
-<h3><strong><?php if ($this->session->flashdata('info') == TRUE) echo "Success"; else echo "Error"; ?></strong></h3>
-<h4><?php echo $this->session->flashdata('msg');?></h4>
+<?php
+  if( $this->session->flashdata('info') == TRUE )
+    $alert_class = 'alert-success';
+  else
+    $alert_class = 'alert-error';
+?>
+<div class="alert <?php echo $alert_class; ?>">
+  <a class="close" data-dismiss="alert">×</a>
+  <?php echo $this->session->flashdata('msg');?>
 </div>
 
-<script>$(document).ready(function() {
-    $.blockUI({ 
-        message: $('div.msgUI'), 
-                fadeIn: 500, 
-                fadeOut: 400, 
-                timeout: 1500,
-                showOverlay: false, 
-                centerY: false, 
-                css: { 
-                    width: '350px', 
-                        top: '90px', 
-                        left: '', 
-                        right: '10px', 
-                        border: 'none', 
-                        padding: '5px', 
-                        backgroundColor: '#000', 
-                        '-webkit-border-radius': '10px', 
-                        '-moz-border-radius': '10px', 
-                        opacity: .6, 
-                        color: '#fff' 
-                } 
-    }); 
-});
-
-</script>
 <?php endif; ?>
 
 <?php if( isset($message) ): ?>

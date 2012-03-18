@@ -37,14 +37,16 @@ class Service extends CI_Controller
 			$data = $this->upload->data();
             $orig = $data['orig_name'];
             $file = $data['full_path'];
+            $jobid = substr($data['file_path'], 0, strlen($data['file_path']) - 1 );
+            $jobid = substr($jobid, strrpos($jobid, '/') + 1);
             $this->load->model('translation');
             if($this->translation->add_trans($trans, $orig, $file)) {
                 $this->session->set_flashdata('info', true);
-                $this->session->set_flashdata('msg', $data['client_name'].' Successfully Uploaded');
+                $this->session->set_flashdata('msg', 'File <strong>' . $data['client_name'] . "</strong> Successfully Uploaded for job <strong><a class='toggle-accordion' data-jobid='{$jobid}'>#{$jobid}</a></strong>.");
             }
             else {
                 $this->session->set_flashdata('error', true);
-                $this->session->set_flashdata('msg', $data['client_name'].' Error Adding Translation');
+                $this->session->set_flashdata('msg', 'File <strong>' . $data['client_name']."</strong> Error Adding Translation for job <strong><a class='toggle-accordion' data-jobid='{$jobid}'>#{$jobid}</a></strong>.");
             }
 
 		}
