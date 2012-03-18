@@ -18,6 +18,17 @@ $confirm_new_password = array(
 	'size' 	=> 30,
 );
 ?>
+
+<?php if( $message != NULL ): ?>
+	<?php
+		$message->type = ($message->type != NULL) ? 'alert-'.$message->type : '';
+	?>
+    <div class="alert <?php echo $message->type; ?>">
+    	<a class="close" data-dismiss="alert">×</a>
+    	<?php echo $message->text; ?>
+    </div>
+<?php endif; ?>
+
 <?php echo form_open($this->uri->uri_string()); ?>
 <table>
 	<tr>

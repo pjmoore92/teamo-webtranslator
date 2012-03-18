@@ -12,6 +12,19 @@ if ($this->config->item('use_username', 'tank_auth')) {
 	$login_label = 'Email';
 }
 ?>
+
+<?php if( $message != NULL ): ?>
+	<?php
+		$message->type = ($message->type != NULL) ? 'alert-'.$message->type : '';
+	?>
+    <div class="alert <?php echo $message->type; ?>">
+    	<a class="close" data-dismiss="alert">×</a>
+    	<?php echo $message->text; ?>
+    </div>
+<?php endif; ?>
+
+Enter the e-mail address that you've registered with, so we can reset your password.<br />
+
 <?php echo form_open($this->uri->uri_string()); ?>
 <table>
 	<tr>
