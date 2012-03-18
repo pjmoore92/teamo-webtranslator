@@ -27,7 +27,7 @@ $(document).ready(function(){
                     $('#modal-from-dom-register-message .modal-body')
                         .html('').append(message);	
 	}
-	//File submission validation
+	//File submission validation (I) - no files
 	else if ($('#filelist').html() == ''){	
 		var header = $('<a href="#" class="close">&times;</a><h2>Oh dear!</h2>');
 
@@ -38,6 +38,21 @@ $(document).ready(function(){
                         <p>\
                         You didn\'t upload any files!<br />\
                         Please go back and add 1 or more files in order to register.\
+                        </p>');
+                    $('#modal-from-dom-register-message .modal-body')
+                        .html('').append(message);
+	}
+	//File submission validation (II) - file types
+	else if ($('#filelist').html().indexOf("error") > -1){	
+		var header = $('<a href="#" class="close">&times;</a><h2>Oh dear!</h2>');
+
+                    $('#modal-from-dom-register-message .modal-header')
+                        .html('').append(header);
+
+                    var message = $('\
+                        <p>\
+                        You uploaded files that are incompatible!<br />\
+                        Please go back and add valid files.\
                         </p>');
                     $('#modal-from-dom-register-message .modal-body')
                         .html('').append(message);
