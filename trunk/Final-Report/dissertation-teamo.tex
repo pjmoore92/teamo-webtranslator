@@ -231,7 +231,7 @@ users described as "Laggards" in the graph.\\
 \begin{figure}
 \begin{center}
 \includegraphics[scale=0.6]{DiffusionOfInnovation}
-\caption{Roger's bell curve, source: http://en.wikipedia.org/wiki/File:DiffusionOfInnovation.png}
+\caption{Roger's bell curve, cite{wik}}
 \end{center}
 \end{figure}
 
@@ -239,7 +239,7 @@ Another point to consider is how users actually come to accept and use a
 new technology, and the factors that influence such a decision. \textbf{Figure
 1.2}, otherwise known as the Technology Adoption Model (TAM) provides a
 graphical realisation of this.
-\footnote{\url{http://en.wikipedia.org/wiki/Technology\_acceptance\_model}} The model
+\cite{wik} The model
 suggests that when users are presented with a new technology, a number of
 factors influence their decision about how and when they will use it, notably:
 
@@ -269,7 +269,7 @@ certainly a trade off we have to be mindful of.
 \begin{figure}
 \begin{center}
 \includegraphics{tam}
-\caption{Technology Adoption Model, source: \small{http://en.wikipedia.org/wiki/File:Technology\_Acceptance\_Model.png}}
+\caption{Technology Adoption Model, \cite{wik}}
 \end{center}
 \end{figure}
 
@@ -349,7 +349,7 @@ intuitive to use.
 \begin{figure}
 \begin{center}
 \includegraphics[scale=0.4]{ex1doctrans}
-\caption{Online document translator, source: http://www.onlinedoctranslator.com/}
+\caption{Online document translator, \cite{od}}
 \end{center}
 \end{figure}
 
@@ -360,7 +360,7 @@ information to a user by providing the registration, document upload and
 language selection elements on a single page, in a simple 3 step process. Our
 interface would then fall in line with the principle that user interfaces should
 have an aesthetic and minimalist design.
-\footnote{\url{http://www.useit.com/papers/heuristic/heuristic\_list.html}} We believe
+\cite{jakb} We believe
 this is an extremely important aspect of any modern website based on the way
 that users make a decision of whether or not to use the services offered by the
 website. For example, imagine a user enters a web-search for ``Translation
@@ -930,7 +930,7 @@ Bethel Translations, like all modern websites, makes use of multiple
 technologies in order to provide both the rich user interface and the handling
 of the various background operations which are integral to a system such as this.
 These two distinct entities form part of the client/server
-model\footnote{\url{http://en.wikipedia.org/wiki/Client-server\_model}}.\\
+model\cite{wik}.\\
 \\
 Utilising this model for our design, the client domain includes all of the programming code which runs in the
 user's web browser, whilst the server domain encompasses the logical operations
@@ -953,7 +953,7 @@ with ease as adding new modern features will be simpler.\newline
 Another thing we learnt from our Distributed Information Management course is
 that it is desirable to separate out our concerns when developing in a web
 environment. This led us to using the open source Twitter Bootstrap
-\footnote{\url{http://twitter.github.com/bootstrap/}}. Bootstrap is ``simple and
+\cite{tb}. Bootstrap is ``simple and
 flexible HTML, CSS, and JavaScript for popular user interface components and
 interactions''. During the implementation stage, Twitter released an upgraded version,
 version 2.0, of Bootstrap and we upgraded to this version when it was released
@@ -1313,8 +1313,7 @@ database using SQL create table statements. Storing this as a script on the
 development server we used allowed us to simply run it when we moved the
 website to the production server and have the tables ready to use.  This
 enforces a highly recommended software engineering process in that you should
-always reuse code wherever possible \footnote{Software Engineering by I
-Sommerville - pg 425}. Not only that, we have a script that is essentially
+always reuse code wherever possible \cite{seng} (\textit{pg 425}). Not only that, we have a script that is essentially
 \textit{portable} - so it could in theory be executed on any web server and
 create the tables required for Bethel Translations to function. The process of
 moving the website from testing to production is described in more detail in
@@ -1381,7 +1380,7 @@ changes that need to be made, depending on the project itself. This chapter desc
 the process followed by the team as we transported the website from one server to another: 
 from a testing server used in development, to a professional web hosting company
 that the translator would be responsible for managing after the project deadline.\newline
-Ian Sommerville \footnote{Software Engineering, pg 385} describes that software developers 
+Ian Sommerville \cite{seng} (\textit{pg 385}) describes that software developers 
 should ``provide built-in support for deployment that will reduce the probability that system 
 administrators will make mistakes when configuring the software''. Since ours is a 
 website developed within a web application framework, it is relatively easy to make the
@@ -1447,8 +1446,7 @@ pages contained in the website. These included vital information on things like 
 and information about her experience as a translator. The team modified this plain information into styled pages
 that were consistent with the rest of the website. Phrases such as ``free full quote'' were emboldened. We 
 aimed to emphasise some attractive features of the service as subtly as possible. These changes may seem 
-trivial on first impressions, but the study at \small{\textit{\url{http://sixrevisions.com/usabilityaccessibility/10-
-usability-tips-based-on-research-studies/}}} suggests that giving a little thought to the potential customers
+trivial on first impressions, but one of the usability studies we looked at \cite{sixr} suggests that giving a little thought to the potential customers
 and how they interact with the website can benefit it hugely.
 \section{Reliability}
 \label{sec:reliab}
@@ -1457,8 +1455,8 @@ Professional Software Development lectures, we are taught that {software mainten
 \textbf{over 90\%} of the workload in software engineering projects. Since we would not be responsible for 
 maintaining the system after deployment, and given the inability of the translator to do this 
 herself, we hand picked a rigorous server for the website to be hosted on. This decision was reached after
-careful evaluation of available hosting plans. The hosting company we decided on is located at 
-\small{\textit{www.krystal.co.uk}}. In brief, it offers afforable, competitive plans and is situated in a 
+careful evaluation of available hosting plans. The hosting company we decided on was Krystal Hosting \cite{kry}.
+ In brief, it offers afforable, competitive plans and is situated in a 
 ``bunker data-centre''. We were able to find an excellent plan for the translator that involved, among other
  great perks, 50GB of storage and email accounts.
 We realised the latter to be important to her as she was intent on sending emails under a company
@@ -1695,6 +1693,8 @@ usability-tips-based-on-research-studies/}
   \emph{http://en.wikipedia.org/wiki/Technology\_acceptance\_model}
   Client Server Model,
   \emph{http://en.wikipedia.org/wiki/Client-server\_model}
+  Rogers Bell Curve,
+  \emph{http://en.wikipedia.org/wiki/Technology_lifecycle}
   
 \bibitem{tb}
   Twitter Bootstrap,
@@ -2135,7 +2135,7 @@ as needing more work before being baselined.
 \begin{center}
 \label{fig:configman}
 \includegraphics[scale=0.6]{config}
-\caption{\small{Configuration Management Activities, source: http://www.goldtech2000.com/images/image014.gif}}
+\caption{\small{Configuration Management Activities, \cite{gt}}}
 \end{center}
 \end{figure}
 
