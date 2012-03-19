@@ -1368,7 +1368,7 @@ Although the translator would already have clients lined up to use the website f
 services, it was still a requirement of the system to make it findable on the Internet. The Internet
 is the greatest platform for advertising new companies, and the website we have developed is no different.
 It is intuitive then to consider how potential customers might try and locate the service if they require it.
-Undoubtedly, the majority of users would perform a search of "document translation" using their favourite
+Undoubtedly, the majority of users would perform a search of ``document translation'' using their favourite
 search engine. The challenge for us, therefore, is the increase the visibility of Bethel Translations on
 these search engines. The terminology concerned is ``page ranking''. That is, the higher a page is located
 in the results of a search engine query, the more likely a user is likely to click through to it. \newline
@@ -1377,9 +1377,9 @@ looked at methods of improving this aspect of the website.  The key principle to
 metatags to increase findability via a search engine. A metatag is extra information contained within the HTML
 that is easily readable by search engines when users enter a search query. For example, we included meta tags
 such as:
-\begin{listings}
+\begin{lstlisting}
 <meta name="description" content="Translation from English to French">
-\end{listings}
+\end{lstlisting}
 With these metatags in place, it helps search engines match pages to queries such that if a user entered ``english to
 french translation'', it should increase the page ranking of that relevant page for BethelTranslations. Including
 metatags to improve SEO is not as magical as it may seem though. The best way of increasing page visibility on 
@@ -1443,6 +1443,21 @@ service on offer and, thankfully, the agreement was mutual.
 \section{Configuration}
 The final section of this chapter provides a summary of the steps followed to port the website code base over
 from development to production.
+
+The actual deployment of the website consisted of a number of important steps:
+\begin{itemize}
+	\item \textbf{Setting up the database} - the database schema was kept under
+		version
+		control as an SQL file, which was used in an installation script that
+		would create the tables.
+	\item \textbf{Uploading} and \textbf{configuring} the application on the
+		server - this was
+		very straightforward, since we only had to upload the files from our
+		testing server to the Bethel Translations one. Codeigniter natively 
+		supports configuration files for its modules, but only one of them
+		was actually related to the domain name on which the application was
+		installed and needed to be changed.
+\end{itemize}
 
 %==============================================================================
 \chapter{Evaluation}
