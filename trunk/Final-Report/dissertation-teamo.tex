@@ -223,7 +223,7 @@ Another point to consider is how users actually come to accept and use a
 new technology, and the factors that influence such a decision. \textbf{Figure
 1.2}, otherwise known as the Technology Adoption Model (TAM) provides a
 graphical realisation of this.
-\footnote{http://en.wikipedia.org/wiki/Technology\_acceptance\_model} The model
+\footnote{\url{http://en.wikipedia.org/wiki/Technology\_acceptance\_model}} The model
 suggests that when users are presented with a new technology, a number of
 factors influence their decision about how and when they will use it, notably:
 
@@ -354,7 +354,7 @@ information to a user by providing the registration, document upload and
 language selection elements on a single page, in a simple 3 step process. Our
 interface would then fall in line with the principle that user interfaces should
 have an aesthetic and minimalist design.
-\footnote{http://www.useit.com/papers/heuristic/heuristic\_list.html} We believe
+\footnote{\url{http://www.useit.com/papers/heuristic/heuristic\_list.html}} We believe
 this is an extremely important aspect of any modern website based on the way
 that users make a decision of whether or not to use the services offered by the
 website. For example, imagine a user enters a web-search for ``Translation
@@ -900,7 +900,7 @@ Bethel Translations, like all modern websites, makes use of multiple
 technologies in order to provide both the rich user interface and the handling
 of the various background operations which are integral to a system such as this.
 These two distinct entities form part of the client/server
-model\footnote{http://en.wikipedia.org/wiki/Client-server\_model}.\\
+model\footnote{\url{http://en.wikipedia.org/wiki/Client-server\_model}}.\\
 \\
 Utilising this model for our design, the client domain includes all of the programming code which runs in the
 user's web browser, whilst the server domain encompasses the logical operations
@@ -923,7 +923,7 @@ with ease as adding new modern features will be simpler.\newline
 Another thing we learnt from our Distributed Information Management course is
 that it is desirable to separate out our concerns when developing in a web
 environment. This led us to using the open source Twitter Bootstrap
-\footnote{http://twitter.github.com/bootstrap/}. Bootstrap is ``simple and
+\footnote{\url{http://twitter.github.com/bootstrap/}}. Bootstrap is ``simple and
 flexible HTML, CSS, and JavaScript for popular user interface components and
 interactions''. During the implementation stage, Twitter released an upgraded version,
 version 2.0, of Bootstrap and we upgraded to this version when it was released
@@ -1419,8 +1419,8 @@ pages contained in the website. These included vital information on things like 
 and information about her experience as a translator. The team modified this plain information into styled pages
 that were consistent with the rest of the website. Phrases such as ``free full quote'' were emboldened. We 
 aimed to emphasise some attractive features of the service as subtly as possible. These changes may seem 
-trivial on first impressions, but the study at \small{\textit{http://sixrevisions.com/usabilityaccessibility/10-
-usability-tips-based-on-research-studies/}} suggests that giving a little thought to the potential customers
+trivial on first impressions, but the study at \small{\textit{\url{http://sixrevisions.com/usabilityaccessibility/10-
+usability-tips-based-on-research-studies/}}} suggests that giving a little thought to the potential customers
 and how they interact with the website can benefit it hugely.
 \section{Reliability}
 \label{sec:reliab}
@@ -1544,10 +1544,32 @@ successfully completed the task we were given, together.
 
 \section{Future Work}
 \label{sect:fut-work}
-Languages
-Currencies
-Payment Types
-User Profiles
+\begin{itemize}
+\item{Languages}
+
+Since our client, the translator, did not have enough time to translate the website into languages other 
+than English, for the moment we have only fully deployed the website in its English version. 
+But it will easy enough to have a version in another language within the framework we are using. We have 
+actually partly implemented the website in French and Italian. It will be only about listing the corresponding 
+translations of the texts in the website in one place within the framework.
+
+\item{Currencies}
+
+As the translator requires we only let customers to pay in 3 different currencies, namely Dollers, Euros and Stirling Pounds. 
+However, it is always possible to support payment using some other currencies. In the background we have integrated 
+PayPal to deal with the payment and it will automatically exchange the currency for the translator. 
+
+\item{Payment Types}
+
+We will consider adding Bacs\footnote{\url{http://www.bacs.co.uk/}} as a payment method alongside PayPal as a possible extra feature for the future work.
+
+\item{User Profiles}
+
+One thing we may provide in the future work is the user profile page. That is, the translator will be able to select a particular 
+user and view his profile and past business history with him. This may potentially require the registerd users of the website to 
+complement more of their informations.
+
+\end{itemize}
 \section{Contributions}
 \label{sec:contrib}
 As is discussed in the project plan, the team had a very open and agile approach to the project.
