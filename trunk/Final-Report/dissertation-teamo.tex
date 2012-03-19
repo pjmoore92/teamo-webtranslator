@@ -160,7 +160,7 @@ with an email address to securely, conveniently and cost-effectively send and
 receive payments online " - \textit{\small{www.PayPal.com/about}}. This setup
 provides the translator with a feature that will not only guarantee her
 security but also will encourage her customers to use the site. PayPal's
-incredible share of the online payments market encourgaes a feeling of reassurance
+incredible share of the online payments market encourages a feeling of reassurance
 during the payment stage. The translator, therefore, does not need to be concerned
 with things such as credit card verification. All of this functionality is
 covered by PayPal as part of their service. \\
@@ -198,7 +198,7 @@ on the website progress. These updates had been sent at important stages of
 development such as the transition from the design inception to the early
 implementation. The essence of our approach was to produce a website which delivered the requirements of our client. When we felt there
 was a need to query the client on certain aspects of the
-website's implementation, we emailed her without hesitation and she was quite often happy to
+web-site's implementation, we emailed her without hesitation and she was quite often happy to
 accommodate these changes. It seemed that she was prepared to grant us some
 degree of trust with creating her website, which certainly helped, but we still
 sought her opinion of most changes that took place. Arguably then, communication
@@ -276,7 +276,7 @@ and new techniques are developed very quickly. These have been made easy to use
 by anyone, regardless of: computer knowledge, nature of their device (mobile or
 desktop) or their operating system. All they need is an up-to-date web browser -
 arguably an easy requirement to fulfil, since most of them update
-automatically. From this we can surmise there is a large audience withint the
+automatically. From this we can surmise there is a large audience within the
 reach of our project. This is a considerable motivating factor for everyone in
 the team.\\
 
@@ -381,14 +381,14 @@ a solid idea of how this 3-stage process would appear on our website.
 The layout is intuitive, flowing and simple to approach. In this early design we
 have divided the page into two sections. In section 1 the user is presented with
 a concise block of text detailing the main functions of the site.
-Subsequently, in Section 2 the user can enteri their contact information, add
+Subsequently, in Section 2 the user can enter their contact information, add
 one of more documents, set the requirements and submit the request for a quote.\\
 \\
 There is no overwhelming web-form that some other websites utilise. It is minimal and
 it is undemanding. The majority of the registration process happens
 automatically when the user clicks ``Get your quote''. at which point the system
 registers the user (pending email validation), uploads their documents to the
-file store, before placin the job in
+file store, before placing the job in
 our client's pending work queue. The implementation of such functions are
 discussed later in Section~\ref{chap:impl}.\\
 \\
@@ -450,24 +450,25 @@ know when the work is complete."}
 \caption{The transition of jobs through "statuses"}
 \end{figure}
 
-Building upon the needs of these user classes, we needed to design a flexible
+Building upon the needs of these user classes, we chose to design a flexible
 system that provided functionality for all of these goals. Our main focal point
 would be the transition of \textbf{jobs}. In the context of our system, a job is
 what the website creates when the user uploads one or more documents for
 translation. Clients (registered users) would submit and pay for them. The
-translator would review them, download them and upload them. We considered the
+translator would review, download the original files before uploading the
+translated versions. We considered the
 transition of jobs throughout the life cycle of a translation, as job statuses,
 and produced a sequence that is illustrated in \textbf{Figure 2.3}. \newline
 
 The diagram is much self-explanatory, but to summarise: Jobs that are submitted
 by the clients are placed in a \textbf{pending} work queue. The translator is
-able to review these documents and send some quote to the client. After a job
+able to review these documents before sending a quote to the client. After a job
 has been quoted, it is placed in the \textbf{Quotes} queue. Quoted jobs are held
-in this queue until they are paid for via PayPal. When this has happened, they
+in this queue until they are paid for via PayPal. Once this has happened, they
 are moved to \textbf{Translations}, which is a breakdown of completed jobs.
-After a period of 90 days, jobs from this section are moved to \textbf{History}
-in order to reduce space on the server.
-
+After a period of 90 days, jobs are moved to the \textbf{History}
+section, the attached files being deleted permanently.\\
+\\
 The transformation from this design plan to a viable user interface that is
 built upon these job statuses is described later in Section~\ref{sect:ui}.
 \newline
@@ -605,27 +606,24 @@ diagram, are listed as part of Chapter \ref{chap:impl}.
 \section{System Design and Wire-frames}
 \label{sect:system-design-and-wireframes}
 After laying out the process of the website we focused on organising the content
-and on the wire-frames.
+of the wire-frames.
 
 
 \subsection{Information Architecture}
 Based on the user analysis discussed in section \ref{sect:user-process}, we split
 up the website into two abstract sections: 
 \begin{itemize} 
-	\item \textbf{Advertisement pages}, which are available to all visitors, and
+	\item \textbf{Static Advertisement pages}, which are available to all visitors, and
 	describe the service, means of contact, and other such information.
-	\item \textbf{User dashboard}, the section of the site available only to
-	registered users, and which allows them to see the progress of their 
-	documents.
+	\item \textbf{Dynamically generated User dashboard}, the section of the site available only to
+	registered users, and which allows them to follow the progress of their translations
 \end{itemize}
 
 %TODO: maybe ``presentation'' isn't the best word to use here?
-The \textbf{advertisement pages}, as stated above, need to inform the visitor
-about the service. 
-
-Initially, the translator offered only a ``document translation'' service, but
-in the meantime, she obtained certifications for others as well, i.e.:
-``video interpreting'', ``proofreading'', and ``over-the-phone interpreting''.
+During the initial requirements capturing process, our client only offered
+document translation, however during the implementation stage she obtained
+certifications for other related services as well. We were now required to include pages
+describing her interpreting, and proofreading services.
 Since the first one is the main service, we decided that the front page of the
 website would present only an overview of all of these, while focusing on the
 document translation. The other services would have their own separate pages
@@ -645,7 +643,7 @@ approach is to have one page per status, as shown in Figure
 			{figures/jobstatus-page}
 	\end{center}
 	\vspace{-40pt}
-	\caption{Connection between a job's status and the section of the
+	\caption{Relation between a job's status and the section of the
 	dashboard it is found in.}
 	\label{fig:jobstatus-page}
 \end{figure}
@@ -708,9 +706,9 @@ Wire-frames are blueprints of the website, representing every important page and
 their structure and behaviour.
 They focus more on what elements would a page contain, and their place on
 the page, rather than a refined design. Therefore, these sketches take form of
-rough drawings of the final design, usually keeping things like images or
-colours out, because they can distract the reader from his main purpose, which
-is analysing the layout of that particular page, rather than the visual design.
+rough drawings of the final design, avoiding specific details such as images or
+colours, as they can generally distract the reader from their main purpose - is
+analysing the layout of that particular page, rather than the visual design.
 % some more on why these are useful, etc.
 
 
@@ -754,9 +752,8 @@ across all pages and the rest of the content goes in the \textbf{content area}.
 This is a good design practice because it keeps the entire website consistent. In 
 terms of technological benefits this will increase the speed of loading the website 
 due to lower bandwidth requirements. The browser does not need to reload the header 
-and footer every time, as it only loads the new sections. The browser can cache
-these sections also meaning that the site is more efficient.
-The rest of the sketches of the pages illustrated here will only show the
+and footer every time, as it only loads the new sections. The browser will cache
+these sections, improving the site's efficiency. The rest of the sketches of the pages illustrated here will only show the
 content area.
 
 The header contains:
@@ -821,11 +818,11 @@ service. Contains a few paragraphs that detail goals and accomplishments.
 The page needs to answer some possible questions that the users might have
 regarding the business:
 \begin{itemize}
-	\item who is behind it?
-	\item what are they doing?
-	\item when did they start doing it?
-	\item where are they?
-	\item how are they accomplishing what they claim to do?
+	\item Who is behind it?
+	\item What are they doing?
+	\item When did they start doing it?
+	\item Where are they?
+	\item How are they accomplishing what they claim to do?
 	\item Optionally an image, or even a short video, to enhance trustworthiness.
 \end{itemize}
 
@@ -840,7 +837,8 @@ regarding the business:
 
 
 \subsubsection{Testimonials}
-Having testimonials from happy customers also adds to the trust of the business.
+Testimonials from happy customers will likely add to the level of trust
+prospective customers have with this business.
 The business owner would ask her clients for feedback and permission to publish
 it on the website. Then she can pick which ones would suit her and post only a
 fragment on the website, along with some details of that client (name, company,
@@ -882,7 +880,7 @@ want to give money to.'' [Jakob Nielsen]
 From the images and diagrams in this chapter we have constructed the blueprints
 for a modern, stylish, and most significantly - user friendly website.
 Ultimately the website we want to build is one the client can fully use, without
-any reluctance. The next chapter, \ref{chap:impl}, describes how transitioned
+any reluctance. The next chapter, \ref{chap:impl}, describes how we transitioned
 from design to implementation, and the methods used in doing so.
 
 %==============================================================================
@@ -1372,15 +1370,15 @@ these search engines. The terminology concerned is ``page ranking''. That is, th
 in the results of a search engine query, the more likely a user is likely to click through to it. \newline
 The process of increasing the visibility on search engines is known as SEO (Search Engine Optimisation). We 
 looked at methods of improving this aspect of the website.  The key principle to successful SEO is using
-metatags to increase findability via a search engine. A metatag is extra information contained within the HTML
+meta-tags to increase findability via a search engine. A meta-tag is extra information contained within the HTML
 that is easily readable by search engines when users enter a search query. For example, we included meta tags
 such as:
 \begin{lstlisting}
 <meta name="description" content="Translation from English to French">
 \end{lstlisting}
-With these metatags in place, it helps search engines match pages to queries such that if a user entered ``english to
+With these meta-tags in place, it helps search engines match pages to queries such that if a user entered ``english to
 french translation'', it should increase the page ranking of that relevant page for BethelTranslations. Including
-metatags to improve SEO is not as magical as it may seem though. The best way of increasing page visibility on 
+meta-tags to improve SEO is not as magical as it may seem though. The best way of increasing page visibility on 
 search results is simply - time. We believe that the system we have created has provided the translator with a means
 of creating a viable online business, partly due to our simple aesthetic of user interface, and partly due to our
 research discussed in the \ref{sec:reliab} section later. Therefore, over time, the website can and should become
@@ -1430,12 +1428,12 @@ Professional Software Development lectures, we are taught that {software mainten
 maintaining the system after deployment, and given the inability of the translator to do this 
 herself, we hand picked a rigorous server for the website to be hosted on. This decision was reached after
 careful evaluation of available hosting plans. The hosting company we decided on is located at 
-\small{\textit{www.krystal.co.uk}}. In brief, it offers afforable, competitve plans and is situated in a 
-``bunker datacentre''. We were able to find an excellent plan for the translator that involved,a mong other
+\small{\textit{www.krystal.co.uk}}. In brief, it offers afforable, competitive plans and is situated in a 
+``bunker data-centre''. We were able to find an excellent plan for the translator that involved,a among other
  great perks, 50GB of storage and email accounts.
 We realised the latter to be important to her as she was intent on sending emails under a company
 name, not her own personal account. The hosting company is well reputed and states that it has a system in place
-to take frequent backups of data, excellent phsyical security and round the clock customer support. We were
+to take frequent backups of data, excellent physical security and round the clock customer support. We were
 more than happy to recommend this company for Joelle to host her website on purely because of the reliable
 service on offer and, thankfully, the agreement was mutual.
 \section{Configuration}
@@ -1466,7 +1464,7 @@ Second feedback session with Karen incl more complete website design - Feb 9th\\
 Successful evaluation of a software project is paramount. Without it,
 developers are left to their own volition, assuming all the decisions they've
 made are the correct ones. Developers cannot presuppose every vector of user
-behaviour, neither can they recognize every error in the source code. Carefully
+behaviour, neither can they recognise every error in the source code. Carefully
 observing and recording user interactions with the system is a valuable tool
 in pin-pointing errors of judgement and failures in implementation.\\
 \\
@@ -1505,8 +1503,8 @@ expanding areas of the dashboard) were all appreciated by the participants.
  
 \subsection{Problems}
 Some issues were raised during the tests, particularly during the lab evaluation
-session. Most notably, the PayPal stage was a block to the particpants
-completing the task's asked of them. Due to an incorectly set API key,
+session. Most notably, the PayPal stage was a block to the participants
+completing the task's asked of them. Due to an incorrectly set API key,
 
 \subsection{Suggestions}
 
