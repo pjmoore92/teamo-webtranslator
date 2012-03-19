@@ -482,10 +482,10 @@ built upon these job statuses is described later in Section~\ref{sect:ui}.
 \section{User Process}
 \label{sect:user-process}
 
-This section will describe the general activity flow for a client and the translator, respectively.
-For the client we will try to describe the minimal stages he would likely pass through to use the 
-translation service; while for the translator we will try to show his experience to finish his 
-business process in a straightforward manner.
+This section will illustrate the typical activity flows for a client and the translator, respectively.
+For the client we will try to describe the minimum number of stages they would likely
+undertake in order to use the translation service; while for the translator we
+will attempt to show a typical work session involving multiple activities.
 
 \newpage
 \begin{wrapfigure}{l}{0.42\textwidth}
@@ -953,16 +953,14 @@ fully operational.
 
 \section{User Interface} \label{sect:ui} 
 
-This section aims to show the user interface of our final product. 
-From the structure to the navigation and finally the description of all the main pages.
+In this section we will discuss the user interface, particularly in terms of the structure of
+the site, and the navigation steps taken in order to browse it.
 
 \subsection{Structure and Navigation}
 
 The overall structure of the application is relatively simple, as shown 
 in the website structure diagram (Figure ~\ref{fig:website-structure}). 
 Everything is 1 to 3 clicks away.
-
-\textbf{Navigation}
 
 Pages are displayed in a single browser window, with the exception
 of some modal windows that hover over the main page to show notifications. The modals
@@ -1550,16 +1548,20 @@ successfully completed the task we were given, together.
 \item{Languages}
 
 Since our client, the translator, did not have enough time to translate the website into languages other 
-than English, for the moment we have only fully deployed the website in its English version. 
-But it will easy enough to have a version in another language within the framework we are using. We have 
-actually partly implemented the website in French and Italian. It will be only about listing the corresponding 
-translations of the texts in the website in one place within the framework.
+than English, for the time being we are only presenting an English version. However we have already fully implemented a localization system
+for the site. Literal text is stored in language files and not part of the
+source code. Based on the user's preference, the correct language is automatically
+injected into the final web page. As soon as we are provided complete
+translations of the text used throughout the site, we will happily support multiple
+languages in the interface.
 
 \item{Currencies}
 
-As the translator requires we only let customers to pay in 3 different currencies, namely Dollers, Euros and Stirling Pounds. 
-However, it is always possible to support payment using some other currencies. In the background we have integrated 
-PayPal to deal with the payment and it will automatically exchange the currency for the translator. 
+Presently, the translator has only requested support for paying in 3 different
+currencies, namely Dollers, Euros and Pounds Sterling. 
+However, it is always possible to support payment using some other currencies.
+PayPal already offers the ability to automatically convert prices into many
+currencies on behalf of the client.
 
 \item{Payment Types}
 
@@ -1567,10 +1569,12 @@ We will consider adding Bacs\footnote{\url{http://www.bacs.co.uk/}} as a payment
 
 \item{User Profiles}
 
-One thing we may provide in the future work is the user profile page. That is, the translator will be able to select a particular 
-user and view his profile and past business history with him. This may potentially require the registerd users of the website to 
-complement more of their informations.
-
+One thing we may provide in any future is more detailed tracking of users in the
+administrative dashboard. With this enhanced functionality, the translator would
+be able to select a particular user and view their past business history with
+him. This is very achieveable with the modular approach we took to handling
+data in our application.
+ 
 \end{itemize}
 \section{Contributions}
 \label{sec:contrib}
@@ -1586,7 +1590,7 @@ Alasdair Campbell contributed to the project in the following areas, among other
 \item{Implementation of Database}
 \item{Implementation of Language Functionality}
 \item{Writing of Evaluation Section of Dissertation}
-\item{}
+\item{Proofreading and redrafting the Disertation}
 \item{}
 \end{itemize}
 Stephen Hayton contributed to the project in the following areas, among others:
