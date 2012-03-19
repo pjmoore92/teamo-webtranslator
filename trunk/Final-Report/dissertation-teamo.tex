@@ -1373,7 +1373,20 @@ search engine. The challenge for us, therefore, is the increase the visibility o
 these search engines. The terminology concerned is ``page ranking''. That is, the higher a page is located
 in the results of a search engine query, the more likely a user is likely to click through to it. \newline
 The process of increasing the visibility on search engines is known as SEO (Search Engine Optimisation). We 
-looked at methods of improving this aspect of the website.  
+looked at methods of improving this aspect of the website.  The key principle to successful SEO is using
+metatags to increase findability via a search engine. A metatag is extra information contained within the HTML
+that is easily readable by search engines when users enter a search query. For example, we included meta tags
+such as:
+\begin{listings}
+<meta name="description" content="Translation from English to French">
+\end{listings}
+With these metatags in place, it helps search engines match pages to queries such that if a user entered ``english to
+french translation'', it should increase the page ranking of that relevant page for BethelTranslations. Including
+metatags to improve SEO is not as magical as it may seem though. The best way of increasing page visibility on 
+search results is simply - time. We believe that the system we have created has provided the translator with a means
+of creating a viable online business, partly due to our simple aesthetic of user interface, and partly due to our
+research discussed in the \ref{sect:reliab} section later. Therefore, over time, the website can and should become
+more popular.
 \section{Security}
 As software engineers we would be naive to believe that we should not concern ourselves with the
 security of the website we had developed. A result of increasing the number of users to the site
@@ -1412,6 +1425,7 @@ trivial on first impressions, but the study at \small{\textit{http://sixrevision
 usability-tips-based-on-research-studies/}} suggests that giving a little thought to the potential customers
 and how they interact with the website can benefit it hugely.
 \section{Reliability}
+\label{sec:reliab}
 Another extremely important aspect of the deployed system would be to ensure it was reliable. In the 
 Professional Software Development lectures, we are taught that {software maintenance} accounts for
 \textbf{over 90\%} of the workload in software engineering projects. Since we would not be responsible for 
