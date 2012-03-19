@@ -165,7 +165,7 @@ professional look and leaves our client less vulnerable to hacking attacks as
 opposed to other methods of payment. One of the principal requirements of our
 website is support PayPal for payment of services. \\
 
-Seperatley, Bethel Translations is also a worthwhile use of our time for many reasons. We are helping
+Separately, Bethel Translations is also a worthwhile use of our time for many reasons. We are helping
 to produce a system that will be used by a local businesswoman with a young family.
 This provides a great sense of achievement for our team as something we are building is
 helping others in their daily life. The experience we have working with a real external
@@ -1497,19 +1497,20 @@ behaviour, neither can they recognise every error in the source code. Carefully
 observing and recording user interactions with the system is a valuable tool
 in pin-pointing errors of judgement and failures in implementation.\\
 \\
-In this project, a transaction involves multiple staged exchanges
+In this project, retaining customers throughout the process right up until
+payment is the main priority. Transactions involve multiple staged exchanges
 between our client and the customers. Feedback was crucial in order to confirm
 that our decisions made at the design stage stood up to the challenges of
-everyday use.
+everyday use.\\
 
 \section{User Testing}
 \label{sect:testing}
-Although we performed regular evaluations of the system throughout the development
-period, it was necessary to coordinate a comprehensive evaluation strategy to
+Although we performed periodical evaluations of the system throughout the development
+process, it was necessary to coordinate a comprehensive evaluation strategy to
 fully road test our system once it was largely feature complete and operational.
-Taking place in the computing department's level 3 laboratory.  At the same time
-carefully selected individuals out-with the university were invited to take
-part.\\
+The majority of the testing took place in the Computing Department's Level 3
+Lab in the Boyd Orr building. At the same time, selected individuals out-with the university were invited to take
+part in the evaluation.\\
 \\
 Evaluators were given instructions on how to access the website and a task sheet
 to complete. Immediately following the evaluation, participants were invited to
@@ -1531,15 +1532,54 @@ responsive. The colours used, layout of the pages and the browser features emplo
 expanding areas of the dashboard) were all appreciated by the participants.
  
 \subsection{Problems}
-Some issues were raised during the tests, particularly during the lab evaluation
-session. Most notably, the PayPal stage was a block to the participants
-completing the task's asked of them. Due to an incorrectly set API key,
+Some issues were raised during the tests, particularly from the lab evaluation
+session. Most notably, the PayPal stage was a block to participants
+completing the task's asked of them. Due to an incorrectly set PayPal API key,
+they were unable to action a payment against their translation job.
+This didn't detract to severely from the evaluation thankfully.
 
 \subsection{Suggestions}
+On top of the praise directed at our accomplishments, some suggestions were made
+through the feedback questionnaire. Listed here are the most pertinent ones,
+with any progress made to them.
+\begin{itemize}
+\item{\textbf{Explanation of pricing options -} one user felt there wasn't
+enough information given on to the pricing policy, in particular whether or not
+the selected deadline influenced the price per word. Although having this
+information on the main form would detract from the simplicity we have achieved,
+we feel that this is a valid concern. One solution would be to make use of
+tool-tips, or an information area which relates to the context of the current
+position in the form.}
+\item{\textbf{Hard to find Login button -} one user reported it was difficult
+finding the login button. Although it was situated in the top right corner of
+the site, as familiar to most users of the Internet, it was slightly ambiguous
+due to the styling of the HTML element. Upon reading this report, we enlarged
+and re-styled the login elements.}
+\item{\textbf{Problems with the ambiguity over passwords -} originally we
+planned to avoid username/password combinations by utilising a reference code,
+similar to a flight booking reference. In the end this proved more troublesome
+than was worthwhile, so we changed to a standard logging-in mechanism. In
+some places of the site we still referred to the 'reference code' leading to
+confusion for some of our volunteers. We have since remedied this flaw in the
+deployed site.}
+\item{\textbf{Automatic logging in after account verification -} users reported
+annoyance at having to enter their details following clicking the verify link in
+the email sent to them. Although is is a regular occurance on older websites, it
+is technically possible to achieve this. The authentication library, TankAuth,
+doesn't support this natively, but a solution has been posted which allows this
+extra functionality. We will implement this in due course.}
+\end{itemize}
 
 \section{Client Evaluation}
 \label{trans-eval}
-TODO how to describe this?!
+Due to our client's busy schedule, she was unable to complete a full evaluation
+of the administrator section of the website during the project's time-frame,
+however her plan is to trial the website for a month or so, and then
+deliver feedback to the team. This way the client will have sufficient time to get used to
+her new way of working at her own pace, and return valuable feedback after
+reflection. It's also worth noting that there are only one or two slight differences
+between the user and administrator experiences, and we have already performed
+rigorous evaluation of the client side processes.
 
 %==============================================================================
 \chapter{Conclusion}
