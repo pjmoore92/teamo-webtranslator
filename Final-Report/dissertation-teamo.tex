@@ -9,7 +9,6 @@
 \usepackage{subfig}
 \usepackage{float}
 \usepackage{listings}
-\usepackage{pdfpages}
 
 \usepackage{url}
 \usepackage{appendix}
@@ -193,7 +192,7 @@ feedback. Not only that, our team would have to create a very easy-to-use admini
 end to the website that she could master easily.\\
 \\
 As we advanced the development of the website, we were careful to be very clear
-and straightforward when updating the client on our progress. We accomplished this
+and straightford when updating the client on our progress. We accomplished this
 mainly through emails containing concise, clear and jargon free status updates
 on the website progress. These updates had been sent at important stages of
 development such as the transition from the design inception to the early
@@ -350,7 +349,7 @@ intuitive to use.
 \end{center}
 \end{figure}
 
-From previous modules in our degree, namely Information Management 2 and Interactive Systems 3, our team had experience
+From previous modules in our degree, namely IM2 and IS3, our team had experience
 of applying Jakob Nielsen's heuristics to obtain a successful user interface. We
 wanted to develop the idea that our website would display the minimal amount of
 information to a user by providing the registration, document upload and
@@ -567,7 +566,7 @@ about the service and the translator); read the “Testimonials” page.\\
 %%\rule{430pt}{1pt}
 
 \section{Database Model}
-
+\marginpar{Explain each entity?}
 Our database structure was designed after we had thoroughly revised our user
 registration and job transition 
 processes, detailed before this section. We envisaged there being four separate
@@ -591,7 +590,7 @@ they are all populated
 in some way during the 3 stage process discussed earlier.
 
 Discussion of the database schema, namely how we implemented the entities in the
-diagram, are listed as part of Chapter \ref{chap:impl}.
+diagram, are listed as part of the \ref{chap:impl} chapter.
 % \newpage
 
 
@@ -613,7 +612,6 @@ up the website into two abstract sections:
 	documents.
 \end{itemize}
 
-%TODO: maybe ``presentation'' isn't the best word to use here?
 The \textbf{advertisement pages}, as stated above, need to inform the visitor
 about the service. 
 
@@ -642,6 +640,54 @@ approach is to have one page per status, as shown in Figure
 	\caption{Connection between a job's status and the section of the
 	dashboard it is found in.}
 	\label{fig:jobstatus-page}
+\end{figure}
+
+After this evaluation, we have built a website structure diagram
+(Figure ~\ref{fig:website-structure}). Everything is 1-3 clicks away.
+\begin{figure}[H]
+\label{fig:website-structure}
+	\vspace{-20pt} %trims the whitespace on the top of the page
+	\begin{center}
+		\subfloat[Main]{
+			%\label{fig:website-structure:main}
+			\includegraphics[
+				width=\linewidth,
+				% scale=0.85,
+				trim=40px 600px 40px 20px,
+				clip=true
+				]
+				{figures/website-structure}
+		}
+		
+		\qquad
+		\subfloat[Services expansion]{
+			%\label{fig:website-structure:services}
+			\includegraphics[
+				width=\linewidth,
+				% scale=0.85,
+				trim=30px 700px 30px 0px,
+				clip=true
+				]
+				{figures/website-structure-services}
+		}
+		
+		\qquad
+		\subfloat[Dashboard expansion]{
+			%\label{fig:website-structure:dashboard}
+			\includegraphics[
+				width=\linewidth,
+				% scale=0.85,
+				trim=30px 700px 30px 0px,
+				clip=true
+				]
+				{figures/website-structure-dashboard}
+		}
+
+	\end{center}
+	\label{fig:website-structure}
+	\vspace{-50pt}
+	\caption{Website structure}
+	%\vspace{-50pt}
 \end{figure}
 
 
@@ -716,7 +762,9 @@ time.
 	\item main navigation menu
 \end{itemize}
 
-The menu is a collection of links to the main areas of the website:
+Within the pages, primary navigation is provided on the top of the
+screen, in a horizontal list of text links. In the dashboard navigation is
+provided on the left, in a vertical list of text links.
 \begin{itemize} \itemsep1pt \parskip0pt \parsep0pt
 	\item Home
 	\item About
@@ -730,6 +778,7 @@ The menu is a collection of links to the main areas of the website:
 
 
 Footer:
+\marginpar{Why are these important?}
 \begin{itemize} \itemsep1pt \parskip0pt \parsep0pt
 	\item copyright notice, if needed
 	\item links to legal documents (e.g.: Privacy policy, terms of use, etc)
@@ -743,15 +792,18 @@ Footer:
 
 
 \subsubsection{Main page}
+The main page provides navigation links to all
+other pages. It shows the welcome message from the translator.
 From our earlier decision of creating a simple three step process and
 implementing this on our homepage, we took our wire-frame and refined it to
-come up with the  \textbf{Main Template} (Figure ~\ref{wireframes-main-layout}).
+come up with the  \textbf{Main Template}
+(Figure ~\ref{wireframes:main-template}).
 
 \begin{figure}[ht]
-\label{wireframes:main-template}
 \begin{center}
 \includegraphics[width=\linewidth]{wireframes/bt-homepagev3}
 \caption{The Main Template}
+\label{wireframes:main-template}
 \end{center}
 \end{figure}
 
@@ -765,7 +817,7 @@ This is the page the users would go to in order to find out more about the
 service. Contains a few paragraphs that detail goals and accomplishments.
 The page needs to answer some possible questions that the users might have
 regarding the business:
-\begin{itemize}
+\begin{itemize} \itemsep1pt \parskip0pt \parsep0pt
 	\item who is behind it?
 	\item what are they doing?
 	\item when did they start doing it?
@@ -777,7 +829,8 @@ regarding the business:
 \begin{figure}
 \label{wireframes:about}
 \begin{center}
-\includegraphics[width=\linewidth, trim = 0px 110px 0px 100px]{wireframes/about}
+\includegraphics[width=\linewidth, trim = 0px 110px 0px 100px, clip=true]
+	{wireframes/about}
 \caption{The About page}
 \end{center}
 \end{figure}
@@ -792,20 +845,28 @@ fragment on the website, along with some details of that client (name, company,
 occupation).
 
 \begin{figure}
-\label{wireframes:testimonials}
 \begin{center}
-\includegraphics[width=\linewidth, trim = 0px 80px 0px 220px]
+\vspace{-40pt} %trims the whitespace on the top of the page
+\includegraphics[width=\linewidth, trim = 0px 40px 0px 40px, clip=true]
 	{wireframes/testimonials}
 \caption{The Testimonials page}
+\label{wireframes:testimonials}
 \end{center}
 \end{figure}
 % end Testimonials
 
 
 \subsubsection{Contact}
+The contact page (Figure \ref{wireframes:contact}) is the page that a customer
+may use to contact the translator
+for general enquiries or getting a quote for services other than document
+translating that the translator offers. 
+
 Having other contact methods (phone number, physical mailing address) also add
 to the credibility of the business. ``A company with no address is not one you
 want to give money to.'' [Jakob Nielsen]
+
+Page elements:
 \begin{enumerate} \itemsep1pt \parskip0pt \parsep0pt
 	\item work telephone number
 	\item physical address
@@ -814,15 +875,17 @@ want to give money to.'' [Jakob Nielsen]
 \end{enumerate}
 
 \begin{figure}
-\label{wireframes:contact}
 \begin{center}
-\includegraphics[width=\linewidth, trim = 0px 40px 0px 220px]
+\vspace{-40pt} %trims the whitespace on the top of the page
+\includegraphics[width=\linewidth, trim = 0px 0px 0px 0px, clip=true]
 	{wireframes/contact}
 \caption{The Contact page}
+\label{wireframes:contact}
 \end{center}
 \end{figure}
 % end Testimonials
 
+\newpage
 \subsection{Summary}
 From the images and diagrams in this chapter we have constructed the blueprints
 for a modern, stylish, and most significantly - user friendly website.
@@ -847,7 +910,7 @@ of the various background operations which are integral to a system such as this
 These two distinct entities form part of the client/server
 model\footnote{http://en.wikipedia.org/wiki/Client-server\_model}.\\
 \\
-Utilising this model for our design, the client domain includes all of the programming code which runs in the
+Utilizing this model for our design, the client domain includes all of the programming code which runs in the
 user's web browser, whilst the server domain encompasses the logical operations
 performed on the web server.\\
 \\
@@ -897,19 +960,11 @@ TBC
 
 \subsection{Structure and Navigation}
 
-The overall structure of the application is relatively simple, as shown 
-in the website structure diagram (Figure ~\ref{fig:website-structure}). 
-Everything is 1-3 clicks away.
-
-
-
-
+There are five primary elements in the site, and each of these may
+be accessed directly from the main page (in addition to the ‘Contact
+us’ information).
 
 \textbf{Navigation}
-
-Within the pages, primary navigation is provided on the top of the
-screen, in a horizontal list of text links. In the dashboard navigation is
-provided on the left, in a vertical list of text links.
 
 Pages are displayed in a single browser window, with the exception
 of some modal window may show for notification. The modals
@@ -932,10 +987,6 @@ Some of the similar pages are omitted in order to avoid redundancy.
 \begin{itemize}
 \item \textbf{Description}
 
-The welcome page is the landing page that provides navigation links to all other pages. It shows the welcome message from the translator.
-The main functionality of this page allows clients to log in or register for the site. 
-We decided to make the registration process a three-steps process so as to make it as simple as possible for a first time user.
-
 \item \textbf{Navigation}
 
 This is the default page a potential customer will see when visiting the website. One can always come back to this page with the text link ``Home".
@@ -949,8 +1000,8 @@ Content: Links to the About page, the Testimonials page, the Contact page, and t
 Behaviour: The user is directed to the destination of a particular link. \\
 
 \item `Login' / `My Account'\\
-Type: Drop-down box\\
-Content: (For `Login') Fields `Email' and `Password' to input login information; check-box `Remember me' to provide cookie feature; 
+Type: Dropdown box\\
+Content: (For `Login') Fields `Email' and `Password' to input login information; checkbox `Remember me' to provide cookie feature; 
 text link `Forgot password' directing to password resetting process. (For `My Account') text links `Dashboard' and `Logout'.\\
 Behaviour: `Login' is shown by default. `My Account' is shown for a logged-in user.\\
 
@@ -971,9 +1022,9 @@ Behaviour: Disappears after a user logged in. A modal telling the user to activa
 
 \begin{itemize}
 \item \textbf{Description}
-
-The contact page is the page that a customer may use to contact the translator for general enquiries or getting a quote for services other than document translating that the translator offers. 
-
+%What we've changed from Wireframes:
+%  * taken down additional contact information, at the translator's request.
+%  * 
 \item \textbf{Navigation}
 
 A user can get access to this page through the text link `Contact' on the main menu bar.
@@ -982,13 +1033,13 @@ A user can get access to this page through the text link `Contact' on the main m
 \begin{itemize}
 \item `Contact Form'\\
 Type: Form\\
-Content: Text fields to input user information; drop-down box to choose a enquiry subject; text field to leave messages to the translator. \\
+Content: Text fields to input user informations; dropdown box to choose a enquiry subject; text field to leave messages to the translator. \\
 Behaviour: Full name and email address will be automatically filled for a logged-in user. An enquiry email will be sent to the translator. \\
 
 \end{itemize}
 \end{itemize}
 
-\textbf{Administrator Dashboard - Pending/Quoted Jobs}
+\textbf{Admin Dashboard - Pending/Quoted Jobs}
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.8\linewidth]{images/adminDashPending}
@@ -1003,8 +1054,7 @@ The translator can download the documents for a job and set the quote for the jo
 
 \item \textbf{Navigation}
 
-The translator can get access to this page through the text link
-`Pending'/`Quoted' on the side menu bar in the admin Dashboard.
+The translator can get access to this page through the text link `Pending'/`Quoted' on the side menu bar in the Admin Dashboard.
 
 \item \textbf{Main Elements}
 \begin{itemize}
@@ -1015,7 +1065,7 @@ Behaviour: The user is directed to the destination of a particular link. \\
 
 \item `Job Information'\\
 Type: Text\\
-Content: Information of the job including client name, source and desired languages for translation, submit date, due date, and a quote \\
+Content: Informations of the job including client name, source and desired languages for translation, submit date, due date, and a quote \\
 Behaviour: If the job is quoted, a quote will be shown, or otherwise a dash line. \\
 
 \item `Set/Update Quote'\\
@@ -1025,7 +1075,7 @@ Behaviour: A job will be moved from the pending list to the quoted list if the t
 
 \item `Download'\\
 Type: Text link\\
-Content: a download
+Content: a downlo
 ad link for a document in the job\\
 Behaviour: -\\
 \end{itemize}
@@ -1064,13 +1114,13 @@ Behaviour: -\\
 \item `Upload'\\
 Type: Upload Field\\
 Content: A field to choose the document to be uploaded.\\
-Behaviour: Only shows for accepted jobs. The accepted job will be moved to translations after the uploading is completed.\\
+Behavior: Only shows for accepted jobs. The accepted job will be moved to translations after the uploading is completed.\\
 
 \end{itemize}
 \end{itemize}
 
 
-\textbf{Admin Dashboard - Site Statistics}
+\textbf{Admin Dashboard - Site Statstics}
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.8\linewidth]{images/adminDashStatistics}
@@ -1151,7 +1201,7 @@ Behaviour: - \\
 
 \item `Upload'\\
 Type: Button\\
-Content: A  button to select files to be uploaded and a button to upload and submit a new job.\\
+Content: A uploader button to select files to be uploaded and a button to upload and submit a new job.\\
 Behaviour: A new job will be submitted after all the requirements are set and all files are successfully uploaded.\\
 
 \end{itemize}
@@ -1243,7 +1293,7 @@ Sommerville - pg 425}. Not only that, we have a script that is essentially
 \textit{portable} - so it could in theory be executed on any web server and
 create the tables required for Bethel Translations to function. The process of
 moving the website from testing to production is described in more detail in
-chapter \ref{chap:depl}  \\
+the \ref{chap:depl} chapter. \\
 \\
 \small{
 \textbf{Customer}\\
@@ -1310,7 +1360,7 @@ Ian Sommerville \footnote{Software Engineering, pg 385} describes that software 
 should ``provide built-in support for deployment that will reduce the probability that system 
 administrators will make mistakes when configuring the software''. Since ours is a 
 website developed within a web application framework, it is relatively easy to make the
-changes to accommodate this process. As the project neared the end of development stages, such
+changes to accomodate this process. As the project neared the end of development stages, such
 that most functional requirements of the system had been realised, more consideration was given
 to non-functional requirements. It was intuitive for us that the changes be categorised 
 into sections that generally match the non-functional requirements of the system.
@@ -1330,7 +1380,7 @@ As software engineers we would be naive to believe that we should not concern ou
 security of the website we had developed. A result of increasing the number of users to the site
 means there is a greater security risk. The main concern with a site like this one is spam bots.
 Spam bots deliberately try to misuse the site to gain access to customer information, flood the 
-translator with phishing emails and various other malicious requests.\newline
+translator with phising emails and various other malicious requests.\newline
 We identified two areas of the site that could potentially be targeted by spam bots: the contact
 page, and the main document submission/registration page. Initially it was considered to prevent 
 spam bots from abusing these forms by implementing captchas. A captcha is an interactive form that
@@ -1352,7 +1402,7 @@ query to go through.
 \section{Marketability}
 The challenge of encouraging potential customers to try the website does not end with them finding it, although 
 that is a major part of the problem. Once they have navigated their way to the website, it is extremely important 
-that we entice them somehow into committing to the process of signing up and submitting documents for translation.
+that we entice them somehow into commiting to the process of signing up and submitting documents for translation.
 We believed we had accomplished this somewhat already via our simple, aesthetically pleasing interface design.
 At the end of the development phase, however, the translator had sent us some plain text for some of the static 
 pages contained in the website. These included vital information on things like the other services she offered
@@ -1444,10 +1494,6 @@ and ambitions of what the website would do. As time progressed and as we learned
 programming languages, there were times when it seemed like the project may never have reached a stage where 
 we could consider it complete. We are extremely glad to have a working product to be able to give to our client.
 
-A second achievement is on a personal level for the team. We as a group did not know each other before the project.
-That we have come together and worked well as a team to achieve our end goals can be seen as an achievement as we have
-successfully completed the task we were given, together.
-
 \section{Future Work}
 \label{sect:fut-work}
 Languages
@@ -1456,11 +1502,6 @@ Payment Types
 User Profiles
 \section{Contributions}
 \label{sec:contrib}
-As is discussed in the project plan, the team had a very open and agile approach to the project.
-All members of the team have worked on various parts of the project. 
-We realised the dissertation was one of the most major parts of the project and it was therefore decided that
-every member of the team would work on this document, irrespective of what part of the project they had worked on previously.
-Individual Contributions are summarised in the paragraphs below.
 
 Alasdair Campbell contributed to the project in the following areas, among others:
 \begin{itemize}
@@ -1782,7 +1823,7 @@ One person will take overall responsibility, but everyone has an equal part in c
 \newpage
 \section{Organisation}
 \label{sect:org}
-At the beginning of the project the team were uncertain as to who was most skilled in specific areas so it was decided that everyone would be involved in all stages of the project, to varying levels. As the project progresses it will become clear who is a strong leader in specific areas and those members will then be able to lead the way for that part of the project.
+At the beginning of the project the team were uncertain as to who was most skilled in specific areas so it was decided that everyone would be involved in all stages of the project, to varying levels. As the project progreses it will become clear who is a strong leader in specific areas and those members will then be able to lead the way for that part of the project.
 
 To make sure that, should a situation arise, there is always someone responsible for all tasks, we have assigned basic roles to everyone as follows
 
@@ -1791,7 +1832,7 @@ To make sure that, should a situation arise, there is always someone responsible
 \item{\textbf{Toolsmith - Andrei Mustata} - Researches and trains the group in any new software required to fulfil the task.}
 \item{\textbf{Librarian -Alasdair Campbell} - Maintains the team’s documentation including minutes of meetings, the project schedule, trac.}
 \item{\textbf{Quality Assurer - Wei Zhang} - Manages testing, assuring compliance with any requirement specification documents.}
-\item{\textbf{Configuration Manager - Paul Moore} - Organises modifications to the software project, maintains the version control system and enforces agreed coding standards.}
+\item{\textbf{Configuration Manager - Paul Moore} - Organizes modifications to the software project, maintains the version control system and enforces agreed coding standards.}
 \end{itemize}
 
 There is enough overlap of the roles to overcome the situation of a member being unable to attend
@@ -1921,7 +1962,7 @@ concerns are highlighted then the team will take action to resolve the issue.
     Unrealistic schedule not adhered to & Medium & Tolerable & Improper planning of work time line \\ \hline
     Inaccurate requirements capture & Medium & Serious & Miscommunication with client \\ \hline
     Lack of technical knowledge in team (PHP, HTML, CSS, JavaScript) & Low & Catastrophic & Lack of commitment
-    to other university courses or weakness in understanding \\ \hline
+    to other Uni courses or weakness in understanding \\ \hline
     Shortfall in externally performed tests & Low & Insignificant & Laziness, misguided belief that software is fully secure \\ \hline
     Team Members external commitments & Medium & Tolerable & Team member has commitments that prevent them carrying out team tasks \\ \hline
     Requirement volatility - Client demands change & Medium & Serious & Client has change of circumstances e.g. budget, time, mind-set \\ 
@@ -1941,8 +1982,8 @@ A baseline will be agreed upon for all files under management. This means all fi
 agreed upon and then serve as the basis for further development. This means there is always a base line
 of the last working version.
 
-Diagram C1 outlines the process for Configuration management. 
-All changes to the managed files are committed to the SVN where they are reviewed by the configuration
+Diagram C1 outlines the process for Configuration managment. 
+All changes to the managed files are commited to the SVN where they are reviewed by the configuration
 manager and assessed to be acceptable or unacceptable. They are then added to the baseline or labelled
 as needing more work before being baselined.
 
@@ -1956,7 +1997,7 @@ as needing more work before being baselined.
 
 
 %==============================================================================
-% Specified as required subsidiary information
+% Specified as required subsidary information
 \chapter{Problem Definition}
 \label{chap:prob-spec}
 \section{Problem Title - Website for a Translator}
@@ -1977,7 +2018,7 @@ You are going to develop a system for a free-lance Translator. The system should
 \item{An e-mailed newsletter to regular clients at regular intervals}
 \item{A feedback page where people provide testimonials to prospective customers}
 \item{Related products which can be bought (and paid for via PayPal)}
-\item{A link to Facebook}
+\item{A link to facebook}
 \end{itemize}
 
 
@@ -2038,26 +2079,13 @@ Successful?    YES      NO \newline \newline
 \textbf{Task 6}: Logout and visit the Facebook page to leave some positive feedback. \newline \newline
 Successful?    YES      NO \newline \newline
  %-------------------------------------------------------------------------------------------------
-\section{Survey Results}
-%% TODO Fix pagination here %%
-\label{sect:survey-results}
-\includepdf[pages={-}]{images/survey-results.pdf}
-%-----------------------------------------------------------------------------%
 \chapter{Summary Log}
 
 
 \chapter{Status Report}
-The software system is in a completed state. It is currently live on \url{http://www.betheltranslations.com} and is available to be used
-by the general public. The only thing that currently needs to be fixed is to change the payment action to a real PayPal account instead of
-the testing sandbox.
-
-Other than this a potential customer is able to come to the site, find out all the information that they may need to make an educated decision
-about whether or not to use Bethel Translations and then to upload their documents for quotation.
-
-From our evaluation we believe that customers will find the system intuitive to use, however we have left Jo\"{e}lle with a user manual to aid
-her use of the system, and we are now running a one month beta test. Should she have any problems she will get back in touch with us and if possible
-we will try to address any issues that may arise. 
  
+ 
+
     
 
 
