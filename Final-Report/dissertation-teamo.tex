@@ -644,6 +644,53 @@ approach is to have one page per status, as shown in Figure
 	\label{fig:jobstatus-page}
 \end{figure}
 
+After this evaluation, we have built a website structure diagram
+(Figure ~\ref{fig:website-structure}). Everything is 1-3 clicks away.
+\begin{figure}[H]
+\label{fig:website-structure}
+	\vspace{-20pt} %trims the whitespace on the top of the page
+	\begin{center}
+		\subfloat[Main]{
+			%\label{fig:website-structure:main}
+			\includegraphics[
+				width=\linewidth,
+				% scale=0.85,
+				trim=40px 600px 40px 20px,
+				clip=true
+				]
+				{figures/website-structure}
+		}
+		
+		\qquad
+		\subfloat[Services expansion]{
+			%\label{fig:website-structure:services}
+			\includegraphics[
+				width=\linewidth,
+				% scale=0.85,
+				trim=30px 700px 30px 0px,
+				clip=true
+				]
+				{figures/website-structure-services}
+		}
+		
+		\qquad
+		\subfloat[Dashboard expansion]{
+			%\label{fig:website-structure:dashboard}
+			\includegraphics[
+				width=\linewidth,
+				% scale=0.85,
+				trim=30px 700px 30px 0px,
+				clip=true
+				]
+				{figures/website-structure-dashboard}
+		}
+
+	\end{center}
+	\label{fig:website-structure}
+	\vspace{-50pt}
+	\caption{Website structure}
+	%\vspace{-50pt}
+\end{figure}
 
 % \newpage
 \subsection{Wire-frames}
@@ -716,7 +763,9 @@ time.
 	\item main navigation menu
 \end{itemize}
 
-The menu is a collection of links to the main areas of the website:
+Within the pages, primary navigation is provided on the top of the
+screen, in a horizontal list of text links. In the dashboard navigation is
+provided on the left, in a vertical list of text links.
 \begin{itemize} \itemsep1pt \parskip0pt \parsep0pt
 	\item Home
 	\item About
@@ -907,10 +956,6 @@ Everything is 1-3 clicks away.
 
 \textbf{Navigation}
 
-Within the pages, primary navigation is provided on the top of the
-screen, in a horizontal list of text links. In the dashboard navigation is
-provided on the left, in a vertical list of text links.
-
 Pages are displayed in a single browser window, with the exception
 of some modal window may show for notification. The modals
 contains no browser controls. Links are provided to Close.
@@ -931,10 +976,6 @@ Some of the similar pages are omitted in order to avoid redundancy.
 
 \begin{itemize}
 \item \textbf{Description}
-
-The welcome page is the landing page that provides navigation links to all other pages. It shows the welcome message from the translator.
-The main functionality of this page allows clients to log in or register for the site. 
-We decided to make the registration process a three-steps process so as to make it as simple as possible for a first time user.
 
 \item \textbf{Navigation}
 
