@@ -1,0 +1,1 @@
+**If anyone has suggestions on how to deal with developing locally (as remote sql is not possible) list them here** - alasdair
